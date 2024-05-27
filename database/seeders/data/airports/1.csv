@@ -1,0 +1,1001 @@
+IATA_code,name,city_name,country_code
+DHF,Al Dhafra Air Base,Abu Dhabi,AE
+QIW,Umm Al Quwain,Umm Al Quwain,AE
+XNB,Travel Mall EY Bus Station,Dubai,AE
+XSB,Yas Island,Pleurtuit,AE
+ZDY,Delma Island,Delma Island,AE
+ZVH,Al Ain Bus Station,Al Ain,AE
+ZVJ,EK Bus Station,Abu Dhabi,AE
+FJR,Fujairah,Fujairah,AE
+DCG,Dubai Creek SPB,Dubai,AE
+DWC,Dubai World Central - Al Maktoum Intl,Dubai,AE
+DXB,Dubai Intl,Dubai,AE
+NHD,Minhad Military Ar Base,Dubai,AE
+ZJF,Jebel Ali Free Zone,Dubai,AE
+DJH,Jabel Ali SPB,Dubai,AE
+AUH,Abu Dhabi Intl,Abu Dhabi,AE
+AAN,Al Ain,Al Ain,AE
+SHJ,Sharjah,Sharjah,AE
+RKT,Ras Al Khayman Intl,Ras al Khaimah,AE
+OLR,Salerno,Salerno,AF
+OAI,Bagram,Bagram,AF
+KWH,Khwahan,Khwahan,AF
+KHT,Khost,Khost,AF
+KDH,Kandahar Intl ,Kandahar,AF
+KBL,Kabul Intl,Kabul,AF
+JAA,Jalalabad,Jalalabad,AF
+SGA,Sheghnan,Sheghnan,AF
+URN,Urgun,Urgun,AF
+UND,UND,,AF
+ZAJ,ZAJ,,AF
+BIN,BIN,,AF
+CCN,CCN,,AF
+BST,BST,,AF
+DAZ,Darwaz,Darwaz,AF
+FBD,FBD,,AF
+GZI,GZI,,AF
+HEA,Herat Intl,Herat,AF
+GRG,Gardez,Gardez,AF
+DWR,Dwyer,Dwyer,AF
+FAH,FAH,,AF
+KUR,Razer,Kuran Wa Munjan,AF
+LQN,Qalah-Ye Now,Qalah-Ye Now,AF
+MMZ,Maimanah,Maimanah,AF
+MZR,Mazar-I-Sharif,Mazar-I-Sharif,AF
+OAA,Shank,Shank,AF
+OAS,OAS,,AF
+SBF,SBF,,AF
+TII,Tarin Kot,Tarin Kot,AF
+TQN,Taloqan,Taloqan,AF
+URZ,Uruzgan,Uruzgan,AF
+BBQ,BBQ,,AG
+ANU,V.C. Bird Intl,Antigua,AG
+AXA,Clayton J. Lloyd Intl,Anguilla,AI
+TIA,Tirana,Tirana,AL
+LWN,Shirak,Gyoumri,AM
+EVN,Zvartnots Intl,Yerevan,AM
+BON,Flamingo Intl,Bonaire,AN
+CUR,Curacao Intl,Curacao,AN
+SXM,St. Maarten,St Maarten,AN
+SAB,J. Yrausquin,Saba,AN
+SDD,Lubango,Lubango,AO
+SVP,Kuito,Kuito,AO
+SPP,Menongue,Menongue,AO
+VHC,Saurimo,Saurimo,AO
+VPE,Ngiva,Ondjiva,AO
+XGN,Xangongo,Xangongo,AO
+LUO,Luena,Luena,AO
+MEG,Malanje,Malanje,AO
+LAD,Quatro de Fevereiro,Luanda,AO
+LBZ,Lucapa,Lucapa,AO
+LLT,Lobito,Lobito,AO
+KNP,Capanda,Capanda,AO
+NOV,Huambo,Huambo,AO
+NDD,Sumbe,Sumbe,AO
+NDF,N'Dalatando Location,N'Dalatando Location,AO
+MSZ,Namibe,Namibe,AO
+PGI,Chitato,Chitato,AO
+PBN,PBN,,AO
+CAB,Cabinda,Cabinda,AO
+CEO,CEO,,AO
+JMB,Jamba,Jamba,AO
+LZM,Luzamba,Luzamba,AO
+SSY,M'Banza Congo,M'Banza Congo,AO
+SZA,SZA,,AO
+UAL,Luau,Luau,AO
+UGO,Uige,Uige,AO
+BUG,Gen V Deslandes,Benguela,AO
+CBT,Catumbela,Catumbela,AO
+CFF,Cafunfo,Cafunfo,AO
+CAV,Cazombo,Cazombo,AO
+AZZ,Ambriz,Ambriz,AO
+ANL,Andulo,Andulo,AO
+ARZ,ARZ,,AO
+GGC,Lumbala N' Guimbo,Lumbala N' Guimbo,AO
+GXG, Negage,Negage,AO
+DUE,Dundo,Dundo,AO
+DRC,Dirico,Dirico,AO
+CNZ,Cangamba,Cangamba,AO
+CTI,CTI,,AO
+TNM,Teniente R  Marsh,Teniente R  Marsh,AQ
+TTG,TTG,,AR
+ULA,ULA,,AR
+TUC,Tucuman,Tucuman,AR
+UAQ,San Juan,San Juan,AR
+VGS,General Villegas,General Villegas,AR
+VCF,Valcheta,Valcheta,AR
+VDM,Viedma,Viedma,AR
+VDR,Villa Dolores,Villa Dolores,AR
+VLG,VLG,,AR
+VME,Villa Mercedes,Villa Mercedes,AR
+USH,Ushuaia,Ushuaia,AR
+UZU,Curuzu Cuatia,Curuzu Cuatia,AR
+TDL,TDL,,AR
+SDE,Vicecomodoro Ángel de la Paz Aragonés,Santiago Del Estero,AR
+SFN,Santa Fe Municipal,Santa Fe,AR
+RYO,RYO,,AR
+RZA,Santa Cruz,Santa Cruz,AR
+SLA,Martin Miguel de Guemes Intl,Salta,AR
+OVR,Olavarria,Olavarria,AR
+OYO,Tres Arroyos,Tres Arroyos,AR
+PMY,El Tehuelche,Puerto Madryn,AR
+ROS,Rosario – Islas Malvinas Intl,Rosario,AR
+ROY,ROY,,AR
+RSA,Santa Rosa,Santa Rosa,AR
+RGL,Piloto Civil Norberto Fernández Intl,Rio Gallegos,AR
+RHD,RHD,,AR
+RCU,Las Higueras,Rio Cuarto,AR
+RDS,RDS,,AR
+REL,Almirante Marcos A. Zar,Trelew,AR
+RES,Resistencia,Resistencia,AR
+PUD,PUD,,AR
+PSS,Libertador General Jose de San Martin,Posadas,AR
+MQD,Maquinchao,Maquinchao,AR
+NCJ,Sunchales,Sunchales,AR
+NEC,NEC,,AR
+NQN,Presidente Peron Intl,Neuquen,AR
+OES,San Antonio Oeste,San Antonio Oeste,AR
+JUJ,Gobernador Horacio Guzmán Intl,Jujuy,AR
+JSM,Jose D San Martin,Jose D San Martin,AR
+IRJ,La Rioja,La Rioja,AR
+JNI,JNI,,AR
+IGB,Ingeniero Jacobacci,Ingeniero Jacobacci,AR
+LGS,LGS,,AR
+LHS,Las Heras,Las Heras,AR
+LPG,LPG,,AR
+LMD,Los Menucos,Los Menucos,AR
+LCP,Loncopue,Loncopue,AR
+MDZ,Governor Francisco Gabrielli Intl,Mendoza,AR
+MDQ,Astor Piazzolla Intl ,Mar Del Plata,AR
+MJR,Miramar,Miramar,AR
+MCS,Monte Caseros,Monte Caseros,AR
+CSZ,Brigadier Hector Ruiz,Coronel Suarez,AR
+CPG,Carmen De Patagones,Carmen De Patagones,AR
+CRD,General E. Mosconi Intl,Comodoro Rivadavia,AR
+CRR,Ceres,Ceres,AR
+CVH,CVH,,AR
+CVI,CVI,,AR
+COR,Ingeniero Aeronautico Ambrosio L.V. Taravella Intl,Cordoba,AR
+CNQ,Doctor Fernando Piragine Niveyro Intl,Corrientes,AR
+CNT,CNT,,AR
+CLX,Clorinda,Clorinda,AR
+EMX,El Maiten,El Maiten,AR
+EHL,EHL,,AR
+GPO,General Pico,General Pico,AR
+GNR,General Roca,General Roca,AR
+HOS,Oscar Reguera,Chos Malal,AR
+GGS,Gobernador Gregores ,Gobernador Gregores,AR
+GHU,GHU,,AR
+FTE,Comandante Armando Tola Intl,El Calafate,AR
+EQS,Esquel,Esquel,AR
+ARR,ARR,,AR
+APZ,APZ,,AR
+AOL,AOL,,AR
+AFA,San Rafael,San Rafael,AR
+BHI,Comandante Espora,Bahia Blanca,AR
+CCT,CCT,,AR
+AEP,Jorge Newbery,Buenos Aires,AR
+EZE,Ministro Pistarini Intl,Buenos Aires,AR
+BRC,San Carlos de Bariloche Intl,San Carlos de Bariloche,AR
+COC,COC,,AR
+CPC,Aviador Carlos Campos,San Martin De Los Andes,AR
+CTC,Coronel Felipe Varela Intl,Catamarca,AR
+ELO,Eldorado,Eldorado,AR
+EPA,El Palomar,El Palomar,AR
+FMA,Formosa,Formosa,AR
+IGR,Cataratas del Iguazu Intl,Iguazu,AR
+ING,Lago Argentino,Lago Argentino,AR
+LCM,LCM,,AR
+LLS,Las Lomitas,Las Lomitas,AR
+LUQ,Brigadier Mayor César Raúl Ojeda Airport,San Luis,AR
+MDX,Mercedes,Mercedes,AR
+OLN,Colonia Sarmiento,Colonia Sarmiento,AR
+OYA,OYA,,AR
+PMQ,PMQ,,AR
+PRA,General Justo Jose de Urquiza,Parana,AR
+PRQ,Pres  Roque Saenz,Pres  Roque Saenz,AR
+QPQ,Pinamar,Pinamar,AR
+RCQ,Reconquista,Reconquista,AR
+RGA,Rio Grande,Rio Grande,AR
+RLO,Valle Del Conlara,Merlo,AR
+SGV,Sierra Grande,Sierra Grande,AR
+SST,SST,,AR
+SZQ,Saenz Pena,Saenz Pena,AR
+XMV,Pichanal,Pichanal,AR
+XMX,Ledesma,Ledesma,AR
+XOS,Mosconi,Mosconi,AR
+XPD,San Pedro,San Pedro,AR
+ZAI,Embarcacion,Embarcacion,AR
+FTI,FTI,,AS
+TAV,Tau,Tau,AS
+PPG,Pago Pago Intl,Pago Pago,AS
+LNZ,Linz,Linz,AT
+INN,Innsbruck,Innsbruck,AT
+KLU,Klagenfurt,Klagenfurt,AT
+SZG,Salzburg,Salzburg,AT
+VIE,Vienna Intl,Vienna,AT
+GGZ,Graz Railway Station,Graz,AT
+HOH,Hohenems,Hohenems/Dornbirn,AT
+KGV,Railway Station Klagenfurt ,Klagenfurt,AT
+LZS,Hauptbahnhof Railway Station,Linz,AT
+POK,Saint Polten Railway Station,Sankt Polten,AT
+XGZ,XGZ,,AT
+XOI,Ischgl,Ischgl,AT
+XOW,Seefeld,Seefeld,AT
+XWC,Suedbahnhof Rail,Vienna,AT
+XWW,Westbahnhof Railway Station,Vienna,AT
+ZSB,HBF Railway Station,Salzburg,AT
+GRZ,Graz,Graz,AT
+GSC,Gascoyne Junction,Gascoyne Junction,AU
+GSN,Mount Gunson,Mount Gunson,AU
+GTE,Groote Eylandt,Groote Eylandt,AU
+GTS,GTS,,AU
+GUH,GUH,,AU
+GYL,Argyle,Argyle,AU
+GYP,GYP,,AU
+GUL,GUL,,AU
+GVP,Greenvale,Greenvale,AU
+GOV,Nhulunbuy,Nhulunbuy,AU
+GLI,Glen Innes,Glen Innes,AU
+GLM,Glenormiston,Glenormiston,AU
+GLT,Gladstone,Gladstone,AU
+HOK,Hooker Creek,Lajamanu,AU
+HLS,HLS,,AU
+HLV,Helenvale,Helenvale,AU
+HMG,HMG,,AU
+HSM,HSM,,AU
+HTI,Great Barrier Reef,Hamilton Island,AU
+HCQ,Halls Creek,Halls Creek,AU
+HGD,Hughenden,Hughenden,AU
+HID,Horn Island,Horn Island,AU
+EPR,Esperance,Esperance,AU
+EVH,Evans Head,Evans Head,AU
+EVD,Eva Downs,Eva Downs,AU
+ETD,Etadunna,Etadunna,AU
+FLS,Flinders Is. Tasmania,Flinders Island,AU
+FIZ,Fitzroy Crossing,Fitzroy Crossing,AU
+FVL,Flora Valley,Flora Valley,AU
+GAH,Gayndah,Gayndah,AU
+FRB,FRB,,AU
+GIC,Boigu Island,Boigu Island,AU
+GFF,Griffith,Griffith,AU
+GFN,Clarence Valley Regional,Grafton,AU
+GET,Geraldton,Geraldton,AU
+GEX,Geelong,Geelong,AU
+GBL,South Goulburn Island,Goulburn Island,AU
+GBP,Gamboola,Gamboola,AU
+EIH,Einasleigh,Einasleigh,AU
+EDR,Edward River,Pormpuraaw,AU
+ECH,ECH,,AU
+EDD,Erldunda,Erldunda,AU
+ENB,Eneabba,Eneabba,AU
+EKD,Elkedra,Elkedra,AU
+ELC,Elcho Island,Elcho Island,AU
+DRB,Derby,Derby,AU
+DRN,Dirranbandi,Dirranbandi,AU
+DRY,Drysdale River Airport,Drysdale River,AU
+DYM,Diamantina Lakes,Diamantina Lakes,AU
+DYW,Daly Waters,Daly Waters,AU
+CZY,Cluny,Cluny,AU
+DBY,Dalby,Dalby,AU
+DBO,Dubbo City Regional,Dubbo,AU
+DGE,Mudgee,Mudgee,AU
+DNQ,DNQ,,AU
+DNG,Doogan,Doogan,AU
+DOX,Dongara,Dongara,AU
+DPO,Devonport,Devonport,AU
+DKI,Dunk Island,Dunk Island,AU
+DLK,Dulkaninna,Dulkaninna,AU
+DMD,Doomadgee,Doomadgee,AU
+CLH,Coolah,Coolah,AU
+CMA,Cunnamulla,Cunnamulla,AU
+CMD,CMD,,AU
+CML,Camooweal,Camooweal,AU
+CMQ,Clermont,Clermont,AU
+CNS,Cairns,Cairns,AU
+CNB,Coonamble,Coonamble,AU
+CNC,Coconut Island,Coconut Island,AU
+CNJ,Cloncurry,Cloncurry,AU
+COJ,COJ,,AU
+CGV,Caiguna,Caiguna,AU
+CKI,Croker Island Airpor,Croker Island,AU
+CVQ,Carnarvon,Carnarvon,AU
+CWR,Cowarie,Cowarie,AU
+CWT,CWT,,AU
+CWW,CWW,,AU
+CUD,Caloundra,Caloundra,AU
+CUG,Cudal,Cudal,AU
+CXT,CXT,,AU
+CYG,CYG,,AU
+CRJ,Coorabie,Coorabie,AU
+CPD,Coober Pedy,Coober Pedy,AU
+CQP,Cape Flattery,Cape Flattery,AU
+CRB,CRB,,AU
+CTL,Charleville,Charleville,AU
+CTN,Cooktown,Cooktown,AU
+CTR,Cattle Creek,Cattle Creek,AU
+BTX,Betoota,Betoota,AU
+BUC,Burketown,Burketown,AU
+BVI,Birdsville,Birdsville,AU
+BSJ,BSJ,,AU
+BNE,Brisbane,Brisbane,AU
+BNK,Ballina Byron,Ballina,AU
+BOX,Borroloola,Borroloola,AU
+BQB,Busselton,Busselton,AU
+BQL,Boulia,Boulia,AU
+BRK,Bourke,Bourke,AU
+BRT,Bathurst Island,Bathurst Island,AU
+CCL,CCL,,AU
+CBX,CBX,,AU
+CBI,Cape Barren,Cape Barren,AU
+CBR,Canberra International,Canberra,AU
+CFS,Coffs Harbour,Coffs Harbour,AU
+CES,CES,,AU
+CDQ,Croydon,Croydon,AU
+CDU,Camden,Camden,AU
+CED,Ceduna,Ceduna,AU
+CAZ,Cobar,Cobar,AU
+BZD,BZD,,AU
+BYX,Baniyala,Baniyala,AU
+BWQ,Brewarrina,Brewarrina,AU
+BWT,Wynyard,Burnie,AU
+BWB,Barrow Island,Barrow Island,AU
+BXF,Bellburn,Bellburn,AU
+BXG,BXG,,AU
+BHQ,Broken Hill,Broken Hill,AU
+BHS,Raglan,Bathurst,AU
+BIP,Bulimba,Bulimba,AU
+BKQ,Blackall,Blackall,AU
+BLN,BLN,,AU
+BLS,Bollon,Bollon,AU
+BLT,Blackwater,Blackwater,AU
+BMP,Brampton Island,Brampton Island,AU
+AXC,Aramac,Aramac,AU
+AUU,Aurukun,Aurukun,AU
+AWN,Alton Downs,Alton Downs,AU
+BCI,Barcaldine,Barcaldine,AU
+BCK,Bolwarra,Bolwarra,AU
+BCZ,Bickerton Island,Bickerton Island,AU
+BDB,Bundaberg,Bundaberg,AU
+BDD,Badu Island,Badu Island,AU
+BEU,Bedourie,Bedourie,AU
+ABG,ABG,,AU
+ABM,Northern Peninsula,Bamaga,AU
+ABX,Albury,Albury,AU
+ADO,ADO,,AU
+ADL,Adelaide Intl,Adelaide,AU
+ALH, Albany,Albany,AU
+AMX,AMX,,AU
+ARM,Armidale,Armidale,AU
+ASP,Alice Springs,Alice Springs,AU
+AAB,Arrabury,,AU
+ABH,ABH,,AU
+ACF,Brisbane Archerfield,Queensland,AU
+AGW,Agnew,Agnew,AU
+AGY,Argyle Downs,Argyle Downs,AU
+AMT,Amata,Amata,AU
+ANZ,ANZ,,AU
+ARY,ARY,,AU
+AUD,Augustus Downs,Augustus Downs,AU
+AVG,AVG,,AU
+AWP,AWP,,AU
+AXL,Alexandria Station,Alexandria Station,AU
+AYD,Alroy Downs,Alroy Downs,AU
+AYL,AYL,,AU
+AYQ,Connellan,Ayers Rock,AU
+AYR,Ayr,Ayr QLD,AU
+BDW,Bedford Downs,Bedford Downs,AU
+BEE,Beagle Bay,Beagle Bay,AU
+BEO,Belmont,Newcastle,AU
+BFC,Bloomfield River,Bloomfield River,AU
+BHT,Brighton Downs,Brighton Downs,AU
+BIW,BIW,,AU
+BKP,Barkly Downs,Barkly Downs,AU
+BME,Broome,Broome,AU
+BQW,Balgo Hill,Balgo Hill,AU
+BRJ,Bright,Bright,AU
+BTD,BTD,,AU
+BUY,Bunbury,Bunbury,AU
+BVW,Batavia Downs,Batavia Downs,AU
+BVZ,Beverley Springs,Beverley Springs,AU
+BWU,Bankstown,Sydney,AU
+BZP,Bizant,Bizant,AU
+CBC,Cherrabun,Cherrabun,AU
+CBY,Canobie,Canobie,AU
+CCW,Cowell,Cowell,AU
+CDA,Cooinda,Cooinda,AU
+CFH,Clifton Hills,Clifton Hills,AU
+CFI,Camfield Station,Camfield Station,AU
+CFP,Carpentaria Downs,Carpentaria Downs,AU
+CIE,Collie,Collie,AU
+CKW,CKW,,AU
+COB,Coolibah,Coolibah,AU
+COY,Coolawanyah Station,Coolawanyah Station,AU
+CRH,Cherrabah,Cherrabah,AU
+CRY,Carlton Hill,Carlton Hill,AU
+CSD,Cresswell Downs,Cresswell Downs,AU
+CSI,Casino,Casino,AU
+CUQ,Coen,Coen,AU
+CUY,Cue,Cue,AU
+CVC,Cleve,Cleve,AU
+CXQ,Christmas Creek Stn,Christmas Creek Stn,AU
+DCN,Curtin,Derby,AU
+DDI,Daydream Island,Daydream Island,AU
+DDN,DDN,,AU
+DFP,Drumduff,Drumduff,AU
+DGD,Dalgaranga Gold Mine,Dalgaranga Gold Mine,AU
+DHD,Durham Downs,Durham Downs,AU
+DKV,Docker River,Docker River,AU
+DLV,Delissaville,Delissaville,AU
+DNB,Dunbar,Dunbar,AU
+DNM,Denham,Denham,AU
+DRD,Dorunda,Dorunda,AU
+DRR,Durrie,Durrie,AU
+DRW,Darwin Intl,Darwin,AU
+DVP,Davenport Downs,Davenport Downs,AU
+DVR,Daly River Mission,Daly River Mission,AU
+DXD,Dixie,Dixie,AU
+DYA,Dysart,Dysart,AU
+EMD,Emerald,Emerald,AU
+ERB,Ernabella,Ernabella,AU
+ERQ,Elrose Mine,Elrose Mine,AU
+FIK,Finke,Finke,AU
+FLY,Finley,Finley,AU
+FOT,Forster,Forster,AU
+FSL,Fossil Downs Station,Fossil Downs Station,AU
+FVR,Forrest River,Forrest River,AU
+GBV,Gibb River,Gibb River,AU
+GDD,Gordon Downs,Gordon Downs,AU
+GEE,GEE,,AU
+GFE,Grenfell,Grenfell,AU
+GGD,GGD,,AU
+GLG,Glengyle,Glengyle,AU
+GLY,GLY,,AU
+GPD,Mount Gordon Mine,Mount Gordon Mine,AU
+GPN,Garden Point,Garden Point,AU
+GTT,GTT,,AU
+HAP,Long Island Seaplane Base,Long Island/Happy Bay,AU
+HAT,Heathlands,Heathlands,AU
+HBA,Hobart Intl,Hobart,AU
+HIP,Headingly,Headingly,AU
+HIS,Hayman Island,Hayman Island,AU
+HLL,Hillside,Hillside,AU
+HLT,HLT,,AU
+HPE,Hopevale,Hopevale,AU
+HRN,Heron Island,Heron Island,AU
+HRY,HRY,,AU
+HUB,HUB,,AU
+HXX,HXX,,AU
+IGH,IGH,,AU
+IKP,IKP,,AU
+IVW,Inverway,Inverway,AU
+JAD,JAD,,AU
+JFM,Fremantle,Fremantle,AU
+KBB,Kirkimbie Station,Kirkimbie Station,AU
+KBD,Kimberley Downs Station,Kimberley Downs Station,AU
+KBJ,Kings Canyon,Kings Canyon,AU
+KCS,Kings Creek Stati,Kings Creek Stati,AU
+KDS,Kamaran Downs,Kamaran Downs,AU
+KFE,Cloudbreak,Cloudbreak,AU
+KFG,Kalkurung,Kalkgurung,AU
+KGC,Kingscote,Kingscote,AU
+KKP,Koolburra,Koolburra,AU
+KML,Kamileroi,Kamileroi,AU
+KNS,King Island,King Island,AU
+KOH,Koolatah,Koolatah,AU
+KRD,Kurundi Station,Kurundi Station,AU
+KTR,Tindal,Katherine,AU
+KUG,Kubin Island,Kubin Island,AU
+KYF,Yeelirrie,Yeelirrie,AU
+KYI,Yalata Mission,Yalata Mission,AU
+LBH,LBH,,AU
+LGE,LGE,,AU
+LIB,Limbunya Station,Limbunya Station,AU
+LKD,Lakeland Downs,Lakeland Downs,AU
+LLP,Linda Downs,Linda Downs,AU
+LTP,Lyndhurst Station,Lyndhurst Station,AU
+LTV,Lotus Vale Station,Lotus Vale Station,AU
+LUT,New Laura,New Laura,AU
+LUU,Laura,Laura,AU
+MBB,Marble Bar,Marble Bar,AU
+MBN,Mount Barnett,Mount Barnett,AU
+MCV,Mcarthur River,Mcarthur River Mine,AU
+MET,Moreton,Moreton,AU
+MFP,Manners Creek Station,Manners Creek Station,AU
+MGV,Margaret River Station,Margaret River Station,AU
+MHO,Mount House,Mount House,AU
+MIY,Mittiebah,Mittiebah,AU
+MIZ,Mainoru,Mainoru,AU
+MKV,Mount Cavenagh,Mount Cavenagh,AU
+MLR,Millicent,Millicent,AU
+MLV,Merluna,Merluna,AU
+MNQ,MNQ,,AU
+MNV,Mount Valley,Mount Valley,AU
+MOO,Moomba,Moomba,AU
+MQA,Mandora Station,Mandora Station,AU
+MQE,Marqua,Marqua,AU
+MRP,Marla,Marla,AU
+MRT,Moroak,Moroak,AU
+MTD,Mount Sandford Station,Mount Sandford Station,AU
+MTQ,Mitchell,Mitchell,AU
+MVU,Musgrave,Musgrave,AU
+MWY,Miranda Downs,Miranda Downs,AU
+MXD,Marion Downs,Marion Downs,AU
+MYO,Myroodah Station,Myroodah Station,AU
+NGA,NGA,,AU
+NLF,Darnley Island,Darnley Island,AU
+NLS,Nicholson,Nicholson,AU
+NMP,New Moon,New Moon,AU
+NMR,Nappa Merrie,Nappa Merrie,AU
+NSM,Norseman,Norseman,AU
+OAG,Orange,Orange,AU
+ODR,ODR,,AU
+OKR,Yorke Island,Yorke Island,AU
+OPI,OPI,,AU
+OSO,OSO,,AU
+OXO,Orientos,Orientos,AU
+OXY,Morney,Morney,AU
+PRD,Pardoo Station,Pardoo Station,AU
+PTI,PTI,,AU
+PXH,PXH,,AU
+QBE,Bega,Bega,AU
+QBW,Batemans Bay,Batemans Bay,AU
+QDN,Eden,Eden,AU
+QIY,Bedarra Island,Bedarra Island,AU
+QJD,Jindabyne,Jindabyne,AU
+QLE,Leeton,Leeton,AU
+QPV,Perisher Valley,Perisher Valley,AU
+QTH,Thredbo,Thredbo,AU
+QWL,Crackenback Vill,Crackenback Vill,AU
+QZC,Smiggin Holes,Smiggin Holes,AU
+QZM,Bullocks Flat,Bullocks Flat,AU
+RDA,Rockhampton Downs,Rockhampton Downs,AU
+RHL,Roy Hill,Roy Hill,AU
+RLP,Rosella Plains,Rosella Plains,AU
+RMA,Roma,Roma,AU
+RMK,RMK,,AU
+ROH,Robinhood,Robinhood,AU
+RPB,Roper Bar,Roper Bar,AU
+RSE,RSE,,AU
+RTP,Rutland Plains,Rutland Plains,AU
+SFP,Surfers Paradise,Surfers Paradise,AU
+SGO,St. George,St George,AU
+SGP,SGP,,AU
+SHU,Smith Point,Smith Point,AU
+SIX,SIX,,AU
+SOI,South Molle Island,South Molle Island,AU
+SQC,Southern Cross,Southern Cross,AU
+SRM,Sandringham Station,Sandringham Station,AU
+SRR,Stradbroke Isl,Stradbroke Isl,AU
+SSK,Sturt Creek,Sturt Creek,AU
+STH,STH,,AU
+SVM,St Pauls,St Pauls,AU
+SXE,West Sale,Sale,AU
+SYU,"Warraber I., Qlnd.",Warraber Island,AU
+TBK,Timber Creek,Timber Creek,AU
+TDN,Theda Station,Theda Station,AU
+TDR,Theodore,Theodore,AU
+TIS,Thursday Island,Thursday Island,AU
+TKY,TKY,,AU
+TXR,Tanbar,Tanbar,AU
+TYG,Thylungra,Thylungra,AU
+TYP,Tobermorey,Tobermorey,AU
+UDA,Undara,Undara,AU
+UTD,Nutwood Downs,Nutwood Downs,AU
+VCD,Victoria R. Downs,Victoria River Downs,AU
+VNR,VNR,,AU
+WAN,Waverney,Waverney,AU
+WAZ,WAZ,,AU
+WDI,Wondai,Wondai,AU
+WGZ,Off-Line Point,Manly,AU
+WLA,Wallal Downs,Wallal Downs,AU
+WME,Mount Keith,Mount Keith,AU
+WND,Windarra,Windarra,AU
+WOG,Woodgreen,Woodgreen,AU
+WRW,Warrawagine Station,Warrawagine Station,AU
+WSY,WSY,,AU
+XTR,Tara,Tara,AU
+XZX,Rail Generic,Rail Generic,AU
+YNN,Yandicoogina,Yandicoogina,AU
+ZBO,Bowen,Bowen,AU
+ZGL,South Galway,South Galway,AU
+ZNE,Newman,Newman,AU
+ZVG,Springvale,Springvale,AU
+USL,Useless Loop,Useless Loop,AU
+UTB,Muttaburra,Muttaburra,AU
+WIN,Winton,Winton,AU
+WIO,Wilcannia,Wilcannia,AU
+WKB,Warracknabeal,Warracknabeal,AU
+WLC,Walcha,Walcha,AU
+WEI,Weipa,Weipa,AU
+WEW,Wee Waa,Wee Waa,AU
+WGA,Wagga Wagga,Wagga Wagga,AU
+WGE,Walgett,Walgett,AU
+WGT,WGT,,AU
+WHL,Welshpool,Welshpool,AU
+WLL,Wollogorang,Wollogorang,AU
+WLO,Waterloo,Waterloo,AU
+WMB,WMB,,AU
+WNR,"Windorah, Qld.",Windorah,AU
+WOL,"Wollongong, N.S.W.",Wollongong,AU
+TYB,TYB,,AU
+TWB,Toowoomba,"Toowoomba, QLD",AU
+WTB,Brisbane West Wellcamp,"Toowoomba, QLD",AU
+TWN,Tewantin,Tewantin,AU
+TWP,Torwood,Torwood,AU
+TUM,TUM,,AU
+UIR,Quirindi,Quirindi,AU
+ULP,Quilpie,Quilpie,AU
+UMR,"Woomera, South Australia","Woomera, South Australia",AU
+UBB,"Thursday I., Qld.",Mabuiag Island,AU
+UBU,Kalumburu,Kalumburu,AU
+UEE,UEE,,AU
+TSV,"Townsville, Qnslnd",Townsville,AU
+TRO,Taree,Taree,AU
+TPR,"Tom Price, West",Tom Price,AU
+TMW,Tamworth,Tamworth,AU
+SYD,Sydney (Kingsford Smith),Sydney,AU
+SWB,Shaw River,Shaw River,AU
+SWC,SWC,,AU
+SWH,SWH,,AU
+SRN,SRN,,AU
+SSP,Silver Plains,Silver Plains,AU
+STF,Stephens Island,Stephens Island,AU
+TEF,TEF,,AU
+TGN,"Traralgon, Victoria",Traralgon,AU
+THG,Thangool,Thangool,AU
+TAQ,Tarcoola,Tarcoola,AU
+TBL,TBL,,AU
+TCA,Tennant Creek,Tennant Creek,AU
+TCW,Tocumwal,Tocumwal,AU
+SHT,SHT,,AU
+SIO,Smithton,Smithton,AU
+SNB,Snake Bay,Snake Bay,AU
+SNH,SNH,,AU
+SLJ,SLJ,,AU
+RVT,Ravensthorpe,Ravensthorpe,AU
+SBR,Saibai Island,Saibai Island,AU
+SCG,Spring Creek,Spring Creek,AU
+XMC,XMC,,AU
+WYA,Whyalla,Whyalla,AU
+XCO,XCO,,AU
+WUN,"Wiluna, Western",Wiluna,AU
+WWI,Woodie Woodie,Woodie Woodie,AU
+WWY,West Wyalong,West Wyalong,AU
+XMY,"Cape York  ? , Qld.",Yam Island,AU
+XML,Minlaton,Minlaton,AU
+XRH,Richmond,Richmond,AU
+XTG,Thargomindah,Thargomindah,AU
+XTO,XTO,,AU
+ZBL,Biloela,Biloela,AU
+YLG,Yalgoo,Yalgoo,AU
+KNI,Katanning,Katanning,AU
+KNX,Kununurra,Kununurra,AU
+KPP,Kalpowar,Kalpowar,AU
+KRA,KRA,,AU
+KRB,Karumba,Karumba,AU
+KPS,Kempsey,Kempsey,AU
+KSV,Springvale,Springvale,AU
+KBY,Streaky Bay,Streaky Bay,AU
+KCE,Collinsville,Collinsville,AU
+KAX,Kalbarri,Kalbarri,AU
+KDB,KDB,,AU
+KGI,Kalgoorlie-Boulder,Kalgoorlie-Boulder,AU
+KGR,Kulgera Roadhouse,Kulgera,AU
+KGY,KGY,,AU
+INM,Innamincka,Innamincka,AU
+IFL,IFL,,AU
+IDK,Indulkana,Indulkana,AU
+HTU,Hopetoun,Hopetoun,AU
+HVB,Hervey Bay,Hervey Bay,AU
+JCK,Julia Creek,Julia Creek,AU
+IRG,Lockhart River,Lockhart River,AU
+ISA,Mount Isa,Mount Isa,AU
+IVR,Inverell,Inverell,AU
+LOA,LOA,,AU
+LNO,Leonora,Leonora,AU
+LLL,Lissadell,Lissadell,AU
+LNH,Lake Nash,Lake Nash,AU
+LRE,Longreach,Longreach,AU
+LHG,Lightning Ridge,Lightning Ridge,AU
+LGH,LGH,,AU
+LER,Leinster,Leinster,AU
+LFP,Lakefield,Lakefield,AU
+LLG,Chillagoe,Chillagoe,AU
+LCN,Balcanoona,Balcanoona,AU
+LDC,Lindeman Island,Lindeman Island,AU
+LDH,Lord Howe Island,Lord Howe Island,AU
+LDW,Lansdowne Station,Lansdowne Station,AU
+LEA,RAAF Learmonth,Learmonth,AU
+LEL,Lake Evella,Gapuwiyak,AU
+KWM,Kowanyama,Kowanyama,AU
+KTA,Karratha,Karratha,AU
+MBF,Porepunkah,Mount Buffalo,AU
+MBH,Maryborough,Maryborough,AU
+LYT,Lady Elliot Islan,Lady Elliot Islan,AU
+LZR,Lizard Island,Lizard Island,AU
+LVO,LVO,,AU
+LWH,Lawn Hill,Lawn Hill,AU
+LST,Launceston,Launceston,AU
+LSY,Lismore,Lismore,AU
+LTB,Latrobe,Latrobe,AU
+MJP,Manjimup,Manjimup,AU
+MKR,Meekatharra,Meekatharra,AU
+MKY,Mackay,Mackay,AU
+MIM,Merimbula,Merimbula,AU
+MIH,Mitchell Plateau,Mitchell Plateau,AU
+MJK,Shark Bay,Monkey Mia,AU
+MHU,Mount Hotham,Mount Hotham,AU
+MCY,Sunshine Coast,Sunshine Coast,AU
+AVV,Avalon,Melbourne,AU
+MBW,Moorabbin,Melbourne,AU
+MEB,Essendon,Melbourne,AU
+MEL,Melbourne,Melbourne,AU
+MFL,Mount Full Stop,Wando Vale,AU
+MGB,Mount Gambier,Mount Gambier,AU
+MGT,Milingimbi,Milingimbi Island,AU
+PPI,PPI,,AU
+PPP,Whitsunday Coast,Proserpine,AU
+PMK,PMK,,AU
+PLO,Port Lincoln,Port Lincoln,AU
+PKE,Parkes,Parkes,AU
+PKT,PKT,,AU
+PHE,Port Hedland Intl,Port Hedland,AU
+PBO,Paraburdoo,Paraburdoo,AU
+OYN,Ouyen,Ouyen,AU
+PDE,Pandie Pandie,Pandie Pandie,AU
+PER,Perth,Perth,AU
+PEY,PEY,,AU
+PDN,Parndana,Parndana,AU
+PQQ,Port Macquarie,Port Macquarie,AU
+PUG,Port Augusta,Port Augusta,AU
+PTJ,Portland,Portland,AU
+RAM,Ramingining,Ramingining,AU
+RBC,Robinvale,Robinvale,AU
+RBS,RBS,,AU
+RBU,Roebourne,Roebourne,AU
+RCM,Richmond,Richmond,AU
+RCN,RCN,,AU
+RSB,RSB,,AU
+RTS,RTS,,AU
+RTY,Merty Merty,Merty Merty,AU
+RPM,Ngukurr,Ngukurr,AU
+RPV,Roper Valley,Roper Valley,AU
+RRE,Marree,Marree,AU
+RRV,Robinson River,Robinson River,AU
+RKY,Rokeby,Rokeby,AU
+ROK,Rockhampton,Rockhampton,AU
+OKB,Orchid Beach,Fraser Island,AU
+ODD,Oodnadatta,Oodnadatta,AU
+ODL,Cordillo Downs,Cordillo Downs,AU
+OLP,Olympic Dam,Olympic Dam,AU
+OKY,Oakey,Oakey,AU
+ONG,Mornington,Mornington Island,AU
+ONR,Monkira,Monkira,AU
+OOL,Gold Coast,Gold Coast,AU
+OOM,Snowy Mountains,Cooma,AU
+OOR,Mooraberree,Mooraberree,AU
+ORR,ORR,,AU
+ORS,Waterport Spb,Orpheus Island,AU
+NRA,Narrandera,Narrandera,AU
+NRG,Narrogin,Narrogin,AU
+NRY,Newry,Newry,AU
+NSO,Scone,Scone,AU
+NSV,Noosaville,Noosaville,AU
+NTN,Normanton,Normanton,AU
+NTL,Newcastle,Newcastle,AU
+NUB,Numbulwar,Numbulwar,AU
+NYN,Nyngan,Nyngan,AU
+NUR,NUR,,AU
+NPP,Napperby,Napperby,AU
+NOA,NOA,,AU
+NKB,Noonkanbah,Noonkanbah,AU
+NLL,Nullagine,Nullagine,AU
+NDS,Sandstone,Sandstone,AU
+NBH,Nambucca Heads,Nambucca Heads,AU
+NAA,Narrabri,Narrabri,AU
+NAC,NAC,,AU
+MVH,Macksville,Macksville,AU
+MVK,Mulka,Mulka,AU
+MWB,Morawa,Morawa,AU
+MWT,Moolawatana,Moolawatana,AU
+MXU,Mullewa,Mullewa,AU
+MYA,Moruya,Moruya,AU
+MYI,Murray Island,Murray Island,AU
+MQL,Mildura,Mildura,AU
+MQZ,Margaret River,Margaret River,AU
+MRG,MRG,,AU
+MRL,Miners Lake,Miners Lake,AU
+MRZ,Moree,Moree,AU
+MSF,Mount Swan,Mount Swan,AU
+MUP,Mulga Park,Mulga Park,AU
+MUQ,Muccan Station,Muccan Station,AU
+MMG,Mount Magnet,Mount Magnet,AU
+MMM,Middlemount,Middlemount,AU
+MNE,MNE,,AU
+MNG,Maningrida,Maningrida,AU
+MNW,Macdonald Downs,Macdonald Downs,AU
+MOV,MOV,,AU
+AUA,Queen Beatrix International,Aruba,AW
+GBB,Qabala Intl,Gabala,AZ
+NAJ,Nakhichevan,Nakhichevan,AZ
+GYD,Heydar Aliyev Intl,Baku,AZ
+ZXT,Zabrat,Baku,AZ
+BAK,Metropolitan Area,Baku,AZ
+KVD,Ganja Intl ,Ganja,AZ
+LLK,LLK,,AZ
+ZTU,ZTU,,AZ
+SJJ,Sarajevo Intl,Sarajevo,BA
+TZL,Tuzla,Tuzla,BA
+OMO,Mostar,Mostar,BA
+BNX,Banja Luka Intl,Banja Luka,BA
+BGI,Grantley Adams Intl,Bridgetown,BB
+BZL,Barisal,Barisal,BD
+CXB,Coxs Bazar,Coxs Bazar,BD
+CGP,Shah Amanat Intl,Chittagong,BD
+CLA,Comilla,Comilla,BD
+DAC,Hazrat Shahjalal Intl,Dhaka,BD
+IRD,Ishurdi,Ishurdi,BD
+JSR,Jessore,Jessore,BD
+TKR,Thakurgaon,Thakurgaon,BD
+RJH,Shah Makhdum,Rajshahi,BD
+SPD,Saidpur,Saidpur,BD
+ZYL,Osmani Intl,Sylhet,BD
+ZHM,Shamshernagar,Shamshernagar,BD
+OBL,OBL,,BE
+LGG,Liege,Liege,BE
+KJK,KJK,,BE
+CRL,Brussels South Charleroi,Brussels,BE
+GNE,GNE,,BE
+MWW,Mouscron,Mouscron,BE
+OST,Ostend-Bruges Intl,Oostende/Brugge,BE
+QHA,QHA,,BE
+QMO,Mons,Mons,BE
+QON,Arlon,Arlon,BE
+ZGK,Leuven,Leuven,BE
+ZGQ,Tournai,Tournai,BE
+ZGV,Wavre,Wavre,BE
+ZWE,Antwerp Central Railway Station ,Antwerp,BE
+ZWY,ZWY,,BE
+ZYR,Brussels Midi Railway Station,Brussels,BE
+BRU,Brussels,Brussels,BE
+ANR,Antwerp Intl,Antwerp,BE
+QNM,Namur Rail Station,Namur Rail Station,BE
+BNR,Banfora,Banfora,BF
+DGU,Dedougou,Dedougou,BF
+DIP,Diapaga,Diapaga,BF
+BOY,Borgo,Bobo Dioulasso,BF
+FNG,Fada N'Gourma,Fada N'Gourma,BF
+PUP,Po,Po,BF
+TMQ,Tambao,Tambao,BF
+XAR,Aribinda,Aribinda,BF
+XKY,XKY,,BF
+XLU,Leo,Leo,BF
+XPA,Pama,Pama,BF
+XSE,Sebba,Sebba,BF
+OUA,Ouagadougou Intl,Ouagadougou,BF
+OUG,Ouahigouya,Ouahigouya,BF
+XZA,Zabre,Zabre,BF
+XNU,Nouna,Nouna,BF
+XDE,XDE,,BF
+XDJ,XDJ,,BF
+XBO,Boulsa,Boulsa,BF
+XBG,Bogande,Bogande,BF
+XKA,Kantchari,Kantchari,BF
+XGA,Gaoua,Gaoua,BF
+XGG,Gorom Gorom,Gorom Gorom,BF
+TEG,Tenkodogo,Tenkodogo,BF
+TUQ,Tougan,Tougan,BF
+VAR,Varna,Varna,BG
+TGV,Targovishte,Targovishte,BG
+SZR,SZR,,BG
+SOF,Sofia,Sofia,BG
+SLS,Silistra,Silistra,BG
+PDV,PDV,,BG
+ROU,ROU,,BG
+JAM,JAM,,BG
+HKV,Malevo,Haskovo,BG
+GOZ,GOZ,,BG
+BOJ,Bourgas,Burgas,BG
+BAH,Bahrain Intl,Bahrain,BH
+GBQ,GBQ,,BH
+WGF,Manama,Manama,BH
+BJM,Bujumbura Intl,Bujumbura,BI
+GID,Gitega,Gitega,BI
+KRE,Kirundo,Kirundo,BI
+KDC,KDC,,BJ
+PKO,Parakou,Parakou,BJ
+NAE,NAE,,BJ
+DJA,Djougou,Djougou,BJ
+COO,Cotonou,Cotonou,BJ
+SVF,SVF,,BJ
+BDA,L.F. Wade Intl,Bermuda,BM
+NWU,Nas,Bermuda Hamilton,BM
+BWN,Brunei Intl,Bandar Seri Begawan,BN
+APB,APB,,BO
+BJO,BJO,,BO
+BVK,Huacaraje,Huacaraje,BO
+MGD,MGD,,BO
+MQK,San Matias,San Matias,BO
+SJB,San Joaquin,San Joaquin,BO
+SRE,Juana Azurduy de Padilla Intl,Sucre,BO
+TDD,Trinidad,Trinidad,BO
+VVI,"Viru Viru, Santa Cruz",Santa Cruz,BO
+CIJ,Captain Anibal Arab,Cobija,BO
+GYA,GYA,,BO
+BVL,Baures,Baures,BO
+CBB,Jorge Wilstermann International,Cochabamba,BO
+BYC,Yacuiba,Yacuiba,BO
+CEP,Concepcion,Concepcion,BO
+POI,POI,,BO
+RIB,Gen Buech,Riberalta,BO
+RBO,Robore,Robore,BO
+RBQ,RBQ,,BO
+PSZ,Puerto Suarez,Puerto Suarez,BO
+LPB,El Alto Intl,La Paz,BO
+MHW,Monteagudo,Monteagudo,BO
+SNG,SNG,,BO
+SNM,San Ignacio De M,San Ignacio De M,BO
+SJS,SJS,,BO
+SJV,San Javier,San Javier,BO
+SBL,Yacuma,Santa Ana,BO
+TJA,Tarija,Tarija,BO
+SRZ,"El Trompillo, Santa Cruz",Santa Cruz,BO
+SRJ,SRJ,,BO
+SRB,SRB,,BO
+SRD,San Ramon,San Ramon,BO
+VAH,Vallegrande,Vallegrande,BO
+VLM,Villamontes,Villamontes,BO
+EUX,F. D. Roosevelt,St Eustatius,BQ
+ATM,ATM,,BR
+AUB,Itauba,Munich,BR
+BAU,Bauru,Bauru,BR
+BEL,Val De Cans Intl,Belem,BR
+BFH,BFH,,BR
+BSS,Balsas,Balsas,BR
+BZC,BZC,,BR
+CCI,Concordia,Concordia,BR
+CCQ,Cachoeira,Cachoeira,BR
+CDI,CDI,,BR
+CMT,CMT,,BR
+CPQ,Campo dos Amarais,Campinas,BR
+CSW,Colorado Do Oeste,Colorado Do Oeste,BR
+CTQ,Do Palmar,Santa Vitoria,BR
+ESI,ESI,,BR
+FRC,Franca,Franca,BR
+GCV,Gravatai,Gravatai,BR
+GDP,Guadalupe,Guadalupe,BR
+ILB,Ilha Solteira,Ilha Solteira,BR
+JTI,Jatai,Jatai,BR
+LBR,LBR,,BR
+LIP,Lins,Lins,BR
+MTE,Monte Alegre,Monte Alegre,BR
+MTG,Mato Grosso,Mato Grosso,BR
+NAT,Natal,Natal,BR
+NBV,NBV,,BR
+PCS,Picos,Picos,BR
+PDF,PDF,,BR
+PGG,Progresso,Progresso,BR
+PHI,PHI,,BR
+PIG,Pitinga,Pitinga,BR
+PLL,PLL,,BR
+QBD,Barra Do Pirai,Barra Do Pirai,BR
+QBK,Betim,Betim,BR
+QCC,Camacari,Camacari,BR
+QCV,Guarulhos,Guarulhos,BR
+QCX,Sao Caetano Do Sul,Sao Caetano Do Sul,BR
+QDV,Jundiai,Jundiai,BR
+QGA,Guaira,Guaira,BR
+QGB,Limeira,Limeira,BR
+QGS,Alagoinhas,Alagoinhas,BR
+QHB,Piracicaba,Piracicaba,BR
+QHE,Sao Bento Do Sul,Sao Bento Do Sul,BR
+QHN,Taguatinga,Taguatinga,BR
+QHP,Taubate,Taubate,BR
+QHV,Novo Hamburgo,Novo Hamburgo,BR
+QJA,Jaragua Do Sul,Jaragua Do Sul,BR
+QJM,Brusque,Brusque,BR
+QMI,Mogi Das Cruzes,Mogi Das Cruzes,BR
+QNR,Santa Cruz Rio Pardo,Santa Cruz Rio Pardo,BR
+QRP,Gramado,Gramado,BR
+QTA,Atibaia,Atibaia,BR

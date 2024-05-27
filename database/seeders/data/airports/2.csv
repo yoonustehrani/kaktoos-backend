@@ -1,0 +1,1002 @@
+IATA_code,name,city_name,country_code
+QTU,Itu,Itu,BR
+QVH,Vila Velha,Vila Velha,BR
+QWJ,Americana,Americana,BR
+RIG,Rio Grande,Rio Grande,BR
+RRN,Serra Norte,Serra Norte,BR
+RSG,Serra Pelada,Serra Pelada,BR
+RWS,Sumare,Sumare,BR
+SEI,Senhor Do Bonfim,Senhor Do Bonfim,BR
+SJL,Sao Gabriel,Sao Gabriel,BR
+SSZ,SSZ,,BR
+STZ,Confresa,Santa Terezinha,BR
+TMT,Trombetas,Trombetas,BR
+TSQ,TSQ,,BR
+TUZ,Tucuma,Tucuma,BR
+UBT,UBT,,BR
+UNA,Una,Ilha Comandatuba/Una,BR
+VAL,Valenca,Valenca,BR
+VLP,Vila Rica,Vila Rica,BR
+ZBW,Atibaia,Atibaia,BR
+CFB,Cabo Frio Intl,Cabo Frio,BR
+CFC,Carlos Alberto da Costa Neves,Cacador,BR
+CFO,Confreza,Confreza,BR
+CDJ,Conceicao Do Arag,Conceicao Do Arag,BR
+CBW,Campo Mourao,Campo Mourao,BR
+CCM,Criciuma,Criciuma,BR
+CCX,Caceres,Caceres,BR
+BYO,Bonito,Bonito,BR
+BVB,Boa Vista Intl,Boa Vista,BR
+BVS,Breves,Breves,BR
+BVH,Vilhena,Vilhena,BR
+CAU,Caruaru,Caruaru,BR
+CAW,CAW,,BR
+CAC,Cascavel,Cascavel,BR
+CAF,CAF,,BR
+BVM,Belmonte,Belmonte,BR
+BSB,Brasilia Intl,Brasilia,BR
+BNU,Blumenau,Blumenau,BR
+BRA,BRA,,BR
+BRB,BRB,,BR
+BQQ,BQQ,,BR
+BPS,Porto Seguro,Porto Seguro,BR
+BPG,Barra Do Garcas,Barra Do Garcas,BR
+BJP,Braganca Paulista,Braganca Paulista,BR
+BMS,Brumado,Brumado,BR
+BGV,Bento Goncalves,Bento Goncalves,BR
+BHZ,"Belo Horizonte, All",Belo Horizonte,BR
+CNF,Tancredo Neves Intl,Belo Horizonte,BR
+PLU,Belo Horizonte/Pampulha – Carlos Drummond de Andrade,Belo Horizonte,BR
+BGX,Bage,Bage,BR
+BAT,BAT,,BR
+AZL,Fazenda Tucunare,Sapezal,BR
+AXE,Xanxere,Xanxere,BR
+AUX,Araguaina,Araguaina,BR
+BDC,Barra Do Corda,Barra Do Corda,BR
+BCR,BCR,,BR
+BAZ,BAZ,,BR
+AMJ,Almenara,Almenara,BR
+ALT,Alenquer,Alenquer,BR
+ALQ,ALQ,,BR
+ARU,Aracatuba,Aracatuba,BR
+ARS,Aragarcas,Aragarcas,BR
+AQM,Ariquemes,Ariquemes,BR
+AQA,Araraquara,Araraquara,BR
+APU,APU,,BR
+APX,Arapongas,Arapongas,BR
+APY,Alto Parnaiba,Alto Parnaiba,BR
+APQ,Arapiraca,Arapiraca,BR
+APS,Anapolis,Anapolis,BR
+AAG,AAG,,BR
+AAI,Arraias Airport,,BR
+AAX,Araxa,Araxa,BR
+AFL,Alta Floresta,Alta Floresta,BR
+AIF,Assis,Assis,BR
+AIR,Aripuana,Aripuana,BR
+AJU,Aracaju,Aracaju,BR
+GYN,Santa Genoveva,Goiania,BR
+GVR,Coronel Altino Machado de Oliveira,Governador Valadares,BR
+GUJ,GUJ,,BR
+GUZ,Guarapari,Guarapari,BR
+GRP,Gurupi,Gurupi,BR
+GPB,Tancredo,Guarapuava,BR
+GNM,Guanambi,Guanambi,BR
+GMS,GMS,,BR
+GJM,Guajara Mirim,Guajara Mirim,BR
+HRZ,Horizontina,Horizontina,BR
+GEL,SepÃ© TiarajuÂ ,Santo Angelo,BR
+FOR,Pinto Martins Intl,Fortaleza,BR
+FLB,FLB,,BR
+FLN,Florianopolis,Florianopolis,BR
+FBE,FBE,,BR
+FBA,Fonte Boa,Fonte Boa,BR
+FEC,Feira De Santana,Feira De Santana,BR
+FEJ,Feijo,Feijo,BR
+FEN,Fernando De Noronha,Fernando De Noronha,BR
+ERM,ERM,,BR
+ERN,ERN,,BR
+CIZ,Coari,Coari,BR
+CKO,Cornelio Procopio,Cornelio Procopio,BR
+CKS,Carajas,Carajas,BR
+CGB,Marechal Rondon Intl,Cuiaba,BR
+CGR,Campo Grande Intl,Campo Grande,BR
+CNV,CNV,,BR
+CMP,Santana Do Aragua,Santana Do Aragua,BR
+CLV,CLV,,BR
+CMC,Camocim,Camocim,BR
+CMG,Corumba Intl,Corumba,BR
+CXJ,Hugo Cantergiani Regional,Caxias Do Sul,BR
+CZB,Carlos Ruhl,Cruz Alta,BR
+CZS,Campo Intl,Cruzeiro Do Sul,BR
+CTP,Carutapera,Carutapera,BR
+CWB,Afonso Pena Intl,Curitiba,BR
+CSS,Cassilandia,Cassilandia,BR
+CSU,CSU,,BR
+CQS,CQS,,BR
+CPU,Cururupu,Cururupu,BR
+CPV,CPV,,BR
+CQA,CQA,,BR
+CRQ,CRQ,,BR
+DIQ,Divinopolis,Divinopolis,BR
+DMT,DMT,,BR
+DOU,Francisco de Matos Pereira,Dourados,BR
+DNO,Dianopolis,Dianopolis,BR
+DTI,Diamantina,Diamantina,BR
+VIX,Vitoria,Vitoria,BR
+VIA,VIA,,BR
+VDC,Vitoria Da Conquista,Vitoria Da Conquista,BR
+VAG,Varginha,Varginha,BR
+URB,Urubupunga,Urubupunga,BR
+URG,Rubem Berta,Uruguaiana,BR
+TUR,Tucurui,Tucurui,BR
+UBA,Uberaba,Uberaba,BR
+TXF,Teixeira Freitas,Teixeira Freitas,BR
+UDI,Uberlandia,Uberlandia,BR
+UMU,UMU,,BR
+TLZ,Catalao,Catalao,BR
+TJL,Tres Lagoas,Tres Lagoas,BR
+TOW,Toledo,Toledo,BR
+TRQ,Tarauaca,Tarauaca,BR
+SQY,Sao Lourenco Do Sul,Sao Lourenco Do Sul,BR
+SRA,Santo Rosaa,Santo Rosaa,BR
+SQM,Sao Miguel Araguaia,Sao Miguel Araguaia,BR
+SSA,Salvador,Salvador,BR
+SSO,SSO,,BR
+STM,Santarem-Maestro Wilson Fonseca,Santarem,BR
+SWM,Suia Missu,Suia Missu,BR
+SXX,Sao Felix Do Xing,Sao Felix Do Xing,BR
+SXO,SXO,,BR
+THE,Teresina,Teresina,BR
+TGQ,Tangara Da Serra,Tangara Da Serra,BR
+TFF,Tefe,Tefe,BR
+TFL,TFL,,BR
+TEC,Telemaco Borba,Telemaco Borba,BR
+TBT,Tabatinga,Tabatinga,BR
+SBJ,Sao Mateus,Sao Mateus,BR
+CGH,Sao Paulo/Congonhas,Sao Paulo,BR
+GRU,Sao Paulo-Guarulhos Intl,Sao Paulo,BR
+VCP,Campinas/Viracopos,Sao Paulo,BR
+RVD,RVD,,BR
+SFV,Santa Fe Do Sul,Santa Fe Do Sul,BR
+SFK,Soure,Soure,BR
+SJK,Sao Jose Dos Campos,Sao Jose dos Campos,BR
+SJP,Sao Jose do Rio Preto,Sao Jose Do Rio Preto,BR
+SOD,Sorocaba,Sorocaba,BR
+SLZ,Marechal Cunha Machado Intl,Sao Luis,BR
+XIG,Xinguera,Xinguera,BR
+XAP,Chapeco,Chapeco,BR
+ZMD,Sena Madureira,Sena Madureira,BR
+MII,Marilia,Marilia,BR
+MGF,Regional De Maringa,Maringa,BR
+MEA,Macae,Macae,BR
+MEU,Monte Dourado,Monte Dourado,BR
+MCZ,Zumbi dos Palmares Intl,Maceio,BR
+LVR,LVR,,BR
+LVB,Livramento,Livramento,BR
+MAB,Maraba,Maraba,BR
+MAO,Eduardo Gomes Intl,Manaus,BR
+MBK,Matupa,Matupa,BR
+MCP,Macapa Intl,Macapa,BR
+MBZ,Maues,Maues,BR
+LEP,Leopoldina,Leopoldina,BR
+LEC,Coronel Horacio de Mattos,Lencois,BR
+LDB,Londrina,Londrina,BR
+LCB,Pontes E Lacerda,Pontes E Lacerda,BR
+LAJ,LAJ,,BR
+LAZ,LAZ,,BR
+JRN,Juruena,Juruena,BR
+JTC,Bauru-Arealva,Bauru,BR
+JPA,Presidente Castro Pinto Intl,Joao Pessoa,BR
+JPR,Ji-Parana,Ji-Parana,BR
+JOI,Joinville-Lauro Carneiro de Loyola,Joinville,BR
+JCM,JCM,,BR
+JCR,Jacareacanga,Jacareacanga,BR
+JCB,JCB,,BR
+IZA,Zona da Mata Regional,Juif De Fora,BR
+JDF,Francisco De Assis,Juif De Fora,BR
+JDO,Regional Do Cariri,Juazeiro Do Norte,BR
+JDR,Sao Joao Del Rei,Sao Joao Del Rei,BR
+JNA,JNA,,BR
+JLS,Jales,Jales,BR
+JIA,Juina,Juina,BR
+JJG,HUMBERTO BORTOLUZZI,JAGUARUNA,BR
+ITP,Itaperuna,Itaperuna,BR
+ITQ,Itaqui,Itaqui,BR
+ITR,Itumbiara,Itumbiara,BR
+IPN,IPN,,BR
+IPU,Ipiau,Ipiau,BR
+ITB,ITB,,BR
+ITE,Itubera,Itubera,BR
+ITI,Itambacuri,Itambacuri,BR
+ITN,Itabuna,Itabuna,BR
+HUW,Humaita,Humaita,BR
+IDO,IDO,,BR
+IOS,Ilhéus Jorge Amado,Ilheus,BR
+IPG,Ipiranga,Ipiranga,BR
+IMP,Imperatriz,Imperatriz,BR
+IGU,Cataratas del Iguazu Intl,Foz do Iguacu,BR
+IJU,J Batista Bos Filho,Ijui,BR
+PTO,Pato Branco,Pato Branco,BR
+PSW,Passos,Passos,BR
+PTQ,Porto De Moz,Porto De Moz,BR
+PVH,Governador Jorge Teixeira de Oliveira Intl,Porto Velho,BR
+PVI,Paranavai,Paranavai,BR
+RBR,Pres. Medici Intl,Rio Branco,BR
+RAO,Dr. Leite Lopes State,Ribeirao Preto,BR
+RBB,Borba,Borba,BR
+QSC,QSC,,BR
+RIA,RIA,,BR
+GIG,Rio de Janeiro Galeao,Rio De Janeiro,BR
+SDU,Santos Dumont,Rio De Janeiro,BR
+SNZ,Santa Cruz,Rio De Janeiro,BR
+REZ,Resende,Resende,BR
+RDC,Redencao,Redencao,BR
+REC,Recife,Recife,BR
+ROO,ROO,,BR
+POJ,POJ,,BR
+PNZ,Petrolina Intl,Petrolina,BR
+POA,Salgado Filho Intl,Porto Alegre,BR
+POO,Pocos De Caldas,Pocos De Caldas,BR
+PPY,Pouso Alegre,Pouso Alegre,BR
+PPB,Presidente Prudente,Presidente Prudente,BR
+PMG,PMG,,BR
+PNB,Porto Nacional,Porto Nacional,BR
+PMW,Palmas,Palmas,BR
+PNG,Paranagua,Paranagua,BR
+PGZ,PGZ,,BR
+PHB,Parnaiba-Prefeito Dr. Joao Silva Filho Intl,Parnaiba,BR
+PIN,PIN,,BR
+PIV,Pirapora,Pirapora,BR
+PDR,Presidente Dutra,Presidente Dutra,BR
+PET,Federal,Pelotas,BR
+PFB,Passo Fundo,Passo Fundo,BR
+PBV,Portos Dos Gauchos,Portos Dos Gauchos,BR
+PBX,PBX,,BR
+PBQ,Pimenta Bueno,Pimenta Bueno,BR
+PAV,PAV,,BR
+PBB,PBB,,BR
+OUS,Ourinhos,Ourinhos,BR
+OTT,Cotriguacu,Cotriguacu,BR
+OYK,Oiapoque,Oiapoque,BR
+MVS,Mucuri,Mucuri,BR
+MVF,MVF,,BR
+MNX,Manicore,Manicore,BR
+MOC,Montes Claros,Montes Claros,BR
+MQH,Minacu,Minacu,BR
+OAL,OAL,,BR
+OIA,Ourilandia,Ourilandia,BR
+OLC,Sao Paulo De Olivenca,Sao Paulo De Olivenca,BR
+ORX,Oriximina,Oriximina,BR
+OPS,Sinop,Sinop,BR
+NOK,Nova Xavantina,Nova Xavantina,BR
+NPR,Novo Progresso,Novo Progresso,BR
+NNU,NNU,,BR
+NVP,Novo Aripuana,Novo Aripuana,BR
+NVT,Navegantes,Navegantes,BR
+NTM,Miracema Do Norte,Miracema Do Norte,BR
+NQL,Niquelandia,Niquelandia,BR
+NMC,Norman'S Cay,Norman'S Cay,BS
+MYG,Mayaguana,Mayaguana,BS
+NAS,Nassau,Nassau,BS
+RCY,RCY,,BS
+IGA,Inagua,Inagua,BS
+MAY,Clarence A. Bain,Mangrove Cay,BS
+MHH,Marsh Harbour Intl,Marsh Harbour,BS
+ZSA,San Salvador,San Salvador,BS
+TYM,TYM,,BS
+TZN,South Andros,South Andros,BS
+ELH,North Eleuthera Intl,North Eleuthera,BS
+DCT,Duncan Town,Duncan Town,BS
+CRI,Crooked Island,Crooked Island,BS
+CXY,Cat Cays,Cat Cays,BS
+FPO,Grand Bahama Intl,Freeport,BS
+GHB,Governor's Harbour,Governor's Harbour,BS
+GHC,GHC,,BS
+ASD,Andros Town Intl,Andros Town,BS
+ATC,Arthur's Town,Arthur's Town,BS
+BIM,Bimini Intl,Bimini,BS
+CCZ,Chub Cay,Chub Cay,BS
+AXP,Springpoint,Spring Point,BS
+CEL,Cape Eleuthera,Cape Eleuthera,BS
+COX,Congo Town,Congo Town,BS
+GBI,GBI,,BS
+GGT,Exuma Intl,George Town,BS
+HBI,Harbour Island,Harbour Island,BS
+LGI,Deadmans Cay,Deadmans Cay,BS
+NSB,North Seaplane Base,Bimini,BS
+PID,PID,,BS
+PPO,Powell Point,Powell Point,BS
+PWN,Pitts Town,Pitts Town,BS
+RSD,South Eleuthera,Rock Sound,BS
+SAQ,San Andros,San Andros,BS
+SML,Stella Maris,Stella Maris,BS
+SWL,SWL,,BS
+TBI,The Bight,The Bight,BS
+TCB,Treasure Cay,Treasure Cay,BS
+WKR,Walker'S Cay,Walker'S Cay,BS
+WTD,WTD,,BS
+WZY,Seaplane Base,Nassau,BS
+PBH,Paro,Paro,BT
+BUT,BUT,,BT
+GLU,GLU,,BT
+YON,Trashigang,Trashigang,BT
+TBY,Tshabong,Tshabong,BW
+SXN,SXN,,BW
+SWX,Shakawe,Shakawe,BW
+SVT,Savuti,Savuti,BW
+LOQ,Lobatse,Lobatse,BW
+PKW,Selebi Phikwe,Selebi Phikwe,BW
+MUB,Maun,Maun,BW
+ORP,Orapa,Orapa,BW
+GNZ,GNZ,,BW
+GBE,Sir Seretse Khama Intl,Gaborone,BW
+FRW,Francistown,Francistown,BW
+BBK,Kasane,Kasane,BW
+TLD,Tuli Lodge,Tuli Lodge,BW
+MHP,Minsk Intl 1,Minsk,BY
+VTB,Vitebsk,Vitebsk,BY
+BQT,Brest,Brest,BY
+GNA,Hrodna,Grodno,BY
+GME,GME,,BY
+MSQ,Minsk Intl,Minsk,BY
+MVQ,Mogilev,Mogilev,BY
+ORZ,ORZ,,BZ
+PLJ,Placencia,Placencia,BZ
+PND,Punta Gorda,Punta Gorda,BZ
+INB,Independence,Independence,BZ
+SQS,SQS,,BZ
+SPR,San Pedro,San Pedro,BZ
+SJX,Sartaneja,Sartaneja,BZ
+CYC,Caye Chapel,Caye Chapel,BZ
+CZH,Corozal,Corozal,BZ
+CUK,Caye Caulker,Caye Caulker,BZ
+DGA,Dangriga,Dangriga,BZ
+BZE,Philip S.W. Goldson Intl,Belize City,BZ
+TZA,Belize City,Belize City,BZ
+BCV,BCV,,BZ
+BGK,Big Creek,Big Creek,BZ
+MDB,Melinda,Melinda,BZ
+MZE,Manatee,Manatee,BZ
+STU,STU,,BZ
+SVK,Silver Creek,Silver Creek,BZ
+CXH,Coal Harbour Sea Plane Base,Vancouver,CA
+DVK,Diavik,Diavik,CA
+GSL,Taltheilei,Taltheilei,CA
+IUM,IUM,,CA
+JDN,JDN,,CA
+JHL,Fort Mackay,Fort Mackay,CA
+KES,KES,,CA
+KEW,Keewaywin,Keewaywin,CA
+KIF,Kingfisher Lake,Kingfisher Lake,CA
+KNV,KNV,,CA
+KNY,Kinoosao,Kinoosao,CA
+NML,Mildred Lake,Mildred Lake,CA
+NWP,NWP,,CA
+TNS,Tungsten,Tungsten,CA
+UZM,Hope Bay,Hope Bay,CA
+WPL,Powell Lake,Powell Lake,CA
+XAW,Capreol,Capreol,CA
+XAX,Dorval Railway Station,Dorval,CA
+XAZ,Campbellton,Campbellton,CA
+XBE,"Bearskin Lake, Ontario",Bearskin Lake,CA
+XBW,XBW,,CA
+XCI,Chambord,Chambord,CA
+XCL,Cluff Lake,Cluff Lake,CA
+XDL,Chandler,Chandler,CA
+XDM,Drummondville,Drummondville,CA
+XDO,Grande Riviere,Grande Riviere,CA
+XDQ,Railway Station,Ontario,CA
+XDS,Ottawa Train Station,Ontario,CA
+XDU,Hervey,Hervey,CA
+XEE,Lac Edouard,Lac Edouard,CA
+XEF,Union Railway Station,Winnipeg,CA
+XEH,Ladysmith,Ladysmith,CA
+XEJ,Langford,Langford,CA
+XEK,Rena,Rena,CA
+XEL,New Carlisle,New Carlisle,CA
+XEM,New Richmond,New Richmond,CA
+XEY,Miramichi,Miramichi,CA
+XFC,Fredericton Junction,Fredericton Junction,CA
+XFD,Stratford,Stratford,CA
+XFE,Parent,Parent,CA
+XFG,Perce,Perce,CA
+XFI,Port Daniel,Port Daniel,CA
+XFK,XFK,,CA
+XFL,Shawinigan,Shawinigan,CA
+XFM,Shawnigan,Shawnigan,CA
+XFO,Taschereau,Taschereau,CA
+XFQ,Weymont,Weymont,CA
+XFS,Alexandria,Alexandria,CA
+XFV,Brantford,Brantford,CA
+XGJ,Cobourg,Cobourg,CA
+XGK,Coteau,Coteau,CA
+XGL,Granville Lake,Granville Lake,CA
+XGW,Gananoque,Gananoque,CA
+XGY,Grimsby,Grimsby,CA
+XHM,Georgetown,Georgetown,CA
+XHS,Chemainus,Chemainus,CA
+XIA,Guelph,Guelph,CA
+XIB,Ingersoll,Ingersoll,CA
+XID,Maxville,Maxville,CA
+XIF,Napanee,Napanee,CA
+XII,Prescott,Prescott,CA
+XIM,Saint Hyacinthe,Saint Hyacinthe,CA
+XIO,Saint Marys,Saint Marys,CA
+XIP,Woodstock,Woodstock,CA
+XJL,Joliette,Joliette,CA
+XJQ,Jonquiere,Jonquiere,CA
+XKO,Kemano,Kemano,CA
+XLF,Leaf Bay,Leaf Bay,CA
+XLJ,Quebec Railway Station,Quebec,CA
+XLM,Saint Lambert,Saint Lambert,CA
+XLP,Matapedia,Matapedia,CA
+XLV,XLV,,CA
+XLY,Aldershot,Aldershot,CA
+XLZ,Truro,Truro,CA
+XMP,Macmillan Pass,Macmillan Pass,CA
+XOK,Oakville,Oakville,CA
+XON,Carleton,Carleton,CA
+XPB,Parksville,Parksville,CA
+XPH,Port Hope,Port Hope,CA
+XPN,Brampton,Brampton,CA
+XPX,Pointe-Aux-Trembles,Pointe-Aux-Trembles,CA
+XRP,Riviere De Pierre,Riviere De Pierre,CA
+XRR,Ross River,Ross River,CA
+XTY,Strathroy,Strathroy,CA
+XVV,Belleville,Belleville,CA
+XWA,Watford,Watford,CA
+XWY,Wyoming,Wyoming,CA
+XZB,Casselman,Casselman,CA
+XZC,Glencoe,Glencoe,CA
+XZK,Amherst,Amherst,CA
+YAE,Alta Lake,Alta Lake,CA
+YAF,Asbestos Hill,Asbestos Hill,CA
+YAH,YAH,,CA
+YAM,Sault Ste. Marie,Sault Ste. Marie,CA
+YAR,YAR,,CA
+YAU,Kattiniq,Kattiniq,CA
+YAW,YAW,,CA
+YAY,St. Anthony,St Anthony,CA
+YBD,YBD,,CA
+YBG,CFB Bagotville,Bagotville,CA
+YBM,Bronson Creek,Bronson Creek,CA
+YBN,Borden,Borden,CA
+YBS,Opapamiska Lake,Opapamiska Lake,CA
+YBT,Brochet,Brochet,CA
+YBZ,Union Railway Station,Toronto,CA
+YCI,Caribou Island,Caribou Island,CA
+YCJ,Cape St James,Cape St James,CA
+YCM,St. Catharines/Niagara District ,St Catharines,CA
+YCN,YCN,,CA
+YCP,YCP,,CA
+YCR,Cross Lake,Cross Lake,CA
+YCT,Coronation,Coronation,CA
+YCX,YCX,,CA
+YCZ,YCZ,,CA
+YDA,Dawson City,Dawson City,CA
+YDH,Daniels Harbour,Daniels Harbour,CA
+YDI,Davis Inlet,Davis Inlet,CA
+YDK,Main Duck Island,Main Duck Island,CA
+YDO,YDO,,CA
+YDP,Nain,Nain,CA
+YDR,Broadview,Broadview,CA
+YDS,Desolation Sound,Desolation Sound,CA
+YDT,YDT,,CA
+YDV,Bloodvein,Bloodvein,CA
+YDW,Obre Lake,Obre Lake,CA
+YDX,Doc Creek,Doc Creek,CA
+YEB,Bar River,Bar River,CA
+YED,YED,,CA
+YEE,YEE,,CA
+YEP,Estevan Point,Estevan Point,CA
+YET,YET,,CA
+YFA, Fort Albany,Fort Albany,CA
+YFD,YFD,,CA
+YFG,Fontanges,Fontanges,CA
+YFI,Firebag,Fort Mackay,CA
+YFL,Fort Reliance,Fort Reliance,CA
+YFX,Fox Harbour,Fox Harbour,CA
+YGA,Gagnon,Gagnon,CA
+YGD,YGD,,CA
+YGE,YGE,,CA
+YGN,Greenway Sound,Greenway Sound,CA
+YGR,Iles De La Madeleine,Iles de La Madeleine,CA
+YGS,YGS,,CA
+YGV,Havre St. Pierre,Havre-St-Pierre,CA
+YGY,Deception,Deception,CA
+YHB,Hudson Bay,Hudson Bay,CA
+YHC,Hakai Pass,Hakai Pass,CA
+YHE,YHE,,CA
+YHF,YHF,,CA
+YHH,Harbor Spb,Campbell River,CA
+YHP,Poplar Hill,Poplar Hill,CA
+YHZ,Halifax Stanfield Intl,Halifax,CA
+YIF,Pakuashipi,ST-AUGUSTIN/PAKUASHIPI,CA
+YIG,Big Bay Marina,Big Bay Marina,CA
+YIV,Island Lake,Island Lake/Garden Hill,CA
+YJA,Hinton/Jasper-Hinton,Jasper,CA
+YJN,YJN,,CA
+YJO,Johnny Mountain,Johnny Mountain,CA
+YKC,YKC,,CA
+YKI,Kennosao Lake,Kennosao Lake,CA
+YKJ,Key Lake,Key Lake,CA
+YLA,Langara,Langara,CA
+YLF,Laforges,Laforges,CA
+YLJ,YLJ,,CA
+YLK,Oro Station,Oro Station,CA
+YLO,Shilo,Shilo,CA
+YLX,Long Point,Long Point,CA
+YMA,YMA,,CA
+YMB,YMB,,CA
+YMC,Maricourt Airstrip,Maricourt Airstrip,CA
+YMD,Mould Bay,Mould Bay,CA
+YMI,Minaki,Minaki,CA
+YMJ,YMJ,,CA
+YMR,Merry Island,Merry Island,CA
+YMY,Central Railway Station,Montreal,CA
+YND,YND,,CA
+YNE,Norway House,Norway House,CA
+YNF,Corner Brook,Corner Brook,CA
+YNI,Nitchequon,Nitchequon,CA
+YNK,Nootka Sound,Nootka Sound,CA
+YNL,Points North Landing,Points North Landing,CA
+YNO,North Spirit Lake,North Spirit Lake,CA
+YNR,Arnes,Arnes,CA
+YOA,Ekati,Ekati,CA
+YOC,Old Crow,Old Crow,CA
+YOE,Falher,Falher,CA
+YOH,Oxford House,Oxford House,CA
+YOI,Opinaca,Opinaca,CA
+YOJ,Footner Lake,High Level,CA
+YOY,Valcartier,Valcartier,CA
+YPF,Esquimalt,Esquimalt,CA
+YPI,Port Simpson,Port Simpson,CA
+YPK,YPK,,CA
+YPP,Pine Point,Pine Point,CA
+YPT,Pender Harbour,Pender Harbour,CA
+YQA,YQA,,CA
+YQB,Quebec City Jean Lesage Intl,Quebec,CA
+YQE,Kimberley,Kimberley,CA
+YQG,Windsor Intl,Windsor,CA
+YQN,Nakina,Nakina,CA
+YRB,Resolute Bay,Resolute Bay,CA
+YRD,Dean River,Dean River,CA
+YRE,Resolution Island,Resolution Island,CA
+YRF,Cartwright,Cartwright,CA
+YRO,Rockcliffe,Ottawa,CA
+YSD,Suffield,Suffield,CA
+YSG,Lutselke,Lutselke,CA
+YSJ,Saint John,Saint John,CA
+YSP,YSP,,CA
+YSR,Nanisivik,Nanisivik,CA
+YSS,Slate Island,Slate Island,CA
+YST,St. Theresa Point,Ste Theresa Point,CA
+YSV,Saglek,Saglek,CA
+YSX,Shearwater,Shearwater,CA
+YSZ,Squirrel Cove,Squirrel Cove,CA
+YTC,YTC,,CA
+YTF,Alma,Alma,CA
+YTH,Thompson,Thompson,CA
+YTI,Triple Island,Triple Island,CA
+YTJ,Terrace Bay,Terrace Bay,CA
+YTK,YTK,,CA
+YTN,Riviere Au Tonner,Riviere Au Tonner,CA
+YTP,Sea Plane Base,Tofino,CA
+YTU,Tasu,Tasu,CA
+YVB,Bonaventure,Bonaventure,CA
+YVG,Vermilion,Vermilion,CA
+YVO,Val-d'Or,Val d'Or,CA
+YWH,Victoria Inner Harbour,Victoria,CA
+YWN,YWN,,CA
+YWO,Lupin,Lupin,CA
+YWQ,Chute-Des-Passes,Chute-Des-Passes,CA
+YWV,YWV,,CA
+YWY,Wrigley,Wrigley,CA
+YXC,Canadian Rockies Intl,Cranbrook,CA
+YXF,Snake River,Snake River,CA
+YXI,Killaloe,Killaloe,CA
+YXT,Northwest Regional,Terrace,CA
+YXZ,YXZ,,CA
+YYI,Rivers,Rivers,CA
+YYJ,Victoria Intl,Victoria,CA
+YYM,Cowley,Cowley,CA
+YYQ,Churchill,Churchill,CA
+YYR,CFB Goose Bay,Goose Bay,CA
+YYT,St. John's Intl,St John's,CA
+YYW,YYW,,CA
+YYY,Mont Joli,Mont Joli,CA
+YZA,YZA,,CA
+YZC,Beatton River,Beatton River,CA
+YZG,Salluit,Salluit,CA
+YZM,YZM,,CA
+YZP,Sandspit,Sandspit,CA
+YZZ,Trail,Trail,CA
+ZEL,Bella Bella,Bella Bella,CA
+ZFA,ZFA,,CA
+ZFB,Old Fort Bay,Old Fort Bay,CA
+ZFD,Fond Du Lac,Fond-du-Lac,CA
+ZFL,South Trout Lake,South Trout Lake,CA
+ZFW,ZFW,,CA
+ZHO,Houston,Houston,CA
+ZJN,Swan River,Swan River,CA
+ZKG,Kegaska,Kegaska,CA
+ZLT,La Tabatiere,La Tabatiere,CA
+ZNA,Nanaimo Harbor Water,Nanaimo,CA
+ZNG,Negginan,Negginan,CA
+ZNU,Namu,Namu,CA
+ZQS,Queen Charlotte Is,Queen Charlotte Is,CA
+ZSJ,Sandy Lake,Sandy Lake,CA
+ZSP,ZSP,,CA
+ZST,ZST,,CA
+ZSW,ZSW,,CA
+ZTB,Tete-A-La Baleine,Tete-a-la Baleine,CA
+CFQ,CFQ,,CA
+AKV,Akulivik,Akulivik,CA
+DGF,Douglas Lake,Douglas Lake,CA
+DAS,Great Bear Lake,Great Bear Lake,CA
+DUQ,Duncan,Duncan,CA
+CJH,CJH,,CA
+SSQ,La Sarre,La Sarre,CA
+SUR,Summer Beaver,Summer Beaver,CA
+SYF,Silva Bay,Silva Bay,CA
+TIL,Inverlake,Inverlake,CA
+TUX,Tumbler Ridge,Tumbler Ridge,CA
+WNN,"Wunnummin Lake, Ontario",Wunnummin Lake,CA
+WPC,Pincher Creek,Pincher Creek,CA
+YOO,Oshawa Municipal,Oshawa,CA
+YOP,Rainbow Lake,Rainbow Lake,CA
+YOS,YOS,,CA
+YOW,Ottawa/Macdonald-Cartier Intl,Ottawa,CA
+YPA,Prince Albert,Prince Albert,CA
+YPB,Port Albern,Port Alberni,CA
+YPC,Paulatuk,Paulatuk,CA
+YPD,Parry Sound,Parry Sound,CA
+YPE,Peace River,Peace River,CA
+YPG,YPG,,CA
+YPH,Inukjuak,Inukjuak,CA
+YPJ,Aupaluk,Aupaluk,CA
+YPL,Pickle Lake,Pickle Lake,CA
+YPM,"Pikangikum, Ontario",Pikangikum,CA
+YPN,Port Menier,Port Menier,CA
+YPO,Peawanuk,Peawanuk,CA
+YPQ,YPQ,,CA
+YPR,Digby Island,Prince Rupert,CA
+YPS,YPS,,CA
+YPW,Powell River,Powell River,CA
+YPX,Puvirnituq,Puvirnituq,CA
+YPY,Fort Chipewyan,Fort Chipewyan,CA
+YPZ,Burns Lake,Burns Lake,CA
+YQC,Quaqtaq,Quaqtaq,CA
+YQD,The Pas,The Pas,CA
+YQF,YQF,,CA
+YQH,YQH,,CA
+YQI,Yarmouth,Yarmouth,CA
+YQJ,Quadra Island,Quadra Island,CA
+YQK,Kenora,Kenora,CA
+YQL,Lethbridge,Lethbridge,CA
+YQM,Greater Moncton Intl,Moncton,CA
+YQQ,Comox,Comox,CA
+YQR,Regina Intl,Regina,CA
+YQS,YQS,,CA
+YQT,Thunder Bay Intl,Thunder Bay,CA
+YQU,Grande Prairie,Grande Prairie,CA
+YQV,YQV,,CA
+YQW,North Battleford,North Battleford,CA
+YQX,Gander Intl,Gander,CA
+YQY,Sydney/J.A. Douglas McCurdy ,Sydney,CA
+YQZ,Quesnel,Quesnel,CA
+YRA,Gameti Rae Lakes,Gameti,CA
+YRC,Refuge Cove,Refuge Cove,CA
+YRG,Rigolet ,Rigolet,CA
+YRI,YRI,,CA
+YRJ,Roberval,Roberval,CA
+YRL,Red Lake,Red Lake,CA
+YRM,YRM,,CA
+YRN,Rivers Inlet,Rivers Inlet,CA
+YRQ,YRQ,,CA
+YRR,Stuart Island,Stuart Island,CA
+YRS,Red Sucker Lake,Red Sucker Lake,CA
+YRT,Rankin Inlet,Rankin Inlet,CA
+YRV,YRV,,CA
+YSA,Sable Island,Sable Island,CA
+YSB,Sudbury,Sudbury,CA
+YSC,YSC,,CA
+YSE,Squamish,Squamish,CA
+YSF,Stony Rapids,Stony Rapids,CA
+YSH,Smiths Falls-Montague,Smith Falls,CA
+YSI,Sans Souci,Sans Souci,CA
+YSK,Sanikiluaq,Sanikiluaq,CA
+YSL,Saint-Leonard Aerodrome,St Leonard,CA
+YSM,Fort Smith,Fort Smith,CA
+YSN,YSN,,CA
+YSO,Postville,Postville,CA
+YSU,YSU,,CA
+YSY,Sachs Harbour,Sachs Harbour,CA
+YTA,YTA,,CA
+YTB,Hartley Bay,Hartley Bay,CA
+YTD,Thicket Portage,Thicket Portage,CA
+YTE,Cape Dorset,Cape Dorset,CA
+YTG,Sullivan Bay,Sullivan Bay,CA
+YTL,Big Trout Lake,Big Trout Lake,CA
+YTM,Mont Tremblant Intl,Mont Tremblant,CA
+YHM,Hamilton Jc Munro Iternational  ,Toronto,CA
+YKF,Region of Waterloo Intl,Toronto,CA
+YKZ,Buttonville Municipal,Toronto,CA
+YTZ,Billy Bishop Toronto City,Toronto,CA
+YYZ,Pearson Intl,Toronto,CA
+YTO,"Toronto, All",Toronto,CA
+YTQ,Tasiujuaq,Tasiujaq,CA
+YTR,YTR,,CA
+YTS,Timmins Victor M. Power,Timmins,CA
+YTT,YTT,,CA
+YTX,Telegraph Creek,Telegraph Creek,CA
+YKE,YKE,,CA
+YKG,Kangirsuk,Kangirsuk,CA
+YKK,Kitkatla,Kitkatla,CA
+YKL,Schefferville,Schefferville,CA
+YKQ,Waskaganish ,Waskaganish,CA
+YKT,Klemtu,Klemtu,CA
+YKU,Chisasibi,Chisasibi,CA
+YCS,Chesterfield Inlet,Chesterfield Inlet,CA
+YIK,Ivujivik,Ivujivik,CA
+YIO,Pond Inlet,Pond Inlet,CA
+YJF,Fort Liard,Fort Liard,CA
+YJP,YJP,,CA
+YJT,Stephenville,Stephenville,CA
+YKA,Kamloops,Kamloops,CA
+YGK,Kingston/Norman Rogers,Kingston,CA
+YGL,La Grande,La Grande Riviere,CA
+YGM,YGM,,CA
+YGO,Gods Lake Narrows,Gods Lake Narrows,CA
+YGP,Michel-Pouliot Gaspe,Gaspe,CA
+YGQ,Geraldton,Geraldton,CA
+YGT,Igloolik,Igloolik,CA
+YGW,Kuujjuarapik,Kuujjuarapik,CA
+YGX,Gillam,Gillam,CA
+YGZ,Grise Fiord,Grise Fiord,CA
+YHA,Port Hope Simpson,Port Hope Simpson,CA
+YHD,Dryden Regional,Dryden,CA
+YHG,Charlottetown,Charlottetown,CA
+YHI,Ulukhaktok/Holman,Ulukhaktok,CA
+YHK, Gjoa Haven,Gjoa Haven,CA
+YHN,Hornepayne,Hornepayne,CA
+YHO,Hopedale,Hopedale,CA
+YHR,Chevery,Chevery,CA
+YHS,Sechelt,Sechelt,CA
+YHT,YHT,,CA
+YHY,Hay River/Merlyn Carter,Hay River,CA
+YIB,Atikokan,Atikokan,CA
+YCW,YCW,,CA
+YCY,Clyde River,Clyde River,CA
+YDB,YDB,,CA
+YDC,Drayton Valley,Drayton Valley,CA
+YDE,Paradise River,Paradise River,CA
+YDF,Deer Lake Regional,Deer Lake,CA
+YDG,YDG,,CA
+YDJ,Hatchet Lake,Hatchet Lake,CA
+YDL,YDL,,CA
+YDN,Dauphin,Dauphin,CA
+YDQ,Dawson Creek,Dawson Creek,CA
+YDU,Kasba Lake,Kasba Lake,CA
+YEA,"Edmonton, All",Edmonton,CA
+YEG,Edmonton Intl,Edmonton,CA
+YXD,Edmonton City Centre Blatchford Field,Edmonton,CA
+YEK,Arviat,Arviat,CA
+YEL,YEL,,CA
+YEM,YEM,,CA
+YEN,YEN,,CA
+YER,Fort Severn,Fort Severn,CA
+YEU,Eureka,Eureka,CA
+YEV,Inuvik Mike Zubko,Inuvik,CA
+YEY,YEY,,CA
+YFB,Iqaluit,Iqaluit,CA
+YFC,Fredericton Intl,Fredericton,CA
+YFE,YFE,,CA
+YFH,Fort Hope,Fort Hope,CA
+YFJ,Wekweeti,Snare Lake,CA
+YFO,Flin Flon,Flin Flon,CA
+YFR,Fort Resolution,Fort Resolution,CA
+YFS,Fort Simpson,Fort Simpson,CA
+YGB,Gillies Bay,Gillies Bay,CA
+YGC,Grande Cache,Grande Cache,CA
+YGG,Ganges Harbor Seaplane Base,Ganges,CA
+YGH,Fort Good Hope,Fort Good Hope,CA
+XBB,Blubber Bay,Blubber Bay,CA
+XBR,"Brockville, Ontario",Brockville,CA
+XCM,"Chatham, Ontario",Chatham,CA
+XGR,"Kangiqsualujjuaq, Que.",Kangiqsualujjuaq,CA
+XKS,"Kasabonika, Ontario",Kasabonika,CA
+XLB,"Lac Brochet, Manitoba",Lac Brochet,CA
+XPK,"Pukatawagan, Manitoba",Pukatawagan,CA
+XPP,Poplar River,Poplar River,CA
+XSI,"South Indian Lake, Man.",South Indian Lake,CA
+YAA,Anahim Lake,Anahim Lake,CA
+YAB,YAB,,CA
+YAC,Cat Lake,Cat Lake,CA
+YAD,Moose Lake,Moose Lake,CA
+YAG,Fort Frances Municipal,Fort Frances,CA
+XTL,"Tadoule Lake, Manitoba",Tadoule Lake,CA
+XQU,"Qualicum Beach, B.C.",Qualicum Beach,CA
+YAJ,Lyall Harbour,Lyall Harbour,CA
+YAL,Alert Bay,Alert Bay,CA
+YAQ,Maple Bay,Maple Bay,CA
+YAT,Attawapiskat,Attawapiskat,CA
+YAV,Miners Bay,Miners Bay,CA
+YAX,Angling Lake,Angling Lake,CA
+YAZ,Tofino Long Beach,Tofino,CA
+YBA,Banff,Banff,CA
+YBB,Kugaaruk,Kugaaruk,CA
+YBC,Baie-Comeau,Baie Comeau,CA
+YBE,Uranium City,Uranium City,CA
+YBF,Bamfield,Bamfield,CA
+YBH,YBH,,CA
+YBI,Black Tickle,Black Tickle,CA
+YBJ,Baie Johan Beetz,Baie Johan Beetz,CA
+YBK,Baker Lake,Baker Lake,CA
+YBL,Campbell River,Campbell River,CA
+YBO,Bobquinn Lake,Bobquinn Lake,CA
+YBQ,Telegraph Harbour,Telegraph Harbour,CA
+YBR,YBR,,CA
+YBV,Berens River,Berens River,CA
+YBW,Bedwell Harbour Water Aerodrome,Bedwell Harbour,CA
+YBX,Lourdes-de-Blanc-Sablon,Blanc-Sablon,CA
+YBY,YBY,,CA
+YCA,Courtenay,Courtenay,CA
+YCB,Cambridge Bay,Cambridge Bay,CA
+YCC,Cornwall Regional,Cornwall,CA
+YCD,Nanaimo,Nanaimo,CA
+YCE,Centralia,Centralia,CA
+YCF,Cortes Bay,Cortes Bay,CA
+YCG,West Kootenay Regional,Castlegar,CA
+YCH,YCH,,CA
+YCK,Colville Lake,Colville Lake,CA
+YCL,Charlo,Charlo,CA
+YCO,Kugluktuk,Kugluktuk,CA
+ZTM,Shamattawa,Shamattawa,CA
+ZRJ,Weagamow Lake,Round Lake,CA
+ZMT,Masset,Masset,CA
+ZOF,Ocean Falls,Ocean Falls,CA
+ZPB,Sachigo Lake,Sachigo Lake,CA
+ZPO,Pine House,Pine House,CA
+ZMH,South Cariboo Regional ,108 Mile Ranch,CA
+ZJG,Jenpeg,Jenpeg,CA
+ZKE,Kashechewan,Kashechewan,CA
+ZHP,High Prairie,High Prairie,CA
+ZBM,ZBM,,CA
+ZBF,Bathurst,Bathurst,CA
+ZEM,East Main,Eastmain,CA
+ZFM,Fort Mcpherson,Fort McPherson,CA
+ZFN,Tulita,Tulita,CA
+ZGF,ZGF,,CA
+ZGI,Gods River Airport,Gods River,CA
+ZGR,Little Grand Rapids,Little Grand Rapids,CA
+ZGS,Gethsemani,La Romaine,CA
+YNX,Snap Lake,Snap Lake,CA
+YOD,YOD,,CA
+YOG,Ogoki Post,Ogoki,CA
+YUB,Tuktoyaktuk,Tuktoyaktuk,CA
+YUD,Umiujaq,Umiujag,CA
+YUT,Repulse Bay,Repulse Bay,CA
+YUX,Hall Beach,Hall Beach,CA
+YUY,Rouyn-Noranda,Rouyn-Noranda,CA
+ZAA,Alice Arm,Alice Arm,CA
+ZAC,York Landing,York Landing,CA
+YLH,Lansdowne Hous,Lansdowne House,CA
+YLL,Lloydminster,Lloydminster,CA
+YLM,Clinton Creek,Clinton Creek,CA
+YLP,Mingan,Mingan,CA
+YLQ,La Tuque,La Tuque,CA
+YLR,Leaf Rapids,Leaf Rapids,CA
+YLS,Lebel Sur Quevillon,Lebel Sur Quevillon,CA
+YLT,Alert,Alert,CA
+YLV,Kelowna,Kelowna,CA
+YLW,Kelowna Intl,Kelowna,CA
+YLY,Langley,Langley,CA
+YME,YME,,CA
+YMF,Montagne Harbor,Montagne Harbor,CA
+YMG,Manitouwadge,Manitouwadge,CA
+YMH,Mary's Harbour,Mary's Harbour,CA
+YMM,Fort McMurray Intl,Fort McMurray,CA
+YMN,Makkovik,Makkovik,CA
+YMO,Moosonee,Moosonee,CA
+YHU,Montreal Saint-Hubert Longueuil,Montreal,CA
+YMX,Montreal–Mirabel Intl,Montreal,CA
+YUL,Montreal-Pierre Elliott Trudeau Intl,Montreal,CA
+YMQ,"Montreal, All",Montreal,CA
+YLB,YLB,,CA
+YLC,Kimmirut,Kimmirut,CA
+YLD,Chapleau,Chapleau,CA
+YLE,Whati,Whati,CA
+YNM,YNM,,CA
+YNP,Natuashish,Natuashish,CA
+YNS,Nemiscau,Nemiscau,CA
+YMT,Chibougamau/Chapais,Chibougamau,CA
+YMU,Mansons Landing,Mansons Landing,CA
+YMV,Mary River,Mary River,CA
+YMW,YMW,,CA
+YNA,Natashquan,Natashquan,CA
+YNC,Wemindji,Wemindji,CA
+YNH,YNH,,CA
+YVC,La Ronge,La Ronge,CA
+YVE,YVE,,CA
+YVM,Qikiqtarjuaq,Qikiqtarjuaq,CA
+YVN,Cape Dyer,Cape Dyer,CA
+YVP,Kuujjuaq,Kuujjuaq,CA
+YVQ,Norman Wells,Norman Wells,CA
+YVR,Vancouver Intl,Vancouver,CA
+YVT,Buffalo Narrows,Buffalo Narrows,CA
+YVV,Wiarton,Wiarton,CA
+YVZ,Deer Lake,Deer Lake,CA
+YWA,YWA,,CA
+YWB,Kangiqsujuaq,Kangiqsujuaq,CA
+YWG,Winnipeg James Armstrong Richardson Intl,Winnipeg,CA
+YWJ,Deline,Deline,CA
+YWK,Wabush,Wabush,CA
+YWL,Williams Lake,Williams Lake,CA
+YWM,Williams Harbour,Williams Harbour,CA
+YWP,Webequie,Webequie,CA
+YWR,White River,White River,CA
+YWS,Whistler/Green Lake Water,Whistler,CA
+YXE,Saskatoon John G. Diefenbaker Intl,Saskatoon,CA
+YXH,Medicine Hat Regional,Medicine Hat,CA
+YXJ,Fort St. John,Fort St. John,CA
+YXK,Rimouski,Rimouski,CA
+YXL,Sioux Lookout,Sioux Lookout,CA
+YXN,Whale Cove,Whale Cove,CA
+YXP,Pangnirtung,Pangnirtung,CA
+YXQ,YXQ,,CA
+YXR,YXR,,CA
+YXS,Prince George,Prince George,CA
+YXU,London Intl,London,CA
+YXX,"Abbotsford, British Columbia",Abbotsford,CA
+YXY,Whitehorse,Whitehorse,CA
+YYA,Big Bay Yacht Clu,Big Bay Yacht Clu,CA
+YYB,North Bay/Jack Garland ,North Bay,CA
+YYC,Calgary Intl,Calgary,CA
+YYD,Smithers,Smithers,CA
+YYE,Fort Nelson,Fort Nelson,CA
+YYF,Penticton Regional,Penticton,CA
+YYG,Charlottetown,Charlottetown,CA
+YYH,Taloyoak,Taloyoak,CA
+YYL,Lynn Lake,Lynn Lake,CA
+YYN,YYN,,CA
+YYU,Kapuskasing,Kapuskasing,CA
+YZE,YZE,,CA
+YZF,Yellowknife,Yellowknife,CA
+YZH,Slave Lake,Slave Lake,CA
+YZR,Sarnia Chris Hadfield,Sarnia,CA
+YZS,Coral Harbour,Coral Harbour,CA
+YZT,Port Hardy,Port Hardy,CA
+YZU,YZU,,CA
+YZV,Sept-Iles,Sept-Iles,CA
+YZW,YZW,,CA
+YZX,Greenwood,Greenwood,CA
+ZWL,Wollaston Lake,Wollaston Lake,CA
+ZTS,ZTS,,CA
+ZUC,Ignace,Ignace,CA
+ZUM,Churchill Falls,Churchill Falls,CA
+ILF,Ilford,Ilford,CA
+HZP,Fort Mackay,Fort Mackay,CA
+LRQ,Laurie River,Laurie River,CA
+LAK,Aklavik,Aklavik,CA
+PIW,Pikwitonei,Pikwitonei,CA
+QBC,Bella Coola,Bella Coola,CA
+MSA,Muskrat Dam,Muskrat Dam,CA
+CCK,Cocos Islands,Cocos Islands,CC
+BDV,Moba,Moba,CD
+BMB,Bumba,Bumba,CD
+BNC,BNC,,CD
+BOA,Boma,Boma,CD
+BZU,BZU,,CD
+FBM,Lubumbashi,Lubumbashi,CD
+KLI,Kotakoli,Kotakoli,CD
+KOO,Kongolo,Kongolo,CD
+KRZ,KRZ,,CD
+LZA,Luiza,Luiza,CD
+MEW,Mweka,Mweka,CD
+NKL,Kolo,Kolo,CD
+NLO,NLO,,CD
+GMA,Gemena,Gemena,CD
+GOM,Goma Intl,Goma,CD
+GDJ,GDJ,,CD
+FDU,Bandundu,Bandundu,CD

@@ -1,0 +1,1001 @@
+IATA_code,name,city_name,country_code
+XXU,Hedemora,Hedemora,SE
+XXV,Kumla,Kumla,SE
+XYC,Herrljunga,Herrljunga,SE
+XYI,Flen,Flen,SE
+XYM,Falkenberg,Falkenberg,SE
+XYN,Kristinehamn,Kristinehamn,SE
+XYO,Karlshamn,Karlshamn,SE
+XYP,Avesta,Avesta,SE
+XYX,Sala,Sala,SE
+XYY,Arvika,Arvika,SE
+QPG,Paya Lebar,Singapore,SG
+SIN,Singapore Changi,Singapore,SG
+XSP,Seletar,Singapore,SG
+ASI,RAF Ascension Island Station,Ascension Island,SH
+LJR,Rail Station Ljubljana,Ljubljana,SI
+MBX,Maribor Edvard Rusjan,Maribor,SI
+LJU,Ljubljana Joze Pucnik,Ljubljana,SI
+POW,POW,,SI
+POV,Presov,Presov,SK
+PZY,PZY,,SK
+LUE,LUE,,SK
+ILZ,ILZ,,SK
+KSC,Barca Intl,Kosice,SK
+SLD,Sliac,Sliac,SK
+TAT,Tatry/Poprad,Poprad/Tatry,SK
+BTS,Bratislava,Bratislava,SK
+BTE,BTE,,SL
+FNA,Lungi Intl,Freetown,SL
+GBK,Gbangbatok,Gbangbatok,SL
+HGS,HGS,,SL
+KBA,KBA,,SL
+WYE,Yengema,Yengema,SL
+SAI,SAI,,SM
+CSK,Cap Skirring,Cap Skiring,SN
+DSS,Blaise Diagne INTL,Dakar,SN
+NIK,Niokolo-Koba,Niokolo-Koba,SN
+RDT,Richard-Toll,Richard-Toll,SN
+SMY,Simenti,Simenti,SN
+WIZ,Ziguinchor,Ziguinchor,SN
+XLS,St. Louis,Saint Louis,SN
+DKR,Leopold Sedar Senghor Intl,Dakar,SN
+BXE,Bakel,Bakel,SN
+ZIG,Ziguinchor,Ziguinchor,SN
+TUD,Tambacounda,Tambacounda,SN
+KLC,KLC,,SN
+KGG,KGG,,SN
+KDA,Kolda,Kolda,SN
+MAX,Matam,Matam,SN
+MGQ,Aden Adde Intl,Mogadishu,SO
+BXX,Borama,Borama,SO
+BSA,Bossaso,Bosaso,SO
+BUO,Burao,Burao,SO
+BBO,Berbera,Berbera,SO
+BIB,Baidoa,Baidoa,SO
+GGR,Garowe,Garowe,SO
+HGA,Hargeisa Intl,Hargeisa,SO
+BSY,Bardera,Bardera,SO
+CMO,CMO,,SO
+CMS,Scusciuban,Scusciuban,SO
+CXN,CXN,,SO
+ERA,ERA,,SO
+GBM,Garbaharey,Garbaharey,SO
+GLK,Galcaio,Galcaio,SO
+GSR,Gardo,Gardo,SO
+HCM,HCM,,SO
+KMU,KMU,,SO
+LGX,Lugh Ganane,Lugh Ganane,SO
+LKR,Las Khoreh,Las Khoreh,SO
+BTO,BTO,,SR
+DOE,Djoemoe,Djoemoe,SR
+KCB,KCB,,SR
+OEM,Vincent Fayks,Paloemeu,SR
+ORG,Zorg en Hoop,Paramaribo,SR
+SMZ,Stoelmans Eiland,Stoelmans Eiland,SR
+TOT,Coronie,Totness,SR
+WSO,Washabo,Washabo,SR
+DRJ,Drietabbetje,Drietabbetje,SR
+AGI,AGI,,SR
+AAJ,AAJ,,SR
+ABN,Albina,Albina,SR
+LDO,Ladouanie,Ladouanie,SR
+ICK,ICK,,SR
+PBM,Johan Adolf Pengel Intl,Paramaribo,SR
+MOJ,MOJ,,SR
+RBX,Rumbek,Rumbek,SS
+MAK,Malakal,Malakal,SS
+AEE,Adareil,Adareil,SS
+WUU,Wau,Wau,SS
+PCP,Principe,Principe Island,ST
+TMS,Sao Tome I.,Sao Tome,ST
+SAL,El Salvador Intl,San Salvador,SV
+LTK,Bassel al-Assad Intl,Latakia,SY
+PMS,PMS,,SY
+DEZ,Deir ez-Zor,Deir ez Zor,SY
+KAC,Kameshly,Kamishly,SY
+QHM,Hama,Hama,SY
+QHS,Homs,Homs,SY
+SOR,SOR,,SY
+ALP, Aleppo Intl,Aleppo,SY
+DAM,Damascus Intl,Damascus,SY
+QMN,Mbabane,Mbabane,SZ
+SHO,King Mswati III Intl,Manzini,SZ
+MTS,Matsapha Intl,Manzini,SZ
+NCA,North Caicos,North Caicos,TC
+PIC,PIC,,TC
+PLS,Providenciales Intl,Providenciales,TC
+MDS,Middle Caicos,Middle Caicos,TC
+SLX,Salt Cay,Salt Cay,TC
+XSC,"South Caicos,British W. Indies",South Caicos,TC
+GDT,JAGS McCartney Intl,Grand Turk ,TC
+FYT,Faya-Largeau,Faya-Largeau,TD
+AMC,Am Timan,Am Timan,TD
+AOD,AOD,,TD
+AEH,Abeche,Abeche,TD
+BKR,BKR,,TD
+AKM,Zakouma,Zakouma,TD
+AMO,Mao,Mao,TD
+ATV,Ati,Ati,TD
+LTC,Lai,Lai,TD
+MVO,Mongo,Mongo,TD
+OUT,Bousso,Bousso,TD
+SRH,SRH,,TD
+MEF,Melfi,Melfi,TD
+PLF,Pala,Pala,TD
+OTC,Bol,Bol,TD
+NDJ,Ndjamena,N'Djamena,TD
+MQQ,Moundou,Moundou,TD
+OGR,OGR,,TD
+LFW,Lome –Tokoin,Lome,TG
+LRL,Niamtougou,Niamtougou,TG
+LPT,Lampang,Lampang,TH
+KKC,Khon Kaen,Khon Kaen,TH
+KOP,Nakhon Phanom,Nakhon Phanom,TH
+NST,Nakhon Si Thammarat,Nakhon Si Thammarat,TH
+NAK,Nakhon Ratchasima,Nakhon Ratchasima,TH
+PHS,Phitsanuloke,Phitsanulok,TH
+SGZ,SGZ,,TH
+UBP,Ubon,Ubon Ratchathani,TH
+TKH,Takhli,Takhli,TH
+USM,Koh Samui,Koh Samui,TH
+URT,Surat Thani,Surat Thani,TH
+UTH,Udon Thani,Udon Thani,TH
+BAO,Udorn,Ban Mak Khaen,TH
+BFV,Buri Ram,Buri Ram,TH
+CEI,Chiang Rai Intl,Chiang Rai,TH
+CJM,Chumphon,Chumphon,TH
+KBV,Krabi,Krabi,TH
+KDT,Kamphangsaen,Kamphangsaen,TH
+KKM,Lop Buri,Lop Buri,TH
+LOE,Loei,Loei,TH
+MAQ,Mae Sot,Mae Sot,TH
+NAW,Narathiwat,Narathiwat,TH
+NNT,Nan,Nan,TH
+PAN,PAN,,TH
+PHY,Phetchabun,Phetchabun,TH
+PHZ,PHZ,,TH
+PMM,Phanom Sarakham,Phanom Sarakham,TH
+PRH,Phrae,Phrae,TH
+PXR,PXR,,TH
+PYX,PYX,,TH
+PYY,PYY,,TH
+QHI,QHI,,TH
+QJX,Nong Khai,Nong Khai,TH
+ROI,Roi Et,Roi Et,TH
+SNO,Sakon Nakhon,Sakon Nakhon,TH
+TDX,Trat,Trat,TH
+THS,Sukhothai,Sukhothai,TH
+TKT,TKT,,TH
+TST,Trang,Trang,TH
+UNN,Ranong,Ranong,TH
+UTP,Rayong  Utapao,U-Tapao,TH
+UTR,UTR,,TH
+BKK,Suvarnabhumi Intl,Bangkok,TH
+DMK,Don Muang Intl,Bangkok,TH
+HGN,Mae Hong Son,Mae Hong Son,TH
+HDY,Hat Yai Intl,Hat Yai,TH
+HHQ,Hua Hin,Hua Hin,TH
+HKT,Phuket Intl,Phuket,TH
+CNX,Chiang Mai Intl,Chiang Mai,TH
+DYU,Dushanbe Intl,Dushanbe,TJ
+KQT,KQT,,TJ
+TJU,TJU,,TJ
+LBD,Khujand,Khujand,TJ
+GKD,GÃ¶kÃ§eada ,GÃ¶kÃ§eada ,TK
+AUT,AUT,,TL
+KCI,Kun,Kun,TL
+DIL,Nicolau Lobato Intl,Dili,TL
+BCH,Cakung,Baucau,TL
+MPT,MPT,,TL
+UAI,Suai,Suai,TL
+TAZ,TAZ,,TM
+KRW,KRW,,TM
+ASB,Ashgabat,Ashgabat,TM
+CRZ,CRZ,,TM
+MYP,MYP,,TM
+GAE,GAE,,TN
+QIZ,Bizerte,Bizerte,TN
+QKN,Kairouan,Kairouan,TN
+QSO,Sousse,Sousse,TN
+TBJ,Tabarka,Tabarka,TN
+DJE,Djerba–Zarzis Intl,Djerba,TN
+EBM,El Borma,El Borma,TN
+GAF,Gafsa – Ksar International Intl,Gafsa,TN
+MIR,Monastir Habib Bourguiba Intl,Monastir,TN
+NBE,NBE,,TN
+SFA,Sfax El Maou,Sfax,TN
+TUN,Tunis,Tunis,TN
+TOE,Tozeur,Tozeur,TN
+VAV,Vava u,Vava'u,TO
+TBU,Nuku Alofa,Nuku'alofa,TO
+NFO,Mata'aho,Niuafo'ou,TO
+NTT,Kuini Lavenia,Niuatoputapu,TO
+EUA,Kaufana,Eua,TO
+HPA,Salote Pilolevu,Lifuka Island,TO
+ADA,Sakirpasa - Adana,Adana,TR
+ADF,Adiyaman,Adiyaman,TR
+AFY,AFY,,TR
+AJI, Agri,Agri,TR
+BAL,Batman,Batman,TR
+BTZ,BTZ,,TR
+CII,CII,,TR
+DIY,Diyarbakir,Diyarbakir,TR
+EZS,Elazig,Elazig,TR
+IGD,Igdir,Igdir,TR
+MQJ,MQJ,,TR
+MSR,Mus,Mus,TR
+NKT,Sirnak,Sirnak,TR
+OGU,Ordu Giresun,Ordu,TR
+QIN,Mersin,Mersin,TR
+QRI,Rize,Rize,TR
+QRQ,Marmaris,Marmaris,TR
+SSX,SSX,,TR
+UAB,UAB,,TR
+VAN, Van Ferit Melen,Van,TR
+VAS,Sivas,Sivas,TR
+XHQ,XHQ,,TR
+XKU,Kusadasi,Kusadasi,TR
+YKO,Hakkari Yuksekova,Hakkari,TR
+ERC,Erzincan,Erzincan,TR
+AOE,Anadolu,Eskisehir,TR
+ESK,Eskisehir,Eskisehir,TR
+ERZ,Erzurum,Erzurum,TR
+GZP,Gazipasa,Gazipasa,TR
+GZT,Oguzeli,Gaziantep,TR
+EDO,Balıkesir Koca Seyit,Edremit,TR
+DLM,Dalaman,Dalaman,TR
+DNZ,Denizli Çardak,Denizli,TR
+CKZ,Canakkale,Canakkale,TR
+ASR,Kayseri,Kayseri,TR
+ANK,Etimesgut,Ankara,TR
+ESB,Esenboga Intl,Ankara,TR
+BDM,BDM,,TR
+AYT,Antalya,Antalya,TR
+BJV,Milas-Bodrum,Bodrum,TR
+BXN,Imsik,Bodrum,TR
+BGG,Bingol,Bingol ,TR
+BZI,Balikesir,Balikesir,TR
+NOP,NOP,,TR
+ONQ,Caycuma,Zonguldak,TR
+NAV,Nevsehir,Nevsehir,TR
+MZH,MZH,,TR
+MLX,Malatya Erhac,Malatya,TR
+MQM,Mardin,Mardin,TR
+KYA,Konya,Konya,TR
+KZR,KZR,,TR
+KSY,Kars Harakani,Kars,TR
+KCM,Kahramanmaras,Kahramanmaras,TR
+KCO,KCO,,TR
+KFS,Kastamonu,Kastamonu,TR
+HTY,Hatay,Hatay,TR
+ISE,Isparta Suleyman Demirel,Isparta,TR
+ISL,Ataturk Airport,Istanbul,TR
+IST,Istanbul Airport,Istanbul,TR
+SAW,Sabiha Gokcen,Istanbul,TR
+ADB,Izmir Adnan Menderes,Izmir,TR
+IGL,Cigli Military,Izmir,TR
+IZM,"Izmir, All",Izmir,TR
+TJK,TJK,,TR
+TEQ,TEQ,,TR
+SZF,Carsamba,Samsun,TR
+SXZ,Siirt,Siirt,TR
+GNY,Guney Anadolu Projesi,Sanliurfa,TR
+SFQ,Sanliurfa,Sanliurfa,TR
+USQ,USQ,,TR
+TZX,Trabzon,Trabzon,TR
+YEI,Yenisehir,Bursa,TR
+TAB,Tobago,Tobago,TT
+POS,Piarco Intl,Port Of Spain,TT
+FUN,Funafuti Atol Intl,Funafuti,TV
+HCN,Hengchun,Hengchun,TW
+CMJ,Qimei,Qimei,TW
+CYI,Chiayi,Chiayi,TW
+GNI,Lyudao,Lyudao (Green Island),TW
+HUN,Hualien,Hualien,TW
+KHH,Kaohsiung Intl,Kaohsiung,TW
+KNH,Kinmen,Kinmen,TW
+KYD,Lanyu,Lanyu (Orchid Island),TW
+LHN,Lishan,Lishan,TW
+MFK,MFK,,TW
+MZG,Magong,Magong,TW
+PIF,Pingtung,Pingtung,TW
+RMQ,Taichung,Taichung,TW
+SMT,SMT,,TW
+TXG,TXG,,TW
+WOT,Penghu Is.,Wang'an,TW
+HSZ,Hsinchu,Hsinchu,TW
+TTT,Taitung,Taitung,TW
+TPE,"Taipei, All",Taipei,TW
+TSA,"Shungshan, Taipei",Taipei,TW
+TNN,Tainan,Tainan,TW
+TKQ,Kigoma,Kigoma,TZ
+TBO,Tabora,Tabora,TZ
+SUT,SUT,,TZ
+SEU,Seronera,Seronera,TZ
+SGX,Songea,Songea,TZ
+SHY,Shinyanga,Shinyanga,TZ
+XMI,Masasi,Masasi,TZ
+JOM,Njombe,Njombe,TZ
+KIY,KIY,,TZ
+LDI,Kikwetu,Lindi,TZ
+LKY,Lake Manyara,Lake Manyara,TZ
+MFA,Mafia,Mafia,TZ
+MBI,Mbeya,Mbeya,TZ
+MUZ,Musoma,Musoma,TZ
+NCH,Nachingwea,Nachingwea,TZ
+MWZ,Mwanza,Mwanza,TZ
+MYW,Mtwara,Mtwara,TZ
+GTZ,Kirawira B,Grumeti,TZ
+JRO,Kilimanjaro Intl,Kilimanjaro,TZ
+MWN,Mwadui,Mwadui,TZ
+PMA,Pemba,Pemba,TZ
+QSI,QSI,,TZ
+TGT,TGT,,TZ
+ZNZ,Zanzibar Intl,Zanzibar,TZ
+DOD,Dodoma Intl,Dodoma,TZ
+DAR,Julius Nyerere Intl,Dar Es Salaam,TZ
+GIT,Geita,Geita,TZ
+BKZ,Bukoba,Bukoba,TZ
+ARK,Arusha,Arusha,TZ
+HRK,Kharkov Intl,Kharkiv,UA
+HMJ,HMJ,,UA
+DOK,Donetsk Intl,Donetsk,UA
+CKC,CKC,,UA
+CWC,Chernivtsi Intl,Chernivtsi,UA
+DNK,Dnepropetrovsk Intl,Dnipropetrovsk,UA
+ERD,Berdyansk,Berdyansk,UA
+KCP,Kamianets Podilskiy,Kamianets Podilskiy,UA
+KGO,KGO,,UA
+KHC,Kerch,Kerch,UA
+KWG,Kryvyi Rih Intl ,Krivyi Rih,UA
+SIP,Simferopol Intl,Simferopol,UA
+UKS,Belbek,Sevastopol,UA
+MXR,Myrhorod,Myrhorod,UA
+ODS,Odessa Intl,Odesa,UA
+NLV,Nikolaev,Mykolaiv,UA
+PLV,Poltava,Poltava,UA
+OZH,Zaporozhye Intl,Zaporizhzhia,UA
+LWO,Lviv Danylo Halytskyi Intl,Lviv,UA
+KRQ,Kramatorsk,Kramatorsk,UA
+KHE,Kherson,Kherson,UA
+KHU,Kremenchug,Kremenchuk,UA
+IEV,Kyiv Zhulhany Intl,Kiev,UA
+KBP,Boryspil Intl,Kiev,UA
+IFO,Ivano-Frankivsk Intl,Ivano-FrankIvsk,UA
+ZTR,Zhytomyr,Zhytomyr,UA
+RWN,Rivne,Rivne,UA
+TNL,TNL,,UA
+UCK,Lutsk,Lutsk,UA
+UDJ,Uzhgorod,Uzhhorod,UA
+UMY,UMY,,UA
+VIN,VIN,,UA
+VSG,Lugansk/Voroshilovgrad,Luhansk,UA
+ULU,ULU,,UG
+TRY,TRY,,UG
+SRT,Soroti,Soroti,UG
+KCU,Masindi,Masindi,UG
+KSE,Kasese,Kasese,UG
+MBQ,Mbarara,Mbarara,UG
+RUA,Arua,Arua,UG
+KBG,Kabalega Falls,Kabalega Falls,UG
+KLA,Kampala,Kampala,UG
+OYG,Moyo,Moyo,UG
+PAF,Pakuba,Pakuba,UG
+EBB,Entebbe Intl,Entebbe,UG
+AWK,Wake Island,Wake Island,UM
+JON,Johnston Island,Johnston Island,UM
+MDY,Henderson Field (Midway Atoll),Sand Island,UM
+MDN,MDN,,US
+MDO,Middleton Island,Middleton Island,US
+MDF,MDF,,US
+MEJ,MEJ,,US
+MEM,Memphis Intl,Memphis,US
+MEO,MEO,,US
+MEV,MEV,,US
+MFH,MFH,,US
+MFI,MFI,,US
+MFD,Lahm Mncp,Mansfield,US
+MFR,Rogue Valley Intl-Medford,Medford,US
+MFV,Melfa,Melfa,US
+MGW,Morgantown,Morgantown,US
+MGC,MGC,,US
+MGE,MGE,,US
+MGI,Matagorda Isl,Matagorda Isl,US
+MGJ,MGJ,,US
+MGM,Montgomery Regional,Montgomery,US
+MIO,MIO,,US
+MIT,Shafter,Shafter,US
+MIV,MIV,,US
+MIW,MIW,,US
+MIA,Miami Intl,Miami,US
+MIE,MIE,,US
+MIF,MIF,,US
+MHK,Manhattan Municipal,Manhattan,US
+MHM,Minchumina,Minchumina,US
+MHV,MHV,,US
+MHT,Manchester Boston Regional,Manchester,US
+MJX,Robert J. Miller Air Park,Toms River,US
+MKO,Davis Field,Muskogee,US
+MCI,Kansas City Intl,"Kansas City, MO",US
+MKC,Charles B. Wheeler Downtown,"Kansas City, MO",US
+OJC,Johnson Co Executive,"Kansas City, MO",US
+MKE,General Mitchell Intl,Milwaukee,US
+MKG,Muskegon,Muskegon,US
+MKT,Mankato Municipal,Mankato,US
+MLB,Orlando Melbourne Intl,Melbourne,US
+MLC,MLC,,US
+MLD,Malad City,Malad City,US
+MLI,Quad City Intl,Moline,US
+MLJ,MLJ,,US
+MLF,Milford,Milford,US
+MBY,MBY,,US
+MCB,MCB,,US
+MCD,MCD,,US
+MCE,Merced Municipal,Merced,US
+MCW,Mason City,Mason City,US
+MCK,McCook Ben Nelson Regional,McCook,US
+MCN,Middle Georgia Regional,Macon,US
+MBG,MBG,,US
+MBL,Manistee County Blacker,Manistee,US
+MAW,MAW,,US
+LZU,Lawrenceville,Lawrenceville,US
+MAE,MAE,,US
+MAF,Midland Intl,Midland,US
+LYO,LYO,,US
+LYU,Ely Municipal,Ely,US
+LWM,LWM,,US
+LWS,Lewiston-Nez Perce County Regional,Lewiston,US
+LWT,Lewistown Municipal,Lewistown,US
+LWV,Lawrenceville Mnpl,Lawrenceville,US
+LYH,Lynchburg Regional,Lynchburg,US
+LXV,LXV,,US
+LXN,LXN,,US
+LVD,Lime Village,Lime Village,US
+LVK,LVK,,US
+LVL,Lawrenceville,Lawrenceville,US
+LVM,LVM,,US
+LWB,Greenbrier Valley,Lewisburg,US
+LWC,LWC,,US
+LVS,LVS,,US
+LUP,Kalaupapa,Kalaupapa,US
+LUR,Cape Lisburne LRRS,Cape Lisburne,US
+LSK,LSK,,US
+LSN,LSN,,US
+LTW,LTW,,US
+LTS,Altus Air Force Base,Altus,US
+LKP,LKP,,US
+LLX,Lyndonville,Lyndonville,US
+LMA,Lake Minchumina,Lake Minchumina,US
+LIZ,Loring Afb,Limestone,US
+LKK,Kulik Lake,Kulik Lake,US
+LIT,Little Rock,Little Rock,US
+LIH,Lihue,Kauai Island,US
+LGB,Long Beach,Long Beach,US
+LGD,La Grande,La Grande,US
+LFT,Lafayette Regional,Lafayette,US
+LFN,LFN,,US
+LFK,LFK,,US
+LEX,Blue Grass,Lexington,US
+LHV,LHV,,US
+LPS,Lopez Island,Lopez Island,US
+LOT,LOT,,US
+LOW,LOW,,US
+LPC,Lompoc,Lompoc,US
+LRU,LRU,,US
+LSB,LSB,,US
+LSE,La Crosse Regional,La Crosse,US
+LRD,Laredo Intl,Laredo,US
+LQK,Pickens,Pickens,US
+LNY,Lanai,Lanai,US
+LNR,Tri County,Lone Rock,US
+LNS,Lancaster,Lancaster,US
+LOL,LOL,,US
+LND,LND,,US
+LMS,LMS,,US
+LMT,Klamath Falls,Klamath Falls,US
+LNK,Lincoln,Lincoln,US
+LNN,LNN,,US
+LDJ,Linden,Linden,US
+LCH,Lake Charles Regional,Lake Charles,US
+LCI,LCI,,US
+LCQ,LCQ,,US
+LDM,LDM,,US
+LEE,LEE,,US
+LBE,Arnold Palmer Regional,Latrobe,US
+LBF,North Platte Regional,North Platte,US
+LBT,LBT,,US
+LAR,General Brees Field,Laramie,US
+LAS,McCarran Intl,Las Vegas,US
+LBB,Lubbock Preston Smith Intl,Lubbock,US
+LBL,Liberal Mid-America Regional ,Liberal,US
+LAX,Los Angeles Intl,Los Angeles,US
+VNY,Van Nuys,Los Angeles,US
+WHP,Whiteman,Los Angeles,US
+LAL,LAL,,US
+LAM,LAM,,US
+LAN,Capital Region Intl,Lansing,US
+LAA,LAA,,US
+LAF,Purdue University ,Lafayette,US
+KYU,Koyukuk,Koyukuk,US
+KXA,Kasaan Sea Plane Base,Kasaan,US
+KWT,Kwethluk,Kwethluk,US
+KWP,West Point Village Sea Plane Base ,West Point,US
+KWK,Kwigillingok,Kwigillingok,US
+KWN,Kwinhagak,Quinhagak,US
+KVC,King Cove,King Cove,US
+KVL,Kivalina,Kivalina,US
+KUK,Kasigluk,Kasigluk,US
+KTS,Brevig Mission,Teller Mission,US
+KTN,Ketchikan Intl,Ketchikan,US
+KTB,Thorne Bay Seaplane Base,Thorne Bay,US
+KOT,Kotlik,Kotlik,US
+KOZ,Ouzinkie Sea Plane Base,Ouzinkie,US
+KNW,New Stuyahok,New Stuyahok,US
+KPV,Perryville Municipal,Perryville,US
+KQA,Akutan Seaplane Base,Akutan,US
+KPB,Point Baker Sea Plane Base,Point Baker,US
+KPC,Port Clarence,Port Clarence,US
+KPN,Kipnuk Sea Plane Base,Kipnuk,US
+KPR,Port Williams Sea Plane Base,Port Williams,US
+KKA,Koyuk Alfred Adams,Koyuk,US
+KKB,Kitui Bay Sea Plane Base,Kitui Bay,US
+KKH,Kongiganak,Kongiganak,US
+KKI,Akiachak Sea Plane Base,Akiachak,US
+KKK,Kalakaket,Kalakaket,US
+KKL,KKL,,US
+KLL,Levelock,Levelock,US
+KLN,Larsen Sea Plane Base,Larsen Bay,US
+KKT,KKT,,US
+KLS,KLS,,US
+KLW,Klawock,Klawock,US
+KMO,Manokotak,Manokotak,US
+KNB,Kanab Municipal,Kanab,US
+KNK,Kokhanok,Kakhonak,US
+KCN,Spb,Chernofski,US
+KEB,Nanwalek,English Bay,US
+KEK,Ekwok,Ekwok,US
+KEH,Kenmore Air Harbor,Kenmore Air Harbor,US
+KFP,False Pass,False Pass,US
+KIB,Spb,Ivanof Bay,US
+KIC,KIC,,US
+KGX,Grayling,Grayling,US
+KGK,Koliganek,New Koliganek,US
+JOT,JOT,,US
+JRF,JRF,,US
+JST,Cambria County,Johnstown,US
+JVL,Rock County,Janesville,US
+KCL,Chignik Lagoon,Chignik,US
+KCC,Coffman Cove Sea Plane Base,Coffman Cove,US
+KBE,Hot Springs,Bell Island,US
+KAL,Kaltag,Kaltag,US
+IFP,Laughlin Bullhead Intl,Bullhead City,US
+IFA,IFA,,US
+IDG,IDG,,US
+IDH,Grangeville,Grangeville,US
+IDP,IDP,,US
+ICL,ICL,,US
+ICT,Wichita Mid-Continent ,Wichita,US
+IDA,Idaho Falls Regional,Idaho Falls,US
+IAG,Niagara Falls Intl,Niagara Falls,US
+IAN,Bob Baker Memorial,Kiana,US
+HTV,HTV,,US
+HUF,HUF,,US
+HUL,HUL,,US
+HUM,HUM,,US
+HVE,Intermediate,Hanksville,US
+HYG,Hydaburg Sea Plane Base,Hydaburg,US
+HYL,Hollis Seaplane Base,Hollis,US
+HVN,Tweed New Haven,New Haven,US
+HVR,Havre City County,Havre,US
+HVS,HVS,,US
+HWD,HWD,,US
+HWI,Spb,Hawk Inlet,US
+HZL,HZL,,US
+HYR,HYR,,US
+HWO,HWO,,US
+HYA,Barnstable Municipal,Hyannis,US
+INL,Falls Intl,International Falls,US
+IND,Indianapolis Intl,Indianapolis,US
+IOW,IOW,,US
+INW,INW,,US
+INT,INT,,US
+IGG,Igiugig,Igiugig,US
+IGM,Kingman,Kingman,US
+IJX,IJX,,US
+IKB,IKB,,US
+IKK,IKK,,US
+ILG,New Castle,Wilmington,US
+ILI,Iliamna,Iliamna,US
+ILL,ILL,,US
+ILM,Wilmington Intl,Wilmington,US
+ILN,Clinton Field,Wilmington,US
+IKO,Nikolski Air Station,Nikolski,US
+GRK,Killeen–Fort Hood Regional,"Killleen, TX",US
+HLR,Fort Hood Aaf,"Killleen, TX",US
+ILE,Skylark Field,"Killleen, TX",US
+IWD,Gogebic–Iron County,Ironwood,US
+IYK,Kern County,Inyokern,US
+ISN,Sloulin Field Intl,Williston,US
+ISO,Kinston Regional Jetport,Kinston,US
+ISP,Long Island MacArthur,Islip,US
+ISQ,Schoolcraft,"Manistique,Mi",US
+ISS,Wiscasset,Wiscasset,US
+ISW,ISW,,US
+ITO,Hilo Intl,Hilo,US
+ITH,Ithaca Tompkins Regional,Ithaca,US
+IRS,IRS,,US
+IRB,IRB,,US
+IRK,Kirksville Regional,Kirksville,US
+IPT,Williamsport Regional,Williamsport,US
+JMS,Jamestown Regional,Jamestown,US
+JLA,Quartz Creek,Cooper Lodge,US
+JLN,Joplin Regional,Joplin,US
+JNU,Juneau Intl,Juneau,US
+JEF,JEF,,US
+JFN,JFN,,US
+JHW,Chautauqua County-Jamestown,Jamestown,US
+JHM,Kapalua,Kapalua,US
+JAS,JAS,,US
+JAX,Jacksonville Intl,Jacksonville,US
+JBR,Jonesboro Municipal,Jonesboro,US
+JCY,Johnson,Johnson,US
+JDA,JDA,,US
+RTN,RTN,,US
+RTL,RTL,,US
+RSN,RSN,,US
+RST, Rochester Intl,Rochester,US
+RSH,Russian Mission,Russian Mission,US
+RSJ, Rosario Sea Plane Base,Rosario,US
+RRT,RRT,,US
+ROW,Roswell Intl Air Center (APT),Roswell,US
+ROX,ROX,,US
+RNG,Rangely,Rangely,US
+RNH,RNH,,US
+RNT,Renton,Renton,US
+RNO,Reno/Tahoe Intl,Reno,US
+ROA,Roanoke-Blacksburg Regional,Roanoke,US
+ROC,Greater Rochester Intl,Rochester,US
+RKW,RKW,,US
+RKD,Knox County Regional,Rockland,US
+RKH,RKH,,US
+RKR,RKR,,US
+RKS,Rock Springs,Rock Springs,US
+RME,RME,,US
+RMY,Mariposa-Yosemite,Mariposa - Ca,US
+RMG,RMG,,US
+RBW,RBW,,US
+RCR,RCR,,US
+RCT,Reed City,Reed City,US
+RCK,RCK,,US
+RDD,Redding Municipal,Redding,US
+REO,REO,,US
+RDG,Reading Regional,Reading,US
+RCE,Roche Harbor,Roche Harbor,US
+RHI,Oneida County,Rhinelander,US
+RFG,RFG,,US
+RFK,Rollang Field,Anguilla,US
+RIW,Riverton Regional,Riverton,US
+RIC,Richmond Intl,Richmond,US
+RID,RID,,US
+RIE,RIE,,US
+RIF,Reynolds,Richfield,US
+RIL,Garfield County,Rifle,US
+PYL,Perry Spb,Perry Island,US
+PYM,PYM,,US
+PWM,Portland Intl Jetport,Portland,US
+PVU,PVU,,US
+PVW,PVW,,US
+PWD,Sherwood,Plentywood,US
+PWT,PWT,,US
+PWY,Pinedale,Pinedale,US
+PXL,PXL,,US
+RAL,Riverside Municipal,Riverside,US
+RAC,RAC,,US
+RAP,Rapid City Regional,Rapid City,US
+RBL,Red Bluff,Red Bluff,US
+RBG,RBG,,US
+PRO,PRO,,US
+PQS,Pilot Station,Pilot Station,US
+PRB,PRB,,US
+PRC,Ernest A Love Field,Prescott,US
+PSB,PSB,,US
+PSC,Tri-Cities Regional,Pasco,US
+PRW,Prentice,Prentice,US
+PRX,PRX,,US
+PSF,PSF,,US
+PSG,Petersburg James A. Johnson,Petersburg,US
+PRZ,PRZ,,US
+PSK,PSK,,US
+PSP,Palm Springs Intl,Palm Springs,US
+PTA,Port Alsworth,Port Alsworth,US
+PTB,Dinwiddie County,Petersburg,US
+PTC,Port Alice,Port Alice,US
+PTD,Port Alexander,Port Alexander,US
+PUL,PUL,,US
+PVC,Provincetown,Provincetown,US
+PVD,T. F. Green,Providence,US
+PVF,PVF,,US
+PUB,Pueblo Memorial,Pueblo,US
+PUC,Carbon County Regional,Price,US
+PTS,PTS,,US
+PTV,PTV,,US
+PTW,PTW,,US
+PTK,PTK,,US
+PTH,Port Heiden,Port Heiden,US
+PSX,PSX,,US
+PAK,PAK,,US
+PAO,PAO,,US
+PAE,Paine Field,Everett,US
+PAH,Barkley Regional,Paducah,US
+OWA,OWA,,US
+OWB,Daviess County,Owensboro,US
+OWD,OWD,,US
+OWK,Norridgewock,Norridgewock,US
+OVE,OVE,,US
+OZA,"Ozona,Tx","Ozona,Tx",US
+OXC,Waterbury Oxford,Oxford,US
+OXD,Miami University,Oxford,US
+OSX,"Kosciusko,Ms","Kosciusko,Ms",US
+OTG,OTG,,US
+OTH,Southwest Oregon Regional,North Bend,US
+OTK,Tillamook,Tillamook,US
+OUN,OUN,,US
+OTZ,Ralph Wien Memorial,Kotzebue,US
+OTM,OTM,,US
+OTS,Anacortes,Anacortes,US
+PBF,PBF,,US
+PBG,PBG,,US
+PBI,West Palm Beach Intl,West Palm Beach,US
+PDB,Pedro Bay,Pedro Bay,US
+PCA,Portage Creek,Portage Creek,US
+PCD,PCD,,US
+PCU,Pearl River Cnt,"Picayune,Ms",US
+PGA,Page,Page,US
+PGC,PGC,,US
+PGD,PGD,,US
+PGL,PGL,,US
+PGM,Port Graham,Port Graham,US
+PGO,PGO,,US
+PGR,"Paragould,Ar","Paragould,Ar",US
+PGS,PGS,,US
+PGV,Pitt-Greenville,Greenville,US
+PDX,Portland Intl,Portland,US
+PEQ,PEQ,,US
+PLR,PLR,,US
+PLN,Pellston Regional,Pellston,US
+PKF,PKF,,US
+PKA,Napaskiak,Napaskiak,US
+PKB,Wood County,Parkersburg,US
+PKD,PKD,,US
+PHT,PHT,,US
+AZA,Phoenix–Mesa Gateway,Phoenix,US
+DVT,Deer Valley,Phoenix,US
+LUF,Luke AFB,Phoenix,US
+MSC,Falcon Field,Phoenix,US
+PHX,Phoenix Sky Harbor Intl,Phoenix,US
+SCF,Scottsdale,Phoenix,US
+PIA,General Wayne A. Downing Peoria Intl,Peoria,US
+PHD,PHD,,US
+PHK,PHK,,US
+PHL,Philadelphia Intl,Philadelphia,US
+PHN,PHN,,US
+PHO,Point Hope,Point Hope,US
+PIH,Pocatello Regional,Pocatello,US
+PIR,Pierre Regional,Pierre,US
+PIP,Pilot Point,Pilot Point,US
+PJB,PJB,,US
+PIT,Pittsburgh Intl,Pittsburgh,US
+PIZ,Point Lay LRRS,Point Lay,US
+POU,Dutchess County,Poughkeepsie,US
+POH,"Pocahontas,Ar","Pocahontas,Ar",US
+POE,POE,,US
+POF,POF,,US
+PPM,PPM,,US
+PPA,PPA,,US
+PPF,PPF,,US
+PPV,Port Protection,Port Protection,US
+PML,Port Moller,Port Moller,US
+PMD,PMD,,US
+PMH,PMH,,US
+PMB,Pembina,Pembina,US
+PNC, Ponca City Regional,Ponca City,US
+PNS,Pensacola Intl,Pensacola,US
+PNU,Panguitch,Panguitch,US
+PNN,Princeton,Princeton,US
+NME,Nightmute,Nightmute,US
+NNK,Naknek,Naknek,US
+NNL,Nondalton,Nondalton,US
+NOT,NOT,,US
+NPH,Nephi Municipal,Nephi,US
+NQA,NQA,,US
+NQI,"Kingsville,Tx","Kingsville,Tx",US
+NPT,NPT,,US
+NIR,"Beeville,Tx","Beeville,Tx",US
+NHX,Barin Olf Osn,Foley,US
+NLE,Jerry Tyler Memo,Niles,US
+NLG,Nelson Lagoon,Nelson Lagoon,US
+NLC,Nas Reeves Field,"Lemoore,Ca",US
+NTU,Oceana,Oceana,US
+NSL,Slayton,Slayton,US
+NRI,Grand Lake Regional,Afton,US
+NRS,"Imperial Beach,Ca","Imperial Beach,Ca",US
+NSE,Whiting Field Nas,Milton,US
+NRB,Mayport,Mayport,US
+NRC,Aux Field,Crows Landing,US
+NWH,Parlin Field,Newport,US
+NUI,Nuiqsut,Nuiqsut,US
+NUL,Nulato,Nulato,US
+NUP,Nunapitchuk,Nunapitchuk,US
+NUQ,NUQ,,US
+OAJ,Albert J Ellis,Jacksonville,US
+OAK,Metropolitan Oakland Intl,Oakland,US
+EWR,Newark Liberty Intl,New York,US
+JFK,J.F. Kennedy Intl,New York,US
+JRA,West 30th HPT,New York,US
+LGA,LaGuardia,New York,US
+NBP,Battery PK City Ferry,New York,US
+NES,East 34th Ferry,New York,US
+NWS,Pier 11 Wall St Ferry,New York,US
+NYC,"New York, All",New York,US
+SWF,Stewart International,New York,US
+JRB,Down Manh HPT,New York,US
+TSS,East 34Th HPT,New York,US
+NYG,Quantico,Quantico,US
+ODW,A.J. Eisenberg,Oak Harbor,US
+ODM,Oakland,Oakland,US
+OCN,OCN,,US
+ODC,Oakdale,Oakdale,US
+OCA,Ocean Reef,Ocean Reef,US
+OCF,OCF,,US
+OCH,A.L. Mangham Jr. Regional ,Nacogdoches,US
+OBU,Kobuk,Kobuk,US
+NVN,Beckwourth,Beckwourth,US
+OBE,OBE,,US
+OGS,Ogdensburg Intl,Ogdensburg,US
+OFK,Norfolk Regional,Norfolk,US
+OGA,OGA,,US
+OGB,OGB,,US
+OGD,Ogden Municipal,Ogden,US
+OGG,Kahului,Kahului,US
+OIC,OIC,,US
+OKC,Will Rogers World,Oklahoma City,US
+OKM,OKM,,US
+OKK,Kokomo,Kokomo,US
+ORF,Norfolk Intl,Norfolk,US
+ORH,Worcester Regional,Worcester,US
+ORI,Port Lions Sea Plane Base,Port Lions,US
+ONY,Olney,Olney,US
+OOA,OOA,,US
+OOK,Toksook Bay,Toksook Bay,US
+OPL,OPL,,US
+ISM,Kissimmee,Orlando,US
+MCO,Orlando Intl,Orlando,US
+ORL,Orlando Executive,Orlando,US
+SFB,Orlando Sanford Intl,Orlando,US
+OSB,OSB,,US
+ORV,Robert (Bob) Curtis Memorial,Noorvik,US
+ONA,ONA,,US
+OME,Nome,Nome,US
+OMK,OMK,,US
+ONH,ONH,,US
+ONM,ONM,,US
+ONP,Newport Municipal,Newport,US
+OLM,Olympia,Olympia,US
+OLS,OLS,,US
+OLU,OLU,,US
+OLV,OLV,,US
+OMA,Eppley Airfield,Omaha,US
+OLE,OLE,,US
+OLH,Old Harbor Sea Plane Base,Old Harbor,US
+MYH,Marble Canyon,Marble Canyon,US
+MYR,Myrtle Beach,Myrtle Beach,US
+MYU,Kincardine Ellis Field,Mekoryuk,US
+MYV,Yuba County,Marysville,US
+MYK,MYK,,US
+MYL,MYL,,US
+MXA,MXA,,US
+MWL,Mineral Wells,Mineral Wells,US
+MWM,MWM,,US
+MWO,MWO,,US
+MWA,Williamson County Regional,Marion,US
+MWH,Grant County Intl,Moses Lake,US
+MVE,MVE,,US
+MVC,MVC,,US
+MVY,Martha's Vineyard,Martha's Vineyard,US
+MZJ,MZJ,,US
+MZZ,MZZ,,US
+NEL,"Lakehurst,Nj","Lakehurst,Nj",US
+NCN,New Chenega,New Chenega,US
+NCO,Quonset Point,Quonset Point,US
+MUT,MUT,,US
+MTW,MTW,,US
+MUO,Mountain Home,Mountain Home,US
+MUI,Fort Indiantown,Fort Indiantown,US
+MTM,Metlakatla Seaplane Base,Metlakatla,US
+MTP,MTP,,US
+MTJ,Montrose Regional,Montrose,US
+MSY,Louis Armstrong New Orleans Intl,New Orleans,US
+MRK,MRK,,US
+MRB,MRB,,US
+MQW,MQW,,US
+MQY,MQY,,US
+MRN,MRN,,US
+MRF,Marfa,Marfa,US
+MSN,Dane County Regional,Madison,US
+MSO,Missoula Intl,Missoula,US
+MSS,Massena Intl,Massena,US
+MLY,Manley Hot Springs,Manley Hot Springs,US
+MLS,Miles City,Miles City,US
+MLT,MLT,,US
+MMH,Mammoth Yosemite,Mammoth Lakes,US
+MMI,MMI,,US
+MMN,MMN,,US
+MMU,Morristown Municipal,Morristown,US
+MNM,MNM,,US
+MNN,MNN,,US
+MPR,MPR,,US
+MPJ,MPJ,,US
+MOR,MOR,,US
+MOT,Minot Intl,Minot,US
+MOU,Mountain Village,Mountain Village,US
+MOD,Modesto Municipal,Modesto,US
+MNZ,MNZ,,US
+SRW,SRW,,US
+SRF,"San Rafael,CA","San Rafael,CA",US
+SRC,SRC,,US
+SQL,SQL,,US
+SQV,SQV,,US
+SPS,Wichita Falls Municipal,Wichita Falls,US
+SPX,Spaceland,Houston,US
+SQA,SQA,,US
+STS,Sonoma County,Santa Rosa,US
+SUD,SUD,,US
+SUE,SUE,,US
+SUO,SUO,,US
+SUA,SUA,,US
+SSW,Stuart Island,Stuart Island,US
+STE,STE,,US
+STC,St. Cloud Municipal,Saint Cloud,US
+SSC,Shaw AFB Sumter Cty,Sumter,US
+SUU,Travis Afb,Fairfield,US
+SUX,Sioux City,Sioux City,US
+SVC,Silver City/Hurley,Silver City,US
+SVE,SVE,,US
+SVA,Savoonga,Savoonga,US
+SVH,SVH,,US
+SWW,SWW,,US
+SWO,SWO,,US
+SWD,SWD,,US
+SVS,Stevens Village,Stevens Village,US
+SYB,Seal Bay,Seal Bay,US
+SXY,SXY,,US
+SXP,Sheldon Point,Sheldon Point,US
+SXQ,SXQ,,US
+SYR,Syracuse,Syracuse,US
+SYV,SYV,,US
+SYN,SYN,,US
+SYI,SYI,,US
+TBR,TBR,,US
+TBN,Fort Leonard Wood,Fort Leonard Wood,US
+TCC,TCC,,US
+TCL,TCL,,US
+TCS,TCS,,US
+TCT,Takotna,Takotna,US
+SZN,SZN,,US
+SZP,"Santa Paula,Ca","Santa Paula,Ca",US
+SZL,Whiteman Afb,Warrensburg,US
+TAL,Tanana,Tanana,US
+TBC,TBC,,US
+TEK,Tatitlek,Tatitlek,US
+TEX,Telluride Regional,Telluride,US
+TEB,Teterboro,Teterboro,US
+TDO,Winlock,Toledo,US
+TEH,Tetlin,Tetlin,US
+THA,Tullahoma,Tullahoma,US
+TGE,Tuskegee,Tuskegee,US
+TIW,TIW,,US
+TIX,TIX,,US
+THV,THV,,US
+THM,Thompsonfield,Thompsonfield,US
+THP,THP,,US

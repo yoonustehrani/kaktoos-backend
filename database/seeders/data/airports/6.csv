@@ -1,0 +1,1001 @@
+IATA_code,name,city_name,country_code
+NUA,Gregory Lake Sea Plane Base,Nuwara Eliya,LK
+NUF,Castlereigh Reservoir,Hatton,LK
+NIA,Nimba,Nimba,LR
+MLW,Spriggs Payne,Monrovia,LR
+ROB,Roberts Intl,Monrovia,LR
+VOI,VOI,,LR
+SNI,R. E. Murray,Sinoe,LR
+SAZ,Sasstown,Sasstown,LR
+RVC,River Cess,River Cess,LR
+THC,THC,,LR
+GRC,Grand Cess,Grand Cess,LR
+BYL,Belle Yella,Belle Yella,LR
+CPA,Cape Palmas,Harper,LR
+TPT,Tapeta,Tapeta,LR
+UCN,Buchanan,Buchanan,LR
+WES,Weasua,Weasua,LR
+LEF,Lebakeng,Lebakeng,LS
+NKU,NKU,,LS
+SHK,SHK,,LS
+SHZ,SHZ,,LS
+SKQ,Sekake,Sekake,LS
+SOK,Semongkong,Semongkong,LS
+THB,Thaba Tseka,Thaba Tseka,LS
+UTG,Quthing,Quthing,LS
+TKO,Tlokoeng,Tlokoeng,LS
+UNE,Qacha'S Nek,Qacha'S Nek,LS
+MSU,Moshoeshoe I Intl,Maseru,LS
+MSG,Matsaile,Matsaile,LS
+LRB,Leribe,Leribe,LS
+MKH,MKH,,LS
+MFC,Mafeteng,Mafeteng,LS
+KUN,Kaunas,Kaunas,LT
+PNV,Panevezys,Panevezys,LT
+VNO,Vilnius,Vilnius,LT
+SQQ,SQQ,,LT
+PLQ,Palanga Intl,Palanga,LT
+LUX,Luxembourg Findel,Luxembourg,LU
+RSC,Skulte,Riga,LV
+DGP,DGP,,LV
+VNT,VNT,,LV
+RIX,Riga Intl,Riga,LV
+LPX,LPX,,LV
+TOB,Tobruk,Tobruk,LY
+SRX,"Sert, Libyan A Jamahiriyah",Sirte,LY
+TIP,Tripoli,Tripoli,LY
+DNF,Martuba,Derna,LY
+GHT,Ghat,Ghat,LY
+BEN,Benina Intl,Benghazi,LY
+AKF,Kufra,Kufra,LY
+BCQ,Brach,Brach,LY
+HUQ,Houn,Hon,LY
+LAQ,Al Abraq Intl,Beida,LY
+LMQ,Marsa Brega,Marsa Brega,LY
+LTD,Ghadames,Ghadames,LY
+MJI,Mitiga Intl,Tripoli,LY
+MRA,Misurata,Misurata,LY
+NFR,Nafoora,Nafoora,LY
+QUB,QUB,,LY
+SEB,Sebha,Sebha,LY
+WAX,Zuara,Zuara,LY
+AHU,Charif Al Idrissi,Al Hoceima,MA
+EUN,Hassan I,Laayoune,MA
+GLN,GLN,,MA
+RAK,Marrakesh Menara,Marrakech,MA
+SMW,Smara,Smara,MA
+TFY,Tarfaya,Tarfaya,MA
+TTA,TTA,,MA
+VIL,"Dakhla, Western Sahara",Dakhla,MA
+CAS,Anfa,Casablanca,MA
+CMN,Mohamed V Intl,Casablanca,MA
+AGA,Agadir Al Massira,Agadir,MA
+FEZ,Fez,Fes,MA
+ESU,Essaouira-Mogador,Essaouira,MA
+ERH,ERH,,MA
+GMD,Ben Slimane,Ben Slimane,MA
+SII,SII,,MA
+TNG,Tangier,Tangier,MA
+UAR,UAR,,MA
+TTU,TTU,,MA
+RBA,Rabat–Salé,Rabat,MA
+OZG,Zagora,Zagora,MA
+OZZ,Ouarzazate,Ouarzazate,MA
+OUD,Les Angades,Oujda,MA
+NDR,Nador Intl,Nador,MA
+NNA,NNA,,MA
+MCM,Monte Carlo Heliport,Monte Carlo,MC
+BZY,BZY,,MD
+KIV,Chisinau Intl,Chisinau,MD
+ZBK,ZBK,,ME
+IVG,Berane,Berane,ME
+QBA,Budva,Budva,ME
+TGD,"Titograd, Montenegro",Podgorica,ME
+TIV,"Tivat, Montenegro",Tivat,ME
+ZKQ,Kotor,Kotor,ME
+AHY,AHY,,MG
+DIE,Arrachart,Antsiranana,MG
+FTU,Marillac,Tolanaro,MG
+ILK,ILK,,MG
+MJA,Manja,Manja,MG
+NKO,Ankokoambo,Ankokoambo,MG
+RLR,Isalo,Isalo,MG
+WPB,Port Berge,Port Berge Vaovao,MG
+DWB,Soalala,Soalala,MG
+DVD,Andavadoaka,Andavadoaka,MG
+AMY,Ambatomainty,Ambatomainty,MG
+ANM,Antsirabato,Antalaha,MG
+ATJ,ATJ,,MG
+BSV,Besakoa,Besakoa,MG
+BPY,Besalampy,Besalampy,MG
+BKU,BKU,,MG
+BMD,Belo sur Tsiribihina,Belo Tsiribihina,MG
+ZWA,ZWA,,MG
+ZVA,Miandrivazo,Miandrivazo,MG
+WTA,Tambphorano,Tambohorano,MG
+WTS,Tsiroanomandidy,Tsiroanomandidy,MG
+WVK,Manakara,Manakara,MG
+TVA,Morafenobe,Morafenobe,MG
+TTS,Tsaratanana,Tsaratanana,MG
+TZO,Ankisatra,Ankisatra,MG
+TMM,Tamatave,Toamasina,MG
+TLE,Tulear,Toliara,MG
+TNR,Antananarivo,Antananarivo,MG
+VND,VND,,MG
+VOH,Vohemar,Vohimarina,MG
+VVB,Mahanoro,Mahanoro,MG
+WAD,Andriamena,Andriamena,MG
+WAM,Ambatondrazaka,Ambatondrazaka,MG
+WAQ,Antsalova,Antsalova,MG
+WAI,Antsohiny,Antsohihy,MG
+WAK,WAK,,MG
+WBD,Befandriana,Befandriana,MG
+WBE,Bealanana,Bealanana,MG
+WBO,Beroroha,Beroroha,MG
+WOR,Ankorefo,Ankorefo,MG
+WML,Malaimbandy,Malaimbandy,MG
+WMN,Maroantsetra,Maroantsetra,MG
+WMP,Mampikony,Mampikony,MG
+WMR,Mananara,Mananara Avaratra,MG
+WMV,WMV,,MG
+WMD,Mandabe,Mandabe,MG
+WMA,Mandritsara,Mandritsara,MG
+WFI,Fianarantsoa,Fianarantsoa,MG
+SMS,Sainte Marie,Sainte-Marie,MG
+RVA,Farafangana,Farafangana,MG
+TDV,Tanandava,Tanandava,MG
+SVB,Sambava,Sambava,MG
+JVA,Ankavandra,Ankavandra,MG
+IVA,Ambanja,Ambanja,MG
+HVA,Analalava,Analalava,MG
+MJN,Amborovy,Mahajanga,MG
+NOS,Fascene,Nosy-Be,MG
+OHB,Moramanga,Moramanga,MG
+MXT,Maintirano,Maintirano,MG
+MXM,Morombe,Morombe,MG
+MNJ,Mananjary,Mananjary,MG
+MOQ,Morondava,Morondava,MG
+OVA,Bekily,Bekily,MG
+MJB,Mejit Island,Mejit Island,MH
+MAV,Maloelap,Maloelap Atoll,MH
+MAJ,Marshall Islands Intl,Majuro,MH
+KIO,Kili Island,Kili Island,MH
+UTK,Utirik Atoll,Utirik Island,MH
+UIT,Jaluit,Jaluit,MH
+BII,Enyu Airfield,Bikini Atoll,MH
+AIC,Airok,Airok,MH
+AIM,Ailuk Island,Ailuk Island,MH
+AUL,Aur Island,Aur Island,MH
+EAL,Elenak,Kwajalein Atoll,MH
+EBN,Ebadon Island,Ebadon Island,MH
+EBO,Ebon Atoll,Ebon Island,MH
+EJT,Enijet,Mili Atoll,MH
+ENT,Enewetak Island,Enewetak Island,MH
+IMI,Ine Island,Ine Island,MH
+JAT,Jabot,Jabot Island,MH
+JEJ,Jeh,Jeh Island,MH
+KBT,Kaben,Kaben,MH
+KWA,Bucholz Army Airfield,Kwajalein Island,MH
+LIK,Likiep,Likiep Island,MH
+LML,Lae,Lae,MH
+LOF,Loen,Loen Island,MH
+MIJ,Mili Island,Mili Island,MH
+MJE,Majkin,Majkin,MH
+NDK,Namdrik Island,Namdrik Island,MH
+RNP,Rongelap,Rongelap,MH
+TBV,Tabal Island,Tabal Island,MH
+TIC,Tinak Island,Tinak Island,MH
+UJE,Ujae I.,Ujae Island,MH
+WJA,Woja,Woja Island,MH
+WTE,Wotje,Wotje,MH
+WTO,Wotho Atoll,Wotho,MH
+SKP,Skopje Alexander the Great,Skopje,MK
+OHD,Ohrid St. Paul the Apostle,Ohrid,MK
+NIX,NIX,,ML
+MZI,MZI,,ML
+KSS,KSS,,ML
+KNZ,KNZ,,ML
+KTX,Koutiala,Koutiala,ML
+KYS,Kayes,Kayes,ML
+SZU,Segou,Segou,ML
+NRM,Nara,Nara,ML
+BKO,Bamako-Senou Intl,Bamako,ML
+GUD,GUD,,ML
+EYL,Yelimane,Yelimane,ML
+GAQ,Korogoussou,Gao,ML
+GAW,Gangaw,Gangaw,MM
+HEB,Hinthada,Hinthada,MM
+HOX,HOX,,MM
+BMO,Bhamo,Bhamo,MM
+BPE,BPE,,MM
+BSX,BSX,,MM
+AKY,Sittwe,Sittwe,MM
+HEH,Heho,Heho,MM
+KHM,Khamti,Khamtis,MM
+KMV,Kalemyo,Kalemyo,MM
+KYT,Kyauktu,Kyauktu,MM
+MGK,Mong Ton,Mong Ton,MM
+MGU,Manaung,Manaung,MM
+MOE,Momeik,Momeik,MM
+NMS,Namsang,Nansang,MM
+NPD,Naypyidaw - Naypyitaw,Naypyidaw - Naypyitaw,MM
+NYT,Nay Pyi Taw,Nay Pyi Taw,MM
+NYU,Nyaung U,Bagan/Nyaung-u,MM
+PPU,Papun,Papun,MM
+THL,Tachilek,Tachilek,MM
+TIO,Tilin,Tilin,MM
+XYE,Ye,Ye,MM
+SNW,Thandwe,Thandwe,MM
+TVY,Tavoy,Dawei,MM
+KYP,Kyaukpyu,Kyaukpyu,MM
+LIW,Loikaw,Loikaw,MM
+LSH,Lashio,Lashio,MM
+MGZ,Myeik,Myeik,MM
+MDL,Mandalay Intl,Mandalay,MM
+KAW,Kawthaung,Kawthaung,MM
+KET,Keng Tung,Kentung,MM
+MWQ,Magwe,Magway,MM
+MYT,Myitkyina,Myitkyina,MM
+MOG,MOG,,MM
+MNU,Mawlamyine,Mawlamyine,MM
+NMT,Namtu,Namtu,MM
+PAA,Pa An,Pa An,MM
+PBU,Putao,Putao,MM
+PKK,PKK,,MM
+PRU,PRU,,MM
+RGN,Yangon Intl,Yangon,MM
+MXW,Mandalgobi,Mandalgovi,MN
+KHR,KHR,,MN
+HVD,Khovd,Khovd,MN
+ULN,Ulaanbaatar,Ulaanbaatar,MN
+ULO,Ulaangam,Ulaangom,MN
+ULZ,Uliastai,Uliastai,MN
+UGA,"Bulgan, Bulgan",Bulgan,MN
+TSZ,Tsetserleg,Tsetserleg,MN
+TNZ,Tosontsengel,Tosontsengel,MN
+UUN,Baruun-Urt,Baruun-Urt,MN
+HBU,Bulgan Khovd,Bulgan Khovd,MN
+HTM,Khatgal,Khatgal,MN
+LTI,Altai,Altai,MN
+MXV,Moron,Moron,MN
+UGT,Umnugobitour,Umnugobitour,MN
+ULG,Ulgit,Ulgit,MN
+UNR,Ondorhaan/Underkhaan,Ondorkhaan,MN
+BYN,Bayankhongor,Bayankhongor,MN
+AVK,Arvaikheer,Arvaikheer,MN
+HJT,Khujirt,Khujirt,MN
+ERT,ERT,,MN
+DLZ,Dalanzadgad,Dalanzadgad,MN
+COQ,Choibalsan,Choibalsan,MN
+MFM,Macau Intl,Macau,MO
+XZM,Macao Ferry Terminal,Macao,MO
+SPN,Saipan Intl,Saipan,MP
+TIQ,Tinian,Tinian,MP
+ROP,Rota Intl,Rota,MP
+FDF,Fort De France,Fort De France,MQ
+FGD,FGD,,MR
+CGT,Chinguetti,Chinguetti,MR
+BGH,BGH,,MR
+AJJ,Akjoujt,Akjoujt,MR
+AEO,Aioun El Atrouss,Aioun el Atrouss,MR
+ATR,Mouakchott Intl,Atar,MR
+EMN,Nema,Nema,MR
+MBR,Mbout,Mbout,MR
+OUZ, Zouerate,Zouerate,MR
+SEY,Selibaby,Selibabi,MR
+THT,Tamchakett,Tamchakett,MR
+OTL,Boutilimit,Boutilimit,MR
+NDB,Nouadhibou,Nouadhibou,MR
+MOM,Moudjeria,Moudjeria,MR
+NKC,Nouakchott Intl,Nouakchott,MR
+KFA,Kiffa,Kiffa,MR
+KED,Kaedi,Kaedi,MR
+LEG,Aleg,Aleg,MR
+TIY,Tidjikja,Tidjikja,MR
+THI,THI,,MR
+TMD,Timbedra,Timbedra,MR
+MNI,MNI,,MS
+GZM,Gozo Heliport,Gozo,MT
+MLA,Malta Intl,Malta,MT
+MRU,Sir Seewoosagur Ramgoolam Intl,Mauritius,MU
+RRG,Rodrigues Island,Rodrigues Island,MU
+DRV,DRV,,MV
+FVM,Fuvahmulaku Island,Fuvahmulaku Island,MV
+GAN,Gan Intl,Gan Island,MV
+GKK,GKK,,MV
+HAQ,Hanimaadhoo Intl,Hanimaadhoo Island,MV
+KDM,Kaadedhdhoo,Kaadedhdhoo,MV
+KDO,Kadhdhoo,Kadhdhoo Island,MV
+MLE,Ibrahim Nasir Intl,Male,MV
+MAI,Mangochi,Mangochi,MW
+LIX,Likoma Island,Likoma Island,MW
+LLW,Lilongwe Intl,Lilongwe,MW
+LMB,Salima,Salima,MW
+KGJ,Karonga,Karonga,MW
+KBQ,Kasungu,Kasungu,MW
+MYZ,Monkey Bay,Monkey Bay,MW
+VUU,MVUU Camp,Blantyre,MW
+ZZU,Mzuzu,Mzuzu,MW
+BLZ,Chileka,Blantyre,MW
+CMK,Club Makokola,Club Makokola,MW
+CEH,Chelinda,Chelinda,MW
+CEN,Ciudad Obregon,Ciudad Obregon,MX
+BHL,BHL,,MX
+AZG,Apatzingan,Apatzingan,MX
+AJS,Abreojos,Abreojos,MX
+AGU,Jesus Teran Peredo I Aguascalients Intl,Aguascalientes,MX
+ACA,Acapulco Intl,Acapulco,MX
+CJT,Copalar,Comitan,MX
+CME,Ciudad del Carmen Intl,Ciudad Del Carmen,MX
+CNA,CNA,,MX
+CPE,Campeche Intl,Campeche,MX
+CTM,Chetumal Intl,Chetumal,MX
+CZM,Cozumel,Cozumel,MX
+CYW,CYW,,MX
+CUA,CUA,,MX
+CUL,Culiacan Intl,Culiacan,MX
+CUN,Cancun Intl,Cancun,MX
+CUU,Gen Fierro Villalobos Intl,Chihuahua,MX
+CVJ,General Mariano Matamoros,Cuernavaca,MX
+CVM,Ciudad Victoria Intl,Ciudad Victoria,MX
+DGO,General Guadalupe Victoria Intl,Durango,MX
+ESE,Ensenada,Ensenada,MX
+GDL,Don Miguel Hidalgo Y Costilla Intl,Guadalajara,MX
+HMO,General Ignacio Pesqueira García Intl,Hermosillo,MX
+GUB,Guerrero Negro,Guerrero Negro,MX
+GYM,Gen Jose Maria Yanez,Guaymas,MX
+AZP,Atizapan,Mexico City,MX
+BJX,Leon Del Bajio Intl,Leon Guanajuato,MX
+CJS,Abraham Gonzalez Intl,Ciudad Juarez,MX
+CLQ,Lic. Miguel de la Madrid,Colima,MX
+CZA,CZA,,MX
+HUX,Bahías de Huatulco International,Huatulco,MX
+JAL,El Lencero,Jalapa,MX
+MEX,Benito Juarez Intl,Mexico City,MX
+NCG,NCG,,MX
+NLU,Santa Lucia,Mexico City,MX
+NTR,NTR,,MX
+PAZ,El Tajin National,Poza Rica,MX
+PBC,Hermanos Serdan Intl,Puebla,MX
+PCO,Punta Colorada,Punta Colorada,MX
+PJZ,Puerto Juarez,Puerto Juarez,MX
+PNO,Pinotepa Nacional,Pinotepa Nacional,MX
+PUH,Pochutla,Pochutla,MX
+QRO,Queretaro Intercontinental,Queretaro,MX
+QTZ,Coatzacoalcos,Coatzacoalcos,MX
+SZT,SZT,,MX
+TLC,Jose Morelos Y Pavon,Mexico City,MX
+VER,Veracruz,Veracruz,MX
+ZCL,La Calera,Zacatecas,MX
+ZIH,Ixtapa/Zihuatanejo Intl,Ixtapa/Zihuatanejo,MX
+ZLO,Manzanillo,Manzanillo,MX
+ZMM,Zamora,Zamora,MX
+XAL,XAL,,MX
+VSA,Villahermosa,Villahermosa,MX
+UPN,Uruapan,Uruapan,MX
+VIB,Villa Constitucion,Villa Constitucion,MX
+TSL,Tamuin,Tamuin,MX
+TPQ,Tepic,Tepic,MX
+TRC,Torreon,Torreon,MX
+TUY,TUY,,MX
+UAC,San Luis Rio Colorado,San Luis Rio Colorado,MX
+TZM,TZM,,MX
+TIJ,Tijuana,Tijuana,MX
+TGZ,Tuxtla Gutierrez,Tuxtla Gutierrez,MX
+TAM,Tampico,Tampico,MX
+TAP,Tapachula,Tapachula,MX
+TCN,TCN,,MX
+SRL,Santa Rosalia,Santa Rosalia,MX
+SNQ,San Quintin,San Quintin,MX
+SLW,Plan de Guadalupe Intl,Saltillo,MX
+SLP,San Luis Potosi,San Luis Potosi,MX
+SJD,Los Cabos Intl,San Jose del Cabo,MX
+SCX,Salina Cruz,Salina Cruz,MX
+SFH,SFH,,MX
+MXL,General Rodolfo Sánchez Taboada Intl,Mexicali,MX
+MZT,General Rafael Buelna Intl,Mazatlan,MX
+MMC,Ciudad Mante,Ciudad Mante,MX
+MTT,Minatitlan/Coatzacoalcos Intl,Minatitlan,MX
+MUG,MUG,,MX
+MTY,General Mariano Escobedo Intl,Monterrey,MX
+NLD,Quetzalcoatl Intl,Nuevo Laredo,MX
+NOG,NOG,,MX
+OAX,Xoxocotlan,Oaxaca,MX
+PCV,Punta Chivato,Punta Chivato,MX
+PCM,PCM,,MX
+PDS,Piedras Negras Intl,Piedras Negras,MX
+PQM,Palenque Intl,Palenque,MX
+PPE,PPE,,MX
+REX,General Lucio Blanco Intl,Reynosa,MX
+PVR,Licenciado Gustavo Diaz Ordaz Intl,Puerto Vallarta,MX
+PXM,Puerto Escondido Intl,Puerto Escondido,MX
+IZT,Ixtepec,Ixtepec,MX
+ISJ,ISJ,,MX
+LOM,LOM,,MX
+LMM,Fort Valley Federal Intl,Los Mochis,MX
+LOV,Venustiano Carranza Intl,Monclova,MX
+LAP,Manuel Marquez de Leon Intl,La Paz,MX
+MAM,General Mariano Matamoros,Matamoros,MX
+LZC,Lazaro Cardenas,Lazaro Cardenas,MX
+LTO,Loreto Intl,Loreto,MX
+MLM,Morelia,Morelia,MX
+MID,Manuel Crescencio Rejon Intl,Merida,MX
+MKZ,Malacca Intl,Malacca,MY
+MKM,Mukah,Mukah,MY
+MEP,MEP,,MY
+LSM,Long Semado,Long Semado,MY
+LWY,Lawas,Lawas,MY
+LBU,Labuan,Labuan,MY
+LDU,Lahad Datu,Lahad Datu,MY
+KUA,Sultan Haji Ahmad Shah,Kuantan,MY
+KUD,Kudat,Kudat,MY
+KUL,Kuala Lumpur Int,Kuala Lumpur,MY
+SZB,Sultan Abdul Aziz Shah,Kuala Lumpur,MY
+LMN,Limbang,Limbang,MY
+LGK,Langkawi Intl,Langkawi,MY
+JHB,Senai Intl,Johor Bahru,MY
+IPH,Sultan Azlan Shah,Ipoh,MY
+KBR,Sultan Ismail Petra,Kota Bharu,MY
+KCH,Kuching Intl,Kuching,MY
+KGU,Keningau,Keningau,MY
+KPI,KPI,,MY
+KTE,KTE,,MY
+RDN, LTS Pulau Redang,Redang Island,MY
+PEN,Penang Intl,Penang,MY
+PAY,Pamol,Pamol,MY
+ODN,Long Seridan,Long Seridan,MY
+MUR,Marudi,Marudi,MY
+MYY,Miri,Miri,MY
+SDK,Sandakan,Sandakan,MY
+SMM,Semporna,Semporna,MY
+SPT,Sipitang,Sipitang,MY
+SWY,Sitiawan,Sitiawan,MY
+TGG,Kuala Trengganu,Kuala Terengganu,MY
+TWU,Tawau,Tawau,MY
+TPG,TPG,,MY
+TOD,Tioman,Tioman Island,MY
+TMG,Tomanggong,Tomanggong,MY
+BKM,Bakalalan,Bakelalan,MY
+BWH,BWH,,MY
+GSA,GSA,,MY
+LAC,LAC,,MY
+LBP,Long Banga Airfield,Long Banga,MY
+LGL,Long Lellang,Long Lellang,MY
+LKH,Long Akah,Long Akah,MY
+LSU,Long Sukang,Long Sukang,MY
+MZV,Mulu,Mulu,MY
+PKG,Pangkor,Pangkor,MY
+SBW,Sibu,Sibu,MY
+SPE,Sepulot,Sepulot,MY
+SXS,SXS,,MY
+SXT,Sungai Tiang,Taman Negara,MY
+TGC,TGC,,MY
+XPQ,Port Klang,Port Klang,MY
+AOR,Sultan Abdul Halim,Alor Setar,MY
+BBN,Bario,Bario,MY
+BLG,Belaga,Belaga,MY
+BKI,Kota Kinabalu Intl,Kota Kinabalu,MY
+BSE,BSE,,MY
+BTU,Bintulu,Bintulu,MY
+BZB,Bazaruto Island,Bazaruto Island,MZ
+BJN,Bajone,Bajone,MZ
+BCW,Benguerra Island,Benguerra Island,MZ
+BEW,Beira,Beira,MZ
+ANO,Angoche,Angoche,MZ
+AME,AME,,MZ
+APL,Nampula,Nampula,MZ
+FXO,Cuamba,Cuamba,MZ
+CMZ,Caia,Caia,MZ
+DGK,Dugong Beach Lodge,Dugong Beach Lodge,MZ
+IBL,Indigo Bay Lodge,Indigo Bay Lodge,MZ
+IDC,Ila Da Chilonzuene,Chilonzuine Island,MZ
+IHC,Inhaca,Inhaca,MZ
+LMZ,LMZ,,MZ
+MFW,Magaruque Island,Magaruque Island,MZ
+MMW,Moma,Moma,MZ
+NTC,Santa Carolina,Santa Carolina,MZ
+POL,Pemba,Pemba,MZ
+TCV,Tete Airport,Tete,MZ
+VJB,Xai-Xai,Xai-Xai,MZ
+UEL,Quelimane,Quelimane,MZ
+VNX,Vilanculos,Vilankulos,MZ
+VJQ,Gurue,Gurue,MZ
+VPY,Chimoio,Chimoio,MZ
+VXC,Lichinga,Lichinga,MZ
+TGS,TGS,,MZ
+TET,Tete,Tete,MZ
+MZB,Mocimboa Da Praia,Mocimboa Da Praia,MZ
+MTU,Montepuez,Montepuez,MZ
+MUD,Mueda,Mueda,MZ
+MNC,Nacala,Nacala,MZ
+MPM,Maputo Int,Maputo,MZ
+NND,Nangade,Nangade,MZ
+PDD,Ponta Do Ouro,Ponta Do Ouro,MZ
+RRM,Marromeu,Marromeu,MZ
+IMG,Inhaminga,Inhaminga,MZ
+INH,INH,,MZ
+INE,Chinde,Chinde,MZ
+LFB,Lumbo,Lumbo,MZ
+LBM,Luabo,Luabo,MZ
+MJS,Maganja Da Costa,Maganja Da Costa,MZ
+LUD,Luderitz,Luderitz,NA
+KMP,KMP,,NA
+KAS,Karasburg,Karasburg,NA
+NNI,NNI,,NA
+OHI,Oshakati,Oshakati,NA
+OKF,OKF,,NA
+OPW,OPW,,NA
+OND,Ondangwa,Ondangwa,NA
+OMD,Oranjemund,Oranjemund,NA
+OKU,Mokuti Lodge,Mokuti Lodge,NA
+MPA,Katima Mulilo,Katima Mulilo,NA
+NDU,Rundu,Rundu,NA
+TCY,Terrace Bay,Terrace Bay,NA
+SZM,SZM,,NA
+SWP,Swakopmund,Swakopmund,NA
+ERS,Eros,Windhoek,NA
+WDH,"Hosea Kutako,Windhoek, All",Windhoek,NA
+TSB,TSB,,NA
+WVB,Walvis Bay,Walvis Bay,NA
+AIW,Ai Ais,Ai Ais,NA
+LHU,LHU,,NA
+MJO,Mount Etjo,Mount Etjo,NA
+MQG,Midgard,Midgard,NA
+OGV,Ongava,Ongava,NA
+OMG,Omega,Omega,NA
+RHN,Rosh Pina,Rosh Pina,NA
+GFY,Grootfontein,Grootfontein,NA
+GOG,Gobabis,Gobabis,NA
+ADI,Arandis,Arandis,NA
+BQI,Bagani,Bagani,NA
+BMY,Waala,Belep Island,NC
+GEA,"Magenta, Noumea",Noumea,NC
+ILP,Ile Des Pins,Ile des Pins,NC
+KNQ,Kone,Kone,NC
+MEE,Mare,Mare,NC
+PDC,Mueo,Mueo,NC
+TGJ,"Tiga, Loyalty Is, Pacific Ocea",Tiga,NC
+UVE,"Ouvea, Loyalty Is New Caledoni",Ouvea,NC
+TOU,Touho,Touho,NC
+NOU,La Tontouta Intl ,Noumea,NC
+PUV,Poum,Poum,NC
+KOC,Koumac,Koumac,NC
+LIF,Ouanaham,Lifou,NC
+MFQ,Maradi,Maradi,NE
+RLT,Arlit,Arlit,NE
+NIM,Niamey,Niamey,NE
+THZ,Tahoua,Tahoua,NE
+ZND,Zinder,Zinder,NE
+BKN,BKN,,NE
+AJY,AJY,,NE
+NLK,Norfolk Island,Norfolk Island,NF
+BCU,Bauchi,Bauchi,NG
+DKA,Katsina,Katsina,NG
+ENU,Enugu,Enugu,NG
+GMO,Lawanti,Gombe,NG
+JOS,Yakubu Gowon,Jos,NG
+KAD,KAD,,NG
+KAN,Mallam Aminu Kano Intl,Kano,NG
+MXJ,MXJ,,NG
+PHG,Port Harcourt City,Port Harcourt City,NG
+YOL,Yola,Yola,NG
+ABB,Asaba Intl,Asaba,NG
+ABV,Nnamdi Azikiwe Intl,Abuja,NG
+AKR,AKR,,NG
+BNI,Benin City,Benin City,NG
+CBQ,Calabar,Calabar,NG
+SKO,Sokoto,Sokoto,NG
+QOW,Sam Mbakwe,Owerri,NG
+QRW,Warri Airport,Warri,NG
+QUO,Akwa Ibom Intl,Uyo,NG
+PHC,Port Harcourt Intl,Port Harcourt,NG
+MDI,MDI,,NG
+MIU,Maiduguri Intl,Maiduguri,NG
+LOS,Murtala Muhammed,Lagos,NG
+ILR,ILR,,NG
+IBA,Ibadan,Ibadan,NG
+MGA,Augusto C Sandino Intl,Managua,NI
+PUZ,Puerto Cabezas,Puerto Cabezas,NI
+NCR,NCR,,NI
+BEF,Bluefields,Bluefields,NI
+BZA,BZA,,NI
+NVG,Nueva Guinea,Nueva Guinea,NI
+RFS,Rosita,Rosita,NI
+RNI,Corn Island,Corn Island,NI
+WSP,Waspam,Waspam,NI
+HAG,La Haya,La Haya,NL
+QFA,Aalsmeer,Aalsmeer,NL
+QHZ,Hoofddorp,Hoofddorp,NL
+QYC,Drachten,Drachten,NL
+QYH,Hengelo,Hengelo,NL
+QYI,Hilversum,Hilversum,NL
+QYL,Almelo,Almelo,NL
+QYM,Amersfoort,Amersfoort,NL
+QYP,Apeldoorn,Apeldoorn,NL
+QYT,Paterswolde,Paterswolde,NL
+QYV,Deventer,Deventer,NL
+QYZ,QYZ,,NL
+ZYA,Amsterdam Centraal Rail Way Station,Amsterdam,NL
+ZYM,Arnhem,Arnhem,NL
+ZYO,Roosendaal,Roosendaal,NL
+ZYT,Maastricht Railway Station,Maastricht,NL
+AMS,Amsterdam Schiphol ,Amsterdam,NL
+GLZ,GLZ,,NL
+GRQ,Groningen,Groningen,NL
+ENS,Twente,Enschede,NL
+DHR,DHR,,NL
+EIN,Eindhoven,Eindhoven,NL
+MST,Maastricht Aachen,Maastricht,NL
+RTM,Rotterdam The Hague,Rotterdam,NL
+LWR,Leeuwarden,Leeuwarden,NL
+LEY,LEY,,NL
+UDE,Volkel Ab,Uden,NL
+WOE,Bergen Op Zoom,Bergen Op Zoom,NL
+UTC,Utrecht,Utrecht,NL
+VAW,Svartnes,Vardo,NO
+VDB,Leirin,Fagernes,NO
+TRD,Trondheim,Trondheim,NO
+SKN,Stokmarknes Skagen,Stokmarknes,NO
+SDN,Sandane,Sandane,NO
+SVG,Stavanger,Stavanger,NO
+LKL,Banak,Lakselv,NO
+LKN,Leknes,Leknes,NO
+LYR,Svalbard Longyear,Longyearbyen,NO
+MEH,Mehamn,Mehamn,NO
+HVG,Honningsvag Valan,Honningsvag,NO
+KSU,Kristiansund Kvernberget,Kristiansund,NO
+KRS,Kristiansand Kjevik,Kristiansand,NO
+KKN,Kirkenes,Kirkenes,NO
+OSL,Gardermoen,Oslo,NO
+RYG,Moss Rygge,Oslo,NO
+TRF,Sandefjord Torp,Oslo,NO
+MQN,Mo i Rana,Mo I Rana,NO
+MOL,Molde,Molde,NO
+OLA,Orland,Orland,NO
+HMR, Stafsberg Hamar,Hamar,NO
+HAU,Haugesund,Haugesund,NO
+HAA,Hasvik,Hasvik,NO
+ALF,Alta,Alta,NO
+ANX,Andenes,Andenes,NO
+AES,Vigra Alesund,Aalesund,NO
+XJA,Alvdal Rail Station,Alvdal Rail Station,NO
+YVK,Koppang Rail Station,Koppang Rail Station,NO
+BDU,Bardufoss,Bardufoss,NO
+BGO,Bergen,Bergen,NO
+BJF,Batsfjord,Batsfjord,NO
+BNN,Bronnoysund,Bronnoysund,NO
+BOO,Bodo,Bodo,NO
+BVG,Berlevag,Berlevag,NO
+DLD,DLD,,NO
+EVE,Harstad/Narvik,Harstad-Narvik,NO
+FAN,Farsund,Farsund,NO
+FDE,Forde,Forde,NO
+FRO,Flora,Floro,NO
+GLL,Klanten,Gol,NO
+HFT,Hammerfest,Hammerfest,NO
+HOV,Hovden,Orsta-Volda,NO
+HRD,Harstad,Harstad,NO
+MJF,Kjaerstad,Mosjoen,NO
+NTB,NTB,,NO
+NVK,Narvik Framnes,Narvik,NO
+OSY,Namsos Hoknesora,Namsos,NO
+QFK,Selje Harbour,Selje,NO
+QFQ,Maloy Harbour,Maloy,NO
+QKK,Karasjok,Karasjok,NO
+QKX,Kautokeino,Kautokeino,NO
+QTP,Tana,Tana,NO
+QVO,Havoysund,Havoysund,NO
+RET,Rost,Rost,NO
+RRS,Roros,Roros,NO
+RVK,Ryumsjoen,Roervik,NO
+SKE,Skien,Skien,NO
+SOG,Sogndal Haukasen,Sogndal,NO
+SOJ,South Molle Island,Sorkjosen,NO
+SRP,Sorstokken,Stord,NO
+SSJ,Sandnessjoen Stokka,Sandnessjoen,NO
+SVJ,Svolvaer,Svolvaer,NO
+TOS,Tromso,Tromso,NO
+VDS,Vadso,Vadso,NO
+VRY,Vaeroy,Vaeroy,NO
+XGD,Arendal,Arendal,NO
+XGH,Flam,Flam,NO
+XGI,Andalsnes,Andalsnes,NO
+XGP,Dombas,Dombas,NO
+XGS,Gjerstad,Gjerstad,NO
+XGU,Asker,Asker,NO
+XHF,Honefoss,Honefoss,NO
+XHL,Nelaug,Nelaug,NO
+XKB,Kongsberg,Kongsberg,NO
+XKC,Sandnes,Sandnes,NO
+XKD,Halden,Halden,NO
+XKE,Rena,Rena,NO
+XKF,Fredrikstad,Fredrikstad,NO
+XKG,Grong,Grong,NO
+XKI,Lillestrom,Lillestrom,NO
+XKJ,Steinkjer,Steinkjer,NO
+XKK,Larvik,Larvik,NO
+XKM,Moss,Moss,NO
+XKN,Finse,Finse,NO
+XKP,Porsgrunn,Porsgrunn,NO
+XKQ,Sarpsborg,Sarpsborg,NO
+XKW,Tonsberg,Tonsberg,NO
+XKZ,Vinstra,Vinstra,NO
+XND,Drammen,Drammen,NO
+XOB,Bryne,Bryne,NO
+XOD,Oppdal,Oppdal,NO
+XOL,Myrdal,Myrdal,NO
+XOQ,Sira,Sira,NO
+XOR,Otta,Otta,NO
+XRD,Egersund,Egersund,NO
+XUB,Berkak,Berkak,NO
+XUC,Elverum,Elverum,NO
+XUE,Heimdal,Heimdal,NO
+XUG,Holmestrand,Holmestrand,NO
+XUH,Levanger Railway,Levanger,NO
+XUI,Lysaker,Lysaker,NO
+XUJ,Moelv,Moelv,NO
+XUL,Nesbyen,Nesbyen,NO
+XUM,Neslandsvatn,Neslandsvatn,NO
+XUO,Nordagutu,Nordagutu,NO
+XUQ,Ringebu,Ringebu,NO
+XUR,Skoppum,Skoppum,NO
+XUS,Snartemo,Snartemo,NO
+XUU,Stjordal,Stjordal,NO
+XUV,Storekvina,Storekvina,NO
+XUW,Storen,Storen,NO
+XUX,Ustaoset,Ustaoset,NO
+XVK,Voss,Voss,NO
+XXE,Vennesla,Vennesla,NO
+XXG,Verdal,Verdal,NO
+XXL,Lillehammer,Lillehammer,NO
+XXR,Al,Al,NO
+XZD,Kongsvinger,Kongsvinger,NO
+YVH,Hjerkinn,Hjerkinn,NO
+YVS,Ski,Ski,NO
+ZMQ,Raufoss,Raufoss,NO
+ZMX,Tynset,Tynset,NO
+ZMZ,Bjerka,Bjerka,NO
+ZVB,Brumunddal,Brumunddal,NO
+ZVD,Drangedal,Drangedal,NO
+ZWJ,Haugastol,Haugastol,NO
+ZXM,Rognan,Rognan,NO
+ZXO,Fauske,Fauske,NO
+ZXR,Hemnes,Hemnes,NO
+ZXU,Rygge,Rygge,NO
+ZXX,Rade,Rade,NO
+ZYG,Gjovik,Gjovik,NO
+ZYS,Sandefjord,Sandefjord,NO
+ZYV,Vegarshei,Vegarshei,NO
+ZYW,Sandvika,Sandvika,NO
+ZYY,Marnardal,Marnardal,NO
+BWA,Bhairawa,Bhairahawa,NP
+DHI,Dhangarhi,Dhangarhi,NP
+HRJ,Chaurjhari,Chaurjhari,NP
+KEP,Nepalganj,Nepalganj,NP
+MWP,Mountain,Mountain Scenic,NP
+PPL,Phaplu,Phaplu,NP
+SYH,Syangboche,Syangboche,NP
+XMG,XMG,,NP
+BGL,BGL,,NP
+BHP,Bhojpur,Bhojpur,NP
+BHR,Bharatpur,Bharatpur,NP
+BIR,Biratnagar,Biratnagar,NP
+BJU,Bajura,Bajura,NP
+BIT,Patan,Baitadi,NP
+BJH,Bajhang,Bajhang,NP
+BDP,Bhadrapur,Bhadrapur,NP
+GKH,GKH,,NP
+FEB,FEB,,NP
+DAP,Darchula,Darchula,NP
+DNP,Tribhuvannagar,Dang,NP
+DOP,Dolpa,Dolpa,NP
+NGX,Manang,Manang,NP
+PKR,Pokhara,Pokhara,NP
+RPA,RPA,,NP
+RJB,Rajbiraj,Rajbiraj,NP
+RHP,Ramechhap,Ramechhap,NP
+IMK,Simikot,Simikot,NP
+JMO,Jomsom,Jomsom,NP
+JKR,JKR,,NP
+MEY,Meghauli,Meghauli,NP
+LUA,Tenzing-Hillary,Lukla,NP
+LTG,Langtang,Langtang,NP
+LDN,Lamidanda,Lamidanda,NP
+KTM,Tribhuvan Intl,Kathmandu,NP
+RUK,Chaurjahari,Rukumkot,NP
+SKH,SKH,,NP
+SIF,Simara,Simara,NP
+SIH,Dipayal Silgadhi,Dipayal Silgadhi,NP
+TPU,Tikapur,Tikapur,NP
+TPJ,Taplejung,Taplejung,NP
+TMI,Tumlingtar,Tumlingtar,NP
+INU,Nauru Island Intl,Nauru Island,NR
+IUE,Niue Intl,Niue Island,NU
+ALR,ALR,,NZ
+CHT,Karewa,Chatham Island,NZ
+ENZ,Mystery Break,Mystery Break,NZ
+FGL,Fox Glacier,Fox Glacier,NZ
+GTN,Glentanner,Mount Cook,NZ
+HLZ,Hamilton Intl,Hamilton,NZ
+KWU,Mansion House,Mansion House,NZ
+MON,Mount Cook,Mount Cook,NZ
+NPE,Hawkes Bay,Napier/Hastings,NZ
+NSN,Nelson,Nelson,NZ
+SZS,SZS,,NZ
+TMZ,TMZ,,NZ
+TWZ,TWZ,,NZ
+XXH,Helicopter Scenic,Helicopter Scenic,NZ
+DUD,Dunedin Intl,Dunedin,NZ
+CMV,CMV,,NZ
+CHC,Christchurch Intl,Christchurch,NZ
+GIS,Gisborne,Gisborne,NZ
+GBZ,GBZ,,NZ
+GMN,GMN,,NZ
+HKK,Hokitika,Hokitika,NZ
+BHE,Woodbourne,Blenheim,NZ
+AKL,Auckland,Auckland,NZ
+AMZ,AMZ,,NZ
+ASG,ASG,,NZ
+TKZ,Tokoroa,Tokoroa,NZ
+TRG,Tauranga,Tauranga,NZ
+TUO,Taupo,Taupo,NZ
+WIK,Waiheke Island,Waiheke Island,NZ
+WHO,WHO,,NZ
+WHK,Whakatane,Whakatane,NZ
+WKA,Wanaka,Wanaka,NZ
+WLG,Wellington,Wellington,NZ
+WIR,Wairoa,Wairoa,NZ
+WAG,Wanganui,Wanganui,NZ
+TIU,Timaru,Timaru,NZ
+THH,THH,,NZ
+TEU,Te Anau,Te Anau,NZ
+ZQN,Queenstown,Queenstown,NZ
+WSZ,Westport,Westport,NZ
+WRE,Whangarei,Whangarei,NZ
+WTZ,WTZ,,NZ
+MFN,Milford Sound,Milford Sound,NZ
+IVC,Invercargill,Invercargill,NZ
+KKO,Kaikohe,Kaikohe,NZ
+KKE,Kerikeri,Kerikeri,NZ
+KTF,Takaka,Takaka,NZ
+KAT,Kaitaia,Kaitaia,NZ
+KBZ,KBZ,,NZ
+ROT,Rotorua Intl,Rotorua,NZ
+PPQ,PPQ,,NZ
+PMR,Palmerston North,Palmerston North,NZ
+PCN,PCN,,NZ
+NPL,New Plymouth,New Plymouth,NZ
+OHA,Rnzaf Base,Ohakea,NZ
+OAM,OAM,,NZ
+MRO,MRO,,NZ
+MTA,Matamata,Matamata,NZ
+MZP,MZP,,NZ
+OHS,Sohar,Sohar,OM
+KHS,Khasab,Khasab,OM
+MCT,Muscat Intl,Muscat,OM
+SLL,Salalah Intl,Salalah,OM
+TTH,Thumrait,Thumrait,OM
+FAU,Fahud,Fahud,OM
+AHW,Ahwaz,Ahwaz,OM
+AOM,AOM,,OM
+BJQ,Bahja,Bahja,OM
+BYB,Dibaa,Dibaa,OM
+JNJ,Duqm,Duqm,OM
+LKW,Lekhwair,Lekhwair,OM
+MSH,RAFO Masirah,Masirah,OM
+RMB,Buraimi,Buraimi,OM
+RNM,Qarn Alam,Qarn Alam,OM
+SUH,Sur,Sur,OM
+UKH,Mukhaizna,Mukhaizna,OM
+WWG,Al Koude,Al Koude,OM
+ACU,Achutupo,Achutupo,PA
+BFQ,Bahia Pinas,Bahia Pinas,PA
+BLB,Panama Pacifico,Balboa,PA
+BOC,Bocas Del Toro,Bocas Del Toro,PA
+CTE,Carti,Carti,PA
+CZJ,Corazon De Jesus,Corazon De Jesus,PA
+DAV,Enrique Malek,David,PA
+ELE,El Real de Santa María,El Real,PA
+HOW,Fort Kobbe,Fort Kobbe,PA
+JQE,Jaque,Jaque,PA
+MPI,Mamitupo,Mamitupo,PA
+MPP,Mulatupo,Mulatupo,PA
+NBL,San Blas,San Blas,PA
+NGN,Nargana,Nargana,PA
+NMG,San Miguel,San Miguel,PA
+OGM,Ogobsucum,Ustupu Island,PA
+PAC,Marcos A. Gelabert Intl,Panama City,PA
+PVE,El Porvenir,El Porvenir,PA
+RIT,Rio Tigre,Rio Tigre,PA
+RSI,Rio Sidra,Rio Sidra,PA
+SAX,Sambu,Sambu,PA
+SFW,Santa Fe,Santa Fe,PA
+TUE,Tupile,Tupile,PA
+GHE,GHE,,PA
+CHX,Changuinola Intl,Changuinola,PA
+CTD,Chitre Alonso Valderrama,Chitre,PA
+AML,Puerto Armuelles,Puerto Armuelles,PA
+CDE,Caledonia,Caledonia,PA
+TUW,TUW,,PA
+UTU,Ustupo,Ustupo,PA
+SIC,SIC,,PA
+TJC,Ticantiki,Ticantiki,PA
+SYP,SYP,,PA
+IVI,Isla Viveros,Isla Viveros,PA
+ONX,Colon,Colon,PA
+OTD,Contadora,Contadora,PA
+PLP,La Palma,La Palma,PA
+RIZ,Rizhao Shanzihe,Rizhao,PA
+PTY, Tocumen Intl,Panama City,PA
+PYV,Yaviza,Yaviza,PA
+PYC,Playon Chico,Playon Chico,PA
+PIU,Cap. FAP Guillermo Concha Iberico Intl,Piura,PE
+PCL,FAP Captain David Abensur Rengifo Intl,Pucallpa,PE
+PEM,Padre Aldamiz Intl ,Puerto Maldonado,PE
+NZC,NZC,,PE
+JAE,Aeropuerto de Shumba,JaÃ©n,PE
+IQT,C.F. Secada Vignetta Intl,Iquitos,PE
+JJI,JJI,,PE
+HUU,HUU,,PE
+JUL,Inca Manco Cápac Intl,Juliaca,PE
+MBP,Moyobamba,Moyobamba,PE
+LIM,Jorge Chavez Intl,Lima,PE
+SQU,Saposoa,Saposoa,PE
+TDP,Trompeteros,Trompeteros,PE
+TGI,Tingo Maria,Tingo Maria,PE
+TCQ,Tacna,Tacna,PE
+TBP,Capitan FAP Pedro Canga Rodrigue,Tumbes,PE
+SJA,San Juan,San Juan,PE
+SMG,Santa Maria,Santa Maria,PE
+TYL,Talara,Talara,PE
+UMI,Quincemil,Quincemil,PE
+TRU,Trujillo,Trujillo,PE
+TPP,Tarapoto,Tarapoto,PE
+YMS,Moises Benzaquen Rengifo ,Yurimaguas,PE
+AYP,Yanamilla,Ayacucho,PE
+ANS, Andahuaylas,Andahuaylas,PE
+AOP,Andoas,Andoas,PE
+ATA,ATA,,PE
+AQP,Rodriguez Ballon Intl,Arequipa,PE
+CUZ,Alejandro Velasco Astete Intl,Cuzco,PE
+CHM,Chimbote,Chimbote,PE
+CHH,Chachapoyas,Chachapoyas,PE
+CIX,José Abelardo Quiñones Gonzáles International,Chiclayo,PE
+CJA,Mayor General FAP Armando Revoredo Iglesias,Cajamarca,PE
+ALD,Alerta,Alerta,PE
+APE,San Juan Aposento,San Juan Aposento,PE
+BLP,BLP,,PE
+IBP,Iberia,Iberia,PE
+ILQ,ILQ,,PE
+MFT,Machu Picchu,Machu Picchu,PE
+PIO,PIO,,PE
+RIJ,Rioja,Rioja,PE
+SYC,Shiringayoc,Shiringayoc,PE
+VVN,Malvinas,Malvinas,PE
+AHE,Ahe,Ahe,PF
+FAC,Faaite,Faaite,PF
+FAV,Fakarava,Fakarava,PF
+GMR,Totegegie,Gambier Island,PF
+HOI,Hao,Hao Island,PF
+KKR,Kaukura Atoll,Kaukura,PF
+MAU,Maupiti,Maupiti,PF
+NAU,Napuka,Napuka,PF
+PKP,PKP,,PF
+RMT,Rimatara,Rimatara,PF
+RRR,Raroia,Raroia,PF
+TIH,Tikehau,Tikehau,PF
+UAH,Ua Huka,Ua Huka,PF
+UAP,UAP,,PF
+ZTA,ZTA,,PF
+FGU,Fangatau,Fangatau,PF
+FHZ,Fakahina,Fakahina,PF
+HHZ,Hikueru,Hikueru,PF
+APK,Apataki,Apataki,PF
+AAA,Anaa,Anaa,PF
+AXR,Arutua,Arutua,PF
+AUQ,Atuona,Hiva Oa,PF
+BOB,Motu Mute,Bora Bora,PF
+XMH,Manihi,Manihi,PF
+TPX,Tupai,Tupai,PF
+TTI,TTI,,PF
+TKV,Tatakoto,Tatakoto,PF

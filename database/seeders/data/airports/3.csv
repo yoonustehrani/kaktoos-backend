@@ -1,0 +1,1001 @@
+IATA_code,name,city_name,country_code
+FKI,Kisangani,Kisangani,CD
+FMI,Kalemie,Kalemie,CD
+FIH,Kinshasha,Kinshasa,CD
+BNB,Boende,Boende,CD
+BUX,Bunia,Bunia,CD
+BSU,Basankusu,Basankusu,CD
+BKY,Kavumu,Bukavu,CD
+BDT,Gbadolite,Gbadolite,CD
+BAN,BAN,,CD
+MSM,MSM,,CD
+MNO,Manono,Manono,CD
+MNB,Moanda,Muanda,CD
+PWO,Pweto,Pweto,CD
+PFR,Ilebo,Ilebo,CD
+LBO,LBO,,CD
+KWZ,Kolwezi,Kolwezi,CD
+LIE,LIE,,CD
+LIQ,Lisala,Lisala,CD
+LJA,Lodja,Lodja,CD
+MJM,Mbuji Mayi,Mbuji-Mayi,CD
+MDK,Mbandaka,Mbandaka,CD
+MAT,Matadi Tshimpi,Matadi,CD
+LZI,Luozi,Luozi,CD
+IDF,Idiofa,Idiofa,CD
+IKL,IKL,,CD
+IRP,Matari,Isiro,CD
+KBN,Tunta,Kabinda,CD
+KBO,Kabalo,Kabalo,CD
+KEC,Kasenga,Kasenga,CD
+KGA,Kananga,Kananga,CD
+KGN,Kasongo-Lunda,Kasongo-Lunda,CD
+KKW,Kikwit,Kikwit,CD
+KND,Kindu,Kindu,CD
+KNM,Kaniama,Kaniama,CD
+KLY,Kalima,Kalima,CD
+KMN,Kamina Ville,Kamina,CD
+RUE,Butembo,Butembo,CD
+KOL,Koumala,Koumala,CF
+IRO,Birao,Birao,CF
+IMO,IMO,,CF
+MKI,Obo,Obo,CF
+RFA,Rafai,Rafai,CF
+NDL,NDL,,CF
+ODJ,Ouanda Djalle,Ouanda Djalle,CF
+ODA,Ouadda,Ouadda,CF
+BBT,Berberati,Berberati,CF
+BCF,Bouca,Bouca,CF
+BBY,BBY,,CF
+BMF,Bakouma,Bakouma,CF
+BGF,Bangui M'Poko Intl,Bangui,CF
+BGU,BGU,,CF
+BSN,BSN,,CF
+BTG,Batangafo,Batangafo,CF
+BOP,Bouar,Bouar,CF
+AIG,Yalinga,Yalinga,CF
+GDI,Gordil,Melle,CF
+GDA,Gounda,Gounda,CF
+CRF,Carnot,Carnot,CF
+BEM,BEM,,CF
+BIV,BIV,,CF
+KWD,Kawadjia,Kawadjia,CF
+KEE,Kelle,Kelle,CG
+NKY,Nkay,N'kayi,CG
+OLL,Oyo,Oyo,CG
+DIS,Dolisie,Dolisie,CG
+DJM,DJM,,CG
+FTX,Owando,Owando,CG
+EPN,Epena,Epena,CG
+GMM,Gamboma,Gamboma,CG
+ANJ,ANJ,,CG
+BOE,Boundji,Boundji,CG
+BTB,BTB,,CG
+BZV,Maya Maya,Brazzaville,CG
+OKG,Okoyo,Okoyo,CG
+MUY,Mouyondzi,Mouyondzi,CG
+MSX,Mossendjo,Mossendjo,CG
+OUE,Ouesso,Ouesso,CG
+PNR,Pointe Noire,Pointe-Noire,CG
+MKJ,Makoua,Makoua,CG
+LKC,Lekana,Lekana,CG
+LCO,Lage,Lage,CG
+ION,Impfondo,Impfondo,CG
+KMK,Makabana,Makabana,CG
+KNJ,Kindamba,Kindamba,CG
+SOE,SOE,,CG
+SMV,St Moritz,St Moritz,CH
+SIR,Sion,Sion,CH
+ZRH,Zurich,Zurich,CH
+LUG,Lugano,Lugano,CH
+BXO,BXO,,CH
+BRN,Bern,Bern,CH
+GVA,Geneve,Geneva,CH
+ACH,Altenrhein,Altenrhein,CH
+QGL,St Gallen,St Gallen,CH
+QLJ,Lucerne,Lucerne,CH
+QLS,Lausanne,Lausanne,CH
+QNC,Neuchatel,Neuchatel,CH
+QZB,Zermatt,Zermatt,CH
+ZAP,Appenzell,Appenzell,CH
+ZDA,Aarau,Aarau,CH
+ZDB,Adelboden,Adelboden,CH
+ZDC,Aigle,Aigle,CH
+ZDD,Arbon,Arbon,CH
+ZDE,Arosa,Arosa,CH
+ZDH,Basel Mulhouse Railway Station,Basel Mulhouse,CH
+ZDI,Bellinzona,Bellinzona,CH
+ZDL,Brig,Brig,CH
+ZDO,Buchs Sg,Buchs Sg,CH
+ZDP,Burgdorf,Burgdorf,CH
+ZDQ,Champery,Champery,CH
+ZDS,Chiasso,Chiasso,CH
+ZDT,Chur,Chur,CH
+ZDV,Davos,Davos,CH
+ZDW,Delemont,Delemont,CH
+ZDX,Dietikon,Dietikon,CH
+ZDZ,Einsiedeln,Einsiedeln,CH
+ZHB,Engelberg,Engelberg,CH
+ZHD,Fluelen,Fluelen,CH
+ZHE,Frauenfeld,Frauenfeld,CH
+ZHF,Fribourg,Fribourg,CH
+ZHG,Glarus,Glarus,CH
+ZHI,Grenchen,Grenchen,CH
+ZHJ,Grindelwald,Grindelwald,CH
+ZHL,Heerbrugg,Heerbrugg,CH
+ZHR,Kandersteg,Kandersteg,CH
+ZHS,Klosters Railway Station,Klosters,CH
+ZHU,Kreuzlingen,Kreuzlingen,CH
+ZHW,Langenthal,Langenthal,CH
+ZJC,Lenzburg,Lenzburg,CH
+ZJI,Locarno,Locarno,CH
+ZJM,Martigny,Martigny,CH
+ZJP,ZJP,,CH
+ZJQ,Morges,Morges,CH
+ZJU,Olten,Olten,CH
+ZJV,Pontresina,Pontresina,CH
+ZJZ,Rorschach,Rorschach,CH
+ZKA,Sargans,Sargans,CH
+ZKC,Sarnen,Sarnen,CH
+ZKI,Saas Fee,Saas Fee,CH
+ZKJ,Schaffhausen,Schaffhausen,CH
+ZKO,Sierre,Sierre,CH
+ZKS,Solothurn,Solothurn,CH
+ZKU,Sursee,Sursee,CH
+ZKV,Thalwil,Thalwil,CH
+ZKX,Uzwil,Uzwil,CH
+ZKY,Verbier,Verbier,CH
+ZLB,Visp,Visp,CH
+ZLC,Waedenswil,Waedenswil,CH
+ZLD,Weinfelden,Weinfelden,CH
+ZLF,Wettingen,Wettingen,CH
+ZLH,Wil,Wil,CH
+ZLI,Winterthur,Winterthur,CH
+ZRN,Nyon,Nyon,CH
+ZTK,Thun,Thun,CH
+BBV,BBV,,CI
+BQO,Tehini,Bouna,CI
+MJC,Man,Man,CI
+OFI,Ouango Fitini,Ouango Fitini,CI
+SPY,SPY,,CI
+TXU,Tabou,Tabou,CI
+HGO,Korhogo,Korhogo,CI
+FEK,Ferkessedougou,Ferkessedougou,CI
+GGN,GGN,,CI
+GGO,Guiglo,Guiglo,CI
+DJO,Daloa,Daloa,CI
+DIM,DIM,,CI
+BXI,BXI,,CI
+BYK,BYK,,CI
+BDK,BDK,,CI
+ASK,Yamoussoukro,Yamoussoukro,CI
+ABJ,Felix Houphouet Boigny,Abidjan,CI
+KTC,Katiola,Katiola,CI
+KEO,Odienne,Odienne,CI
+OGO,Abengourou,Abengourou,CI
+ZSS,Sassandra,Sassandra,CI
+SEO,SEO,,CI
+TOZ,Touba,Touba,CI
+AIT,Aitutaki,Aitutaki Island,CK
+AIU,Atiu Island,Atiu Island,CK
+MGS,Mangaia Island,Mangaia Island,CK
+MHX,Manihiki Island,Manihiki Atoll,CK
+MOI,Nukuroa,Mitiaro Island,CK
+MUK,Mauke Island,Mauke Island,CK
+PYE,Penrhyn Island,Penrhyn Atoll,CK
+PZK,Pukapuka Island,Pukapuka Island,CK
+RAR,Rarotongo Intl,Rarotonga Island,CK
+ESR,El Salvador,El Salvador,CL
+LGR,Cochrane,Cochrane,CL
+LOB,LOB,,CL
+MHC,Mocopulli,Castro,CL
+QRC,QRC,,CL
+ULC,ULC,,CL
+WAP,Alto Palena,Alto Palena,CL
+WCA,Castro,Castro,CL
+WPA,WPA,,CL
+ZCQ,ZCQ,,CL
+ZIC,Victoria,Victoria,CL
+ZLR,ZLR,,CL
+ZVC,Villarrica,Villarrica,CL
+ARI,Chacalluta,Arica,CL
+ANF,Cerro Moreno Intl,Antofagasta,CL
+BBA,Teniente Vidal,Balmaceda,CL
+CCH,CCH,,CL
+CCP,Carriel Sur,Concepcion,CL
+CPO,Chamonate,Copiapo,CL
+CJC,El Loa,Calama,CL
+COW,COW,,CL
+CNR,Chanaral,Chanaral,CL
+FRT,FRT,,CL
+FFU,FFU,,CL
+GXQ,Teniente Vidal,Coyhaique,CL
+TOQ,Tocopilla,Tocopilla,CL
+TTC,Taltal,Taltal,CL
+TLX,TLX,,CL
+WPR,WPR,,CL
+WPU,WPU,,CL
+WCH,Chaiten,Chaiten,CL
+VAP,VAP,,CL
+VLR,VLR,,CL
+SCL,Arturo Merino Benitez,Santiago,CL
+SMB,Cerro Sombrero,Cerro Sombrero,CL
+ZPC,Pucon,Pucon,CL
+ZOS,Canal Bajo Carlos Hott Siebert ,Osorno,CL
+ZCO,Temuco,Temuco,CL
+ZAL,Pichoy,Valdivia,CL
+ZUD,ZUD,,CL
+YAI,YAI,,CL
+PNT,PNT,,CL
+PMC,El Tepual,Puerto Montt,CL
+OVL,OVL,,CL
+PUX,PUX,,CL
+PUQ,Presidente Carlos Ibáñez del Campo Intl,Punta Arenas,CL
+KNA,Vina del Mar,Vina del Mar,CL
+IPC,Mataveri Intl,Easter Island,CL
+IQQ,Diego Aracena Intl,Iquique,CL
+LSQ,Los Angeles,Los Angeles,CL
+LSC,La Florida,La Serena,CL
+KLE,Kaele,Kaele,CM
+KBI,KBI,,CM
+OUR,OUR,,CM
+NKS,Nkongsamba,Nkongsamba,CM
+MMF,Mamfe,Mamfe,CM
+NGE,Ngaoundere,Ngaoundere,CM
+MVR,Salak,Maroua,CM
+NSI,Nsimalen,Yaounde,CM
+YAO,Yaounde,Yaounde,CM
+TKC,Tiko,Tiko,CM
+GXX,Yagoua,Yagoua,CM
+GOU,Garoua Intl,Garoua,CM
+FOM,Nkounja,Foumban,CM
+DLA,Douala Intl,Douala,CM
+EBW,Ebolowa,Ebolowa,CM
+BPC,BPC,,CM
+BTA,Bertoua,Bertoua,CM
+BFX,Bafoussam,Bafoussam,CM
+BLC,Bali,Bali,CM
+NAY,Nanyuan,Beijing,CN
+PEK,Beijing Capital Intl,Beijing,CN
+PKX,Daxing Airport,Beijing,CN
+BJS,"Beijing, All",Beijing,CN
+BFJ,Bijie Intl,Bijie,CN
+BFU,BFU,,CN
+BHY,Beihai Fucheng,Beihai,CN
+BAV,Baotou,Baotou,CN
+AYN,Anyang,Anyang,CN
+AVA,AVA,,CN
+BSD,Baoshan,Baoshan,CN
+CAN,Guangzhou Baiyun Intl,Guangzhou,CN
+AOG,AOG,,CN
+AKU,Aksu,Aksu,CN
+AQG,Anqing Tianzhushan,Anqing,CN
+AAT,Altay,Altay,CN
+AEB,AEB,,CN
+ACX,ACX,,CN
+AKA,AKA,,CN
+FYG,FUYONG FERRY PORT,SHENZHEN,CN
+ENH,Enshi Xujiaping,Enshi,CN
+DYG,Zhangjiajie Hehua,Dayong,CN
+DZU,Dazu,Dazu,CN
+DSN,Ordos Ejin Horo,Ordos,CN
+DLC,Dalian Zhoushuizi Intl,Dalian,CN
+DNH,Dunhuang,Dunhuang,CN
+DQA,Daqing Sartu,Daqing,CN
+DOY,Dongying Shengli,Dongying,CN
+DIG,Diqing Shangri-La,Diqing,CN
+DCY,Yading,Daocheng,CN
+DDG,Langtouapt,Dandong,CN
+DAT,Datong Yungang,Datong,CN
+DAX,Dazhou Heshi,Dazhou,CN
+CZX,Changzhou,Changzhou,CN
+CKG,Chongqing Jiangbei Intl,Chongqing,CN
+CIF,Chifeng,Chifeng,CN
+CIH,Changzhi Wangcun,Changzhi,CN
+CGO,Zhengzhou Xinzheng,Zhengzhou,CN
+CGD,Changde,Changde,CN
+CGQ,Changchun Longjia Intl,Changchun,CN
+CSX,Changsha Huanghua Intl,Changsha,CN
+CTU,Chengdu Shuangliu Intl,Chengdu,CN
+FOC,Fuzhou,Fuzhou,CN
+FUG,Fuyang Xiguan,Fuyang,CN
+FUO,Fuoshan,Foshan,CN
+GHN,GHN,,CN
+ENY,Ershilipu,Yan'an,CN
+ERL,ERL,,CN
+GXH,GXH,,CN
+GYS,Guangyuan,Guang Yuan,CN
+GYU,Guyuan Liupanshan,Guyuan,CN
+GOQ,GOQ,,CN
+HGH,Hangzhou Xiaoshan Intl,Hangzhou,CN
+HFE,Hefei Xinqiao Intl,Hefei,CN
+HIA,Huai'an Lianshui,Huai'an,CN
+HJJ,Zhijiang,Huai Hua,CN
+HAK,Haikou,Haikou,CN
+HEK,HEK,,CN
+HET,Hohhot Baita Intl,Hohhot,CN
+HDG,HDG,,CN
+HSC,HSC,,CN
+HSN,Zhoushan Putuoshan,Zhoushan,CN
+HTN,HTN,,CN
+HRB,Harbin Taiping Intl,Harbin,CN
+HLD,Hulunbuir Hailar,Hailar,CN
+HLH,Ulanhot,Ulanhot,CN
+HNY,HNY,,CN
+AXF,Bayanhaote Airport,Alxa Left Banner,CN
+BPL,BPL,,CN
+BPO,Bo'Ao,Bo'Ao,CN
+BPX,Bangda,Bangda,CN
+CHG,CHG,,CN
+CNI,CNI,,CN
+DLU,Dali,Dali City,CN
+DYN,Danyang,Danyang,CN
+EJN,EJN,,CN
+HMI,HMI,,CN
+IQM,Qiemo,Qiemo,CN
+JGD,Jiagedaqi,Jiagedaqi,CN
+JXS,Jiaxing,Jiaxing,CN
+JZH,Jiuzhai Huanglong,Jiuzhaigou,CN
+KHG,Kashi,Kashi,CN
+KJH,KJH,,CN
+KJI,KJI,,CN
+KVN,Kushan,Kushan,CN
+LDS,LDS,,CN
+LLB,Libo,Libo,CN
+LLV,Luliang,Luliang,CN
+LQQ,Liaoyang Railway Station,Liaoyang,CN
+LQS,Lingshui,Lingshui,CN
+LXA,Lhasa Gonggar,Lhasa,CN
+LZN,LZN,,CN
+LZY,Nyingchi Mainling,Lin Zhi,CN
+NGQ,Ngari Gunsa,Shi Quan He,CN
+QHX,Qionghai,Qionghai,CN
+RHT,Alxa Right Banner,Alxa Right Banner,CN
+RKZ,Xigaze Rikaze,Xigaze Rikaze,CN
+RLK,RLK,,CN
+SHP,Qinhuangdao Shanhaiguan,Qinhuangdao,CN
+SXJ,SXJ,,CN
+SYM,Simao  Fusingchen,Simao,CN
+TJJ,Tainjin,Tainjin,CN
+TMV,South Railway Station,Tianmen,CN
+TNH,TNH,,CN
+TVX,TVX,,CN
+WEC,Wenchang,Wenchang,CN
+WXJ,Wanning,Wanning,CN
+XHO,Dongguan,Dongguan,CN
+XIY,Xi an,Xi'an,CN
+XTA,Econ/Tech Dev Area,Tianjin,CN
+XTX,Port Free Trade Zone,Chengdu,CN
+YIC,Yichun Mingyueshan,Yichun,CN
+YIE,Aershan,Aershan,CN
+YIN,Yining,Yining,CN
+YLN,Yilan,Yilan,CN
+ZAS,Shunde,Shunde,CN
+ZAX,Panyu,Panyu,CN
+ZBD,Jiangmen,Jiangmen,CN
+ZBZ,Xinhui,Xinhui,CN
+ZCA,Taishan,Taishan,CN
+ZEF,Nanhai,Nanhai,CN
+ZGC,Zagreb Bus Station,Zagreb,CN
+ZGN,ZGN,,CN
+ZIY,Lianhuashan Ferry Port Bus Station,Lianhuashan,CN
+ZMY,Huangpu,Huangpu,CN
+ZTI,Humen Ferry Port,Humen,CN
+ZUI,Zhuhai Jiuzhou Ferry Bus Station,Zhuhai,CN
+ZUJ,Zhenjiang,Zhenjiang,CN
+ZYK,Shekou Ferry Port,Shekou,CN
+TLQ,TLQ,,CN
+TNA,Jinan,Jinan,CN
+TSN,Tianjin,Tianjin,CN
+TVS,TVS,,CN
+TXN,Tunxi,Huangshan,CN
+TYN,Taiyuan,Taiyuan,CN
+UYN,Yulin Yuyang,Yulin,CN
+URC,Urumqi,Urumqi,CN
+WEF,Weifang,Weifang,CN
+WEH,Weihai,Weihai,CN
+WNH,Wenshan Puzhehei,Wenshan,CN
+WNZ,Wenzhou,Wenzhou,CN
+WHU,WHU,,CN
+SIA,Xiguan,Xi'an,CN
+SHE,Shenyang Taoxian Intl,Shenyang,CN
+SHS,SHS,,CN
+PVG,Shanghai Pudong Intl,Shanghai,CN
+SHA,Shanghai Hongqiao Intl,Shanghai,CN
+SJW,Shijiazhuang Daguocun,Shijiazhuang,CN
+THQ,THQ,,CN
+TEN,Tongren,Tongren,CN
+TGO,Tongliao,Tongliao,CN
+TCG,Tocache,Tacheng,CN
+TCZ,TCZ,,CN
+SZV,SZV,,CN
+SZX,Shenzen,Shenzhen,CN
+TAO,Tsing Tao,Qingdao,CN
+SYX,"Fenghuang, Hainan Is.",Sanya,CN
+SWA, Jieyang Chaoshan,Shantou,CN
+SQD,Shangrao Sanqingshan,Shangrao,CN
+XUZ,Xuzhou,Xuzhou,CN
+XMN,Gaoqi/Xiamen,Xiamen,CN
+XNN,Xining,Xining,CN
+XNT,XNT,,CN
+YBP,Yibin Caiba,Yibin,CN
+XIC,Xichang,Xichang,CN
+XIL,Xilinhot,Xilinhot,CN
+XFN,Xiangfan,Xiangyang,CN
+XEN,Xingcheng,Xingcheng,CN
+WXN,Wanxian,Wanzhou,CN
+WUA,WUA,,CN
+WUH,Wuhan/Tianhe,Wuhan,CN
+WUS,Shaowu  ???,Wuyishan,CN
+WUT,Wutaishan,Xinzhou,CN
+WUX,Sunan Shuofang,Wuxi,CN
+WUZ,Wuzhou/Changzhoudao,Wuzhou,CN
+YIH,Yichang Sanxia,Yichang,CN
+YIW,Yiwu,Yiwu,CN
+YCU,Yuncheng,Yun Cheng,CN
+YTY,Yangzhou Taizhou,Yangzhou,CN
+ZUH, Zhuhai Jinwan,Zhuhai,CN
+ZYI,Zunyi Xinzhou,Zunyi,CN
+ZAT,Zhaotong,Zhaotong,CN
+ZHA,Zhanjiang,Zhanjiang,CN
+YUS,Batang,Yushu,CN
+YNZ,Yancheng Nanyang Intl,Yancheng,CN
+ZHY,Zhongwei,Zhongwei,CN
+ZQZ,ZQZ,,CN
+YZY,Zhangye,Zhangye,CN
+YNJ,Yanji Chaoyangchuan,Yanji,CN
+YNT,Yantai Laishan Intl,Yantai,CN
+MXZ,Mei Xian,Mei Xian,CN
+NGB,Ningbo Lishe Intl,Ningbo,CN
+NDG,Qiqihar Sanjiazi,Qiqihar,CN
+NAO,Nanchong,Nanchong,CN
+NBS,Changbaishan,Baishan,CN
+NLH,Ninglang Luguhu,Ninglang,CN
+NKG,Nanjing Lukou Intl,Nanjing,CN
+NLT,NLT,,CN
+NNY,Nanyang Jiangying,Nanyang,CN
+NNG,Nanning Wuxu Intl,Nanning,CN
+NTG,Nantong Xingdong,Nantong,CN
+OHE,Mohe,Mohe,CN
+NZH,Manzhouli Xijiao,Manzhouli,CN
+PNJ,PNJ,,CN
+PZI,Pan Zhi Hua Bao An Ying,Pan Zhi Hua,CN
+KCA,Kuqa Qiuci,Kuqa,CN
+JXA,JXA,,CN
+JNZ,Jinzhou Xiaolingzi,Jinzhou,CN
+JUH,Chizhou Jiuhuashan,Chizhou,CN
+JUZ,Quzhou,Quzhou,CN
+KGT,KGT,,CN
+KHN,Nanchang Changbei Intl,Nanchang,CN
+KMG,Kunming Changshui Intl,Kunming,CN
+KRY,KRY,,CN
+KOW,Ganzhou Huangjin,Ganzhou,CN
+KRL,Korla,Korla,CN
+IQN,IQN,,CN
+JJN,Quanzhou Jinjiang Intl,Jinjiang,CN
+JIC,JIC,,CN
+JIL,Jilin Ertaizi,Jilin,CN
+JIU,Jiujiang Lushan,Jiujiang,CN
+JIQ,JIQ,,CN
+JMU,Jiamusi Dongjiao,Jiamusi,CN
+JNG,Jining,Jining,CN
+JDZ,Jingdezhen Luojia,Jingdezhen,CN
+JGN,Jiayuguan,Jiayuguan,CN
+JGS,Jinggangshan,Jian,CN
+JHG,Xishuangbanna Gasa,Jinghong,CN
+INC,Yinchuan Hedong Intl,Yinchuan,CN
+HUZ,Huizhou,Huizhou,CN
+HYN,Taizhou Luqiao,Huangyan,CN
+HZG,Hanzhong,Hanzhong,CN
+HZH,Liping,Liping City,CN
+LNJ,Lincang,Lincang,CN
+LJG,Lijiang,Lijiang,CN
+LLF,Yongzhou Lingling,Ling Ling,CN
+LFQ,Linfen Qiaoli,Linfen,CN
+LHW,Lanzhou Zhongchuan Intl,Lanzhou,CN
+LHK,LHK,,CN
+LCX,Longyan Guanzhishan,Longyan,CN
+KWL,Guilin Liangjiang Intl,Guilin,CN
+KWE,Guiyang Longdongbao Intl,Guiyang,CN
+LUM,Dehong Mangshi,Mangshi,CN
+LYA,Luoyang Beijiao,Luoyang,CN
+LYG,Lianyungang Baitabu,Lianyungang,CN
+LZO,Luzhou Lantian,Luzhou,CN
+LZH,Liuzhou Bailian,Liuzhou,CN
+LYI,Linyi Shubuling,Linyi,CN
+MIG,Mianyang Nanjiao,Mian Yang,CN
+MDG,Mudanjiang,Mudanjiang,CN
+MDE,Jose Maria Cordova Intl,Medellin,CO
+MGN,Magangue,Magangue,CO
+MHF,Morichal,Morichal,CO
+MFS,Miraflores,Miraflores,CO
+MCJ,Maicao,Maicao,CO
+LCR,La Chorrera,La Chorrera,CO
+LGT,Las Gaviotas,Las Gaviotas,CO
+LET,Gen. A.V. Cobo,Leticia,CO
+LQM,Puerto Leguizamo,Puerto Leguizamo,CO
+HTZ,Hato Corozal,Hato Corozal,CO
+IBE,Ibague,Ibague,CO
+IPI,San Luis,Ipiales,CO
+IGO,Chigorodo,Chigorodo,CO
+PZA,Paz De Ariporo,Paz De Ariporo,CO
+PYA,Puerto Boyaca,Puerto Boyaca,CO
+RAV,Cravo Norte,Cravo Norte,CO
+PUU,Puerto Asis,Puerto Asis,CO
+PTX,Pitalito,Pitalito,CO
+PSO,Cano,Pasto,CO
+RCH,Almirante Padilla,Riohacha,CO
+PPN,Guillermo Leon Valencia,Popayan,CO
+PLC,Planeta Rica,Planeta Rica,CO
+PLT,Plato,Plato,CO
+OTU,Otu,Otu,CO
+PEI,Matecana Intl,Pereira,CO
+PBE,Puerto Berrio,Puerto Berrio,CO
+PCR,German Olano,Puerto Carreno,CO
+OCV,Ocana,Ocana,CO
+ORC,ORC,,CO
+NQU,Reques Murillo,Nuqui,CO
+NVA,Benito Salas,Neiva,CO
+NUH,Nunchia,Nunchia,CO
+NPU,San Pedro Uraba,San Pedro Uraba,CO
+NBB,Barrancominas,Barrancominas,CO
+NAD,Macanal,Macanal,CO
+MZL,La Nubia,Manizales,CO
+NCI,Necocli,Necocli,CO
+MVP,Mitu,Mitu,CO
+MMP,Mompos,Mompos,CO
+MND,Medina,Medina,CO
+MOY,Monterrey,Monterrey,CO
+MTR,Los Garzones,Monteria,CO
+MTB,Monte Libano,Monte Libano,CO
+MQR,MQR,,CO
+SQE,San Luis De Pale,San Luis De Pale,CO
+SRO,Santana Ramos,Santana Ramos,CO
+SRS,San Marcos,San Marcos,CO
+SSD,San Felipe,San Felipe,CO
+SSL,Santa Rosalia,Santa Rosalia,CO
+SVI,San Vincente Del Caguan,San Vicente,CO
+TBD,Timbiqui,Timbiqui,CO
+TCO,Tumaco,Tumaco,CO
+SJR,San Juan D Ur,San Juan D Ur,CO
+SJE,San Jose Del Gua,San Jose Del Gua,CO
+SJG,San Pedro Jagua,San Pedro Jagua,CO
+SJH,SJH,,CO
+SMC,Santa Maria,Santa Maria,CO
+SMR,Simon Bolivar Intl,Santa Marta,CO
+SNT,Sabana De Torres,Sabana De Torres,CO
+SOX,Sogamoso,Sogamoso,CO
+RVE,Los Colonizadores,Saravena,CO
+VUP,Valledupar,Valledupar,CO
+VVC,Villavicencio,Villavicencio,CO
+VAB,Yavarate,Yavarate,CO
+VGZ,Villagarzon,Villagarzon,CO
+TTM,Tablon De Tamara,Tablon De Tamara,CO
+UNC,Unguia,Unguia,CO
+ULQ,ULQ,,CO
+UIB,Quibdo,Quibdo,CO
+TLU,Tolu,Tolu,CO
+ACL,ACL,,CO
+ADN,Andes,Andes,CO
+ADZ,Gustavo Rojas Pinilla Intl,San Andres Island,CO
+AXM,El Eden Intl,Armenia,CO
+AYG,Yaguara,Yaguara,CO
+AYI,Yari,Yari,CO
+CJD,Candilejas,Candilejas,CO
+CPL,Chaparral,Chaparral,CO
+CQT,Caquetania,Caquetania,CO
+CUI,Currillo,Currillo,CO
+DZI,Codazzi,Codazzi,CO
+ECO,El Encanto,El Encanto,CO
+ECR,ECR,,CO
+ELB,ELB,,CO
+ELJ,El Recreo,El Recreo,CO
+EOH,Enrique Olaya Herrera,Medellin,CO
+FLA,Florencia,Florencia,CO
+GCA,Guacamaya,Guacamaya,CO
+GGL,Gilgal,Gilgal,CO
+ISD,Iscuande,Iscuande,CO
+IVO,Chivolo,Chivolo,CO
+JUO,JUO,,CO
+LAT,La Uribe,La Uribe,CO
+LGZ,Leguizamo,Leguizamo,CO
+LMC,Lamacarena,Lamacarena,CO
+LMX,Lopez De Micay,Lopez De Micay,CO
+LPD,La Pedrera,La Pedrera,CO
+LPE,La Primavera,La Primavera,CO
+LRI,Lorica,Lorica,CO
+MFB,Monfort,Monfort,CO
+MIX,Miriti,Miriti,CO
+MQU,Mariquita,Mariquita,CO
+PCC,PCC,,CO
+PDA,Puerto Inirida,Puerto Inirida,CO
+PRE,Pore,Pore,CO
+PVA,El Embrujo,Providencia,CO
+PYN,Payan,Payan,CO
+SCA,Santa Catalina,Santa Catalina,CO
+SOH,Solita,Solita,CO
+SQB,Santa Ana,Santa Ana,CO
+SQF,Solano,Solano,CO
+TCD,Tarapaca,Tarapaca,CO
+TDA,Trinidad,Trinidad,CO
+TME,Tame,Tame,CO
+TQS,Tres Esquinas,Tres Esquinas,CO
+TRB,Turbo,Turbo,CO
+ULS,Mulatos,Mulatos,CO
+HRR,Herrera,Herrera,CO
+GRA,Gamarra,Gamarra,CO
+GPI,Guapi,Guapi,CO
+GMC,Guerima,Guerima,CO
+EUO,Paratebueno,Paratebueno,CO
+EYP,El Alcaraván,El Yopal,CO
+GIR,GIR,,CO
+GAA,Guamal,Guamal,CO
+CTG,Rafael Nunez Intl,Cartagena,CO
+CSR,Casuarito,Casuarito,CO
+CPB,Capurgana,Capurgana,CO
+CRC,CRC,,CO
+CUO,Caruru,Caruru,CO
+CUC,Camilo Daza Intl,Cucuta,CO
+CVE,Covenas,Covenas,CO
+CZU,Corozal,Corozal,CO
+CLO,Alfonso B. Aragon,Cali,CO
+COG,Mandinga,Condoto,CO
+EJA,Variguies,Barrancabermeja,CO
+EBG,El Bagre,El Bagre,CO
+AFI,Amalfi,Amalfi,CO
+ACR,Araracuara,Araracuara,CO
+ACD,ACD,,CO
+ACM,ACM,,CO
+APO,Apartado,Apartado,CO
+ARO,ARO,,CO
+ARQ,Arauquita,Arauquita,CO
+ARF,Acaricuara,Acaricuara,CO
+CAQ,Juan H. White,Caucasia,CO
+CCO,Carimagua,Carimagua,CO
+BSC,Bahia Solano,Bahia Solano,CO
+BUN,Buenaventura,Buenaventura,CO
+BOG,El Dorado Intl,Bogota,CO
+AUC,Santiago Pérez Quiroz,Arauca,CO
+AYC,Ayacucho,Ayacucho,CO
+BAQ,Ernesto Cortissoz International,Barranquilla,CO
+AZT,Zapatoca,Zapatoca,CO
+BAC,BAC,,CO
+BHF,Bahia Cupica,Bahia Cupica,CO
+BGA,Palonegro Intl,Bucaramanga,CO
+DRK,DRK,,CR
+CSC,CSC,,CR
+FON,FON,,CR
+GLF,Golfito,Golfito,CR
+GPL,GPL,,CR
+BAI,Buenos Aires,Buenos Aires,CR
+BCL,Barra del Colorado,Barra del Colorado,CR
+FMG,FMG,,CR
+JAP,JAP,,CR
+LCS,LCS,,CR
+LIO,LIO,,CR
+LIR,Daniel Oduber Intl,Liberia,CR
+LSL,LSL,,CR
+OTR,Coto 47,Coto 47,CR
+PBP,Punta Islita,Punta Islita,CR
+PLD,Playa Samara,Playa Samara/Carrillo,CR
+RIK,RIK,,CR
+SYQ,SYQ,,CR
+SZC,SZC,,CR
+TOO,San Vito,San Vito,CR
+TMU,Tambor,Tambor,CR
+TNO,Tamarindo,Tamarindo,CR
+TTQ,Tortuquero,Tortuquero,CR
+UPL,Upala,Upala,CR
+SJO,Juan Santamaria Intl,San Jose,CR
+XQP,Quepos,Quepos,CR
+NCT,NCT,,CR
+NOB,Nosara Beach,Nosara,CR
+PJM,Puerto Jimenez,Puerto Jimenez,CR
+PMZ,Palmur'Sur,Palmar Sur,CR
+RFR,Rio Frio,Rio Frio,CR
+MZO,Sierra Maestra,Manzanillo,CU
+SNU,SNU,,CU
+SCU,Antonio Maceo,Santiago de Cuba,CU
+SZJ,Siguanea,Siguanea,CU
+VTU,Las Tunas,Las Tunas,CU
+VRA,Varadero,Varadero,CU
+GAO,Mariana Grajales,Guantanamo,CU
+MOA,Orestes Acosta,Moa,CU
+NBW,Guantanamo Naval Air Station,Guantanamo,CU
+QMA,Matanzas,Matanzas,CU
+QPD,QPD,,CU
+TND,Trinidad,Trinidad,CU
+HOG,Frank Pais,Holguin,CU
+HAV,Jose Marti Intl,Havana,CU
+GER,Rafael Cabrera,Nueva Gerona,CU
+CYO,Vilo Acuña,Cayo Largo del Sur,CU
+CMW,Ign Agramonte Intl,Camaguey,CU
+AVI,Maximo Gomez,Ciego de Avila,CU
+BCA,Baracoa,Baracoa,CU
+CCC,Jardines del Rey,Cayo Coco,CU
+CFG,Jaime Gonzalez,Cienfuegos,CU
+BYM,C.M. de Cespedes,Bayamo,CU
+BVC,Rabil,Boa Vista,CV
+MMO,Vila Do Maio,Maio Island,CV
+SID,Amilcar Cabral Int,Sal Island,CV
+SNE,Preguica,Sao Nicolau Island,CV
+VXE,Sao Vicente,Sao Vicente Island,CV
+SFL,Sao Filipe,Sao Filipe,CV
+MTI,MTI,,CV
+RAI,Nelson Mandela Intl,Praia,CV
+XCH,Christmas Island,Christmas Island,CX
+AKT,AKT,,CY
+ECN,Ercan,Ercan,CY
+EPK,Episkopi,Episkopi,CY
+GEC,Gecitkale,Gecitkale,CY
+QLI,Limassol,Limassol,CY
+QNP,QNP,,CY
+PFO,Paphos Intl,Paphos,CY
+NIC,Nicosia Intl,Nicosia,CY
+LCA,Larnaca Intl,Larnaca,CY
+KLV,Karlovy Vary,Karlovy Vary,CZ
+PED,Pardubice,Pardubice,CZ
+OSR,Ostrava,Ostrava,CZ
+PRG,Ruzyne Intl,Prague,CZ
+UHE,UHE,,CZ
+ZBE,Zabreh,Zabreh,CZ
+VOD,Vodochody,Prague,CZ
+BRQ,Brno – Tuřany,Brno,CZ
+GTW,GTW,,CZ
+GWT,Westerland - Sylt,Westerland,DE
+GKE,GKE,,DE
+HDB,Heidelberg,Heidelberg,DE
+HDF,Heringsdorf,Heringsdorf,DE
+HOQ,Hof,Hof,DE
+GHF,Giebelstadt,Giebelstadt,DE
+FRA,Frankfurt Intl,Frankfurt,DE
+HHN,Frankfurt - Hahn,Frankfurt,DE
+FDH,Friedrichshafen,Friedrichshafen,DE
+FCN,FCN,,DE
+DRS,Dresden,Dresden,DE
+DUS,Dusseldorf Intl,Duesseldorf,DE
+MGL,Monchengladbach,Duesseldorf,DE
+NRN,Weeze,Duesseldorf,DE
+BMR,Baltrum,Baltrum,DE
+BRV,Bremerhaven,Bremerhaven,DE
+BRE,Bremen,Bremen,DE
+BBH,Stralsund,Stralsund,DE
+BBJ,BBJ,,DE
+BER,Berlin Brandenburg,Berlin,DE
+SXF,Schoenfeld/Berlin,Berlin,DE
+TXL,Tegel,Berlin,DE
+BMK,Borkum,Borkum,DE
+AOC,Altenburg Nobitz,Altenburg,DE
+AGE,AGE,,DE
+QGV,Neu Isenburg Rail Station,Frankfurt,DE
+AAH,Merzbrueck,Aachen,DE
+AGB,Augsburg,Munich,DE
+BFE,Bielefeld,Bielefeld,DE
+BNJ,BNJ,,DE
+BWE,BWE,,DE
+BYU,Bindlacher-Berg,Bayreuth,DE
+CBU,CBU,,DE
+CGN,Cologne Bonn,Cologne/Bonn,DE
+CSO,CSO,,DE
+DTM,Dortmund,Dortmund,DE
+DTZ,HBF Railway Station,Dortmund,DE
+EIB,EIB,,DE
+EME,Emden,Emden,DE
+ERF,Erfurt,Erfurt,DE
+ESS,Essen,Essen,DE
+EUM,Neumuenster,Neumuenster,DE
+FEL,Fuerstenfeldbruck,Fuerstenfeldbruck,DE
+FKB,Karlsruhe/Baden-Baden,Karlsruhe/Baden-Baden,DE
+FLF,Schaeferhaus Airport,Flensburg,DE
+FMM,Allgaeu,Memmingen,DE
+FMO,Muenster-Osnabruck,Muenster/Osnabrueck,DE
+FNB,FNB,,DE
+GTI,Guettin,Guettin,DE
+HAJ,Hannover,Hannover,DE
+HAM,Hamburg,Hamburg,DE
+HEI,Heide-Buesum,Heide-Buesum,DE
+HGL,Helgoland,Helgoland,DE
+KEL,Kiel Holtenau,Kiel,DE
+KLT,Kaiserslautern,Kaiserslautern,DE
+KOQ,Koethen De,Koethen De,DE
+LBC,Luebeck Blankensee,Hamburg,DE
+LEJ,Leipzig/Halle,Leipzig/Halle,DE
+MHG,Mannheim,Mannheim,DE
+MHJ,HBF Railway Station,Mannheim,DE
+MUC,Munich Intl,Munich,DE
+NUE,Nuremberg,Nuremberg,DE
+PAD,Paderborn Lippstadt,Paderborn/Lippstadt,DE
+PEF,Peenemuende,Peenemuende,DE
+PSH,PSH,,DE
+QBB,Thomastrasse Bus Station,Cologne Bonn,DE
+QBO,QBO,,DE
+QDU,Dusseldorf Rlway Station,Duesseldorf,DE
+QFB,QFB,,DE
+QFL,Freilassing,Freilassing,DE
+QHQ,Cham,Cham,DE
+QKF,Krefeld,Krefeld,DE
+QKL,Cologne HBF Railway Station ,Cologne,DE
+QKU,Messe Deutz Railway Station,Cologne,DE
+QKZ,Constance,Constance,DE
+QLG,Landshut,Landshut,DE
+QLH,Off-Line Point,Kelsterbach,DE
+QMZ,QMZ,,DE
+QOB,Ansbach,Ansbach,DE
+QOG,Homburg,Homburg,DE
+QPK,Strausberg,Strausberg,DE
+QRB,Ravensburg,Ravensburg,DE
+QSY,Ruedesheim,Ruedesheim,DE
+QTK,Rothenburg,Rothenburg,DE
+QUA,Puttgarden,Puttgarden,DE
+QUL,QUL,,DE
+QWD,Mittenwald,Mittenwald,DE
+QWI,Schleswig,Schleswig,DE
+QYG,Railway Germany,,DE
+RBM,RBM,,DE
+RMS,RMS,,DE
+SCN,Saarbrucken,Saarbruecken,DE
+SZW,SZW,,DE
+THF,THF,,DE
+UPF,Pforzheim,Pforzheim,DE
+UWE,UWE,,DE
+UWP,Wuppertal,Wuppertal,DE
+WIE,WIE,,DE
+WVN,Wilhelmshaven,Wilhelmshaven,DE
+XFW,Hamburg Finkenwerder,Finkenwerder,DE
+XHI,Herzogenaurach,Herzogenaurach,DE
+XXP,XXP,,DE
+XZY,Alzey,Alzey,DE
+ZAQ,Nuremberg HBF Railway Station,Nuremberg,DE
+ZAU,Aue,Aue,DE
+ZCB,Aschaffenburg,Aschaffenburg,DE
+ZCD,ZCD,,DE
+ZCE,Berchtesgaden,Berchtesgaden,DE
+ZCG,Bergisch Gladbach,Bergisch Gladbach,DE
+ZCJ,Bottrop,Bottrop,DE
+ZCN,Off-Line Point,Celle,DE
+ZCR,Dachau,Dachau,DE
+ZCS,Darmstadt,Darmstadt,DE
+ZCT,Delmenhorst,Delmenhorst,DE
+ZCW,Dormagen,Dormagen,DE
+ZCX,Dorsten,Dorsten,DE
+ZCZ,Erlangen,Erlangen,DE
+ZEA,Eschweiler,Eschweiler,DE
+ZEB,Esslingen,Esslingen,DE
+ZED,Off-Line Point,Euskirchen,DE
+ZEE,Fulda,Fulda,DE
+ZEH,Garbsen,Garbsen,DE
+ZEJ,ZEJ,,DE
+ZEK,Gladbeck,Gladbeck,DE
+ZET,Goslar,Goslar,DE
+ZEV,Grevenbroich,Grevenbroich,DE
+ZEW,Gummersbach,Gummersbach,DE
+ZEY,Hagen,Hagen,DE
+ZEZ,Hameln,Hameln,DE
+ZGA,ZGA,,DE
+ZGO,Gotha,Gotha,DE
+ZGW,Greifswald,Greifswald,DE
+ZIO,Solingen,Solingen,DE
+ZIW,Kehl,Kehl,DE
+ZJS,Jena,Jena,DE
+ZLU,Ludwigslust,Ludwigslust,DE
+ZMB,Hamburg Railway Station,Hamburg,DE
+ZMG,ZMG,,DE
+ZMU,Munich Railway Station,Munich,DE
+ZNB,Hamm,Hamm,DE
+ZNF,Hanau,Hanau,DE
+ZNI,Heidenheim,Heidenheim,DE
+ZNJ,Heilbronn,Heilbronn,DE
+ZNK,Herford,Herford,DE
+ZNM,Herten,Herten,DE
+ZNN,Hilden,Hilden,DE
+ZNO,Hildesheim,Hildesheim,DE
+ZNP,Huerth,Huerth,DE
+ZNQ,ZNQ,,DE
+ZNS,Kempten,Kempten,DE
+ZNV,ZNV,,DE
+ZNY,Langenhagen,Langenhagen,DE
+ZOA,Leverkusen,Leverkusen,DE
+ZOD,Ludwigsburg,Ludwigsburg,DE
+ZOE,Ludwigshafen,Ludwigshafen,DE
+ZOJ,Marl,Marl,DE
+ZOK,Meerbusch,Meerbusch,DE
+ZOM,Minden,Minden,DE
+ZOP,Neunkirchen,Neunkirchen,DE
+ZOQ,Neuss,Neuss,DE
+ZOV,Norderstedt,Norderstedt,DE
+ZOX,Oberammergau,Oberammergau,DE
+ZOY,Oberhausen,Oberhausen,DE
+ZOZ,Offenbach,Offenbach,DE
+ZPA,Offenburg,Offenburg,DE
+ZPD,Oldenburg,Oldenburg,DE
+ZPF,ZPF,,DE
+ZPG,Peine,Peine,DE
+ZPJ,Ratingen,Ratingen,DE
+ZPL,Recklinghausen,Recklinghausen,DE
+ZPM,ZPM,,DE
+ZPN,Remscheid,Remscheid,DE
+ZPP,Reutlingen,Reutlingen,DE
+ZPQ,Rheine,Rheine,DE
+ZPR,Rosenheim,Rosenheim,DE
+ZPT,Saarlouis,Saarlouis,DE
+ZPW,Schweinfurt,Schweinfurt,DE
+ZPY,Siegburg,Siegburg,DE
+ZPZ,Sindelfingen,Sindelfingen,DE
+ZQA,Singen,Singen,DE
+ZQC,Speyer,Speyer,DE
+ZQD,Stade,Stade,DE
+ZQE,Stolberg,Stolberg,DE
+ZQF,Trier,Trier,DE
+ZQG,Troisdorf,Troisdorf,DE
+ZQI,Unna,Unna,DE
+ZQJ,Velbert,Velbert,DE
+ZQK,Viersen,Viersen,DE
+ZQP,Wesel,Wesel,DE
+ZQQ,Wetzlar,Wetzlar,DE
+ZQR,Witten,Witten,DE
+ZQV,Worms,Worms,DE
+ZQW,Zweibruecken,Saarbruecken,DE
+ZQY,Giessen,Giessen,DE
+ZRW,Rastatt,Rastatt,DE
+ZSD,Schwanheide,Schwanheide,DE
+ZSG,Sonneberg,Sonneberg,DE
+ZSI,Sassnitz,Sassnitz,DE
+ZSK,Pasewalk,Pasewalk,DE
+ZSN,Stendal,Stendal,DE
+ZSO,Suhl,Suhl,DE
+ZSQ,Salzwedel,Salzwedel,DE
+ZSU,Dessau,Dessau,DE
+ZTT,Cottbus,Cottbus,DE
+ZTZ,Chemnitz,Chemnitz,DE
+ZVR,Hanover Railway Station,Hanover,DE
+ZWM,Wismar,Wismar,DE
+ZWN,ZWN,,DE
+ZWS,HBF Railway Station,Stuttgart,DE
+ZWT,Lutherstadt Wittenberg,Lutherstadt Wittenberg,DE
+XLW,Lemwerder,Lemwerder,DE
+URD,Burg Feuerstein,Burg Feuerstein,DE
+VAC,VAC,,DE
+SGE,SGE,,DE
+STR,Stuttgart,Stuttgart,DE
+QHU,Schwesing,Husum,DE
+REB,REB,,DE
+RLG,Rostock–Laage,Rostock,DE
+NOD,NOD,,DE
+NRD,NRD,,DE
+OBF,OBF,,DE
+KSF,Kassel-Calden,Kassel,DE
+JUI,Juist,Juist,DE
+IGS,Ingolstadt-Manching,Ingolstadt,DE
+IES,Riesa,Riesa,DE
+KZG,Kitzingen,Kitzingen,DE
+LHA,LHA,,DE
+MHI,Moucha Island,Moucha Island,DJ
+OBC,Obock,Obock,DJ
+TDJ,TDJ,,DJ
+JIB,Djibouti-Ambouli Intl,Djibouti,DJ
+AII,Ali Sabieh,Ali Sabieh,DJ
+AAL,Aalborg,Aalborg,DK
+AAR,Aarhus,Aarhus,DK
+BLL,Billund,Billund,DK
+EBJ,Esbjerg,Esbjerg,DK
+CNL,CNL,,DK
+CPH,Copenhagen,Copenhagen,DK
+BYR,BYR,,DK
+QFH,Frederikshavn,Frederikshavn,DK
+QHJ,Hjorring,Hjorring,DK
+QJS,Saeby,Saeby,DK
+QJV,Skagen,Skagen,DK
+QJW,Kjellerup,Kjellerup,DK
+QLZ,Ikast,Ikast,DK
+QWO,Holstebro,Holstebro,DK
+QWQ,Struer,Struer,DK
+QXV,Svendborg,Svendborg,DK
+RKE,Roskilde,Copenhagen,DK
+SGD,Sonderborg,Sonderborg,DK
+XAH,Silkeborg,Silkeborg,DK
+XAJ,Hirtshals,Hirtshals,DK
+XNR,Aabenraa,Aabenraa,DK
+XOA,Aalbaek,Aalbaek,DK
+XVX,Vejle,Vejle,DK
+ZAW,Nykobing Mors,Nykobing Mors,DK
+ZBJ,Fredericia,Fredericia,DK

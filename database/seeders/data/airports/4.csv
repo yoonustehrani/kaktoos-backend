@@ -1,0 +1,1001 @@
+IATA_code,name,city_name,country_code
+ZBT,Kolding,Kolding,DK
+ZBU,Aarhus,Aarhus,DK
+ZFK,Guderup,Guderup,DK
+ZGX,Viborg,Viborg,DK
+ZIB,Nyborg,Nyborg,DK
+ZIJ,Nykoing Sjaelland,Nykoing Sjaelland,DK
+ZIL,Horsens,Horsens,DK
+ZIR,Randers,Randers,DK
+ZMW,Brande,Brande,DK
+ZRY,Herning,Herning,DK
+TED,Thisted,Thisted,DK
+SQW,Skive,Skive,DK
+SKS,Vojens,Vojens,DK
+ODE,Odense,Odense,DK
+MRW,MRW,,DK
+RNN,Bornholm,Bornholm,DK
+KRP,Karup,Karup,DK
+DCF,Canefield,Dominica,DM
+DOM,Melville Hall,Dominica,DM
+COZ,COZ,,DO
+AZS,AZS,,DO
+BRX,BRX,,DO
+CBJ,CBJ,,DO
+EPS,El Portillo - Samana,El Portillo - Samana,DO
+HEX,Herrera Intl,Santo Domingo,DO
+JBQ,JBQ,,DO
+SJM,San Juan,San Juan,DO
+LRM,La Romana Intl,La Romana,DO
+PUJ,Punta Cana Intl,Punta Cana,DO
+POP,Gregorio Luperon Intl ,Puerto Plata,DO
+SDQ,Las Americas Intl,Santo Domingo,DO
+STI,Cibao Intl,Santiago,DO
+TEE,Tebessa,Tebessa,DZ
+TGR,Touggourt,Touggourt,DZ
+TID,Tiaret,Tiaret,DZ
+TMX,Timimoun,Timimoun,DZ
+TMR,Tamanrasset,Tamenghest,DZ
+TLM,Tilimsen,Tlemcen,DZ
+QSF,Setif,Setif,DZ
+MQV,Mostaganem,Mostaganem,DZ
+MZW,Mecheria,Mecheria,DZ
+OGX,Ain Beida,Ouargla,DZ
+ORN,Oran Es Senia,Oran,DZ
+LOO,L'Mekrareg,Laghouat,DZ
+INF,INF,,DZ
+AAE,Rabah Bitat,Annaba,DZ
+BMW,Bordj Badji Mokhtar,Bordj Badji Mokhtar,DZ
+CZL,Mohamed Boudiaf International,Constantine,DZ
+ELG,El Golea,El Golea,DZ
+HME,Oued Irara – Krim Belkacem,Hassi Messaoud,DZ
+IAM,In Amenas,In Amenas,DZ
+INZ,In Salah,In Salah,DZ
+KDF,Kouba,Kouba,DZ
+MUW,Mascara,Mascara,DZ
+QZI,Tizi Ouzou,Tizi Ouzou,DZ
+TAF,TAF,,DZ
+TIN,Tindouf,Tindouf,DZ
+VVZ,Illizi,Illizi,DZ
+BSK,Biskra,Biskra,DZ
+BUJ,Bou Saada,Bou Saada,DZ
+CFK,CFK,,DZ
+CBH,Boudghene Ben Ali Lotfi,Bechar,DZ
+AZR,Adrar,Adrar,DZ
+BLJ,Batna,Batna,DZ
+BJA,Bejaia,Bejaia,DZ
+BFW,BFW,,DZ
+ALG,Houari Boumediene,Algiers,DZ
+DJG,Djanet,Djanet,DZ
+EBH,El Bayadh,El Bayadh,DZ
+ELU,Guemar,El Oued,DZ
+GHA,Noumerat – Moufdi Zakaria,Ghardaia,DZ
+HRM,Tilrempt,Hassi R'Mel,DZ
+GJL,Jijel Ferhat Abbas,Jijel,DZ
+GPS,Seymour,Baltra Island,EC
+GYE,Jose Joaquin de Olmedo Intl,Guayaquil,EC
+ESM,Esmeraldas,Esmeraldas,EC
+ETR,Santa Rosa Intl,Santa Rosa,EC
+CUE,Mariscal Lamar Intl,Cuenca,EC
+ATF,ATF,,EC
+BHA,BHA,,EC
+LGQ,Lago Agrio,Lago Agrio,EC
+MEC,Eloy Alfaro Intl,Manta,EC
+MZD,Mendez,Mendez,EC
+OCC,Francisco de Orellana,Coca,EC
+PTZ,Pastaza,Pastaza,EC
+PYO,PYO,,EC
+TNW,Tena,Tena,EC
+TPN,Tiputini,Tiputini,EC
+TSC,Taisha,Taisha,EC
+IBB,General Villamil,Isabela Island,EC
+LOH,Camilo Ponce Enriquez,Loja,EC
+LTX,Cotapaxi Intl,Latacunga,EC
+MCH,MCH,,EC
+MRR,Macara,Macara,EC
+PVO,Portoviejo,Portoviejo,EC
+TPC,Tarapoa,Tarapoa,EC
+UIO,Quito,Quito,EC
+TUA,TUA,,EC
+SUQ,Sucua,Sucua,EC
+SCY,San Cristóbal de las Casas National,San Cristobal Island,EC
+SNC,SNC,,EC
+XMS,Macas,Macas,EC
+TAY,TAY,,EE
+TLL,Tallinn,Tallinn,EE
+URE,URE,,EE
+KDL,KDL,,EE
+EPU,EPU,,EE
+HMB,Mubarak Intl,Sohag,EG
+HRG,Hurghada Intl,Hurghada,EG
+ATZ,Assiut,Asyut,EG
+CAI,Cairo Intl,Cairo,EG
+ASW,Aswan Intl,Aswan,EG
+ALY,El Nohza,Alexandria - Borg El Arab,EG
+HBE,Borg El Arab,Alexandria - Borg El Arab,EG
+AAC,El Arish Intl,El Arish,EG
+ABS,Abu Simbel,Abu Simbel,EG
+AUE,Abu Rudeis,Abu Rudeis,EG
+DAK,Dakhla,Dakhla Oasis,EG
+DBB,Alalamain Intl,Dabaa City,EG
+GSQ,GSQ,,EG
+LXR,Luxor Intl,Luxor,EG
+MUH,Mersa Matruh Intl,Mersa Matruh,EG
+QIV,Ismailia,Ismailia,EG
+SKV,St Catherine,St Catherine,EG
+TFR,Tarbes,Ramadan City,EG
+PSD,Port Said,Port Said,EG
+RMF,Marsa Alam Intl,Marsa Alam,EG
+UVL,"Kharga, Arab Repub.Egypt",New Valley,EG
+TCP,"Taba, Sinai",Taba,EG
+SSH,"Sharm El Sheik,Arab Rep.",Sharm el-Sheikh,EG
+SQK,Sidi Barrani,Sidi Barrani,EG
+SEW,Siwa Oasis,Siwa Oasis,EG
+MSW,MSW,,ER
+TES,Teseney,Teseney,ER
+ASM,Asmara Intl,Asmara,ER
+ASA,Assab Intl,Assab,ER
+ALC,Alicante-Elche,Alicante,ES
+ABC,Los Llanos,Albacete,ES
+ACE,Lanzarote,Lanzarote,ES
+AGP,Malaga,Malaga,ES
+CDT,Castellon De La Plana,Castellon De La Plana,ES
+BCN,Barcelona-El Prat,Barcelona,ES
+BIO,Bilbao,Bilbao,ES
+BJZ,Badajoz,Badajoz,ES
+HSK,Huesca-Pirineos,Huesca,ES
+GRO,Girona-Costa Brava,Girona,ES
+GRX,Federico Garcia Lorca,Granada,ES
+FUE,Fuerteventura,Fuerteventura,ES
+CQM,Ciudad Real,Ciudad Real,ES
+EAS,San Sebastian,San Sebastian,ES
+AEI,Algeciras,Algeciras,ES
+AMR,Almeria Station,Almeria,ES
+AVJ,Avila,Avila,ES
+AVS,Segovia,Segovia,ES
+CDZ,CDZ,,ES
+CEJ,Cuenca,Cuenca,ES
+EAG,Guadalajara,Guadalajara,ES
+EEL,Tudela,Tudela,ES
+FES,San Fernando,San Fernando,ES
+FGR,FGR,,ES
+GDU,Guadalajara,Guadalajara,ES
+GEN,GEN,,ES
+GGA,La Graciosa,La Graciosa,ES
+GMZ,La Gomera,San Sebastian Gomera,ES
+HEV,Huelva,Huelva,ES
+JCU,Ceuta Heliport,Ceuta,ES
+JEA,Jaen,Jaen,ES
+LEN,Leon,Leon,ES
+LUY,Lugo,Lugo,ES
+MAH,Menorca,Menorca,ES
+NDO,NDO,,ES
+OUQ,Ourense,Ourense,ES
+OVI,Oviedo Railway Station,Oviedo,ES
+OZI,Bobadilla,Bobadilla,ES
+OZL,Orzola,Orzola,ES
+OZP,Moron,Moron,ES
+OZU,Montilla,Montilla,ES
+PCI,PCI,,ES
+PFE,Ponferrada,Ponferrada,ES
+PMI,Palma de Mallorca,Palma De Mallorca,ES
+PTE,Pontevedra,Pontevedra,ES
+PXS,Puerto De Santa Maria,Puerto De Santa Maria,ES
+QCI,Los Cristianos,Los Cristianos,ES
+QFU,Corralejo,Corralejo,ES
+QGN,Tarragona,Tarragona,ES
+QIJ,Gijon,Gijon,ES
+QIU,Ciudadela,Ciudadela,ES
+QLQ,Lleida Railway Station,Lleida,ES
+QLY,Playa Blanca,Playa Blanca,ES
+QRL,Marbella,Marbella,ES
+QSA,Sabadell,Sabadell,ES
+QUQ,Caceres,Caceres,ES
+QWT,Talavera De La Reina,Talavera De La Reina,ES
+QWW,Navalmoral De La Mata,Navalmoral De La Mata,ES
+RMU,Corvera,Corvera,ES
+RRA,Ronda,Ronda,ES
+RZG,Zaragoza Bus Station,Zaragoza,ES
+SAJ,Salamanca Bus Station,Salamanca,ES
+SDR,Santander,Santander,ES
+SPO,San Pablo,San Pablo,ES
+SVQ,Seville,Sevilla,ES
+TEJ,Teruel,Teruel,ES
+TOJ,TOJ,,ES
+UER,Puertollano,Puertollano,ES
+UPC,Puerto De La Cruz,Puerto De La Cruz,ES
+UTL,Torremolinos,Torremolinos,ES
+XJO,Soria,Soria,ES
+XJR,Lorca,Lorca,ES
+XOC,XOC,Madrid,ES
+XOJ,Central Railway Stations,Cordoba,ES
+XOU,Segovia,Segovia,ES
+XQA,XQA,Sevilla,ES
+XTI,Madrid Chamartin Railway Station,Madrid,ES
+XTJ,Toledo ,Toledo ,ES
+XUF,Cartagena,Cartagena,ES
+XZZ,ِDelicias Railway Station,Zaragoza,ES
+YJB,Jervis Bay,Barcelona,ES
+YJD,FRanca Railway Station,Barcelona,ES
+YJE,Alicante Railway Station,Alicante,ES
+YJI,Abando Railway Station,Bilbao,ES
+YJL,Santander Railway Station,Santander,ES
+YJM,Malaga Railway Station,Malaga,ES
+YJV,Valencia Railway Station,Valencia,ES
+MLN,Melilla,Melilla,ES
+ODB,Cordoba,Cordoba ,ES
+RJL,Agoncillo,Logrono,ES
+ROZ,ROZ,,ES
+REU,Reus,Reus,ES
+RGS,Burgos,Burgos,ES
+PNA,Pamplona,Pamplona,ES
+OVD,Asturias,Asturias,ES
+IBZ,Ibiza,Ibiza,ES
+ILD,Lleida-Alguaire,Lleid,ES
+MJV,Murcia-San Javier,Murcia,ES
+MAD,Adolfo Suarez Madrid-Barajas,Madrid,ES
+LPA,Gran Canaria,Gran Canaria,ES
+LCG,A Coruna,A Coruna,ES
+LEI,Almeria,Almeria,ES
+SGM,San Ignacio,San Ignacio,ES
+SCQ,Santiago De Compostela,Santiago De Compostela,ES
+SLM,Salamanca,Salamanca,ES
+SPC,La Palma,Santa Cruz De La Palma,ES
+TFN,"Tenerife, Canary Islands",Tenerife,ES
+TFS,Tenerife South,Tenerife,ES
+TCI,"Tenerife, All",Tenerife,ES
+VGO,Vigo,Vigo,ES
+VDE,"Valverde, Canary Islands",Valverde,ES
+VIT,Vitoria,Vitoria,ES
+VLL,Valladolid,Valladolid,ES
+VLC,Valencia,Valencia,ES
+XRY,Jerez De La Frontera,Jerez,ES
+ZAZ,Zaragoza,Zaragoza,ES
+XBL,Bedele,Bedele,ET
+WRA,Warder,Warder,ET
+SZE,SZE,,ET
+SXU,Sodo,Sodo,ET
+SKR,Shakiso,Shakiso,ET
+LFO,Kelafo,Kelafo,ET
+LLI,Lalibela,Lalibela,ET
+MKS,Mekane Selam,Mekane Selam,ET
+JIM,Jimma,Jimma,ET
+JIJ,Jigiga,Jijiga,ET
+MTF,Mizan Teferi,Mizan Teferi,ET
+MZX,Mena,Mena,ET
+ALK,Asela,Asela,ET
+AXU,Axum,Axum,ET
+BCY,Bulchi,Bulchi,ET
+BEI,Beica,Beica,ET
+BJR,Bahar Dar,Bahar Dar,ET
+EGL,Neghelli,Negele,ET
+FNH,Fincha'A,Fincha'A,ET
+GDQ,Gondar,Gonder,ET
+GOB,Robe,Goba,ET
+GOR,Gore,Gore,ET
+HUE,HUE,,ET
+MQX,Alula Aba Nega,Mekele,ET
+MUJ,MUJ,,ET
+NDM,Mendi,Mendi,ET
+OTA,Mota,Mota,ET
+PWI,Pawe,Pawe,ET
+SHC,Shire ,Inda Selassie,ET
+TIE,Tippi,Tippi,ET
+TUJ,Tum,Tum,ET
+DSE,Combolcha,Dessie,ET
+DIR,Aba Tenna Dejazmach Yilma Intl,Dire Dawa,ET
+DBM,Debra Marcos,Debre Marcos,ET
+DBT,Debra Tabor,Debre Tabor,ET
+DGC,Degeh Bur,Degeh Bur,ET
+DEM,Dembidollo,Dembi Dolo,ET
+GDE,Gode/Iddidole,Gode/Iddidole,ET
+ETE,Genda Wuha,Metema,ET
+GNN,Ginir,Ginir,ET
+GLC,Geladi,Geladi,ET
+GMB,Gambela,Gambela,ET
+HIL,Shillavo,Shillavo,ET
+BCO,Jinka,Jinka,ET
+ADD,Addis Ababa Bole Intl,Addis Ababa,ET
+ABK,Kabri Dar,Kebri Dehar,ET
+AMH,Arba Mintch,Arba Minch,ET
+ASO,Asosa,Asosa,ET
+ENF,Enontekio,Enontekio,FI
+HEC,Helsinki Central Railway Station,Helsinki,FI
+HEL,Helsinki-Vantaa,Helsinki,FI
+HEM,Helsinki-Malmi,Helsinki,FI
+KEM,Kemi-Tornio,Kemi/Tornio,FI
+KOK,Kokkola-Pietarsaari,Kokkola/Pietarsaari,FI
+QLF,Lahti,Lahti,FI
+QVD,Salo,Salo,FI
+QVE,Forssa,Forssa,FI
+QVM,Hameenlinna,Hameenlinna,FI
+QVT,Riihimaki,Riihimaki,FI
+QVV,Heinola,Heinola,FI
+QVW,Kotka,Kotka,FI
+QVY,Kouvola,Kouvola,FI
+QVZ,Hamina,Hamina,FI
+QXJ,Porvoo,Porvoo,FI
+QZU,Rauma,Rauma,FI
+XGQ,SaariselkÃ¤,SaariselkÃ¤,FI
+XGX,Levi,Levi,FI
+XHA,Yllasjarvi,Yllasjarvi,FI
+XHD,Ruka,Ruka,FI
+XPY,Pyha,Pyha,FI
+XQS,Sotkamo,Sotkamo,FI
+XVM,Vuokatti,Vuokatti,FI
+ZLV,Luosto,Luosto,FI
+OUL,Oulu,Oulu,FI
+POR,Pori,Pori,FI
+IVL,Ivalo,Ivalo,FI
+HYV,HYV,,FI
+KEV,KEV,,FI
+KHJ,Kauhajoki,Kauhajoki,FI
+JOE,Joensuu,Joensuu,FI
+JYV,Jyvaskyla,Jyvaskyla,FI
+KAO,Kuusamo,Kuusamo,FI
+KAJ,Kajaani,Kajaani,FI
+MHQ,Mariehamn,Mariehamn,FI
+MIK,Mikkeli,Mikkeli,FI
+LPP,Lappeenranta,Lappeenranta,FI
+KUO,Kuopio,Kuopio,FI
+KTQ,KTQ,,FI
+KTT,Kittila,Kittila,FI
+SJY, Ilmajoki,Seinajoki,FI
+SOT,SOT,,FI
+RVN,Rovaniemi,Rovaniemi,FI
+SVL,Savonlinna,Savonlinna,FI
+VRK,Varkaus,Varkaus,FI
+UTI,Utti,Utti,FI
+VAA,Vaasa,Vaasa,FI
+TKU,Turku,Turku,FI
+TMP,Tampere,Tampere,FI
+TVU,Taveuni,Taveuni Island,FJ
+VAU,VAU,,FJ
+SVU,Savusavu,Savusavu,FJ
+SUV,Suva,Suva,FJ
+KVU,Spb,Korolevu,FJ
+KXF,Koro Island,Koro,FJ
+LBS,Labasa,Labasa,FJ
+LKB,Lakeba,Lakeba Island,FJ
+LEV,Levuka Airfield,Levuka,FJ
+MFJ,Moala,Moala Island,FJ
+LUC,Laucala Island,Laucala Island,FJ
+KDV,Kandavu,Fiji Islands,FJ
+ICI,Cicia,Cicia Island,FJ
+PHR,Pacific Harbour,Pacific Harbour,FJ
+RBI,Rabi Island,Rabi Island,FJ
+NAN,Nadi,Nadi,FJ
+NGI,Zurich-Klote,Ngau Island,FJ
+MNF,Mana Island Airstrip,Mana Island,FJ
+ONU,ONU,,FJ
+BVF,Dama,Bua,FJ
+CST,Castaway,Castaway Island,FJ
+KAY,KAY,,FJ
+NTA,Natadola,Natadola,FJ
+PTF,Malololailai,Malolo Lailai Island,FJ
+RTA,Rotuma Island,Rotuma Island,FJ
+VBV,Vanuabalavu,Vanuabalavu Island,FJ
+VTF,VTF,,FJ
+AQS,Saqani,Saqani,FJ
+MPN,RAF Mount Pleasant,Mount Pleasant,FK
+PSY,PSY,,FK
+TTK,Kosrae,Tottenham,FM
+PNI,Pohnpei Intl,Pohnpei,FM
+KSA,Kosrae Intl,Kosrae,FM
+TKK,Truk,Chuuk,FM
+YAP,Yap Intl,Yap,FM
+FAE,Faroe,Faroe Islands,FO
+AGF,La Garenne,Agen,FR
+AVF,Avoriaz,Avoriaz,FR
+BOR,Belfort,Belfort,FR
+BSL,EuroAPT Basel Mulhouse Freiburg,Basel/Mulhouse,FR
+BYF,Albert,Albert,FR
+CMF,Chambery,Chambery,FR
+CNG,CNG,,FR
+CQF,Calais–Dunkerque,Calais/Dunkerque,FR
+CVF,CVF,,FR
+DLE,DLE,,FR
+DNR,Pleurtuit,Dinard,FR
+DXA,Les Deux Alpes,Les Deux Alpes,FR
+EAP,"Basel,Mulhouse, All",Basel/Mulhouse,FR
+EBU,Saint-Etienne–Boutheon,Saint Etienne,FR
+EGC,Bergerac Dordogne Périgord,Bergerac,FR
+ENC,Essey,Metz/Nancy,FR
+ETZ,Metz-Nancy-Lorraine,Metz/Nancy,FR
+FRJ,FRJ,,FR
+GAT,GAT,,FR
+GFR,GFR,,FR
+HUH,Huahine – Fare,Huahine,FR
+JAH,Aubagne,Aubagne,FR
+JCA,Croisette Heliport,Cannes,FR
+LDE,Tarbes Ossun Lourdes,Lourdes,FR
+LTQ,LTQ,,FR
+LTT,La Môle – Saint-Tropez,Saint Tropez,FR
+MLH,Basel Mulhouse Freiburg Airport,Mulhouse/Basel,FR
+MOZ,Moorea,Moorea,FR
+MZM,Frescaty,Metz/Nancy,FR
+NVS,NVS,,FR
+ORE,ORE,,FR
+PLG,La Plagne,La Plagne,FR
+QAM,QAM,,FR
+QEV,Courbevoie,Courbevoie,FR
+QIE,QIE,,FR
+QJZ,Nantes Railway Station,Nantes,FR
+QMU,Moutiers,Moutiers,FR
+QNJ,QNJ,,FR
+QNL,Neuilly Sur Seine,Neuilly Sur Seine,FR
+QRV,QRV,,FR
+QTJ,QTJ,,FR
+QVI,Valbonne,Valbonne,FR
+QXB,QXB,,FR
+QXG,Angers Railway Station,Angers,FR
+QYR,QYR,,FR
+QZF,Font Romeu,Font Romeu,FR
+QZH,Les Angles,Les Angles,FR
+RFP,Raiatea,Raiatea,FR
+RGI,Rangiroa,Rangiroa,FR
+RSY,Roissy,Roissy,FR
+SBK,SBK,,FR
+SEC,Serre Chevalier,Serre Chevalier,FR
+SNR,SNR,,FR
+SOZ,Solenzara,Solenzara,FR
+SXD,Sophia Antipolis,Sophia Antipolis,FR
+TGF,Tignes,Tignes,FR
+TLN,Toulon/HyersS,Toulon,FR
+VAF,VAF,,FR
+XAB,XAB,,FR
+XAC,Arcachon,Arcachon,FR
+XAG,Agde,Agde,FR
+XAM,Amboise,Amboise,FR
+XAS,XAS,,FR
+XAT,Antibes,Antibes,FR
+XAV,XAV,,FR
+XBA,Bareges,Bareges,FR
+XBC,Briancon,Briancon,FR
+XBH,Bethune,Bethune,FR
+XBQ,Blois,Blois,FR
+XBS,Boulogne Sur Mer,Boulogne Sur Mer,FR
+XBV,Beaune,Beaune,FR
+XBX,Bernay,Bernay,FR
+XBY,Bayonne,Bayonne,FR
+XBZ,Bandol,Bandol,FR
+XCB,Cambrai,Cambrai,FR
+XCE,Cerbere,Cerbere,FR
+XCF,Chamonix Mont Blanc,Chamonix Mont Blanc,FR
+XCP,Compiegne,Compiegne,FR
+XCQ,Chamrousse,Chamrousse,FR
+XCT,La Ciotat,La Ciotat,FR
+XCU,Collioure,Collioure,FR
+XCV,Chantilly,Chantilly,FR
+XCW,XCW,,FR
+XDA,Dax,Dax,FR
+XDB,Lille,Lille,FR
+XDN,Douai,Douai,FR
+XDR,Dreux,Dreux,FR
+XEB,Evian Les Bains,Evian Les Bains,FR
+XED,XED,,FR
+XEP,Epernay,Epernay,FR
+XER,Bus Station,Strasbourg,FR
+XFB,Fontainebleau,Fontainebleau,FR
+XFX,Foix,Foix,FR
+XGT,Gueret,Gueret,FR
+XHY,Hendaye,Hendaye,FR
+XJZ,St Jean De Luz,St Jean De Luz,FR
+XLD,Landerneau,Landerneau,FR
+XLE,Lens,Lens,FR
+XLG,Lognes,Lognes,FR
+XLH,Luchon,Luchon,FR
+XLN,Laon,Laon,FR
+XLR,Libourne,Libourne,FR
+XLX,Lisieux,Lisieux,FR
+XME,Maubeuge,Maubeuge,FR
+XMF,XMF,,FR
+XMK,Montelimar,Montelimar,FR
+XMO,Modane,Modane,FR
+XMQ,Morzine,Morzine,FR
+XMR,Marmande,Marmande,FR
+XMT,Menton,Menton,FR
+XMU,XMU,,FR
+XMW,XMW,,FR
+XOG,Orange,Orange,FR
+XPS,Provins,Provins,FR
+XPZ,Saint Tropez Harbour Ferry Service,Saint Tropez,FR
+XRF,Marseille Railway Station,Marseille,FR
+XRI,Riom,Riom,FR
+XRN,Redon,Redon,FR
+XRS,Les Arcs,Les Arcs,FR
+XRT,Rambouillet,Rambouillet,FR
+XRX,Roubaix,Roubaix,FR
+XSF,Sens,Sens,FR
+XSL,Sarlat,Sarlat,FR
+XSN,XSN,,FR
+XSQ,Selestat,Selestat,FR
+XSS,Soissons,Soissons,FR
+XST,Saintes,Saintes,FR
+XSU,Saumur,Saumur,FR
+XSV,Senlis,Senlis,FR
+XSW,Sedan,Sedan,FR
+XSX,Seclin,Seclin,FR
+XSY,Sete,Sete,FR
+XTB,Tarbes,Tarbes,FR
+XTH,Thionville,Thionville,FR
+XTN,Tourcoing,Tourcoing,FR
+XTS,Thonon Les Bains,Thonon Les Bains,FR
+XTU,Tulle,Tulle,FR
+XUY,Auray,Auray,FR
+XVD,Vendome,Vendome,FR
+XVE,Versailles,Versailles,FR
+XVI,Vienne,Vienne,FR
+XVN,XVN,,FR
+XVO,Vesoul,Vesoul,FR
+XVP,Villepinte,Villepinte,FR
+XVR,Valloire,Valloire,FR
+XVS,XVS,,FR
+XVT,Vitre,Vitre,FR
+XVZ,Vierzon,Vierzon,FR
+XWG,Railway Station,Strasbourg,FR
+XZI,Lorraine TGV Railway Station,Metz Nancy,FR
+XZV,TGV Station,Toulon,FR
+ZAF,Arles,Arles,FR
+ZBH,Severac Le Chateau,Severac Le Chateau,FR
+ANE,Marce,Angers,FR
+ANG,Angoulême – Brie – Champniers ,Angouleme,FR
+AJA,Ajaccio Napoleon Bonaparte,Ajaccio,FR
+ZFJ,Gare De Rennes Rail Station,Rennes,FR
+ZFQ,Gare De Bordeaux Rail Station,Bordeaux,FR
+BES,Brest Bretagne,Brest,FR
+AUF,AUF,,FR
+AUR,Aurillac,Aurillac,FR
+AVN,Avignon-Caum,Avignon,FR
+BAE,BAE,,FR
+BIQ,Biarritz - Anglet - Bayonne,Biarritz,FR
+BIA,Bastia Poretta,Bastia,FR
+CFR,Caen – Carpiquet,Caen,FR
+CEQ,Cannes-Mandelieu,Cannes,FR
+CER,Cherbourg-Maupertus,Cherbourg,FR
+CET,Le Pontreau,Cholet,FR
+CCF,Carcassonne,Carcassonne,FR
+BZR,Beziers Vias,Beziers,FR
+BVE,Brive – La Roche,Brive-La-Gaillarde,FR
+BOD,Bordeaux–Mérignac,Bordeaux,FR
+BOU,Bourges,Bourges,FR
+EDM,EDM,,FR
+DIJ,Dijon,Dijon,FR
+DCM,Castres–Mazamet Airport,Castres,FR
+DPE,DPE,,FR
+DOL,DOL,,FR
+CSF,Creil,Creil,FR
+CTT,Le Castellet,Le Castellet,FR
+CLY,Sainte Catherine,Calvi,FR
+CMR,Colmar-Houssen,Colmar,FR
+CFE,Clermont-Ferrand Auvergne,Clermont-Ferrand,FR
+CHR,CHR,,FR
+EVX,Fauville,Evreux,FR
+EPL,EPL,,FR
+FSC,Sud Corse,Figari,FR
+FNI,Nimes,Nimes,FR
+ZAO,Cahors,Cahors,FR
+TLS,Toulouse,Toulouse,FR
+TUF,Tours,Tours,FR
+UIP,Quimper,Quimper,FR
+URO,Rouen,Rouen,FR
+VNE,VNE,,FR
+VHY,VHY,,FR
+VTL,VTL,,FR
+SXB,Strasbourg,Strasbourg,FR
+RYN,RYN,,FR
+SCP,Mont Dauphin,Mont Dauphin,FR
+HZB,Merville Colonne,Hazebrouck,FR
+IDY,IDY,,FR
+LVA,LVA,,FR
+GNB,Grenoble-Isere,Lyon,FR
+LYN,Lyon–Bron,Lyon,FR
+LYS,Lyon Saint-Exupery,Lyon,FR
+XYD,Part-Dieu Railway Station,LYON,FR
+MCU,Montlucon – Gueret,Montlucon,FR
+MFX,MFX,,FR
+MEN,MEN,,FR
+LIL,Lesquin,Lille,FR
+LIG,Limoges – Bellegarde,Limoges,FR
+LPY,Loudes,Le Puy,FR
+LRH,La Rochelle – lle de Re,La Rochelle,FR
+LRT,Lorient South Brittany,Lorient,FR
+LME,Arnage,Le Mans,FR
+LAI,Lannion – Cote de Granit ,Lannion,FR
+LBI,LBI,,FR
+LEH,Octeville,Le Havre,FR
+LDV,Landivisiau,Landivisiau,FR
+PIS,Poitiers-Biard,Poitiers,FR
+PGX,Perigueux Bassillac,Perigueux,FR
+BVA,Beauvais Tille,Paris,FR
+CDG,Charles de Gaulle,Paris,FR
+JDP,De Paris Heliport,Paris,FR
+LBG,Le Bourget,Paris,FR
+ORY,Orly ,Paris,FR
+PAR,Paris Metropolitan,Paris,FR
+POX, Pontoise - Cormeilles Aerodrome,Paris,FR
+TNF,Toussus-le-Noble,Paris,FR
+VIY,Villa Coublay,Paris,FR
+XCR,Chalons Vatry,Paris,FR
+XPG,Gare du Nord,Paris,FR
+PGF,Perpignan–Rivesaltes,Perpignan,FR
+PRP,PRP,,FR
+PUF,The Pau-Pyrenees Intl,Pau,FR
+RHE,Reims – Champagne,Reims,FR
+RDZ,Rodez–Marcillac,Rodez,FR
+RCO,RCO,,FR
+RNS,Rennes–Saint-Jacques,Rennes,FR
+RNE,Renaison,Roanne,FR
+OBS,OBS,,FR
+NTE,Nantes Atlantique,Nantes,FR
+NIT,NIT,,FR
+MPL,Montpellier Mediterranean,Montpellier,FR
+MRS,Marseille Provence,Marseille,FR
+NCY,Annecy-Meythet,Annecy,FR
+NCE,Nice Cote d'Azur Intol ,Nice,FR
+MVV,MVV,,FR
+MXN,MXN,,FR
+MYB,Mayumba,Mayumba,GA
+MZC,Mitzic,Mitzic,GA
+MVX,Minvoul,Minvoul,GA
+MVG,Mevang,Mevang,GA
+MVB,M'Vengue El Hadj Omar Bongo Ondimba Intl,Franceville,GA
+OKN,Okondja,Okondja,GA
+OMB,Omboue,Omboue,GA
+OYE,Oyem,Oyem,GA
+POG,Port Gentil Intl,Port Gentil,GA
+LEO,Lekoni,Lekoni,GA
+LBQ,LBQ,,GA
+LBV,Libreville Intl,Libreville,GA
+MDV,Medouneu,Medouneu,GA
+MFF,Moanda,Moanda,GA
+MJL,Mouila,Mouila,GA
+MKU,Makokou,Makokou,GA
+MKB,Mekambo,Mekambo,GA
+MBC,Mbigou,Mbigou,GA
+LTL,Lastourville,Lastoursville,GA
+IGE,Tchongorove,Iguela,GA
+KOU,Koulamoutou,Koulamoutou,GA
+KDN,Ndende,Ndende,GA
+KDJ,KDJ,,GA
+TCH,Tchibanga,Tchibanga,GA
+FOU,Fougamou,Fougamou,GA
+GKO,Kongoboumba,Kongoboumba,GA
+BGB,Booue,Booue,GA
+AKE,Akieni,Akieni,GA
+AWE,Alowe,Alowe,GA
+BAW,Biawonque,Biawonque,GA
+BGP,BGP,,GA
+BMM,BMM,,GA
+GAX,Gamba,Gamba,GA
+GIM,Miele Mimbale,Miele Mimbale,GA
+KMD,Mandji,Mandji,GA
+MGO,Manega,Manega,GA
+MGX,Moabi,Moabi,GA
+OUU,Ouanga,Ouanga,GA
+WGY,Wagny,Wagny,GA
+WNE,Wora Na Yeno,Wora Na Yeno,GA
+ZKM,Sette Cama,Sette Cama,GA
+BBS,BBS,,GB
+BRF,Leeds Bradford Intl,Bradford,GB
+BSH,Brighton,Brighton,GB
+CVT,Coventry,Coventry,GB
+DSA,Robin Hood Airport Doncaster Sheffield,Doncaster,GB
+EMA,East Midlands,Nottingham,GB
+FWM,Fort William Heliport,Fort William,GB
+GSY,Binbrook,Grimsby,GB
+HLY,Holyhead,Holyhead,GB
+HOY,Longhope,Hoy,GB
+HUY,Humberside,Humberside,GB
+IOM,Isle of Man,Isle Of Man,GB
+IPW,Ipswich,Ipswich,GB
+JER,Jersey,Jersey,GB
+KRH,Redhill,Redhill,GB
+KYN,Milton Keynes Central railway station,Milton Keynes,GB
+LBA,Leeds Bradford Intl,Leeds/Bradford,GB
+LEQ,Lands End,Lands End,GB
+LSI,Sumburgh,Shetland Islands,GB
+LWK,Lerwick/Tingwall,Shetland Islands,GB
+PCW,PCW,,GB
+PIK,Glasgow Prestwick,Glasgow,GB
+PME,Portsmouth,Portsmouth,GB
+PZE,Penzance Heliport,Penzance,GB
+QDH,Ashford Intl Railway Station,Ashford,GB
+QEW,Leicester Railway Station,Leicester,GB
+QFO,Duxford,Duxford,GB
+QIF,Isleworth,Isleworth,GB
+QLA,Lasham Airfield,Lasham,GB
+QQD,Dover,Dover,GB
+QQH,Harwich,Harwich,GB
+QQP,London Paddington Railway Station,London,GB
+QQR,Ramsgate,Ramsgate,GB
+QQS,St Pancras Railway Station,London,GB
+QQU,Euston Railway Station,London,GB
+QQX,QQX,,GB
+QQY,QQY,,GB
+SCS,SCS,,GB
+TSO,Scilly Is.,Isles Of Scilly,GB
+ULL,Mull,Mull,GB
+UXS,Saint Austell,Saint Austell,GB
+VLF,Newcastle Under Lyme,Newcastle Under Lyme,GB
+WIC,"Wick, Scotland",Wick,GB
+WOB,Woodbridge RAF,Suttonheath,GB
+XGM,Grantham,Grantham,GB
+XHU,Huntingdon,Huntingdon,GB
+XMZ,Macclesfield,Macclesfield,GB
+XNE,Newport,Newport,GB
+XNK,Newark,Newark,GB
+XNO,Northallerton,Northallerton,GB
+XNV,Nuneaton,Nuneaton,GB
+XPF,Penrith,Penrith,GB
+XPT,Preston,Preston,GB
+XPW,Didcot,Didcot,GB
+XQB,Basingstoke,Basingstoke,GB
+XQD,Bedford,Bedford,GB
+XQL,XQL,,GB
+XQM,Market Harborough,Market Harborough,GB
+XQW,Motherwell,Motherwell,GB
+XRC,Runcorn,Runcorn,GB
+XRE,XRE,,GB
+XRU,Rugby,Rugby,GB
+XSR,Salisbury,Salisbury,GB
+XTK,Thirsk,Thirsk,GB
+XVA,Stockport,Stockport,GB
+XVB,Stafford,Stafford,GB
+XVC,Crewe,Crewe,GB
+XVG,Darlington,Darlington,GB
+XVH,Peterborough,Peterborough,GB
+XVJ,Stevenage,Stevenage,GB
+XVW,Wolverhampton,Wolverhampton,GB
+XWB,Stirling,Stirling,GB
+XWD,Wakefield,Wakefield,GB
+XWE,Wellingborough,Wellingborough,GB
+XWH,Stoke On Trent,Stoke On Trent,GB
+XWI,Wigan,Wigan,GB
+XWN,Warrington,Warrington,GB
+XWO,Woking,Woking,GB
+XWS,Swindon,Swindon,GB
+YEO,Royal Naval Air Stn,Yeovilton,GB
+ZFI,Chesterfield,Chesterfield,GB
+ZGB,Nottingham Bus Station,Nottingham,GB
+ZGG,Glasgow Central Railway Station,Glasgow,GB
+ZMA,Mansfield,Mansfield,GB
+ACI,Alderney ,Alderney,GB
+ABZ,Aberdeen Intl,Aberdeen,GB
+ADX,Leuchars,Saint Andrews,GB
+QQW,London-Waterloo Rail Station,London,GB
+BFS,Belfast Intl,Belfast,GB
+BHD,Belfast Harbor,Belfast,GB
+BEX,Raf Station,Benson,GB
+BHX,Birmingham Intl,Birmingham,GB
+BLK,Blackpool Intl,Blackpool,GB
+BEQ,Honington Raf,Bury St Edmunds,GB
+BEB,Benbecula,Benbecula,GB
+BBP,Bembridge,Bembridge,GB
+BOH,Bournemouth,Bournemouth,GB
+BRR,Barra,Barra,GB
+BRS,Bristol,Bristol,GB
+BWF,Barrow-in-Furness,Barrow-in-Furness,GB
+CAL,Campbeltown,Campbeltown,GB
+BZZ,RAF Brize Norton,Brize Norton,GB
+CAX,Carlisle,Carlisle,GB
+CBG,Cambridge,Cambridge,GB
+CEG,Hawarden,Chester,GB
+GLA,Glasgow Intl,Glasgow,GB
+HAW,HAW,,GB
+HRT,RAF Linton-on-Ouse Air Force station,Harrogate,GB
+FSS,Kinloss Raf,Forres,GB
+FZO,Filton,Filton,GB
+GCI,Guernsey,Guernsey,GB
+EOI,Eday,Eday,GB
+ENK,Enniskillen,Enniskillen,GB
+ESH,ESH,,GB
+EXT,Exeter Intl,Exeter,GB
+FEA,Fetlar,Fetlar,GB
+FAB,FAB,,GB
+FFD,Raf Station,Fairford,GB
+FIE,"Fair Isle, Scotland",Fair Isle,GB
+FLH,FLH,,GB
+CSA,Colonsay,Colonsay,GB
+CWL,Cardiff,Cardiff,GB
+DND,Dundee,Dundee,GB
+DOC,DOC,,GB
+EDI,Edinburgh,Edinburgh,GB
+SYY,"Stornoway, Scotland","Stornoway, Outer Stat Hebrides",GB
+SWS,"Swansea, Wales",Swansea,GB
+SQZ,Raf Station,Scampton,GB
+SDZ,"Shetland Islands, All",Shetland Islands,GB
+SOU,Southampton,Southampton,GB
+SOY,Stronsay,Stronsay,GB
+SKL,Skye,Skye,GB
+WHS,Whalsay,Whalsay,GB
+VLY,Anglesey,Anglesey,GB
+UPV,Upavon,Upavon,GB
+UNT,UNT,,GB
+TRE,"Tiree Island, Scotland","Tiree, Inner Hebrides",GB
+WRY,"Westray, Scotland",Westray,GB
+KOI,Kirkwall,Kirkwall,GB
+KNF,Marham Royal Air Force,Kings Lynn,GB
+ILY,Islay,Islay,GB
+INV,Inverness,Inverness,GB
+HYC,Air Parker Booker,High Wycombe,GB
+ISC,Isles of Scilly,Isles Of Scilly,GB
+LYE,Raf Station,Lyneham,GB
+LYX,LYX,,GB
+MAN,Manchester,Manchester,GB
+MHZ,Mildenhall,Mildenhall,GB
+LDY,City of Derry,Derry,GB
+LMO,LMO,,GB
+BQH,Biggin Hill,London,GB
+LCY,London City,London,GB
+LGW,Gatwick,London,GB
+LHR,London Heathrow,London,GB
+LTN,London Luton,London,GB
+SEN,London Southend,London,GB
+STN, Stansted,London,GB
+LPL,Liverpool John Lennon,Liverpool,GB
+LKZ,Lakenheath Raf,Brandon,GB
+PPW,Papa Westray,Papa Westray,GB
+PLH,Plymouth Municipal,Plymouth,GB
+OXF,London Oxford,Oxford,GB
+RCS,RCS,,GB
+PSL,Perth Intl,Perth,GB
+PSV,PSV,,GB
+QUG,Chichester,Chichester,GB
+QUY,Raf Wyton,Wyton,GB
+QCY,Raf Station,Coningsby,GB
+ORM,Northampton,Northampton,GB
+OBN,Oban,Oban,GB
+OKH,Cottesmore Raf,Oakham,GB
+NQY,Newquay Cornwall,Newquay,GB
+NQT,Nottingham,Nottingham,GB
+NRL,North Ronaldsay,North Ronaldsay,GB
+NWI,Norwich Intl,Norwich,GB
+NCL,Newcastle Intl,Newcastle,GB
+NDY,Sanday,Sanday,GB
+MSE,Manston-Kent Intl,Manston-Kent Intl,GB
+MME,Durham Tees Valley,Durham,GB
+CRU,Carriacou Island,Carriacou Island,GD
+GND,Maurice Bishop Intl ,Grenada,GD
+SUI,SUI,,GE
+BUS,Batumi,Batumi,GE
+KUT,Kutaisi Intl,Kutaisi,GE
+TBS,Tbilisi Intl,Tbilisi,GE
+MPY,Maripasoula,Maripasoula,GF
+REI,REI,,GF
+CAY,Felix Eboue,Cayenne,GF
+LDX,LDX,,GF
+OYP,St Georges De Loy,St Georges De Loy,GF
+QKR,Kourou,Kourou,GF
+XAU,Saul,Saul,GF
+TML,TML,,GH
+ACC,Kotoka Intl,Accra,GH
+NYI,Sunyani,Sunyani,GH
+KMS,KMS,,GH
+TKD,TKD,,GH
+GIB,North Front,Gibraltar,GI
+AGM,Tasiilaq Heliport,Tasiilaq,GL
+CNP,Neerlerit Inaat,Neerlerit Inaat,GL
+IOT,Illorsuit,Illorsuit,GL
+JGO,Qeqertarsuaq,Qeqertarsuaq,GL
+JGR,Gronnedal Heliport,Kangilinnguit,GL
+JJU,Qaqortoq Heliport,Qaqortoq,GL
+JNN,Nanortalik Heliport,Nanortalik,GL
+JNS,Narsaq Heliport,Narsaq,GL
+JQA,Qaarsut,Qaarsut,GL
+JRK,Arsuk,Arsuk,GL
+LLU,Alluitsup Paa Heliport,Alluitsup Paa,GL
+OBY,OBY,,GL
+QCU,Akunnaaq Heliport,Akunnaaq,GL
+QEY,Qeqertarsuatsiaat,Qeqertarsuatsiaat,GL
+QFI,Iginniarfik Heliport,Iginniarfik,GL
+QFJ,Alluitsup,Alluitsup,GL
+QGQ,Attu Heliport,Attu,GL
+QJE,Kitsissuarsuit Heliport,Kitsissuarsuit,GL
+QJI,Ikamiut Heliport,Ikamiut,GL
+QKT,Kangaamiut,Kangaamiut,GL
+QMK,Niaqornaarsuk Heliport,Niaqornaarsuk,GL
+QPW,Kangaatsiaq Heliport,Kangaatsiaq,GL
+QRY,Ikerasaarsuk Heliport,Ikerasaarsuk,GL
+QUE,Qullissat,Qullissat,GL
+QUP,Saqqaq Heliport,Saqqaq,GL
+UMD,Uummannaq,Uummannaq,GL
+XEO,Oqatsut Harbour,Oqatsut Harbour,GL
+XIQ,Ilimanaq Harbour Heliport,Ilimanaq,GL
+GOH,Nuuk,Nuuk,GL
+UAK,Narssarssuaq,Narsarsuaq,GL
+THU,Thule,Pituffik,GL
+SFJ,Kangerlussuaq ,Kangerlussuaq,GL
+JSU,Maniitsoq,Maniitsoq,GL
+JUV,Upernavik,Upernavik,GL
+JHS,Sisimiut,Sisimiut,GL
+JFR,Paamiut,Paamiut,GL
+JEG,Aasiaat,Aasiaat,GL
+JCH,Qasigiannguit,Qasigiannguit,GL
+JAV,Ilulissat,Ilulissat,GL
+KUS,Kulusuk,Kulusuk,GL
+NAQ,Qaanaaq,Qaanaaq,GL
+BJL,Yundum Intl,Banjul,GM
+BKJ,Boke,Boke,GN
+GII,Siguiri,Siguiri,GN
+FIG,Katourou,Fria,GN
+FAA,FAA,,GN
+CKY,Conakry International,Conakry,GN
+LEK,Tata,Labe,GN
+MCA,Macenta,Macenta,GN
+KNN,Kankan,Kankan,GN
+KSI,Kissidougou,Kissidougou,GN
+SBI,Koundara,Koundara,GN
+LSS,Terre-de-Haut,Terre-de-Haut,GP
+PTP,Pointe-a-Pitre Intl,Pointe A Pitre,GP
+DSD,La Desirade,La Desirade,GP
+GBJ,Marie-Galante,Marie-Galante,GP
+BBR,BBR,,GP
+CCE,CCE,,GP
+MSB,Marigot Sea Plane Base,Maribor,GP
+SBH,Gustaf III,St Barthelemy,GP
+SFC,Saint Francois,St Francois,GP
+SFG,Esperance,St Martin,GP
+XOT,Marigot,Marigot,GP
+BSG,Bata,Bata,GQ
+SSG,Malabo,Malabo,GQ
+SKG,Thessaloniki Intl,Thessaloniki,GR
+SKU,Skyros Island National,Skyros,GR
+SPJ,SPJ,,GR
+SMI,Samos,Samos,GR
+VOL,Volos,Volos,GR
+RHO,Rhodes Intl,Rhodes,GR
+PAS,Paros,Paros,GR
+KVA,Kavala Intl,Kavala,GR
+KZI,Kozani National,Kozani,GR
+KZS,Megisti,Kastellorizo,GR
+LRS,Leros Municipal,Leros,GR
+KSO,Kastoria National ,Kastoria,GR
+KLX,Kalamata Intl,Kalamata,GR
+JTR,Santorini (Thira) National,Thira,GR
+JNX,Naxos,Naxos,GR
+JSI,Skiathos Island National,Skiathos,GR
+KGS,Kos Island Intl ,Kos Island,GR
+JKH,Chios Island National,Chios,GR
+JMK,Mikonos Island National,Mykonos Island,GR
+IOA,Ioannina,Ioannina,GR
+AGQ,Agrinion,Agrinion,GR
+AXD,Demokritos,Alexandroupolis,GR
+CFU,Ioannis Kapodistrias International,Corfu,GR
+EFL,Kefalonia,Kefallinia,GR
+GPA,Araxos,Patrai,GR
+HER,Heraklion,Irakleion,GR
+HEW,Athens Hellinikon,Athens,GR
+JIK,Ikaria Island,Ikaria Island,GR
+JKL,Kalymnos Island National,Kalymnos Island,GR
+JSH,Sitia Public,Siteia,GR
+JSY,Syros Island National,Syros Island,GR
+JTY,Astypalaia,Astypalaia Island,GR
+KIT,Kithira Island National,Kythira,GR
+KSJ,Kasos Island,Kasos Island,GR
+LRA,LRA,,GR
+LXS,Limnos Intl,Limnos,GR
+MJT,Mytilene Intl,Mytilini,GR
+MLO,Milos Island National,Milos,GR
+PKH,Portochelion,Portochelion,GR
+PVK,Aktion National,Preveza/Lefkada,GR
+PYR,Pygros,Pygros,GR
+QKG,Chalkida,Chalkida,GR
+ZKT,Komotini,Komotini,GR
+ZTH,Zakinthos,Zakinthos Island,GR
+AOK,Karpathos,Karpathos,GR
+ATH,Eleftherios Venizelos Intl,Athens,GR
+CHQ,Chania Intl,Chania,GR
+CIQ,CIQ,,GT
+CTF,Coatepeque,Coatepeque,GT
+AAZ,AAZ,,GT
+CBV,Coban,Coban,GT
+AQB,Quiche,Quiche,GT
+CMM,Carmelita,Carmelita,GT
+DON,DON,,GT
+ENJ,El Naranjo,El Naranjo,GT
+FRS,Santa Elena de Uairen ,Flores,GT
+GSJ,Puerto San Jose,Puerto San Jose,GT
+GUA,La Aurora Intl,Guatemala City,GT
+MCR,Melchor De Menco,Melchor De Menco,GT
+PCG,Paso Caballos,Paso Caballos,GT
