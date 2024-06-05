@@ -1,5 +1,7 @@
 <?php
 
+use App\Payment\IranianCurrency;
+
 return [
 
     /*
@@ -30,5 +32,13 @@ return [
             'channel' => env('SLACK_BOT_USER_DEFAULT_CHANNEL'),
         ],
     ],
+
+    'payment' => [
+        'jibit' => [
+            'apiKey' => env('JIBIT_APIKEY'),
+            'secret' => env('JIBIT_SECRET'),
+            'currency' => IranianCurrency::RIAL
+        ]
+    ]
 
 ];
