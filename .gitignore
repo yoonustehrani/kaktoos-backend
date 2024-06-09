@@ -18,4 +18,8 @@ yarn-error.log
 /.idea
 /.vscode
 database/seeders/data/*.xls
+<<<<<<< HEAD
 /mysqldata
+=======
+/mysqldata
+>>>>>>> 9adf518d2a130d27e039ba0c0aa61b4551464242
