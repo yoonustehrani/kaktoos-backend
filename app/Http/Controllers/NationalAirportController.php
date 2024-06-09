@@ -14,7 +14,8 @@ class NationalAirportController extends Controller
     public function index(Request $request)
     {
         $request->validate([
-            'q' => 'string|min:2'
+            'q' => 'string|min:2',
+            'limit' => 'nullable|numeric|min:1|max:10'
         ]);
         $search_query = $request->query('q');
         $cities = \DB::table('airports');
@@ -32,6 +33,8 @@ class NationalAirportController extends Controller
                 $query->orWhere('city_name_fa', 'like', "%$search_query%");
             });
         }
+        $limit = $request->query('limit') ?? '5';
+        $cities->limit($limit);
         $cities->groupBy('IATA_code')->where('IATA_code', '!=', 'IKA')->select('city_name_fa', 'IATA_code');
         return $cities->get();
         //
