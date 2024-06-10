@@ -65,7 +65,7 @@ services:
     #         timeout: 5s
 networks:
     sail:
-        driver: bridge
+        driver: bridgegit config pull.rebase false
 volumes:
     sail-mariadb:
         driver: local
