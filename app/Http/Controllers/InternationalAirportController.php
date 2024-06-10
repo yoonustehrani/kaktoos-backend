@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\Airport;
 use Illuminate\Http\Request;
+use Symfony\Component\HttpKernel\Exception\HttpException;
 
 class InternationalAirportController extends Controller
 {
     public function index(Request $request)
     {
         $request->validate([
-            'q' => 'string|min:2'
+            'q' => 'string|min:2',
+            'limit' => 'nullable|numeric|min:1|max:10'
         ]);
         $search_query = $request->query('q');
         $airports = Airport::onlyInternational();
@@ -23,6 +25,8 @@ class InternationalAirportController extends Controller
             $airports->where('name_fa', 'like', "%$search_query%");
             $airports->orWhere('city_name_fa', 'like', "%$search_query%");
         }
+        $limit = $request->query('limit') ?? '5';
+        $airports->limit($limit);
         return $airports->get()->groupBy('city_name_fa');
     }
 }
