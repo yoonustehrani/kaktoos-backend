@@ -39,6 +39,12 @@ return [
             'secret' => env('JIBIT_SECRET'),
             'currency' => IranianCurrency::RIAL
         ]
+    ],
+
+    'parto' => [
+        'username' => env('PARTO_USERNAME'),
+        'password' => env('PARTO_PASSWORD'),
+        'office_id' => env('PARTO_OFFICEID')
     ]
 
 ];
