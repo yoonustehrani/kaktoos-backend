@@ -191,7 +191,7 @@ return [
 
     'attributes' => [
         'passengers' => [
-            'adutls' => 'count of adult passengers',
+            'adults' => 'count of adult passengers',
             'children' => 'count of child passengers',
             'infants' => 'count of infant passengers'
         ]
