@@ -39,6 +39,25 @@ return [
             'secret' => env('JIBIT_SECRET'),
             'currency' => IranianCurrency::RIAL
         ]
+    ],
+
+    'parto' => [
+        'username' => env('PARTO_USERNAME'),
+        'password' => env('PARTO_PASSWORD'),
+        'office_id' => env('PARTO_OFFICEID')
+    ],
+
+    'sms' => [
+        'melli_payamak' => [
+            'api_key' => env('MELLI_PAYAMAK_API_KEY'),
+            'username' => env('MELLI_PAYAMAK_USERNAME'),
+            'password' => env('MELLI_PAYAMAK_PASSWORD'),
+            'from' => '50004001130151',
+            'patterns' => [
+                'login' => intval(env('MELLI_PAYAMAK_LOGIN_PATTERN'))
+            ]
+        ],
+        'enabled' => false
     ]
 
 ];

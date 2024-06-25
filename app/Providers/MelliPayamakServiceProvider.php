@@ -2,19 +2,18 @@
 
 namespace App\Providers;
 
-use App\Parto\PartoClient;
+use App\SMS\SMSService;
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Contracts\Foundation\Application;
 
-class PartoServiceProvider extends ServiceProvider
+class MelliPayamakServiceProvider extends ServiceProvider
 {
     /**
      * Register services.
      */
     public function register(): void
     {
-        $this->app->singleton('parto', function(Application $app) {
-            return new PartoClient($app['config']['services']['parto']);
+        $this->app->singleton('sms', function() {
+            return SMSService::default();
         });
     }
 
