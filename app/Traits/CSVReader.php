@@ -24,7 +24,7 @@ trait CSVReader
             } else {
                 $ar = [];
                 for ($i=0; $i < count($columns); $i++) { 
-                    $ar[$columns[$i]] = $line[$i];
+                    $ar[$columns[$i]] = str_replace('"', '', $line[$i]);
                 }
                 $rows->push($ar);
             }

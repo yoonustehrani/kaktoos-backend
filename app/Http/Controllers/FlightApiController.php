@@ -13,7 +13,7 @@ use Illuminate\Support\Carbon;
 
 class FlightApiController extends Controller
 {
-    public function searchOneWay(FlightSearchRequest $request)
+    public function searchOneWay(Request $request)
     {
         /**
          * @var \App\Parto\PartoClient
@@ -36,13 +36,16 @@ class FlightApiController extends Controller
                 destinationLocationType: FlightLocationType::tryFrom($destinationLocationType),
                 departureDateTime: Carbon::createFromFormat('Y-m-d', $request->input('date'))
             ));
-        // dd($flight_search);
-        $cache_key = implode(".", [$request->input('origin') , $request->input('destination') , $request->input('date')]);
+
+
+        // return $parto->searchFlight($flight_search);
+        $cache_key = implode(".", [$request->input('origin') , $request->input('destination') , $request->input('date')]) . "1";
         $flights = cache()->remember(md5($cache_key), 60 * 60, function () use($parto, $flight_search) {
             return $parto->searchFlight($flight_search)?->PricedItineraries ?? [];
         });
         // return $this->paginate($flights, 50)->toArray();
         return response()->json(
+            // $flights
             new FlightSearchCollection($this->paginate($flights, 50))
         );
     }

@@ -40,7 +40,8 @@ class PartoClient
     {
         return new FlightService();
     }
-    public function searchFlight(FlightSearch $flightSearch): stdClass|null
+    public function searchFlight(FlightSearch $flightSearch)
+    // : stdClass|null
     {
         try {
             $response = $this->apiCall('Air/AirLowFareSearch', $flightSearch->getQuery());
@@ -63,19 +64,23 @@ class PartoClient
         }
     }
 
-    public function login(): bool
+    public function login()
+    // : bool
     {
         try {
-            $response = $this->apiCall('Authenticate/CreateSession', [
+            $response = $this->apiCall(uri: 'Authenticate/CreateSession', data: [
                 'UserName' => $this->config['username'],
                 'Password' => \Cache::rememberForever('parto-password', fn() => hash('sha512', $this->config['password'])),
                 'OfficeId' => $this->config['office_id']
-            ], false);
-            session()->put($this->session_key, [
-                'id' => $response->SessionId,
-                'expires' => now()->addMinutes(14)->addSeconds(30)->getTimestamp()
-            ]);
-            return true;
+            ], auth: false);
+            if ($response->SessionId) {
+                session()->put($this->session_key, [
+                    'id' => $response->SessionId,
+                    'expires' => now()->addMinutes(14)->addSeconds(30)->getTimestamp()
+                ]);
+                return true;
+            }
+            return false;
         } catch (PartoErrorException $error) {
             return $error->getErrorObject();
         }
@@ -95,13 +100,13 @@ class PartoClient
 
     public function apiCall(string $uri, array $data = [], $auth = true)
     {
-        if ($auth && $this->loginExpired()) {
+        if ($auth === true && $this->loginExpired() === true) {
             session()->forget($this->session_key);
             if ($this->login()) {
                 return $this->apiCall($uri, $data, $auth);
             }
         }
-        $http = Http::acceptJson()->retry(2)->timeout(60);
+        $http = Http::acceptJson()->connectTimeout(60)->timeout(60)->retry(2);
         if ($auth) {
             $data['SessionId'] = $this->getPartoSession();
         }

@@ -13,18 +13,18 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        $middleware->validateCsrfTokens(except: [
-            'api/airports/*'
-        ]);
+        // $middleware->validateCsrfTokens(except: [
+        //     'api/login'
+        // ]);
         $middleware->statefulApi();
-        $middleware->trustProxies(at: '*');
-            $middleware->trustProxies(headers: Request::HEADER_X_FORWARDED_FOR |
+        $middleware->trustProxies(at: ['*']);
+        $middleware->trustProxies(headers: Request::HEADER_X_FORWARDED_FOR |
             Request::HEADER_X_FORWARDED_HOST |
             Request::HEADER_X_FORWARDED_PORT |
             Request::HEADER_X_FORWARDED_PROTO |
             Request::HEADER_X_FORWARDED_AWS_ELB
         );
-        $middleware->trustHosts(at: ['kaktoos.example']);
+        // $middleware->trustHosts(at: ['kaktoos.example']);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

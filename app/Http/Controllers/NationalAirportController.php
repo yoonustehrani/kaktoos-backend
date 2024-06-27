@@ -20,13 +20,19 @@ class NationalAirportController extends Controller
         $search_query = $request->query('q');
         $cities = \DB::table('airports');
         $cities->where('country_code', 'IR')->whereNotNull('city_name_fa');
-        if (preg_match('/^[A-Z]{2,4}$/', $search_query)) {
-            $cities->where('IATA_code', 'like', "$search_query%");
-        } else if (preg_match('/[A-Za-z]+/', $search_query)) {
-            $cities->where(function(Builder $query) use($search_query) {
-                $query->where('name', 'like', "%$search_query%");
-                $query->orWhere('city_name', 'like', "%$search_query%");
-            });
+        if (preg_match('/[A-Za-z]+/', $search_query)) {
+            if (preg_match('/^[A-Za-z]{2,3}$/', $search_query)) {
+                $cities->where('IATA_code', 'like', "$search_query%");
+                $cities->orWhere(function(Builder $query) use($search_query) {
+                    $query->where('name', 'like', "%$search_query%");
+                    $query->orWhere('city_name', 'like', "%$search_query%");
+                });
+            } else {
+                $cities->where(function(Builder $query) use($search_query) {
+                    $query->where('name', 'like', "%$search_query%");
+                    $query->orWhere('city_name', 'like', "%$search_query%");
+                });
+            }
         } else if (preg_match('/[^a-zA-Z0-9\_\@\!\/\$\#\^\&\*\(\)\-\+]{1,}/', $search_query)) {
             $cities->where(function(Builder $query) use($search_query) {
                 $query->where('name_fa', 'like', "%$search_query%");

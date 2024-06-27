@@ -13,13 +13,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->call(CountrySeeder::class);
-        $this->call(AirportSeeder::class);
-        // User::factory(10)->create();
-
-        // User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        // $this->call(CountrySeeder::class);
+        // $this->call(AirportSeeder::class);
+        $this->call(AirlineSeeder::class);
     }
 }

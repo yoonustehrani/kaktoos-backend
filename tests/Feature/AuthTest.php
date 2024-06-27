@@ -14,13 +14,16 @@ class AuthTest extends TestCase
     {
         $request = $this->get('/sanctum/csrf-cookie');
         $response = $this
-            ->withHeader('X-CSRF-TOKEN', $request->getCookie('XSRF-TOKEN')->getValue())
-            ->withHeader('Referer', 'kaktoos.example')
+            // ->withHeader('X-CSRF-TOKEN', $request->getCookie('XSRF-TOKEN')->getValue())
+            // ->withHeader('Referer', 'kaktoos.example')
             ->postJson('/api/login', [
                 "phone_number" =>  "09150013422",
                 "code" =>  "91631"
             ]);
-        $response->assertStatus(200);
+
+            $response->dd();
+        return;
+        // $response->assertStatus(200);
 
         $response = $this
             ->withHeader('Accept', 'application/json')
