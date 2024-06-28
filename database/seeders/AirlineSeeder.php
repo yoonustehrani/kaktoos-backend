@@ -106,7 +106,7 @@ class AirlineSeeder extends Seeder
                     'logo' => $a['logo'],
                     'icao' => $a['icao'],
                     'name' => $a['name'],
-                    'name_fa' => 'هواپیمایی'. ' ' . $a['name_fa']
+                    'name_fa' => $a['name_fa'] ? 'هواپیمایی'. ' ' . $a['name_fa'] : null
                 ]))->save();
             });
         });

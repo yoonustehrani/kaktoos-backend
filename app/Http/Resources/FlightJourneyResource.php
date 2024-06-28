@@ -9,6 +9,9 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 class FlightJourneyResource extends JsonResource
 {
+    public function getAirline($code) {
+        return session('airlines')[$code] ?? compact('code');
+    }
     /**
      * Transform the resource into an array.
      *
@@ -31,12 +34,8 @@ class FlightJourneyResource extends JsonResource
                     'duration_in_minutes' => $item['JourneyDurationPerMinute'],
                     'connection_time_in_minutes' => $item['ConnectionTimePerMinute'],
                     'flight_number' => $item['FlightNumber'],
-                    'operating_airline' => [
-                        'code' => $item['OperatingAirline']['Code']
-                    ],
-                    'marketing_airline' => [
-                        'code' => $item['MarketingAirlineCode']
-                    ],
+                    'operating_airline' => $this->getAirline($item['OperatingAirline']['Code']),
+                    'marketing_airline' => $this->getAirline($item['MarketingAirlineCode']),
                     'airplane' => [
                         'name' => trim($item['OperatingAirline']['Equipment'] . ' ' . $item['OperatingAirline']['EquipmentName']),
                         'cabin_type' => FlightCabinType::{PartoCabinType::tryFrom($item['CabinClassCode'])->name}
