@@ -10,6 +10,9 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 class FlightSearchResource extends JsonResource
 {
+    public function getAirline($code) {
+        return session('airlines')[$code] ?? compact('code');
+    }
     /**
      * Transform the resource into an array.
      *
@@ -25,6 +28,7 @@ class FlightSearchResource extends JsonResource
                 'issue_date_is_mandatory' => $this['IsPassportIssueDateMandatory'],
                 'is_name_with_space' => $this['IsPassportNameWithSpace'],
             ],
+            'airline' => $this->getAirline($this['ValidatingAirlineCode']),
             'origin_to_destination' => FlightJourneyResource::collection($this['OriginDestinationOptions']),
             'fare' => [
                 'reference' => $this['FareSourceCode'],

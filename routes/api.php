@@ -20,4 +20,8 @@ Route::prefix('flights')->group(function() {
     Route::post('search/one-way', [FlightApiController::class, 'searchOneWay']);
 });
 
+// Route::get('/login', function() {
+//     // session()->put('y', 2);
+//     return session('y');
+// });
 Route::post('/login', [UserAuthController::class, 'login']);

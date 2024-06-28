@@ -24,6 +24,7 @@ return new class extends Migration
             $table->decimal('latitude', 9, 6)->nullable();
             $table->decimal('longitude', 9, 6)->nullable();
             $table->primary('IATA_code');
+            $table->float('rating', 2)->unsigned()->default(0);
             $table->foreign('country_code')->references('code')->on('countries')->cascadeOnDelete()->cascadeOnUpdate();
         });
     }

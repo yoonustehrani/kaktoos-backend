@@ -32,7 +32,7 @@ class AirportSeeder extends Seeder
                 if (in_array($airport['IATA_code'], $iata_codes)) {
                     $airport_fa = $airports_json[$airport['IATA_code']];
                     $airport['name_fa'] = $airport_fa->AirportNameFa;
-                    $airport['is_international'] = \Str::contains($airport_fa->AirportNameEng, 'International');
+                    $airport['is_international'] = \Str::contains($airport_fa->AirportNameEng, 'International') || \Str::contains($airport['name'], 'International');
                     $delimiter = '،';
                     $airport['city_name_fa'] =  explode($delimiter, $airport_fa->LocationFa)[0] ?? null;
                     // $airport['location'] = $airport_fa->LocationEng;
@@ -40,7 +40,7 @@ class AirportSeeder extends Seeder
                     $airport['longitude'] = $airport_fa->Longitude ?: null;
                 } else {
                     $airport['name_fa'] = null;
-                    $airport['is_international'] = false;
+                    $airport['is_international'] = \Str::contains($airport['name'], 'International');
                     // $airport['location_fa'] = null;
                     // $airport['location'] = null;
                     $airport['latitude'] = null;
@@ -59,6 +59,45 @@ class AirportSeeder extends Seeder
                     \Log::alert($chunked_results->toArray());
                 }
             });
+        }
+        $rated = [
+            'THR' => [
+                'name' => 'تهران',
+                'rating' => 2.0
+            ],
+            'MHD' => [
+                'name' => 'مشهد',
+                'rating' => 1.9
+            ],
+            'AWZ' => [
+                'name' => 'اهواز',
+                'rating' => 1.8
+            ],
+            'SYZ' => [
+                'name' => 'شیراز',
+                'rating' => 1.7
+            ],
+            'BND' => [
+                'name' => 'بندر عباس',
+                'rating' => 1.6
+            ],
+            'IFN' => [
+                'name' => 'اصفهان',
+                'rating' => 1.5
+            ],
+            'TBZ' => [
+                'name' => 'تبریز',
+                'rating' => 1.4
+            ],
+            'KIH' => [
+                'name' => 'کیش',
+                'rating' => 1.3
+            ]
+        ];
+        foreach ($rated as $iata => $city) {
+            Airport::where('IATA_code', $iata)->update([
+                'rating' => $city['rating']
+            ]);
         }
     }
 }
