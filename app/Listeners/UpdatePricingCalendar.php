@@ -7,7 +7,8 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Facades\Redis;
 
-class UpdatePricingCalendar implements ShouldQueue
+class UpdatePricingCalendar 
+// implements ShouldQueue
 {
     // use InteractsWithQueue;
     public $delay = 3;
