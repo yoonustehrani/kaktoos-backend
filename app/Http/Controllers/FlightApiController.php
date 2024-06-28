@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\FlightSearchRequest;
 use App\Http\Resources\FlightSearchCollection;
 use App\Models\Airline;
+use Illuminate\Http\Request;
 use App\Parto\Domains\Flight\Enums\FlightCabinType;
 use App\Parto\Domains\Flight\Enums\FlightLocationType;
 use App\Parto\Domains\Flight\FlightOriginDestination;
@@ -14,7 +15,7 @@ use Illuminate\Support\Carbon;
 
 class FlightApiController extends Controller
 {
-    public function searchOneWay(FlightSearchRequest $request)
+    public function searchOneWay(Request $request)
     {
         /**
          * @var \App\Parto\PartoClient
