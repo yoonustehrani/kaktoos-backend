@@ -13,9 +13,6 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        // $middleware->validateCsrfTokens(except: [
-        //     'api/login'
-        // ]);
         $middleware->statefulApi();
         $middleware->trustProxies(at: ['*']);
         $middleware->trustProxies(headers: Request::HEADER_X_FORWARDED_FOR |
