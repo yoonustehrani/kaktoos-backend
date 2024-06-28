@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\SearchForFlightProcessed;
 use App\Http\Requests\FlightSearchRequest;
 use App\Http\Resources\FlightSearchCollection;
 use App\Models\Airline;
@@ -9,8 +10,8 @@ use App\Parto\Domains\Flight\Enums\FlightCabinType;
 use App\Parto\Domains\Flight\Enums\FlightLocationType;
 use App\Parto\Domains\Flight\FlightOriginDestination;
 use Illuminate\Pagination\LengthAwarePaginator;
-use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Collection;
 
 class FlightApiController extends Controller
 {
@@ -44,23 +45,36 @@ class FlightApiController extends Controller
         $flights = cache()->remember(md5($cache_key), 60 * 60, function () use($parto, $flight_search) {
             return $parto->searchFlight($flight_search)?->PricedItineraries ?? [];
         });
-        $collection = collect($flights);
-        $marketing_airlines = $collection->pluck('OriginDestinationOptions.*.FlightSegments.*.MarketingAirlineCode')
+        $collection_of_flights = collect($flights);
+
+        $this->saveAirlinesInSession($collection_of_flights);
+        
+        SearchForFlightProcessed::dispatch(
+            $collection_of_flights,
+            "$origin:$destination",
+            $request->input('date')
+        );
+
+        return response()->json(
+            new FlightSearchCollection($this->paginate($flights, 50))
+        );
+    }
+
+
+    private function saveAirlinesInSession(Collection $flights)
+    {
+        $marketing_airlines = $flights->pluck('OriginDestinationOptions.*.FlightSegments.*.MarketingAirlineCode')
             ->flatten()
             ->filter()
             ->unique();
-        $operating_airlines = $collection->pluck('OriginDestinationOptions.*.FlightSegments.*.OperatingAirline.Code')
+        $operating_airlines = $flights->pluck('OriginDestinationOptions.*.FlightSegments.*.OperatingAirline.Code')
             ->flatten()
             ->filter()
             ->unique()
         ->all();
         $all_airlines = $marketing_airlines->merge($operating_airlines)->unique()->values();
         session()->flash('airlines', Airline::whereIn('code', $all_airlines)->get()->keyBy('code')->toArray());
-        return response()->json(
-            new FlightSearchCollection($this->paginate($flights, 50))
-        );
     }
-
     /**
      * Paginate an array of items.
      *

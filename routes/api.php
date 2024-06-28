@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FlightApiController;
+use App\Http\Controllers\FlightPriceController;
 use App\Http\Controllers\InternationalAirportController;
 use App\Http\Controllers\NationalAirportController;
 use App\Http\Controllers\UserAuthController;
@@ -18,6 +19,7 @@ Route::prefix('airports')->group(function() {
 
 Route::prefix('flights')->group(function() {
     Route::post('search/one-way', [FlightApiController::class, 'searchOneWay']);
+    Route::get('prices', [FlightPriceController::class, 'show']);
 });
 
 // Route::get('/login', function() {
