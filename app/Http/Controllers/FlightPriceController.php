@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\FlightPricesRequest;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Redis;
 
@@ -17,7 +16,7 @@ class FlightPriceController extends Controller
         // Filter prices between the specified dates
         $filteredPrices = Cache::remember(
             key: "calendar:$startDate:$endDate:$route",
-            ttl: 60, // seconds
+            ttl: config('services.parto.timing.calendar_cache'), // seconds
             callback: function() use($startDate, $endDate, $route) {
                 $prices = Redis::hgetall($route);
                 $filteredPrices = [];

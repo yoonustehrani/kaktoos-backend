@@ -44,7 +44,11 @@ return [
     'parto' => [
         'username' => env('PARTO_USERNAME'),
         'password' => env('PARTO_PASSWORD'),
-        'office_id' => env('PARTO_OFFICEID')
+        'office_id' => env('PARTO_OFFICEID'),
+        'timing' => [
+            'flights_cache' => 60 * 60, // 1h
+            'calendar_cache' => 60 // 1m
+        ]
     ],
 
     'sms' => [
