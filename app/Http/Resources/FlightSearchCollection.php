@@ -14,6 +14,9 @@ class FlightSearchCollection extends ResourceCollection
      */
     public function toArray(Request $request): array
     {
-        return $this->resource->toArray();
+        return array_merge($this->resource->toArray(), ['meta' => [
+            'airports' => session('airports'),
+            'airlines' => session('airlines')
+        ]]);
     }
 }

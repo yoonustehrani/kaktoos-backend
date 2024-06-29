@@ -47,7 +47,7 @@ class FlightApiController extends Controller
             $this->takeCareOfSideEffects(collect($flights), $request);
         }
         return response()->json(
-            new FlightSearchCollection($this->paginate($flights, 50))
+            new FlightSearchCollection($this->paginate($flights, 50)) 
         );
     }
 }
