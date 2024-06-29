@@ -12,11 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('countries', function (Blueprint $table) {
-            $table->string('code', 2)->unique();
+            $table->string('code', 2)->primary()->unique();
             $table->string('name')->index();
             $table->string('name_fa')->index();
             $table->string('continent');
-            $table->primary('code');
         });
     }
 
