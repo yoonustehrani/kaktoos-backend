@@ -43,7 +43,9 @@ class FlightApiController extends Controller
         $flights = cache()->remember(md5($cache_key), config('services.parto.timing.flights_cache'), function () use($parto, $flight_search) {
             return $parto->searchFlight($flight_search)?->PricedItineraries ?? [];
         });
-        $this->takeCareOfSideEffects(collect($flights), $request);
+        if (count($flights) > 0) {
+            $this->takeCareOfSideEffects(collect($flights), $request);
+        }
         return response()->json(
             new FlightSearchCollection($this->paginate($flights, 50))
         );

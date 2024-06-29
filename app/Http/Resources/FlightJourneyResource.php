@@ -12,6 +12,9 @@ class FlightJourneyResource extends JsonResource
     public function getAirline($code) {
         return session('airlines')[$code] ?? compact('code');
     }
+    public function getAirport($IATA_code) {
+        return session('airports')[$IATA_code] ?? compact('IATA_code');
+    }
     /**
      * Transform the resource into an array.
      *
@@ -26,8 +29,8 @@ class FlightJourneyResource extends JsonResource
                 return [
                     'is_charter' => $item['IsCharter'],
                     'is_return' => $item['IsReturn'],
-                    'from_airport' => $item['DepartureAirportLocationCode'],
-                    'to_airport' => $item['ArrivalAirportLocationCode'],
+                    'from_airport' => $this->getAirport($item['DepartureAirportLocationCode']),
+                    'to_airport' => $this->getAirport($item['ArrivalAirportLocationCode']),
                     'departure_datetime' => $item['DepartureDateTime'],
                     'arrival_datetime' => $item['ArrivalDateTime'],
                     'duration' => $item['JourneyDuration'],
