@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class Airport extends Model
 {
     protected $fillable = [];
+    public $timestamps = false;
     use HasFactory;
 
     public function scopeOnlyNational(Builder $query)
