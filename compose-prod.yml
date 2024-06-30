@@ -1,0 +1,45 @@
+services:
+    backend:
+        image: yoonustehrani/kaktoos-backend:latest
+        networks:
+            - web
+    mariadb:
+        image: 'mariadb:10'
+        environment:
+            MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
+            MYSQL_ROOT_HOST: '%'
+            MYSQL_DATABASE: '${DB_DATABASE}'
+            MYSQL_USER: '${DB_USERNAME}'
+            MYSQL_PASSWORD: '${DB_PASSWORD}'
+            MYSQL_ALLOW_EMPTY_PASSWORD: 'no'
+        volumes:
+            - ./mysqldata:/var/lib/mysql
+        networks:
+            - web
+        healthcheck:
+            test:
+                - CMD
+                - mysqladmin
+                - ping
+                - '-p${DB_PASSWORD}'
+            retries: 3
+            timeout: 5s
+    redis:
+        image: 'redis:alpine'
+        volumes:
+            - 'sail-redis:/data'
+        networks:
+            - web
+        healthcheck:
+            test:
+                - CMD
+                - redis-cli
+                - ping
+            retries: 3
+            timeout: 5s
+networks:
+    web:
+        driver: bridge
+volumes:
+    sail-redis:
+        driver: local
