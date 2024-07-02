@@ -18,7 +18,7 @@ Route::prefix('airports')->group(function() {
 });
 
 Route::prefix('flights')->group(function() {
-    Route::post('search/one-way', [FlightApiController::class, 'searchOneWay']);
+    Route::post('search/{method}', [FlightApiController::class, 'search']);
     Route::get('prices', [FlightPriceController::class, 'show']);
 });
 

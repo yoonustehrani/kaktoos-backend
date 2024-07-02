@@ -7,6 +7,7 @@ use App\Parto\Domains\Flight\FlightSearch;
 use App\Parto\Domains\FlightService;
 use Carbon\Carbon;
 use Exception;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
 use stdClass;
 
@@ -36,12 +37,11 @@ class PartoClient
         return Carbon::createFromTimestamp($timestamp)->lt(now());
     }
 
-    public function flight()
+    public static function flight()
     {
         return new FlightService();
     }
-    public function searchFlight(FlightSearch $flightSearch)
-    // : stdClass|null
+    public function searchFlight(FlightSearch $flightSearch): stdClass|null
     {
         try {
             $response = $this->apiCall('Air/AirLowFareSearch', $flightSearch->getQuery());
@@ -64,13 +64,12 @@ class PartoClient
         }
     }
 
-    public function login()
-    // : bool
+    public function login(): bool
     {
         try {
             $response = $this->apiCall(uri: 'Authenticate/CreateSession', data: [
                 'UserName' => $this->config['username'],
-                'Password' => \Cache::rememberForever('parto-password', fn() => hash('sha512', $this->config['password'])),
+                'Password' => Cache::rememberForever('parto-password', fn() => hash('sha512', $this->config['password'])),
                 'OfficeId' => $this->config['office_id']
             ], auth: false);
             if ($response->SessionId) {

@@ -28,6 +28,13 @@ class FlightSearchRequest extends FormRequest
             'origin' => 'string|required|regex:/[a-zA-Z]{1,}:[A-Z]{3}/',
             'destination' => 'string|required|regex:/[a-zA-Z]{1,}:[A-Z]{3}/',
             'date' => 'required|string|date|after:yesterday|date_format:Y-m-d',
+            'return_date' => [
+                Rule::requiredIf(fn() => str_contains($this->getPathInfo(), "roundtrip")),
+                'string',
+                'date',
+                'after:date',
+                'date_format:Y-m-d',
+            ],
             'cabin_type' => [
                 'nullable',
                 Rule::enum(FlightCabinType::class)
