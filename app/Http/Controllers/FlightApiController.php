@@ -8,6 +8,7 @@ use App\Parto\Domains\Flight\Enums\FlightCabinType;
 use App\Parto\Domains\Flight\Enums\FlightLocationType;
 use App\Parto\Domains\Flight\FlightOriginDestination;
 use App\Parto\Domains\Flight\FlightSearch;
+use App\Parto\Parto;
 use App\Traits\FlightsSideJobs;
 use App\Traits\PaginatesCollections;
 use Illuminate\Http\Request;
@@ -21,11 +22,9 @@ class FlightApiController extends Controller
         abort_if(! in_array($method, ['one-way', 'roundtrip']), 404, "Search method not found");
         [$originLocationType, $origin] = explode(':', $request->input('origin'));
         [$destinationLocationType, $destination] = explode(':', $request->input('destination'));
-        /**
-         * @var \App\Parto\PartoClient
-         */
-        $parto = app('parto');
-        $flight_search = $parto->flight()->flightSearch()
+
+        $parto = Parto::flight();
+        $flight_search = $parto->flightSearch()
             ->setCount(
                 adult: $request->input('passengers.adults'),
                 child: $request->input('passengers.children', 0),
@@ -33,6 +32,7 @@ class FlightApiController extends Controller
                 
             )
             ->setCabinType(FlightCabinType::tryFrom($request->input('cabin_type', null)));
+        $cache_key = null;
         switch ($method) {
             case 'one-way':
                 $flight_search->oneWay(new FlightOriginDestination(
@@ -42,6 +42,7 @@ class FlightApiController extends Controller
                     destinationLocationType: FlightLocationType::tryFrom($destinationLocationType),
                     departureDateTime: Carbon::createFromFormat('Y-m-d', $request->input('date'))
                 ));
+                $cache_key = implode(".", [$request->input('origin') , $request->input('destination') , $request->input('date')]);
                 break;
             case 'roundtrip':
                 $flight_search->roundtrip(
@@ -60,14 +61,18 @@ class FlightApiController extends Controller
                         departureDateTime: Carbon::createFromFormat('Y-m-d', $request->input('return_date'))
                     )
                 );
+                $cache_key = implode(".", [$request->input('origin') , $request->input('destination') , $request->input('date'), $request->input('return_date')]);
                 break;
         }
-        return $this->returnFlights($flight_search, $request);
+        return $this->returnFlights(
+            flightSearch: $flight_search,
+            request: $request,
+            cache_key: $cache_key
+        );
     }
 
-    protected function returnFlights(FlightSearch $flightSearch, Request $request)
+    protected function returnFlights(FlightSearch $flightSearch, Request $request, string $cache_key)
     {
-        $cache_key = implode(".", [$request->input('origin') , $request->input('destination') , $request->input('date'), $request->input('return_date')]);
         $flights = cache()->remember(md5($cache_key), config('services.parto.timing.flights_cache'), function () use($flightSearch) {
             return app('parto')->searchFlight($flightSearch)?->PricedItineraries ?? [];
         });
