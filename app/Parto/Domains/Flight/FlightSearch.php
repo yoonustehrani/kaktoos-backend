@@ -61,6 +61,12 @@ final class FlightSearch
     {
         $this->setAttribute(self::TRAVEL_INFO_KEY . '.MaxStopsQuantity', 'All');
         $this->setAttribute(self::TRAVEL_INFO_KEY . '.AirTripType', AirTripType::Return->name);
+        foreach ($first->toArray() as $key => $value) {
+            $this->setOriginDistinationData("0.$key", $value);
+        }
+        foreach ($second->toArray() as $key => $value) {
+            $this->setOriginDistinationData("1.$key", $value);
+        }
         return $this;
     }
     public function multi(FlightOriginDestination $first, FlightOriginDestination ...$data)

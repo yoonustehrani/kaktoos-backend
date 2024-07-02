@@ -9,5 +9,5 @@ enum PartoCabinType: int {
     case J = 4;
     case F = 5;
     case P = 6;
-    case Default = 7;
+    case Default = 100;
 }
