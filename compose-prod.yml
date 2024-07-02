@@ -3,6 +3,8 @@ services:
         image: yoonustehrani/kaktoos-backend:latest
         networks:
             - web
+        ports:
+          - "8000:8000"
     mariadb:
         image: 'mariadb:10'
         environment:
