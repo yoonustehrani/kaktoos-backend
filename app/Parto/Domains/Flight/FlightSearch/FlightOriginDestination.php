@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Parto\Domains\Flight;
+namespace App\Parto\Domains\Flight\FlightSearch;
 
 use App\Parto\Domains\Flight\Enums\FlightLocationType;
 

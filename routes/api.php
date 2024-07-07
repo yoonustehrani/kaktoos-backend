@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AirBookingController;
 use App\Http\Controllers\FlightApiController;
 use App\Http\Controllers\FlightPriceController;
 use App\Http\Controllers\InternationalAirportController;
@@ -20,10 +21,7 @@ Route::prefix('airports')->group(function() {
 Route::prefix('flights')->group(function() {
     Route::post('search/{method}', [FlightApiController::class, 'search']);
     Route::get('prices', [FlightPriceController::class, 'show']);
+    Route::post('reserve', [AirBookingController::class, 'store'])->middleware('auth:sanctum');
 });
 
-// Route::get('/login', function() {
-//     // session()->put('y', 2);
-//     return session('y');
-// });
 Route::post('/login', [UserAuthController::class, 'login']);

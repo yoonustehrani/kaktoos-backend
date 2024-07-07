@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Parto\Domains\Flight;
+namespace App\Parto\Domains\Flight\FlightSearch;
 
 use App\Parto\Domains\Flight\Enums\AirTripType;
 use App\Parto\Domains\Flight\Enums\FlightCabinType;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Str;
 
 final class FlightSearch
 {
@@ -24,7 +25,7 @@ final class FlightSearch
     public function setCount(int $adult = 1, int $child = 0, int $infant = 0)
     {
         foreach (compact('adult', 'child', 'infant') as $key => $count) {
-            $key = \Str::ucfirst($key);
+            $key = Str::ucfirst($key);
             $this->setAttribute("{$key}Count", $count);
         }
         return $this;
@@ -34,14 +35,10 @@ final class FlightSearch
         $this->setAttribute(self::ORIGING_DESTINATION_KEY . '.' . $key, $value);
     }
     /**
-     * @param FlightCabinType $cabin
+     * @param FlightCabinType|null $cabin
      */
-    public function setCabinType(FlightCabinType $cabin = null)
+    public function setCabinType(FlightCabinType|null $cabin = null)
     {
-        // $allowed_types = \Cache::rememberForever(
-        //     'flight-cabin-types',
-        //     fn() => array_map(fn(FlightCabinType $obj) => $obj->name, FlightCabinType::cases())
-        // );
         if (is_null($cabin)) {
             $cabin = FlightCabinType::Default;
         }
@@ -92,8 +89,4 @@ final class FlightSearch
     {
         return $this->attributes;
     }
-    // public function __set(string $name, mixed $value)
-    // {
-    //     return $name;
-    // }
 }
