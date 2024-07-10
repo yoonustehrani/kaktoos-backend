@@ -48,7 +48,8 @@ return [
         'timing' => [
             'flights_cache' => 60 * 60, // 1h
             'calendar_cache' => 60 // 1m
-        ]
+        ],
+        'datetime_format' => 'Y-m-d\TH:i:s.uP'
     ],
 
     'sms' => [

@@ -6,6 +6,7 @@ use App\Models\Airline;
 use App\Traits\CSVReader;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Storage;
 
@@ -13,19 +14,20 @@ class AirlineSeeder extends Seeder
 {
     use CSVReader;
 
-    public function downloadLogos($parto_airline_chunks)
+    public function downloadLogos()
     {
-        $parto_airline_chunks->each(function($chunk) {
-            [$f, $s] = [$chunk->first()['iata'], $chunk->last()['iata']];
-            echo "FROM $f TO $s \n";
+        $parto_airlines = $this->read(database_path('/seeders/data/airlines-with-logos.csv'));
+        $parto_airlines->chunk(100)->each(function($chunk) {
+            [$f, $s] = [$chunk->first()['icao'], $chunk->last()['icao']];
+            $this->command->alert("FROM $f TO $s");
             $chunk->each(function($airline) {
                 $airline['logo'] = null;
                 if ($airline['icao']) {
                     $sources = [
-                        'https://raw.githubusercontent.com/Jxck-S/airline-logos/main/radarbox_banners/%s.png',
-                        'https://raw.githubusercontent.com/Jxck-S/airline-logos/main/fr24_logos/%s.png',
                         'https://raw.githubusercontent.com/Jxck-S/airline-logos/main/flightaware_logos/%s.png',
                         'https://raw.githubusercontent.com/Jxck-S/airline-logos/main/radarbox_logos/%s.png',
+                        'https://raw.githubusercontent.com/Jxck-S/airline-logos/main/radarbox_banners/%s.png',
+                        'https://raw.githubusercontent.com/Jxck-S/airline-logos/main/fr24_logos/%s.png',
                         'https://raw.githubusercontent.com/Jxck-S/airline-logos/main/avcodes_banners/%s.png',
                     ];
                     foreach ($sources as $source) {
@@ -36,9 +38,11 @@ class AirlineSeeder extends Seeder
                             if ($response->status() == 404) {
                                 continue;
                             }
-                            $airline['logo'] = sprintf($source, $airline['icao']);
-                            echo "FOUND {$airline['icao']} \n";
-                            Storage::put('/public/airlines/' . $airline['icao'] . '.png', $response->body());
+                            $this->command->info("FOUND {$airline['icao']}");
+                            $success = false;
+                            while (! $success) {
+                                $success = Storage::put('/public/images/airlines/' . $airline['icao'] . '.png', $response->body());
+                            }
                             break;
                         } catch (\Throwable $th) {
                             //throw $th;
@@ -54,6 +58,9 @@ class AirlineSeeder extends Seeder
      */
     public function run(): void
     {
+        // $this->downloadLogos();
+        // return;
+
         $parto_airlines = $this->read(__DIR__ . '/data/airlines.csv');
         $airlines = $this->read(__DIR__ . '/data/airlines-full.csv')->filter(fn($x) => strlen($x['iata']) > 1)->keyBy('iata');
         $iranian = [
@@ -95,11 +102,10 @@ class AirlineSeeder extends Seeder
             return $airline;
         });
 
-        
         $parto_airlines->chunk(100)->each(function($chunk) {
             $chunk->each(function($a) {
-                $a['logo'] = $a['icao'] && Storage::exists("/public/airlines/{$a['icao']}.png") 
-                ?  "storage/airlines/{$a['icao']}.png"
+                $a['logo'] = $a['icao'] && Storage::exists("/public/images/airlines/{$a['icao']}.png") 
+                ?  "storage/images/airlines/{$a['icao']}.png"
                 : null;
                 (new Airline([
                     'code' => $a['iata'],
@@ -110,8 +116,5 @@ class AirlineSeeder extends Seeder
                 ]))->save();
             });
         });
-
-
-        // var_dump($parto_airlines[0]);
     }
 }

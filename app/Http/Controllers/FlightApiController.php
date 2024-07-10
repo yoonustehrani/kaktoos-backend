@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\FlightSearchRequest;
+use App\Http\Resources\FlightFareRuleResource;
 use App\Http\Resources\FlightSearchCollection;
+use App\Models\Airline;
+use App\Models\Airport;
 use App\Parto\Domains\Flight\Enums\FlightCabinType;
 use App\Parto\Domains\Flight\Enums\FlightLocationType;
-use App\Parto\Domains\Flight\FlightOriginDestination;
-use App\Parto\Domains\Flight\FlightSearch;
+use App\Parto\Domains\Flight\FlightSearch\FlightOriginDestination;
+use App\Parto\Domains\Flight\FlightSearch\FlightSearch;
 use App\Parto\Parto;
 use App\Traits\FlightsSideJobs;
 use App\Traits\PaginatesCollections;
@@ -17,6 +20,37 @@ use Illuminate\Support\Carbon;
 class FlightApiController extends Controller
 {
     use PaginatesCollections, FlightsSideJobs;
+
+    public function getFareRules(Request $request)
+    {
+        $request->validate([
+            'ref' => 'required|string|min:10',
+        ]);
+        $rules = collect(Parto::getFareRule($request->input('ref'))?->FareRules ?? []);
+        $airlines = Airline::whereIn(
+            'code', 
+            $rules->pluck('Airline')->flatten()->filter()->unique()->values()
+        )->get()->keyBy('code');
+        $airports = Airport::select('IATA_code as code', 'name', 'name_fa')->whereIn(
+            'IATA_code',
+            $rules->pluck('CityPair')->flatten()->filter()->map(fn($item) => explode('-', $item))->flatten()->unique()->values()
+        )->get()->keyBy('code');
+        return response()->json(
+            FlightFareRuleResource::collection($rules)
+        );
+    }
+
+    public function getBaggageRules(Request $request)
+    {
+        $request->validate([
+            'ref' => 'required|string|min:10',
+        ]);
+
+        return response()->json(
+            Parto::getBaggageRule($request->input('ref'))
+        );
+    }
+
     public function search(string $method, FlightSearchRequest $request)
     {
         abort_if(! in_array($method, ['one-way', 'roundtrip']), 404, "Search method not found");
