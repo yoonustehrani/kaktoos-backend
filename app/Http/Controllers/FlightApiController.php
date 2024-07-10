@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\FlightSearchRequest;
+use App\Http\Resources\FlightFareRuleCollection;
 use App\Http\Resources\FlightFareRuleResource;
 use App\Http\Resources\FlightSearchCollection;
 use App\Models\Airline;
@@ -36,8 +37,13 @@ class FlightApiController extends Controller
             $rules->pluck('CityPair')->flatten()->filter()->map(fn($item) => explode('-', $item))->flatten()->unique()->values()
         )->get()->keyBy('code');
         return response()->json(
-            FlightFareRuleResource::collection($rules)
+            (new FlightFareRuleCollection($rules))->withMeta(compact('airlines', 'airports'))
         );
+        // [
+        //     'data' => $rules,
+        //     'airports' => $airports,
+        //     'airlines' => $airlines
+        // ]
     }
 
     public function getBaggageRules(Request $request)
