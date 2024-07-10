@@ -21,6 +21,8 @@ Route::prefix('airports')->group(function() {
 Route::prefix('flights')->group(function() {
     Route::post('search/{method}', [FlightApiController::class, 'search']);
     Route::get('prices', [FlightPriceController::class, 'show']);
+    Route::post('rules/fare',[FlightApiController::class, 'getFareRules']);
+    Route::post('rules/baggage', [FlightApiController::class, 'getBaggageRules']);
     Route::post('reserve', [AirBookingController::class, 'store'])->middleware('auth:sanctum');
 });
 

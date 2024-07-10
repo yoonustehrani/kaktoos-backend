@@ -58,8 +58,8 @@ class AirlineSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->downloadLogos();
-        return;
+        // $this->downloadLogos();
+        // return;
 
         $parto_airlines = $this->read(__DIR__ . '/data/airlines.csv');
         $airlines = $this->read(__DIR__ . '/data/airlines-full.csv')->filter(fn($x) => strlen($x['iata']) > 1)->keyBy('iata');

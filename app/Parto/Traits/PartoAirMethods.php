@@ -33,8 +33,30 @@ trait PartoAirMethods
         }
     }
 
+    public function getFareRule(string $fareSourceCode)
+    {
+        try {
+            $response = $this->apiCall('Air/AirRules', ['FareSourceCode' => $fareSourceCode]);
+
+            return $response;
+        } catch (PartoErrorException $error) {
+            throw $error;
+        }
+    }
+
+    public function getBaggageRule(string $fareSourceCode)
+    {
+        try {
+            $response = $this->apiCall('Air/AirBaggages', ['FareSourceCode' => $fareSourceCode]);
+
+            return $response;
+        } catch (PartoErrorException $error) {
+            throw $error;
+        }
+    }
+
     public function flightBook()
     {
-
+        
     }
 }
