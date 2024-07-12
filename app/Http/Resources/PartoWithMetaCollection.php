@@ -2,18 +2,13 @@
 
 namespace App\Http\Resources;
 
+use App\Traits\HasMetaResourceAttribute;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\ResourceCollection;
 
-class FlightFareRuleCollection extends ResourceCollection
+class PartoWithMetaCollection extends ResourceCollection
 {
-    public array $meta = [];
-
-    public function withMeta(array $meta)
-    {
-        $this->meta = $meta;
-        return $this;
-    }
+    use HasMetaResourceAttribute;
     /**
      * Transform the resource collection into an array.
      *
