@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\FlightSearchRequest;
-use App\Http\Resources\FlightFareRuleCollection;
 use App\Http\Resources\FlightFareRuleResource;
+use App\Http\Resources\PartoWithMetaCollection;
 use App\Http\Resources\FlightSearchCollection;
+use App\Http\Resources\PartoBaggageRuleResource;
 use App\Models\Airline;
 use App\Models\Airport;
 use App\Parto\Domains\Flight\Enums\FlightCabinType;
@@ -37,13 +38,10 @@ class FlightApiController extends Controller
             $rules->pluck('CityPair')->flatten()->filter()->map(fn($item) => explode('-', $item))->flatten()->unique()->values()
         )->get()->keyBy('code');
         return response()->json(
-            (new FlightFareRuleCollection($rules))->withMeta(compact('airlines', 'airports'))
+            (new PartoWithMetaCollection(
+                FlightFareRuleResource::collection($rules)
+            ))->withMeta(compact('airlines', 'airports'))
         );
-        // [
-        //     'data' => $rules,
-        //     'airports' => $airports,
-        //     'airlines' => $airlines
-        // ]
     }
 
     public function getBaggageRules(Request $request)
@@ -51,10 +49,22 @@ class FlightApiController extends Controller
         $request->validate([
             'ref' => 'required|string|min:10',
         ]);
-
-        return response()->json(
-            Parto::getBaggageRule($request->input('ref'))
-        );
+        // TODO => ->Services
+        $rules = Parto::getBaggageRule($request->input('ref'))?->BaggageInfoes;
+        if ($rules) {
+            $rules = collect($rules);
+            $airports = $rules->pluck('Arrival')->flatten()->filter();
+            $airports = $rules->pluck('Departure')->flatten()->filter()->merge($airports)->unique()->values();
+            $airports = Airport::select('IATA_code as code', 'name', 'name_fa')->whereIn(
+                'IATA_code',
+                $airports
+            )->get()->keyBy('code');
+            return response()->json(
+                (new PartoWithMetaCollection(
+                    PartoBaggageRuleResource::collection($rules)
+                ))->withMeta(compact('airports'))
+            );
+        }
     }
 
     public function search(string $method, FlightSearchRequest $request)
