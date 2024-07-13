@@ -31,17 +31,6 @@ class PaymentServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Route::get('payment/{gateway}/purchase', function($gateway) {
-            /**
-             * @var \App\Payment\PaymentGateway
-             */
-            $purchase = app()->make(PaymentGateway::getGatewayClassname($gateway));
-            $purchase->gateway->setRequestItem('description', 'پرداخت برای تست');
-            $purchase->init(amount: 4000);
-            if ($purchase->requestPurchase()) {
-                return $purchase->redirect();
-            }
-        })->name('payment.purchase');
         Route::post('payment/{gateway}/verify', function(Request $request, string $gateway) {
             dd(
                 $request->all()

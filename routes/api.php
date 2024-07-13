@@ -1,8 +1,9 @@
 <?php
 
 use App\Http\Controllers\AirBookingController;
-use App\Http\Controllers\FlightApiController;
 use App\Http\Controllers\FlightPriceController;
+use App\Http\Controllers\FlightRulesController;
+use App\Http\Controllers\FlightSearchController;
 use App\Http\Controllers\InternationalAirportController;
 use App\Http\Controllers\NationalAirportController;
 use App\Http\Controllers\UserAuthController;
@@ -19,11 +20,12 @@ Route::prefix('airports')->group(function() {
 });
 
 Route::prefix('flights')->group(function() {
-    Route::post('search/{method}', [FlightApiController::class, 'search']);
+    Route::post('search/{method}', [FlightSearchController::class, 'index']);
     Route::get('prices', [FlightPriceController::class, 'show']);
-    Route::post('rules/fare',[FlightApiController::class, 'getFareRules']);
-    Route::post('rules/baggage', [FlightApiController::class, 'getBaggageRules']);
-    Route::post('reserve', [AirBookingController::class, 'store'])->middleware('auth:sanctum');
+    Route::post('rules/fare',[FlightRulesController::class, 'fare']);
+    Route::post('rules/baggage', [FlightRulesController::class, 'baggage']);
+    Route::post('reserve', [AirBookingController::class, 'store']);
+    // ->middleware('auth:sanctum');
 });
 
 Route::post('/login', [UserAuthController::class, 'login']);

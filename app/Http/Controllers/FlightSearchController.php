@@ -3,12 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\FlightSearchRequest;
-use App\Http\Resources\FlightFareRuleResource;
-use App\Http\Resources\PartoWithMetaCollection;
 use App\Http\Resources\FlightSearchCollection;
-use App\Http\Resources\PartoBaggageRuleResource;
-use App\Models\Airline;
-use App\Models\Airport;
 use App\Parto\Domains\Flight\Enums\FlightCabinType;
 use App\Parto\Domains\Flight\Enums\FlightLocationType;
 use App\Parto\Domains\Flight\FlightSearch\FlightOriginDestination;
@@ -19,55 +14,11 @@ use App\Traits\PaginatesCollections;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 
-class FlightApiController extends Controller
+class FlightSearchController extends Controller
 {
     use PaginatesCollections, FlightsSideJobs;
 
-    public function getFareRules(Request $request)
-    {
-        $request->validate([
-            'ref' => 'required|string|min:10',
-        ]);
-        $rules = collect(Parto::getFareRule($request->input('ref'))?->FareRules ?? []);
-        $airlines = Airline::whereIn(
-            'code', 
-            $rules->pluck('Airline')->flatten()->filter()->unique()->values()
-        )->get()->keyBy('code');
-        $airports = Airport::select('IATA_code as code', 'name', 'name_fa')->whereIn(
-            'IATA_code',
-            $rules->pluck('CityPair')->flatten()->filter()->map(fn($item) => explode('-', $item))->flatten()->unique()->values()
-        )->get()->keyBy('code');
-        return response()->json(
-            (new PartoWithMetaCollection(
-                FlightFareRuleResource::collection($rules)
-            ))->withMeta(compact('airlines', 'airports'))
-        );
-    }
-
-    public function getBaggageRules(Request $request)
-    {
-        $request->validate([
-            'ref' => 'required|string|min:10',
-        ]);
-        // TODO => ->Services
-        $rules = Parto::getBaggageRule($request->input('ref'))?->BaggageInfoes;
-        if ($rules) {
-            $rules = collect($rules);
-            $airports = $rules->pluck('Arrival')->flatten()->filter();
-            $airports = $rules->pluck('Departure')->flatten()->filter()->merge($airports)->unique()->values();
-            $airports = Airport::select('IATA_code as code', 'name', 'name_fa')->whereIn(
-                'IATA_code',
-                $airports
-            )->get()->keyBy('code');
-            return response()->json(
-                (new PartoWithMetaCollection(
-                    PartoBaggageRuleResource::collection($rules)
-                ))->withMeta(compact('airports'))
-            );
-        }
-    }
-
-    public function search(string $method, FlightSearchRequest $request)
+    public function index(string $method, FlightSearchRequest $request)
     {
         abort_if(! in_array($method, ['one-way', 'roundtrip']), 404, "Search method not found");
         [$originLocationType, $origin] = explode(':', $request->input('origin'));
@@ -82,7 +33,7 @@ class FlightApiController extends Controller
                 
             )
             ->setCabinType(FlightCabinType::tryFrom($request->input('cabin_type', null)));
-        $cache_key = null;
+        $cache_key = implode(':', [$request->input('passengers.adults'), $request->input('passengers.children', 0), $request->input('passengers.infants', 0)]);
         switch ($method) {
             case 'one-way':
                 $flight_search->oneWay(new FlightOriginDestination(
@@ -92,7 +43,7 @@ class FlightApiController extends Controller
                     destinationLocationType: FlightLocationType::tryFrom($destinationLocationType),
                     departureDateTime: Carbon::createFromFormat('Y-m-d', $request->input('date'))
                 ));
-                $cache_key = implode(".", [$request->input('origin') , $request->input('destination') , $request->input('date')]);
+                $cache_key .= implode(".", [$request->input('origin') , $request->input('destination') , $request->input('date')]);
                 break;
             case 'roundtrip':
                 $flight_search->roundtrip(
@@ -111,7 +62,7 @@ class FlightApiController extends Controller
                         departureDateTime: Carbon::createFromFormat('Y-m-d', $request->input('return_date'))
                     )
                 );
-                $cache_key = implode(".", [$request->input('origin') , $request->input('destination') , $request->input('date'), $request->input('return_date')]);
+                $cache_key .= implode(".", [$request->input('origin') , $request->input('destination') , $request->input('date'), $request->input('return_date')]);
                 break;
         }
         return $this->returnFlights(

@@ -26,6 +26,10 @@ class PaymentGateway
     {
         return $this->gateway->requestPayment();
     }
+    public function getRedirectUrl()
+    {
+        return $this->gateway->redirectUrl;
+    }
     public function redirect()
     {
         if ($this->gateway->redirectUrl) {
