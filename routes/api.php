@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\AirBookingController;
-use App\Http\Controllers\FlightApiController;
 use App\Http\Controllers\FlightPriceController;
 use App\Http\Controllers\FlightRulesController;
 use App\Http\Controllers\FlightSearchController;
@@ -25,7 +24,8 @@ Route::prefix('flights')->group(function() {
     Route::get('prices', [FlightPriceController::class, 'show']);
     Route::post('rules/fare',[FlightRulesController::class, 'fare']);
     Route::post('rules/baggage', [FlightRulesController::class, 'baggage']);
-    Route::post('reserve', [AirBookingController::class, 'store'])->middleware('auth:sanctum');
+    Route::post('reserve', [AirBookingController::class, 'store']);
+    // ->middleware('auth:sanctum');
 });
 
 Route::post('/login', [UserAuthController::class, 'login']);

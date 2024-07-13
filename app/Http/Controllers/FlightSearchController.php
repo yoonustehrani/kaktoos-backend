@@ -33,7 +33,7 @@ class FlightSearchController extends Controller
                 
             )
             ->setCabinType(FlightCabinType::tryFrom($request->input('cabin_type', null)));
-        $cache_key = null;
+        $cache_key = implode(':', [$request->input('passengers.adults'), $request->input('passengers.children', 0), $request->input('passengers.infants', 0)]);
         switch ($method) {
             case 'one-way':
                 $flight_search->oneWay(new FlightOriginDestination(
@@ -43,7 +43,7 @@ class FlightSearchController extends Controller
                     destinationLocationType: FlightLocationType::tryFrom($destinationLocationType),
                     departureDateTime: Carbon::createFromFormat('Y-m-d', $request->input('date'))
                 ));
-                $cache_key = implode(".", [$request->input('origin') , $request->input('destination') , $request->input('date')]);
+                $cache_key .= implode(".", [$request->input('origin') , $request->input('destination') , $request->input('date')]);
                 break;
             case 'roundtrip':
                 $flight_search->roundtrip(
@@ -62,7 +62,7 @@ class FlightSearchController extends Controller
                         departureDateTime: Carbon::createFromFormat('Y-m-d', $request->input('return_date'))
                     )
                 );
-                $cache_key = implode(".", [$request->input('origin') , $request->input('destination') , $request->input('date'), $request->input('return_date')]);
+                $cache_key .= implode(".", [$request->input('origin') , $request->input('destination') , $request->input('date'), $request->input('return_date')]);
                 break;
         }
         return $this->returnFlights(

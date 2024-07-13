@@ -173,9 +173,37 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'passengers.*.birthdate' => [
+            'required' => 'Each passenger must have a birthdate.'
         ],
+        'passengers.*.gender' => [
+            'required' => 'Gender should be specified for each passenger.'
+        ],
+        'passengers.*.type' => [
+            'required' => 'Type of passenger should be specified.'
+        ],
+        'passengers.*.first_name' => [
+            'required' => 'Each passenger must have a first name',
+        ],
+        'passengers.*.middle_name' => [
+            'required_unless' => 'Each passenger must have a middle name unless they are from Iran.',
+        ],
+        'passengers.*.last_name' => [
+            'required' => 'Each passenger must have a last name',
+        ],
+        'passengers.*.wheelchair' => [
+            'required' => 'Each passenger must declare if they have a wheelchair or not.',
+        ],
+        'passengers.*.nationality' => [
+            'required' => 'The nationality of each passenger must be addressed.',
+        ],
+        'passengers.*.national_id' => [
+            'required_if' => 'Each passenger must specify national ID if they are from Iran.',
+            'required_without' => 'If no passport data is specified, the national ID of each passenger must be addressed.',
+        ],
+        'passengers.*.passport' => [
+            'required_without' => 'If no national ID is specified, Passport details of each passenger must be addressed.',
+        ]
     ],
 
     /*
@@ -190,11 +218,21 @@ return [
     */
 
     'attributes' => [
-        'passengers' => [
-            'adults' => 'count of adult passengers',
-            'children' => 'count of child passengers',
-            'infants' => 'count of infant passengers'
-        ]
+        'passengers.adults' => 'count of adult passengers',
+        'passengers.children' => 'count of child passengers',
+        'passengers.infants' => 'count of infant passengers',
+        'passengers' => 'list of passengers',
+        'passengers.*' => 'Passenger #:position',
+        'passengers.*.birthdate' => 'Birthdate of the passenger',
+        'passengers.*.gender' => 'Gender of the passenger',
+        'passengers.*.type' => 'Type of the passenger',
+        'passengers.*.first_name' => 'Firstname of the passenger',
+        'passengers.*.middle_name' => 'Middlename of the passenger',
+        'passengers.*.last_name' => 'Lastname of the passenger',
+        'passengers.*.wheelchair' => 'Passenger\'s need for a wheelchair',
+        'passengers.*.nationality' => 'Passenger\'s nationality',
+        'passengers.*.national_id' => 'Passenger\'s national ID',
+        'passengers.*.passport' => 'Passenger\'s passport details'
     ],
 
 ];
