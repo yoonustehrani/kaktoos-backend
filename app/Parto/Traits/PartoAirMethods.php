@@ -2,6 +2,7 @@
 
 namespace App\Parto\Traits;
 
+use App\Parto\Domains\Flight\FlightBook\FlightBook;
 use App\Parto\Domains\Flight\FlightSearch\FlightSearch;
 use stdClass;
 
@@ -37,8 +38,18 @@ trait PartoAirMethods
         return $this->apiCall('Air/AirBaggages', ['FareSourceCode' => $fareSourceCode]);
     }
 
-    public function flightBook()
+    public function getBookingDetails(string $unique_id)
     {
-        
+        return $this->apiCall('Air/AirBookingData', ['UniqueId' => $unique_id]);
+    }
+
+    public function cancel(string $unique_id)
+    {
+        return $this->apiCall('Air/AirCancel', ['UniqueId' => $unique_id]);
+    }
+
+    public function flightBook(FlightBook $flightBook)
+    {
+        return $this->apiCall('Air/AirBook', $flightBook->getQuery());
     }
 }

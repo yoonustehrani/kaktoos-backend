@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static mixed getFareRule(string $fareSourceCode)
  * @method static mixed getBaggageRule(string $fareSourceCode)
  * @method static mixed revalidate(string $fareSourceCode)
+ * @method static mixed flightBook(\App\Parto\Domains\Flight\FlightBook\FlightBook $flightBook)
  *
  * @see \App\Parto\PartoClient
  *

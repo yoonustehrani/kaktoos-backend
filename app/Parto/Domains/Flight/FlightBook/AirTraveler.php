@@ -10,7 +10,7 @@ use Exception;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Collection;
 
-class AirTraveller
+class AirTraveler
 {
     protected Collection $attributes;
     public string $datetime_formate;
@@ -28,7 +28,8 @@ class AirTraveller
                 'Country' => null,
                 'IssueDate' => null,
                 'PassportNumber' => null
-            ]
+            ],
+            'NationalId' => ''
         ]);
     }
 
@@ -40,7 +41,8 @@ class AirTraveller
     protected function configureTitle()
     {
         $title = null;
-        $is_male = $this->attributes->get('gender') === TravellerGender::Male->name;
+        $is_male = $this->attributes->get('Gender') === TravellerGender::Male->name;
+        
         switch ($this->attributes->get('PassengerType')) {
             case TravellerPassengerType::Adt->name:
                 $title = $is_male ? TravellerTitle::Mr : TravellerTitle::Ms;
@@ -56,19 +58,26 @@ class AirTraveller
         $this->attributes->put('PassengerName.PassengerTitle', $title->name);
     }
 
-    protected function configure()
+    protected function configure(): Collection
     {
         $this->configureTitle();
+        $attrs = $this->attributes->undot();
+        if (is_null($this->attributes['Passport']['PassportNumber'])) {
+            $attrs->put('Passport', []);
+        }
+        return $attrs;
     }
 
     public function setPassengerType(TravellerPassengerType $type)
     {
         $this->attributes->put('PassengerType', $type->name);
+        return $this;
     }
 
     public function setGender(TravellerGender $gender)
     {
         $this->attributes->put('Gender', $gender->name);
+        return $this;
     }
 
     public function setName(string $firstName, string $middleName, string $lastName)
@@ -78,38 +87,52 @@ class AirTraveller
             'PassengerMiddleName' => $middleName,
             'PassengerLastName' => $lastName
         ]);
+        return $this;
     }
 
     public function setSeatPreference(TravellerSeatPreference $preference)
     {
-        $this->attributes->put('PassengerType', $preference->name);
+        $this->attributes->put('SeatPreference', $preference->name);
+        return $this;
     }
 
     public function hasWheelchair()
     {
         $this->attributes->put('Wheelchair', true);
+        return $this;
     }
 
     public function setNationality(string $countryCode)
     {
         $this->attributes->put('Nationality', $countryCode);
         $this->attributes->put('Passport.Country', $countryCode);
+        return $this;
     }
 
-    public function setPassport(string $passportNumber, Carbon $expires_on, Carbon $issued_on)
+    public function setPassport(string $passportNumber, Carbon $expires_on, Carbon $issued_on = null)
     {
         $this->attributes->put('Passport.PassportNumber', $passportNumber);
         $this->attributes->put('Passport.ExpiryDate', $expires_on->format($this->datetime_formate));
-        $this->attributes->put('Passport.IssueDate', $expires_on->format($this->datetime_formate));
+        if (! is_null($issued_on)) {
+            $this->attributes->put('Passport.IssueDate', $issued_on->format($this->datetime_formate));
+        }
+        return $this;
+    }
+
+    public function setNationalId(string $national_id)
+    {
+        $this->attributes->put('NationalId', $national_id);
+        return $this;
     }
 
     public function setBirthdate(Carbon $birthdate)
     {
         $this->attributes->put('DateOfBirth', $birthdate->format($this->datetime_formate));
+        return $this;
     }
 
     public function get()
     {
-        return $this->attributes->toArray();
+        return $this->configure()->toArray();
     }
 }
