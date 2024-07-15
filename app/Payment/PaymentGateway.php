@@ -15,8 +15,9 @@ class PaymentGateway
     public function __construct(public GatewayMethods $gateway) {
         // $this->callback_url = route();
     }
-    public function init($amount, $data = [])
+    public function init($amount, string $ref, $data = [])
     {
+        $this->gateway->setReferenceId($ref);
         $this->gateway->setAmount($amount);
         foreach ($data as $key => $value) {
             $this->gateway->setRequestItem($key, $value);

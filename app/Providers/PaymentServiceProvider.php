@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Http\Controllers\PaymentController;
 use App\Payment\PaymentGateway;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Http\Request;
@@ -31,10 +32,6 @@ class PaymentServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Route::post('payment/{gateway}/verify', function(Request $request, string $gateway) {
-            dd(
-                $request->all()
-            );
-        })->name('payment.verify');
+        Route::post('payment/{gateway}/verify', [PaymentController::class, 'verify'])->name('payment.verify');
     }
 }
