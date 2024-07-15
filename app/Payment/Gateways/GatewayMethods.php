@@ -13,6 +13,7 @@ interface IPaymentGateway
 
 abstract class GatewayMethods implements IPaymentGateway {
     public int $amount = 0;
+    public string $ref;
     public Collection $requestData;
     public IranianCurrency $currency;
     public string $redirectUrl;
@@ -44,6 +45,10 @@ abstract class GatewayMethods implements IPaymentGateway {
             throw new Exception('Amount must be absolute');
         }
         $this->amount = $amount;
+    }
+    public function setReferenceId(string $order_id)
+    {
+        $this->ref = $order_id;
     }
     public function getAmount() {
         return $this->getCurrency() === IranianCurrency::TOMAN

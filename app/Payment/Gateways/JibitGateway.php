@@ -40,11 +40,11 @@ class JibitGateway extends GatewayMethods
     {
         $data = [
             'amount' => $this->getAmount(),
-            'clientReferenceNumber' => session()->getId(),
+            'clientReferenceNumber' => $this->ref,
             'currency' => 'IRR',
-            'userIdentifier' => session()->getId(),
+            'userIdentifier' => auth()->user()->id,
             'description' => $this->requestData['description'] ?? '',
-            'callbackUrl' => 'https://api.kaktoosseir.com/payment/jibit/verify' // $this->requestData['callbackUrl']
+            'callbackUrl' => $this->requestData['callbackUrl']
         ];
         $result = $this->apiCall(url: '/purchases', data: $data, withAuth: true);
         if (is_array($result) && isset($result['pspSwitchingUrl']) ) {
