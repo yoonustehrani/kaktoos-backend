@@ -73,7 +73,11 @@ class AirBookingController extends Controller
         // TODO: this should be based on enum
         $booking->status = AirBookCategory::tryFrom($result->Category);
         $booking->status_notes = '';
-        $booking->valid_until = Carbon::createFromFormat('Y-m-d\TH:i:s.uP', $result->TktTimeLimit);
+        try {
+            $booking->valid_until = Carbon::createFromFormat('Y-m-d\TH:i:s.uP', $result->TktTimeLimit);
+        } catch (\Throwable $th) {
+            $booking->valid_until = Carbon::createFromFormat('Y-m-d\TH:i:s', $result->TktTimeLimit);
+        }
         $booking = $user->airBookings()->save($booking);
 
         $amount = $request->revalidated_flight->getTotalInRials();
