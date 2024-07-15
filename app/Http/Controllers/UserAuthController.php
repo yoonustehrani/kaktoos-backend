@@ -110,7 +110,7 @@ class UserAuthController extends Controller
                         'No sms record for this phone number'
                     ]
                 ]
-            ], 419);
+            ], 422);
         }
 
         if (Hash::check($request->input('code'), $record->code)) {
@@ -138,6 +138,6 @@ class UserAuthController extends Controller
                     'The entered code is incorrect'
                 ]
             ]
-        ], 419);
+        ], 422);
     }
 }
