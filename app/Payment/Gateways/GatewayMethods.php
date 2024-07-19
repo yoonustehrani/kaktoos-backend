@@ -14,6 +14,7 @@ interface IPaymentGateway
 abstract class GatewayMethods implements IPaymentGateway {
     public int $amount = 0;
     public string $ref;
+    public string $purchase_id;
     public Collection $requestData;
     public IranianCurrency $currency;
     public string $redirectUrl;
@@ -21,6 +22,7 @@ abstract class GatewayMethods implements IPaymentGateway {
     abstract public function config(array $config): void;
     abstract public function requestPayment();
     abstract public function validatePayment();
+
     public function getCallbackUrl() {
         return route('payment.verify', ['gateway' => $this->getGatewayName()]);
     }

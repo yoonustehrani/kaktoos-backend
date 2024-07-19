@@ -49,6 +49,7 @@ class JibitGateway extends GatewayMethods
         $result = $this->apiCall(url: '/purchases', data: $data, withAuth: true);
         if (is_array($result) && isset($result['pspSwitchingUrl']) ) {
             $this->redirectUrl = $result['pspSwitchingUrl'];
+            $this->purchase_id = $result['purchaseIdStr'];
             return true;
         }
         throw new Exception('Jibi error');

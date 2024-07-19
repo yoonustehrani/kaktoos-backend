@@ -52,4 +52,9 @@ trait PartoAirMethods
     {
         return $this->apiCall('Air/AirBook', $flightBook->getQuery());
     }
+
+    public function orderTicket(string $unique_id)
+    {
+        return $this->apiCall('Air/AirOrderTicket', ['UniqueId' => $unique_id]);
+    }
 }

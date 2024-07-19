@@ -12,16 +12,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('air_bookings', function (Blueprint $table) {
+        Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->boolean('is_webfare');
-            $table->string('parto_unique_id');
-            $table->foreignIdFor(User::class)->index();
-            $table->string('status');
-            $table->text('status_notes');
-            $table->timestamp('valid_until');
-            $table->timestamps();
+            $table->foreignIdFor(User::class);
+            $table->string('gateway_purchase_id')->nullable();
+            $table->morphs('purchasable');
+            $table->string('title')->nullable();
+            $table->unsignedBigInteger('amount');
+            $table->timestamp('paid_at')->nullable();
             $table->json('meta')->default(json_encode([]));
+            $table->timestamps();
         });
     }
 
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('air_bookings');
+        Schema::dropIfExists('orders');
     }
 };

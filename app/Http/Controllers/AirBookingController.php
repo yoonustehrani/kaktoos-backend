@@ -5,8 +5,11 @@ namespace App\Http\Controllers;
 use App\Exceptions\PartoErrorException;
 use App\Http\Requests\FlightBookingRequest;
 use App\Models\AirBooking;
+use App\Models\Order;
 use App\Models\User;
 use App\Parto\Domains\Flight\Enums\AirBook\AirBookCategory;
+use App\Parto\Domains\Flight\Enums\AirQueueStatus;
+use App\Parto\Domains\Flight\Enums\PartoFareType;
 use App\Parto\Domains\Flight\Enums\TravellerGender;
 use App\Parto\Domains\Flight\Enums\TravellerPassengerType;
 use App\Parto\Domains\Flight\Enums\TravellerSeatPreference;
@@ -17,6 +20,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\DB;
 
 class AirBookingController extends Controller
 {
@@ -64,37 +68,45 @@ class AirBookingController extends Controller
         }
         
         $result = Parto::flightBook($airBook);
-        // TODO: Unique id should be saved in databse
-        // TODO: db record id should be passed to Payment Gateway
+        abort_if(
+            AirBookCategory::tryFrom($result->Category) != AirBookCategory::Booked,
+            'Couldn\'t book the flight. please try again!',
+            500
+        );
         $booking = new AirBooking();
-        // TODO: this should be dynamic
-        $booking->is_webfare = false;
+        $booking->is_webfare = $request->revalidated_flight->getFareType() == PartoFareType::WebFare;
         $booking->parto_unique_id = $result->UniqueId;
-        // TODO: this should be based on enum
-        $booking->status = AirBookCategory::tryFrom($result->Category);
-        $booking->status_notes = '';
+        $status = AirQueueStatus::tryFrom($result->Status);
+        $booking->status = $status;
+        $booking->status_notes = $status->getDescription();
         try {
             $booking->valid_until = Carbon::createFromFormat('Y-m-d\TH:i:s.uP', $result->TktTimeLimit);
         } catch (\Throwable $th) {
             $booking->valid_until = Carbon::createFromFormat('Y-m-d\TH:i:s', $result->TktTimeLimit);
         }
-        $booking = $user->airBookings()->save($booking);
-
-        $amount = $request->revalidated_flight->getTotalInRials();
-        /**
-         * @var \App\Payment\PaymentGateway
-         */
-        $purchase = app()->make(PaymentGateway::getGatewayClassname('jibit'));
-        $purchase->gateway->setRequestItem('description', 'پرداخت برای تست');
-        $purchase->init(amount: $amount, ref: $booking->id);
-        $purchase->requestPurchase();
-        return [
-            'ticket_time_limit' => $booking->valid_until->format('Y-m-d H:i:s'),
-            'price_changed' => $result->PriceChange,
-            'amount' => $amount,
-            'gateway' => 'jibit',
-            'redirect_url' => $purchase->getRedirectUrl()
-        ];
+        
+        try {
+            DB::beginTransaction();
+            $user->airBookings()->save($booking);
+            $order = $booking->order()->save(new Order([
+                    'user_id' => $user->id,
+                    'amount' => $request->revalidated_flight->getTotalInRials()
+                ])
+            );
+            DB::commit();
+            return [
+                'ticket_time_limit' => $booking->valid_until->format('Y-m-d H:i:s'),
+                'price_changed' => $result->PriceChange,
+                'payment' => [
+                    'amount' => $request->revalidated_flight->getTotalInRials(),
+                    'url' => route('orders.pay', ['order' => $order->id])
+                ]
+            ];
+        } catch (\Throwable $th) {
+            DB::rollBack();
+            // Better to retry
+            abort(500, 'Issue in saving order in DB');
+        }
     }
 
     /**
