@@ -31,6 +31,10 @@ class PaymentGateway
     {
         return $this->gateway->redirectUrl;
     }
+    public function getPurchaseId()
+    {
+        return $this->gateway->purchase_id;
+    }
     public function redirect()
     {
         if ($this->gateway->redirectUrl) {

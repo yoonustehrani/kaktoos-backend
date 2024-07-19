@@ -2,11 +2,14 @@
 
 namespace App\Models;
 
+use App\Parto\Domains\Flight\Enums\AirBook\AirBookCategory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class AirBooking extends Model
 {
+    use HasFactory;
+
     /**
      * Get the attributes that should be cast.
      *
@@ -16,7 +19,12 @@ class AirBooking extends Model
     {
         return [
             'valid_until' => 'datetime',
+            'status' => AirBookCategory::class
         ];
     }
-    use HasFactory;
+
+    public function order()
+    {
+        return $this->morphOne(Order::class, 'purchasable');
+    }
 }

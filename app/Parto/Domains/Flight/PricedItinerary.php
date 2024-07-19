@@ -2,6 +2,7 @@
 
 namespace App\Parto\Domains\Flight;
 
+use App\Parto\Domains\Flight\Enums\PartoFareType;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
 
@@ -37,5 +38,9 @@ class PricedItinerary
     public function isPassportIssueDateMandatory(): bool
     {
         return $this->get('IsPassportIssueDateMandatory');
+    }
+    public function getFareType(): PartoFareType
+    {
+        return PartoFareType::tryFrom($this->get('AirItineraryPricingInfo')['FareType']);
     }
 }
