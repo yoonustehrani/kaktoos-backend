@@ -17,10 +17,13 @@ class TicketController extends Controller
             ])->render(), // Render a Blade view
         ]);
         $pdf = $response->body();
-        return Response::streamDownload(function() use($pdf) {
-            echo $pdf;
-        }, 'ticket-' . $ticketId . '.pdf', [
-            'Content-Type' => 'application/pdf',
+        return response($pdf, 200, [
+            'Content-Type' => 'application/pdf'
         ]);
+        // return Response::streamDownload(function() use($pdf) {
+        //     echo $pdf;
+        // }, 'ticket-' . $ticketId . '.pdf', [
+        //     'Content-Type' => 'application/pdf',
+        // ]);
     }
 }
