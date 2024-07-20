@@ -1,8 +1,10 @@
 <?php
 
 use App\Attributes\Description;
+use App\Events\OrderPaid;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\TicketController;
+use App\Models\Order;
 use App\Parto\Domains\Flight\Enums\AirBook\AirBookCategory;
 use App\Parto\Domains\Flight\Enums\TravellerGender;
 use App\Parto\Domains\Flight\Enums\TravellerPassengerType;
@@ -11,6 +13,19 @@ use App\Parto\Domains\Flight\FlightBook\AirTraveler;
 use App\Parto\Parto;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Route;
+
+
+Route::get('orders/{order}', function(Order $order) {
+    $order->load('purchasable');
+    return $order;
+});
+
+Route::get('orders/{order}/events', function (Order $order) {
+    OrderPaid::dispatch($order);
+    return [
+        'okay' => true
+    ];
+});
 
 Route::get('orders/{order}/pay', [OrderController::class, 'pay'])->name('orders.pay');
 Route::get('tickets/{ticketId}', [TicketController::class, 'show'])->name('tickets.show');

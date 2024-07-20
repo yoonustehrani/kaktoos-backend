@@ -58,7 +58,6 @@ class AirBookingController extends Controller
                 $t->setNationalId($passenger['national_id']);
             }
             $airBook->addTraveler($t);
-            unset($t);
         }
         
         $booking = new AirBooking();
@@ -81,6 +80,9 @@ class AirBookingController extends Controller
             }
         } else {
             $booking->valid_until = now()->addMinutes(14);
+            $booking->meta = [
+                'webfare' => serialize($airBook)
+            ];
         }
 
         $booking->status = $status;
