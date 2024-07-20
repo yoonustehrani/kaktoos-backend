@@ -12,8 +12,14 @@ class TicketController extends Controller
     {
         $response = Http::post('http://pdfrenderer:8082/render', [
             'html' => view('pdfs.ticket', [
-                'invoiceNumber' => '1234',
-                'customerName' => 'Grumpy Cat',
+                'company' => [
+                    'name' => 'کاکتوس سیر توس',
+                    'logo' => '',
+                    'phone_number' => '05131234567'
+                ],
+                'ticket' => [
+                    'number' => '123456'
+                ]
             ])->render(), // Render a Blade view
         ]);
         $pdf = $response->body();

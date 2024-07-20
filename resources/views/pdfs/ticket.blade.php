@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-    <title>Invoice</title>
+    <title>Ticket</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
@@ -8,17 +8,17 @@
 <div class="px-2 py-8 max-w-xl mx-auto">
     <div class="flex items-center justify-between mb-8">
         <div class="flex items-center">
-            <div class="text-gray-700 font-semibold text-lg">Your Company Name</div>
+            <div class="text-gray-700 font-semibold text-lg">{{ $company['name'] }}</div>
         </div>
         <div class="text-gray-700">
-            <div class="font-bold text-xl mb-2 uppercase">Invoice</div>
+            <div class="font-bold text-xl mb-2 uppercase">Ticket</div>
             <div class="text-sm">Date: 01/05/2023</div>
-            <div class="text-sm">Invoice #: {{ $invoiceNumber }}</div>
+            <div class="text-sm">Ticket #: {{ $ticket['number'] }}</div>
         </div>
     </div>
     <div class="border-b-2 border-gray-300 pb-8 mb-8">
         <h2 class="text-2xl font-bold mb-4">Bill To:</h2>
-        <div class="text-gray-700 mb-2">{{ $customerName }}</div>
+        <div class="text-gray-700 mb-2"></div>
         <div class="text-gray-700 mb-2">123 Main St.</div>
         <div class="text-gray-700 mb-2">Anytown, USA 12345</div>
         <div class="text-gray-700">johndoe@example.com</div>

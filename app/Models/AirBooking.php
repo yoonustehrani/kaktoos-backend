@@ -33,6 +33,6 @@ class AirBooking extends Model implements Purchasable
 
     public function getUri()
     {
-        return $this->id;
+        return route('bookings.air.show', ['airBooking' => $this->id]);
     }
 }

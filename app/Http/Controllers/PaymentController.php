@@ -13,8 +13,8 @@ class PaymentController extends Controller
         // TODO: verify the purchase
         $order = Order::find($request->input('clientReferenceNumber'));
         OrderPaid::dispatch($order);
-        return [
-            'url' => $order->purchasable->getUri()
-        ];
+        $url = preg_replace('/^([a-z]{1,}\.)(.+$)/i', '${2}', $request->host());
+        $url .= '/flight/final?url=' . urlencode($order->purchasable->getUri());
+        return redirect()->to($url);
     }
 }

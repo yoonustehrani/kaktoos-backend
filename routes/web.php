@@ -11,11 +11,12 @@ use App\Parto\Domains\Flight\Enums\TravellerPassengerType;
 use App\Parto\Domains\Flight\Enums\TravellerSeatPreference;
 use App\Parto\Domains\Flight\FlightBook\AirTraveler;
 use App\Parto\Parto;
+use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('orders/{order}', function(Order $order) {
+Route::get('orders/{order}', function(Order $order, Request $request) {
     $order->load('purchasable');
     return $order;
 });
