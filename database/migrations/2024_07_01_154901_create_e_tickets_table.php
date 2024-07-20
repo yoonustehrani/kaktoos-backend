@@ -15,8 +15,14 @@ return new class extends Migration
     {
         Schema::create('e_tickets', function (Blueprint $table) {
             $table->id();
+            $table->string('ticket_number');
+            $table->unsignedInteger('status');
             $table->foreignIdFor(AirBooking::class); // UniqueId
             $table->foreignIdFor(Passenger::class);
+            $table->timestamp('issued_at');
+            $table->string('airline_pnr');
+            $table->boolean('refunded')->default(false);
+            $table->unsignedBigInteger('total_refund')->default(0);
             $table->timestamps();
         });
     }

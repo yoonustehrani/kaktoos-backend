@@ -2,24 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Exceptions\PartoErrorException;
 use App\Http\Requests\FlightBookingRequest;
 use App\Models\AirBooking;
 use App\Models\Order;
-use App\Models\User;
 use App\Parto\Domains\Flight\Enums\AirBook\AirBookCategory;
-use App\Parto\Domains\Flight\Enums\AirQueueStatus;
+use App\Parto\Domains\Flight\Enums\AirBook\AirQueueStatus;
 use App\Parto\Domains\Flight\Enums\PartoFareType;
 use App\Parto\Domains\Flight\Enums\TravellerGender;
 use App\Parto\Domains\Flight\Enums\TravellerPassengerType;
 use App\Parto\Domains\Flight\Enums\TravellerSeatPreference;
 use App\Parto\Domains\Flight\FlightBook\AirTraveler;
 use App\Parto\Parto;
-use App\Payment\PaymentGateway;
-use Illuminate\Http\Request;
-use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
-use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 
 class AirBookingController extends Controller
@@ -67,23 +61,30 @@ class AirBookingController extends Controller
             unset($t);
         }
         
-        $result = Parto::flightBook($airBook);
-        abort_if(
-            AirBookCategory::tryFrom($result->Category) != AirBookCategory::Booked,
-            'Couldn\'t book the flight. please try again!',
-            500
-        );
         $booking = new AirBooking();
-        $booking->is_webfare = $request->revalidated_flight->getFareType() == PartoFareType::WebFare;
-        $booking->parto_unique_id = $result->UniqueId;
-        $status = AirQueueStatus::tryFrom($result->Status);
+        $booking->is_webfare = $request->revalidated_flight->isWebfare();
+        $status = AirQueueStatus::Booked;
+
+        if (! $booking->is_webfare) {
+            $result = Parto::flightBook($airBook);
+            abort_if(
+                AirBookCategory::tryFrom($result->Category) != AirBookCategory::Booked,
+                'Couldn\'t book the flight. please try again!',
+                500
+            );
+            $booking->parto_unique_id = $result->UniqueId;
+            $status = AirQueueStatus::tryFrom($result->Status);
+            try {
+                $booking->valid_until = Carbon::createFromFormat('Y-m-d\TH:i:s.uP', $result->TktTimeLimit);
+            } catch (\Throwable $th) {
+                $booking->valid_until = Carbon::createFromFormat('Y-m-d\TH:i:s', $result->TktTimeLimit);
+            }
+        } else {
+            $booking->valid_until = now()->addMinutes(14);
+        }
+
         $booking->status = $status;
         $booking->status_notes = $status->getDescription();
-        try {
-            $booking->valid_until = Carbon::createFromFormat('Y-m-d\TH:i:s.uP', $result->TktTimeLimit);
-        } catch (\Throwable $th) {
-            $booking->valid_until = Carbon::createFromFormat('Y-m-d\TH:i:s', $result->TktTimeLimit);
-        }
         
         try {
             DB::beginTransaction();
@@ -96,7 +97,7 @@ class AirBookingController extends Controller
             DB::commit();
             return [
                 'ticket_time_limit' => $booking->valid_until->format('Y-m-d H:i:s'),
-                'price_changed' => $result->PriceChange,
+                'price_changed' => $result->PriceChange ?? false,
                 'payment' => [
                     'amount' => $request->revalidated_flight->getTotalInRials(),
                     'url' => route('orders.pay', ['order' => $order->id])

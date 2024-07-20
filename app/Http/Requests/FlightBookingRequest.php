@@ -22,7 +22,7 @@ class FlightBookingRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        $revalidated = Cache::remember('ref:' . $this->input('ref'), 60 * 10, fn() => Parto::revalidate($this->input('ref'))?->PricedItinerary);
+        $revalidated = Parto::revalidate($this->input('ref'))?->PricedItinerary;
         abort_if(! $revalidated, 404, 'Couldn\'t find the flight');
         $this->revalidated_flight = new PricedItinerary($revalidated);
         

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Parto\Domains\Flight\Enums;
+namespace App\Parto\Domains\Flight\Enums\AirBook;
 
 use App\Attributes\Description;
 use App\Traits\EnumAttributeCatcher;
