@@ -13,5 +13,8 @@ class PaymentController extends Controller
         // TODO: verify the purchase
         $order = Order::find($request->input('clientReferenceNumber'));
         OrderPaid::dispatch($order);
+        return [
+            'url' => $order->purchasable->getUri()
+        ];
     }
 }

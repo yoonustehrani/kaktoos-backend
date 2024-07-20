@@ -28,7 +28,10 @@ Route::prefix('flights')->group(function() {
     Route::post('rules/fare',[FlightRulesController::class, 'fare']);
     Route::post('rules/baggage', [FlightRulesController::class, 'baggage']);
     Route::post('reserve', [AirBookingController::class, 'store'])->middleware('auth:sanctum');
-    // ->middleware('auth:sanctum');
+});
+
+Route::middleware('auth:sanctum')->group(function() {
+    Route::get('bookings/air/{airBooking}', [AirBookingController::class, 'show'])->name('bookings.air.show');
 });
 
 Route::post('/login', [UserAuthController::class, 'login']);

@@ -118,7 +118,7 @@ class AirBookingController extends Controller
      */
     public function show(AirBooking $airBooking)
     {
-        //
+        return response()->json($airBooking);
     }
 
     /**
