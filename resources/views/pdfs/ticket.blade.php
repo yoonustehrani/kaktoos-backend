@@ -2,6 +2,7 @@
 <head>
     <title>Ticket</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
 </head>
 <body>
 
