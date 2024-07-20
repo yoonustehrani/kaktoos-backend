@@ -43,4 +43,8 @@ class PricedItinerary
     {
         return PartoFareType::tryFrom($this->get('AirItineraryPricingInfo')['FareType']);
     }
+    public function isWebfare(): bool
+    {
+        return $this->getFareType() == PartoFareType::WebFare;
+    }
 }
