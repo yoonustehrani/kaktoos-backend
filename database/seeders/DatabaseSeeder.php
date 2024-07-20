@@ -16,5 +16,10 @@ class DatabaseSeeder extends Seeder
         $this->call(CountrySeeder::class);
         $this->call(AirportSeeder::class);
         $this->call(AirlineSeeder::class);
+
+        $user = User::factory()->state([
+            'phone_number' => '12345'
+        ])->make();
+        $user->save();
     }
 }

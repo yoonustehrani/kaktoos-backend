@@ -105,6 +105,7 @@ class AirBookingController extends Controller
             ];
         } catch (\Throwable $th) {
             DB::rollBack();
+            throw $th;
             // Better to retry
             abort(500, 'Issue in saving order in DB');
         }
