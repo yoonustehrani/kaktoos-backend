@@ -22,7 +22,7 @@ class OrderController extends Controller
         if ($purchase->requestPurchase()) {
             $order->gateway_purchase_id = $purchase->getPurchaseId();
             $order->save();
-            redirect()->to($purchase->getRedirectUrl());
+            return redirect()->to($purchase->getRedirectUrl());
         }
     }
 }
