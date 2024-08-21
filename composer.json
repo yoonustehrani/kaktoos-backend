@@ -9,6 +9,7 @@
         "laravel/framework": "^11.0",
         "laravel/octane": "^2.4",
         "laravel/sanctum": "^4.0",
+        "laravel/tinker": "^2.9",
         "melipayamak/php": "1.0.0"
     },
     "require-dev": {
