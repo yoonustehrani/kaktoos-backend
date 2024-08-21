@@ -17,7 +17,7 @@
 				"amiralizadeh9480.laravel-extra-intellisense",
 				"codingyu.laravel-goto-view",
 				"cierra.livewire-vscode",
-				// "bradlc.vscode-tailwindcss"
+				"rangav.vscode-thunder-client"
 			],
 			"settings": {}
 		}
