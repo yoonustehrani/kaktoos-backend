@@ -7,11 +7,23 @@ use Exception;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 
 trait PartoApiCaller
 {
-    use PartoAirMethods;
+    use PartoAirMethods, PartoHotelMethods;
+    public string $session_key = 'parto-session';
     
+    public function getCredit()
+    {
+        try {
+            $response = $this->apiCall('Common/CreditBalance');
+            return $response;
+        } catch (PartoErrorException $error) {
+            return $error->getErrorObject();
+        }
+    }
+
     private function getPartoSession(): string
     {
         return session()->get($this->session_key)['id'];
@@ -77,6 +89,12 @@ trait PartoApiCaller
         if ($response->serverError()) {
             throw new Exception('Parto Server Error');
         }
+        // Log the response details
+        Log::info('Response:', [
+            'status' => $response->status(),
+            'headers' => $response->headers(),
+            'body' => $response->body(),
+        ]);
         return (object) $response->json();
     }
 }

@@ -4,12 +4,13 @@ namespace App\Parto;
 
 use App\Exceptions\PartoErrorException;
 use App\Parto\Domains\FlightService;
+use App\Parto\Domains\Hotel\HotelServices;
 use App\Parto\Traits\PartoApiCaller;
 
 class PartoClient
 {
     use PartoApiCaller;
-    public string $session_key = 'parto-session';
+    const DATETIME_FORMAT = 'Y-m-d\TH:i:s.uP';
     /**
      * Create a new class instance.
      */
@@ -22,14 +23,9 @@ class PartoClient
     {
         return new FlightService();
     }
-    
-    public function getCredit()
+
+    public static function hotel()
     {
-        try {
-            $response = $this->apiCall('Common/CreditBalance');
-            return $response;
-        } catch (PartoErrorException $error) {
-            return $error->getErrorObject();
-        }
+        return new HotelServices();
     }
 }

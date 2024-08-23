@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Facade;
 
 /**
  * @method static \App\Parto\Domains\FlightService flight()
+ * @method static \App\Parto\Domains\Hotel\HotelServices hotel()
  * @method static mixed getFareRule(string $fareSourceCode)
  * @method static mixed getBaggageRule(string $fareSourceCode)
  * @method static mixed revalidate(string $fareSourceCode)

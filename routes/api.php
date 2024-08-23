@@ -1,9 +1,11 @@
 <?php
 
 use App\Http\Controllers\AirBookingController;
+use App\Http\Controllers\CityController;
 use App\Http\Controllers\FlightPriceController;
 use App\Http\Controllers\FlightRulesController;
 use App\Http\Controllers\FlightSearchController;
+use App\Http\Controllers\HotelController;
 use App\Http\Controllers\InternationalAirportController;
 use App\Http\Controllers\NationalAirportController;
 use App\Http\Controllers\UserAuthController;
@@ -51,4 +53,13 @@ Route::post('/sanctum/token', function (Request $request) {
     }
  
     return $user->createToken('thunderbelt')->plainTextToken;
+});
+
+
+Route::get('cities/search', [CityController::class, 'search']);
+
+Route::prefix('hotels')->group(function() {
+    Route::post('/search', [HotelController::class, 'search']);
+    Route::post('/city/{cityId}', [HotelController::class, 'showCity']);
+    Route::post('/{hotelId}', [HotelController::class, 'show']);
 });

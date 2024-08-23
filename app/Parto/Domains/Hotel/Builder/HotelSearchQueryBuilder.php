@@ -1,0 +1,62 @@
+<?php
+
+namespace App\Parto\Domains\Hotel\Builder;
+
+use App\Parto\PartoClient;
+use Exception;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Carbon;
+
+class HotelSearchQueryBuilder
+{
+    protected $query = [];
+
+    public function __construct(array $initialData)
+    {
+        $default = [
+            'Latitude' => null,
+            'Longitude' => null,
+            'RadiusInKilometer' => 0,
+            'SetGeoLocation' => false,
+            'HotelId' => null,
+            'HotelIdList' => null,
+            'CityId' => null,
+            'RegionCode' => null,
+            'CountryCode' => null,
+            'Occupancies' => [],
+            'NationalityId' => 'US'
+        ];
+        $this->query = array_merge($default, $initialData);
+    }
+
+    protected function set(string $key, mixed $value)
+    {
+        Arr::set($this->query, $key, $value);
+    }
+
+    public function get()
+    {
+        return Arr::undot($this->query);
+    }
+
+    public function setDates(string $checkIn, string $checkOut)
+    {
+        foreach (compact('checkIn', 'checkOut') as $key => $dateString) {
+            $this->set(ucfirst($key), Carbon::createFromFormat('Y-m-d', $dateString)->format(PartoClient::DATETIME_FORMAT));
+        }
+        return $this;
+    }
+
+    public function setPeople(int $adultCount, int $childCount = 0, array $childAges = [])
+    {
+        if (count($childAges) != $childCount) {
+            throw new Exception('Age for all children should be specified');
+        }
+        $a = [];
+        foreach (compact('adultCount', 'childCount', 'childAges') as $key => $value) {
+            $a[ucfirst($key)] = $value;
+        }
+        $this->query['Occupancies'][] = $a;
+        return $this;
+    }
+}

@@ -4,12 +4,39 @@ namespace App\Http\Controllers;
 
 use App\Events\OrderPaid;
 use App\Models\Order;
+use App\Payment\PaymentGateway;
 use Illuminate\Http\Request;
 
 class PaymentController extends Controller
 {
     public function verify(Request $request, string $gateway)
     {
+        $request->validate([
+            'amount' => 'required',
+            'purchaseId' => 'required',
+            'status' => 'required'
+        ]);
+        /**
+         * @var \App\Payment\PaymentGateway
+         */
+        $payment = app()->make(PaymentGateway::getGatewayClassname('jibit'));
+        if ($request->input('status') == 'SUCCESSFUL') {
+            // $result = $payment->gateway->getOrderById($request->input('purchaseId'));
+            // return response()->streamDownload(function () use($request, $result) {
+            //     echo json_encode($result, JSON_PRETTY_PRINT);
+            // }, 'get-order.json', [
+            //     'Content-Type' => 'application/json'
+            // ]);
+            $verification = $payment->gateway->validatePayment($request);
+            if ($verification['status'] == 'SUCCESSFUL') {
+                # payment is valid
+            }
+        } else {
+            dd(
+                $payment->gateway->validatePayment($request)
+            );
+            dd($request->all());
+        }
         // TODO: verify the purchase
         $order = Order::find($request->input('clientReferenceNumber'));
         OrderPaid::dispatch($order);

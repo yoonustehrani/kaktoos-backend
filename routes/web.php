@@ -11,6 +11,7 @@ use App\Parto\Domains\Flight\Enums\TravellerPassengerType;
 use App\Parto\Domains\Flight\Enums\TravellerSeatPreference;
 use App\Parto\Domains\Flight\FlightBook\AirTraveler;
 use App\Parto\Parto;
+use App\Payment\PaymentGateway;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Route;
@@ -30,6 +31,25 @@ Route::get('orders/{order}/events', function (Order $order) {
 
 Route::get('orders/{order}/pay', [OrderController::class, 'pay'])->name('orders.pay');
 Route::get('tickets/{ticketId}', [TicketController::class, 'show'])->name('tickets.show');
+
+
+Route::get('/pay', function() {
+    /**
+     * @var \App\Payment\PaymentGateway
+     */
+    $purchase = app()->make(PaymentGateway::getGatewayClassname('jibit'));
+    // $order->title
+    $purchase->gateway->setRequestItem('description', 'پرداخت برای تست');
+    $purchase->init(amount: 1000, ref: \Str::random(18));
+    if ($purchase->requestPurchase()) {
+        // $order->gateway_purchase_id = $purchase->getPurchaseId();
+        // $order->save();
+        return redirect()->to($purchase->getRedirectUrl());
+    }
+});
+
+Route::view('/', 'welcome');
+
 // Route::get('/', function () {
 //     // return Parto::orderTicket('PO0068353');
 //     return Parto::getBookingDetails('PO0068354');
