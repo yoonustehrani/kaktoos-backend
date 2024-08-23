@@ -12,10 +12,11 @@ class HotelController extends Controller
     public function search(Request $request)
     {
         $request->validate([
+            'q' => 'required|string|min:2',
             'limit' => 'integer|min:1|max:10'
         ]);
         
-        $hotelSearch = Hotel::search();
+        $hotelSearch = Hotel::search($request->query('q'));
         $filters = [
             'city_id' => 'city.id',
             'rating' => 'rating',
@@ -29,7 +30,10 @@ class HotelController extends Controller
         }
         $limit = $request->query('limit') ?? 10;
         // $hotelSearch->orderBy('rating', 'desc');
-        return $hotelSearch->simplePaginate($limit);
+        $hotels = $hotelSearch->take($limit)->simplePaginate($limit);
+        $hotels->load('city.state.country');
+
+        return response()->json($hotels);
     }
 
     public function showCity(int $cityId, HotelSearchRequest $request)

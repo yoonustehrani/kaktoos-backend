@@ -10,10 +10,11 @@ class CityController extends Controller
     public function search(Request $request)
     {
         $request->validate([
+            'q' => 'required|string|min:2',
             'limit' => 'integer|min:1|max:10'
         ]);
 
-        $citySearch = City::search();
+        $citySearch = City::search($request->query('q'));
         $filters = [
             'state_id' => 'state.id',
             'country_code' => 'state.country_code'
@@ -25,6 +26,8 @@ class CityController extends Controller
         }
         $limit = $request->query('limit') ?? 10;
 
-        return $citySearch->simplePaginate($limit);
+        $cities = $citySearch->take($limit)->simplePaginate($limit);
+        $cities->load('state.country');
+        return response()->json($cities);
     }
 }

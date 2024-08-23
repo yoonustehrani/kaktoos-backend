@@ -59,7 +59,7 @@ Route::post('/sanctum/token', function (Request $request) {
 Route::get('cities/search', [CityController::class, 'search']);
 
 Route::prefix('hotels')->group(function() {
-    Route::post('/search', [HotelController::class, 'search']);
+    Route::get('/search', [HotelController::class, 'search']);
     Route::post('/city/{cityId}', [HotelController::class, 'showCity']);
     Route::post('/{hotelId}', [HotelController::class, 'show']);
 });
