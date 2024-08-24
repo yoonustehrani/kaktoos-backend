@@ -42,6 +42,7 @@ class HotelController extends Controller
 
     public function showCity(int $cityId, HotelSearchRequest $request)
     {
+        return $request;
         $service = Parto::hotel()->hotelSearch();
 
         return Parto::api()->searchHotels(
@@ -72,3 +73,4 @@ class HotelController extends Controller
         );
     }
 }
+
