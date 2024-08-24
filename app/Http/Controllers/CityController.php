@@ -11,7 +11,9 @@ class CityController extends Controller
     {
         $request->validate([
             'q' => 'required|string|min:2',
-            'limit' => 'integer|min:1|max:10'
+            'limit' => 'integer|min:1|max:10',
+            'state_id' => 'integer|min:1',
+            'country_code' => 'string|size:2'
         ]);
 
         $citySearch = City::search($request->query('q'));

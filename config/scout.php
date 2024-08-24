@@ -140,7 +140,7 @@ return [
             Hotel::class => [
                 // 'name', 'address', 'city.state.name', 'city.state.country.name', 'city.state.country.name',
                 'filterableAttributes' => [
-                    'accommodation_type_id', 'city.id', 'city.state.id', 'city.state.country.code'
+                    'rating', 'accommodation_type_id', 'city.id', 'city.state.id', 'city.state.country.code'
                 ],
                 'sortableAttributes' => [
                     'rating', 'score'

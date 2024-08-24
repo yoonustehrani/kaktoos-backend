@@ -13,7 +13,11 @@ class HotelController extends Controller
     {
         $request->validate([
             'q' => 'required|string|min:2',
-            'limit' => 'integer|min:1|max:10'
+            'limit' => 'integer|min:1|max:10',
+            'city_id' => 'integer|min:1',
+            'state_id' => 'integer|min:1',
+            'rating' => 'integer|min:1|max:5',
+            'country_code' => 'string|size:2'
         ]);
         
         $hotelSearch = Hotel::search($request->query('q'));
