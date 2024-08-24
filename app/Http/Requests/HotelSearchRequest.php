@@ -24,10 +24,10 @@ class HotelSearchRequest extends FormRequest
         return [
             'start_date' => 'required|date|date_format:Y-m-d|after:today',
             'end_date' => 'required|date|date_format:Y-m-d|after:start_date',
-            'residetns.adults' => 'required|integer|min:1',
-            'residetns.children' => 'integer|min:0',
-            'residetns.children_age' => 'array',
-            'residetns.children_age.*' => 'integer|min:1'
+            'residents.adults' => 'required|integer|min:1',
+            'residents.children' => 'integer|min:0',
+            'residents.children_age' => 'array',
+            'residents.children_age.*' => 'integer|min:1'
         ];
     }
 }

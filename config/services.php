@@ -49,7 +49,8 @@ return [
             'flights_cache' => 60 * 2, // 1h
             'calendar_cache' => 60 // 1m
         ],
-        'datetime_format' => 'Y-m-d\TH:i:s.uP'
+        'datetime_format' => 'Y-m-d\TH:i:s.uP',
+        'endpoint' => 'https://apidemo.partocrs.com/api/'
     ],
 
     'sms' => [

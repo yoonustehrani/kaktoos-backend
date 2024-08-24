@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Parto\Traits;
+namespace App\Parto\Client\Traits;
 
 trait PartoHotelMethods
 {

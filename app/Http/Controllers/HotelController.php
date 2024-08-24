@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\HotelSearchRequest;
 use App\Models\Hotel;
-use App\Parto\Parto;
+use App\Parto\Facades\Parto;
 use Illuminate\Http\Request;
 
 class HotelController extends Controller
@@ -44,7 +44,7 @@ class HotelController extends Controller
     {
         $service = Parto::hotel()->hotelSearch();
 
-        return Parto::searchHotels(
+        return Parto::api()->searchHotels(
             $service->searchByCityId($cityId)
                 ->setDates($request->input('start_date'), $request->input('end_date'))
                 ->setPeople(
@@ -60,7 +60,7 @@ class HotelController extends Controller
     {
         $service = Parto::hotel()->hotelSearch();
 
-        return Parto::searchHotels(
+        return Parto::api()->searchHotels(
             $service->searchByHotelId($hotelId)
                 ->setDates($request->input('start_date'), $request->input('end_date'))
                 ->setPeople(

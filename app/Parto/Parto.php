@@ -2,30 +2,33 @@
 
 namespace App\Parto;
 
-use Illuminate\Support\Facades\Facade;
+use App\Parto\Client\PartoClient;
+use App\Parto\Domains\FlightService;
+use App\Parto\Domains\Hotel\HotelServices;
 
-/**
- * @method static \App\Parto\Domains\FlightService flight()
- * @method static \App\Parto\Domains\Hotel\HotelServices hotel()
- * @method static mixed getFareRule(string $fareSourceCode)
- * @method static mixed getBaggageRule(string $fareSourceCode)
- * @method static mixed revalidate(string $fareSourceCode)
- * @method static mixed orderTicket(string $unique_id)
- * @method static mixed flightBook(\App\Parto\Domains\Flight\FlightBook\FlightBook $flightBook)
- *
- * @see \App\Parto\PartoClient
- *
- * @mixin \Illuminate\Cache\Repository
- */
-class Parto extends Facade
+class Parto
 {
+    const DATETIME_FORMAT = 'Y-m-d\TH:i:s.uP';
     /**
-     * Get the registered name of the component.
-     *
-     * @return string
+     * Create a new class instance.
      */
-    protected static function getFacadeAccessor()
+    public function __construct(protected array $config)
     {
-        return 'parto';
+        
+    }
+
+    public function api()
+    {
+        return new PartoClient($this->config);
+    }
+
+    public static function flight()
+    {
+        return new FlightService();
+    }
+
+    public static function hotel()
+    {
+        return new HotelServices();
     }
 }

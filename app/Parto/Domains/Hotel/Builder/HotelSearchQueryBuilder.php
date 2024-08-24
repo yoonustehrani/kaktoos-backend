@@ -2,7 +2,7 @@
 
 namespace App\Parto\Domains\Hotel\Builder;
 
-use App\Parto\PartoClient;
+use App\Parto\Parto;
 use Exception;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
@@ -24,7 +24,7 @@ class HotelSearchQueryBuilder
             'RegionCode' => null,
             'CountryCode' => null,
             'Occupancies' => [],
-            'NationalityId' => 'US'
+            'NationalityId' => 'IR'
         ];
         $this->query = array_merge($default, $initialData);
     }
@@ -42,7 +42,7 @@ class HotelSearchQueryBuilder
     public function setDates(string $checkIn, string $checkOut)
     {
         foreach (compact('checkIn', 'checkOut') as $key => $dateString) {
-            $this->set(ucfirst($key), Carbon::createFromFormat('Y-m-d', $dateString)->format(PartoClient::DATETIME_FORMAT));
+            $this->set(ucfirst($key), Carbon::createFromFormat('Y-m-d', $dateString)->format(Parto::DATETIME_FORMAT));
         }
         return $this;
     }

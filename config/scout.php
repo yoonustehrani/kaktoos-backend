@@ -138,7 +138,6 @@ return [
         'key' => env('MEILISEARCH_KEY'),
         'index-settings' => [
             Hotel::class => [
-                // 'name', 'address', 'city.state.name', 'city.state.country.name', 'city.state.country.name',
                 'filterableAttributes' => [
                     'rating', 'accommodation_type_id', 'city.id', 'city.state.id', 'city.state.country.code'
                 ],
