@@ -42,19 +42,16 @@ class HotelController extends Controller
 
     public function showCity(int $cityId, HotelSearchRequest $request)
     {
-        return $request;
-        $service = Parto::hotel()->hotelSearch();
-
-        return Parto::api()->searchHotels(
-            $service->searchByCityId($cityId)
-                ->setDates($request->input('start_date'), $request->input('end_date'))
-                ->setPeople(
-                    adultCount: $request->input('residents.adults'),
-                    childCount: $request->input('residents.children', 0),
-                    childAges: $request->input('residents.children_age', [])
-                )
-                ->get()
-        );
+        $hotelQuery = Parto::hotel()->hotelSearch()->searchByCityId($cityId)
+            ->setDates($request->input('start_date'), $request->input('end_date'));
+        for ($i=0; $i < count($request->input('rooms')); $i++) { 
+            $hotelQuery->addRoom(
+                adultCount: $request->input("rooms.$i.adults"),
+                childCount: $request->input("rooms.$i.children", 0),
+                childAges: $request->input("rooms.$i.children_age", [])
+            );
+        }
+        return Parto::api()->searchHotels( $hotelQuery->get() );
     }
 
     public function show(int $hotelId, HotelSearchRequest $request)

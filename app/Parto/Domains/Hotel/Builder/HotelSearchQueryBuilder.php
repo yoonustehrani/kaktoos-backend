@@ -47,7 +47,7 @@ class HotelSearchQueryBuilder
         return $this;
     }
 
-    public function setPeople(int $adultCount, int $childCount = 0, array $childAges = [])
+    public function addRoom(int $adultCount, int $childCount = 0, array $childAges = [])
     {
         if (count($childAges) != $childCount) {
             throw new Exception('Age for all children should be specified');
