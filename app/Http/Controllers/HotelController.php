@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\HotelSearchRequest;
 use App\Models\Hotel;
+use App\Parto\Domains\Hotel\Builder\HotelSearchQueryBuilder;
 use App\Parto\Facades\Parto;
 use Illuminate\Http\Request;
 
@@ -42,32 +43,29 @@ class HotelController extends Controller
 
     public function showCity(int $cityId, HotelSearchRequest $request)
     {
-        $hotelQuery = Parto::hotel()->hotelSearch()->searchByCityId($cityId)
-            ->setDates($request->input('start_date'), $request->input('end_date'));
+        return Parto::api()->searchHotels( 
+            $this->getPartoHotelQuery($request, Parto::hotel()->hotelSearch()->searchByCityId($cityId))
+        );
+    }
+
+    public function show(int $hotelId, HotelSearchRequest $request)
+    {
+        return Parto::api()->searchHotels( 
+            $this->getPartoHotelQuery($request, Parto::hotel()->hotelSearch()->searchByHotelId($hotelId))
+        );
+    }
+
+    protected function getPartoHotelQuery(Request $request, HotelSearchQueryBuilder $builder): array
+    {
+        $builder->setDates($request->input('start_date'), $request->input('end_date'));
         for ($i=0; $i < count($request->input('rooms')); $i++) { 
-            $hotelQuery->addRoom(
+            $builder->addRoom(
                 adultCount: $request->input("rooms.$i.adults"),
                 childCount: $request->input("rooms.$i.children", 0),
                 childAges: $request->input("rooms.$i.children_age", [])
             );
         }
-        return Parto::api()->searchHotels( $hotelQuery->get() );
-    }
-
-    public function show(int $hotelId, HotelSearchRequest $request)
-    {
-        $service = Parto::hotel()->hotelSearch();
-
-        return Parto::api()->searchHotels(
-            $service->searchByHotelId($hotelId)
-                ->setDates($request->input('start_date'), $request->input('end_date'))
-                ->setPeople(
-                    adultCount: $request->input('residents.adults'),
-                    childCount: $request->input('residents.children', 0),
-                    childAges: $request->input('residents.children_age', [])
-                )
-                ->get()
-        );
+        return $builder->get();
     }
 }
 

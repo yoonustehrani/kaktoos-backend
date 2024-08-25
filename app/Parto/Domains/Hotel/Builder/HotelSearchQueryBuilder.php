@@ -34,7 +34,7 @@ class HotelSearchQueryBuilder
         Arr::set($this->query, $key, $value);
     }
 
-    public function get()
+    public function get(): array
     {
         return Arr::undot($this->query);
     }
