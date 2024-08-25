@@ -61,5 +61,6 @@ Route::get('cities/search', [CityController::class, 'search']);
 Route::prefix('hotels')->group(function() {
     Route::get('/search', [HotelController::class, 'search']);
     Route::post('/city/{cityId}', [HotelController::class, 'showCity']);
+    Route::post('/{hotelId}/images', [HotelController::class, 'hotelImages']);
     Route::post('/{hotelId}', [HotelController::class, 'show']);
 });

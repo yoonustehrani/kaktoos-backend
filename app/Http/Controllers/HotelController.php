@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\HotelSearchRequest;
+use App\Http\Resources\HotelImageResource;
+use App\Http\Resources\PartoHotelOfferResource;
 use App\Models\Hotel;
 use App\Parto\Domains\Hotel\Builder\HotelSearchQueryBuilder;
 use App\Parto\Facades\Parto;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class HotelController extends Controller
 {
@@ -50,8 +53,29 @@ class HotelController extends Controller
 
     public function show(int $hotelId, HotelSearchRequest $request)
     {
-        return Parto::api()->searchHotels( 
+        $offers = Parto::api()->searchHotels( 
             $this->getPartoHotelQuery($request, Parto::hotel()->hotelSearch()->searchByHotelId($hotelId))
+        )->PricedItineraries ?? null;
+        if (! $offers) {
+            abort(500, 'No Hotel Offers Found');
+        }
+        return response()->json([
+            'hotel' => Hotel::with(['accommodation', 'city.state.country'])->find($hotelId),
+            'offers' => PartoHotelOfferResource::collection($offers)
+        ]);
+    }
+
+    public function hotelImages(int $hotelId)
+    {
+        $hotelImages = Cache::remember("hotel-$hotelId-images", 60 * 60 * 24, function() use($hotelId) {
+            return Parto::api()->requestHotelImages($hotelId) ?? null;
+        });
+        if (! $hotelImages) {
+            abort(500, 'No hotel image found');
+        }
+        $links = HotelImageResource::collection($hotelImages->Links);
+        return response()->json(
+            collect($links->toArray(request()))->groupBy('group')
         );
     }
 

@@ -11,7 +11,7 @@ class Hotel extends Model
 {
     use Searchable;
     
-    protected $hidden = ['city_id'];
+    protected $hidden = ['city_id', 'accommodation_type_id'];
 
     public function city()
     {
@@ -34,5 +34,10 @@ class Hotel extends Model
     public function makeAllSearchableUsing(Builder $query): Builder
     {
         return $query->with('city.state.country');
+    }
+
+    public function accommodation()
+    {
+        return $this->belongsTo(AccommodationType::class, 'accommodation_type_id');
     }
 }

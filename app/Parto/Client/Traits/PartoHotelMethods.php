@@ -8,4 +8,9 @@ trait PartoHotelMethods
     {
         return $this->apiCall('Hotel/HotelAvailability', $query);
     }
+
+    public function requestHotelImages(int $hotelId)
+    {
+        return $this->apiCall('Hotel/HotelImage', ['HotelId' => $hotelId]);
+    }
 }
