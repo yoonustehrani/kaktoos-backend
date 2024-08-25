@@ -60,7 +60,10 @@ Route::get('cities/search', [CityController::class, 'search']);
 
 Route::prefix('hotels')->group(function() {
     Route::get('/search', [HotelController::class, 'search']);
-    Route::post('/city/{cityId}', [HotelController::class, 'showCity']);
-    Route::post('/{hotelId}/images', [HotelController::class, 'hotelImages']);
-    Route::post('/{hotelId}', [HotelController::class, 'show']);
+    Route::get('/images', [HotelController::class, 'hotelsImages']);
+    Route::post('/city/{cityId}/offers', [HotelController::class, 'showCity']);
+
+    Route::get('/{hotelId}/images', [HotelController::class, 'hotelImages']);
+    Route::post('/{hotelId}/offers', [HotelController::class, 'hotelOffers']);
+    Route::get('/{hotelId}', [HotelController::class, 'show']);
 });

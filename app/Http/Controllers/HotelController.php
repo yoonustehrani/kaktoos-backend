@@ -46,20 +46,58 @@ class HotelController extends Controller
 
     public function showCity(int $cityId, HotelSearchRequest $request)
     {
-        return Parto::api()->searchHotels( 
+        $partoHotels = Parto::api()->searchHotels( 
             $this->getPartoHotelQuery($request, Parto::hotel()->hotelSearch()->searchByCityId($cityId))
+        )->PricedItineraries;
+        $partoHotels = collect($partoHotels);
+        $hotels = Hotel::whereIn('id', $partoHotels->pluck('HotelId'))->with('accommodation')->get();
+        return array_map(fn($hotel) => [
+            'hotel' => $hotel,
+            'offer' => new PartoHotelOfferResource($partoHotels->firstWhere('HotelId', $hotel['id']))
+        ], $hotels->toArray());
+    }
+
+    public function hotelsImages(Request $request)
+    {
+        $request->validate([
+            'ids' => 'required|regex:/^(\d,?)+$/'
+        ]);
+        $key = $request->query('ids');
+        $ids = array_map('intval', explode(',', $request->query('ids')));
+        // TODO: Parto has to answer support ticket - Bulk Image request doesn't work
+        // $hotelImages = Cache::remember("hotel-$key-images", 60 * 60 * 24, function() use($ids) {
+        //     return Parto::api()->requestHotelImagesBulk($ids) ?? null;
+        // });
+        // return $hotelImages;
+        // if (! $hotelImages) {
+        //     abort(500, 'No hotel image found');
+        // }
+        // $links = ;
+        // collect($links->toArray(request()))->groupBy('group')
+        return response()->json(
+            array_map(fn($id) => [
+                'id' => $id,
+                'image' => 'https://cdn-a-hi.partocrs.com/upload/hotelimages/'. $id .'/main.jpg'
+            ], $ids)
         );
     }
 
-    public function show(int $hotelId, HotelSearchRequest $request)
+    public function show(int $hotelId)
+    {
+        return response()->json(
+            Hotel::with(['accommodation', 'city.state.country'])->find($hotelId)
+        );
+    }
+
+    public function hotelOffers(int $hotelId, HotelSearchRequest $request)
     {
         $offers = Parto::api()->searchHotels( 
             $this->getPartoHotelQuery($request, Parto::hotel()->hotelSearch()->searchByHotelId($hotelId))
         )->PricedItineraries ?? [];
-        return response()->json([
-            'hotel' => Hotel::with(['accommodation', 'city.state.country'])->find($hotelId),
-            'offers' => PartoHotelOfferResource::collection($offers)
-        ]);
+
+        return response()->json(
+            PartoHotelOfferResource::collection($offers)
+        );
     }
 
     public function hotelImages(int $hotelId)

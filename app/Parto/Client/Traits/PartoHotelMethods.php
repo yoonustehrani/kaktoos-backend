@@ -13,4 +13,9 @@ trait PartoHotelMethods
     {
         return $this->apiCall('Hotel/HotelImage', ['HotelId' => $hotelId]);
     }
+
+    public function requestHotelImagesBulk(array $hotelIds)
+    {
+        return $this->apiCall('Hotel/HotelImages', ['HotelId' => $hotelIds]);
+    }
 }
