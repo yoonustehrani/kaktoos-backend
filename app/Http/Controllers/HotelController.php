@@ -55,10 +55,7 @@ class HotelController extends Controller
     {
         $offers = Parto::api()->searchHotels( 
             $this->getPartoHotelQuery($request, Parto::hotel()->hotelSearch()->searchByHotelId($hotelId))
-        )->PricedItineraries ?? null;
-        if (! $offers) {
-            abort(500, 'No Hotel Offers Found');
-        }
+        )->PricedItineraries ?? [];
         return response()->json([
             'hotel' => Hotel::with(['accommodation', 'city.state.country'])->find($hotelId),
             'offers' => PartoHotelOfferResource::collection($offers)
