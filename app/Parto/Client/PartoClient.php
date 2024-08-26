@@ -38,7 +38,6 @@ class PartoClient
     protected function apiCall(string $uri, array $data = [], $auth = true)
     {
         if ($auth === true && $this->loginExpired() === true) {
-            Cache::forget(self::AUTH_CACHE_KEY);
             if ($this->login()) {
                 return $this->apiCall($uri, $data, $auth);
             }
@@ -51,7 +50,12 @@ class PartoClient
         }
         $response = $http->post($this->config['endpoint'] . $uri, $data);
         if ($response->clientError() || $response->json('Success') === false) {
-            throw new PartoErrorException($response->json('Error'));
+            $error = new PartoErrorException($response->json('Error'));
+            if ($error->id === 'Err0102008') {
+                // $this->logout();
+                Cache::forget(self::AUTH_CACHE_KEY);
+                return $this->apiCall($uri, $data, $auth);
+            }
         }
         if ($response->serverError()) {
             throw new Exception('Parto Server Error');

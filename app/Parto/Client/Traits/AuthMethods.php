@@ -18,7 +18,7 @@ trait AuthMethods
                 'OfficeId' => $this->config['office_id']
             ], auth: false);
             if ($response->SessionId) {
-                return Cache::put(self::AUTH_CACHE_KEY, value: $response->SessionId, ttl: now()->addMinutes(14)->addSeconds(30));
+                return Cache::forever(self::AUTH_CACHE_KEY, value: $response->SessionId);
             }
             return false;
         } catch (PartoErrorException $error) {
