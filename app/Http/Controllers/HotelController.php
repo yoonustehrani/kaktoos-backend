@@ -46,7 +46,7 @@ class HotelController extends Controller
 
     public function showCity(int $cityId, HotelSearchRequest $request)
     {
-        $partoHotels = Parto::api()->searchHotels( 
+        $partoHotels = Parto::api()->searchHotels(
             $this->getPartoHotelQuery($request, Parto::hotel()->hotelSearch()->searchByCityId($cityId))
         )->PricedItineraries;
         $partoHotels = collect($partoHotels);
@@ -114,7 +114,7 @@ class HotelController extends Controller
         );
     }
 
-    protected function getPartoHotelQuery(Request $request, HotelSearchQueryBuilder $builder): array
+    protected function getPartoHotelQuery(Request $request, HotelSearchQueryBuilder $builder): HotelSearchQueryBuilder
     {
         $builder->setDates($request->input('start_date'), $request->input('end_date'));
         for ($i=0; $i < count($request->input('rooms')); $i++) { 
@@ -124,7 +124,7 @@ class HotelController extends Controller
                 childAges: $request->input("rooms.$i.children_age", [])
             );
         }
-        return $builder->get();
+        return $builder;
     }
 }
 

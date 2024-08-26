@@ -2,11 +2,37 @@
 
 namespace App\Parto\Client\Traits;
 
+use App\Parto\Domains\Hotel\Builder\HotelCancellationQueryBuilder;
+use App\Parto\Domains\Hotel\Builder\HotelSearchQueryBuilder;
+
+/**
+ * @method \stdClass apiCall(string $uri, array $data = [], $auth = true)
+ */
 trait PartoHotelMethods
 {
-    public function searchHotels(array $query)
+    public function searchHotels(HotelSearchQueryBuilder $query)
     {
-        return $this->apiCall('Hotel/HotelAvailability', $query);
+        return $this->apiCall('Hotel/HotelAvailability', $query->get());
+    }
+
+    public function checkOffer(string $ref)
+    {
+        return $this->apiCall('Hotel/HotelCheckRate', ['FareSourceCode' => $ref]);
+    }
+
+    public function bookHotel(string $ref, array $query)
+    {
+        return $this->apiCall('Hotel/HotelBook', array_merge(['FareSourceCode' => $ref], $query));
+    }
+
+    public function confirmHotelBook(string $uniqueId)
+    {
+        return $this->apiCall('Hotel/HotelOrder', ['UniqueId' => $uniqueId]);
+    }
+
+    public function cancelHotelBook(string $uniqueId, HotelCancellationQueryBuilder $query)
+    {
+        return $this->apiCall('Hotel/HotelOrder', array_merge(['UniqueId' => $uniqueId], $query->get()));
     }
 
     public function requestHotelImages(int $hotelId)
