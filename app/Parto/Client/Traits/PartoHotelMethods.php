@@ -2,6 +2,7 @@
 
 namespace App\Parto\Client\Traits;
 
+use App\Parto\Domains\Hotel\Builder\HotelBookingQueryBuilder;
 use App\Parto\Domains\Hotel\Builder\HotelCancellationQueryBuilder;
 use App\Parto\Domains\Hotel\Builder\HotelSearchQueryBuilder;
 
@@ -20,9 +21,9 @@ trait PartoHotelMethods
         return $this->apiCall('Hotel/HotelCheckRate', ['FareSourceCode' => $ref]);
     }
 
-    public function bookHotel(string $ref, array $query)
+    public function bookHotel(string $ref, HotelBookingQueryBuilder $query)
     {
-        return $this->apiCall('Hotel/HotelBook', array_merge(['FareSourceCode' => $ref], $query));
+        return $this->apiCall('Hotel/HotelBook', array_merge(['FareSourceCode' => $ref], $query->get()));
     }
 
     public function confirmHotelBook(string $uniqueId)

@@ -4,13 +4,10 @@ namespace App\Parto\Domains\Hotel\Builder;
 
 use App\Parto\Parto;
 use Exception;
-use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
 
-class HotelSearchQueryBuilder
+class HotelSearchQueryBuilder extends QueryBuilder
 {
-    protected $query = [];
-
     public function __construct(array $initialData)
     {
         $default = [
@@ -27,16 +24,6 @@ class HotelSearchQueryBuilder
             'NationalityId' => 'IR'
         ];
         $this->query = array_merge($default, $initialData);
-    }
-
-    protected function set(string $key, mixed $value)
-    {
-        Arr::set($this->query, $key, $value);
-    }
-
-    public function get(): array
-    {
-        return Arr::undot($this->query);
     }
 
     public function setDates(string $checkIn, string $checkOut)

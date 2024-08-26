@@ -5,6 +5,7 @@ use App\Http\Controllers\CityController;
 use App\Http\Controllers\FlightPriceController;
 use App\Http\Controllers\FlightRulesController;
 use App\Http\Controllers\FlightSearchController;
+use App\Http\Controllers\HotelBookingController;
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\InternationalAirportController;
 use App\Http\Controllers\NationalAirportController;
@@ -66,4 +67,5 @@ Route::prefix('hotels')->group(function() {
     Route::get('/{hotelId}/images', [HotelController::class, 'hotelImages']);
     Route::post('/{hotelId}/offers', [HotelController::class, 'hotelOffers']);
     Route::get('/{hotelId}', [HotelController::class, 'show']);
+    Route::post('/{hotelId}/book', [HotelBookingController::class, 'store'])->middleware('auth:sanctum');
 });
