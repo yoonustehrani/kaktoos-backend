@@ -12,7 +12,7 @@ use App\Parto\Domains\Flight\Enums\TravellerGender;
 use App\Parto\Domains\Flight\Enums\TravellerPassengerType;
 use App\Parto\Domains\Flight\Enums\TravellerSeatPreference;
 use App\Parto\Domains\Flight\FlightBook\AirTraveler;
-use App\Parto\Parto;
+use App\Parto\Facades\Parto;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 
@@ -34,7 +34,7 @@ class AirBookingController extends Controller
         /**
          * @var \App\Models\User
          */
-        $user = auth()->user();
+        $user = $request->user();
         $airBook = Parto::flight()->flightBook();
         $airBook->setFareCode($request->input('ref'))
             ->setPhoneNumber($user->phone_number)
@@ -65,7 +65,7 @@ class AirBookingController extends Controller
         $status = AirQueueStatus::Booked;
 
         if (! $booking->is_webfare) {
-            $result = Parto::flightBook($airBook);
+            $result = Parto::api()->flightBook($airBook);
             abort_if(
                 AirBookCategory::tryFrom($result->Category) != AirBookCategory::Booked,
                 'Couldn\'t book the flight. please try again!',
