@@ -5,18 +5,18 @@ namespace App\Http\Controllers;
 use App\Http\Requests\HotelBookingRequest;
 use App\Parto\Domains\Flight\Enums\TravellerGender;
 use App\Parto\Domains\Flight\Enums\TravellerPassengerType;
-use App\Parto\Domains\Hotel\Builder\HotelBookingQueryBuilder;
 use App\Parto\Domains\Hotel\Builder\HotelPassengerBuilder;
 use App\Parto\Facades\Parto;
-use Illuminate\Http\Request;
 
 class HotelBookingController extends Controller
 {
     public function store(HotelBookingRequest $request)
     {
-        $booking = new HotelBookingQueryBuilder($request->user());
+        $ref = Parto::api()->checkOffer($request->input('ref'))->PricedItinerary['FareSourceCode'];
+
+        $booking = Parto::hotel()->hotelBooking($request->user());
         foreach ($request->input('rooms') as $room) {
-            $room = HotelBookingQueryBuilder::newRoom();
+            $roomQuery = Parto::hotel()->newHotelRoom();
             foreach ($room['residents'] as $resident) {
                 switch (TravellerPassengerType::tryFrom($resident['type'])) {
                     case TravellerPassengerType::Chd:
@@ -32,9 +32,10 @@ class HotelBookingController extends Controller
                 } else {
                     $passenger->setPassportNumber($resident['passport_number']);
                 }
+                $roomQuery->addPassenger($passenger);
             }
-            $booking->addRoom($room);
+            $booking->addRoom($roomQuery);
         }
-        return Parto::api()->bookHotel($request->input('ref'), $booking);
+        return Parto::api()->bookHotel($ref, $booking);
     }
 }
