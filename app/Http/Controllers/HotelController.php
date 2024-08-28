@@ -78,12 +78,6 @@ class HotelController extends Controller
                     new HotelImageResource($item[0])
                 ])
         );
-        // return response()->json(
-        //     array_map(fn($id) => [
-        //         'id' => $id,
-        //         'image' => 'https://cdn-a-hi.partocrs.com/upload/hotelimages/'. $id .'/main.jpg'
-        //     ], $ids)
-        // );
     }
 
     public function show(int $hotelId)
@@ -98,7 +92,6 @@ class HotelController extends Controller
         $offers = Parto::api()->searchHotels( 
             $this->getPartoHotelQuery($request, Parto::hotel()->hotelSearch()->searchByHotelId($hotelId))
         )->PricedItineraries ?? [];
-        return $offers;
         return response()->json(
             PartoHotelOfferResource::collection($offers)
         );
