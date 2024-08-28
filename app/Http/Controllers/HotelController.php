@@ -36,10 +36,10 @@ class HotelController extends Controller
         }
         $limit = $request->query('limit') ?? 10;
         // $hotelSearch->orderBy('rating', 'desc');
-        $hotels = $hotelSearch->take($limit)->simplePaginate($limit);
+        $hotels = $hotelSearch->take($limit);
         $hotels->load('city.state.country');
 
-        return response()->json($hotels);
+        return response()->json($hotels->simplePaginate($limit));
     }
 
     public function show(int $hotelId)
