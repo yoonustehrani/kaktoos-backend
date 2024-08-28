@@ -9,6 +9,7 @@ use App\Http\Controllers\HotelBookingController;
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\InternationalAirportController;
 use App\Http\Controllers\NationalAirportController;
+use App\Http\Controllers\Parto\HotelImageController;
 use App\Http\Controllers\UserAuthController;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -61,10 +62,10 @@ Route::get('cities/search', [CityController::class, 'search']);
 
 Route::prefix('hotels')->group(function() {
     Route::get('/search', [HotelController::class, 'search']);
-    Route::get('/images', [HotelController::class, 'hotelsImages']);
+    Route::get('/images', [HotelImageController::class, 'index']);
     Route::post('/city/{cityId}/offers', [HotelController::class, 'showCity']);
 
-    Route::get('/{hotelId}/images', [HotelController::class, 'hotelImages']);
+    Route::get('/{hotelId}/images', [HotelImageController::class, 'show']);
     Route::post('/{hotelId}/offers', [HotelController::class, 'hotelOffers']);
     Route::get('/{hotelId}', [HotelController::class, 'show']);
     Route::post('/{hotelId}/book', [HotelBookingController::class, 'store'])->middleware('auth:sanctum');
