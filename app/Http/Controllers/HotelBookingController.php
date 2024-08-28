@@ -12,7 +12,7 @@ class HotelBookingController extends Controller
 {
     public function store(HotelBookingRequest $request)
     {
-        $ref = Parto::api()->checkOffer($request->input('ref'))->PricedItinerary['FareSourceCode'];
+        $ref = Parto::api()->hotel()->checkOffer($request->input('ref'))->PricedItinerary['FareSourceCode'];
 
         $booking = Parto::hotel()->hotelBooking($request->user());
         foreach ($request->input('rooms') as $room) {
@@ -36,6 +36,6 @@ class HotelBookingController extends Controller
             }
             $booking->addRoom($roomQuery);
         }
-        return Parto::api()->bookHotel($ref, $booking);
+        return Parto::api()->hotel()->bookHotel($ref, $booking);
     }
 }

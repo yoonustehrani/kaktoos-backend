@@ -18,7 +18,7 @@ class HotelImageController extends Controller
         $key = $request->query('ids');
         $ids = array_map('intval', explode(',', $request->query('ids')));
         $hotelImages = Cache::remember("hotel-$key-images", 60 * 60 * 24, function() use($ids) {
-            return Parto::api()->requestHotelImagesBulk($ids) ?? null;
+            return Parto::api()->hotel()->requestHotelImagesBulk($ids) ?? null;
         });
         if (! $hotelImages) {
             abort(500, 'No hotel image found');
@@ -36,7 +36,7 @@ class HotelImageController extends Controller
     public function show(int $hotelId)
     {
         $hotelImages = Cache::remember("hotel-$hotelId-images", 60 * 60 * 24, function() use($hotelId) {
-            return Parto::api()->requestHotelImages($hotelId) ?? null;
+            return Parto::api()->hotel()->requestHotelImages($hotelId) ?? null;
         });
         if (! $hotelImages) {
             abort(500, 'No hotel image found');

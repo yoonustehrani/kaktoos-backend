@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Http;
 
 class PartoClient
 {
-    use AuthMethods, PartoAirMethods, PartoHotelMethods;
+    use AuthMethods;
     
     public function __construct(protected array $config)
     {

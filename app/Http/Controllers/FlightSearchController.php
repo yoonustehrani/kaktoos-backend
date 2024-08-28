@@ -73,7 +73,7 @@ class FlightSearchController extends Controller
     protected function returnFlights(FlightSearch $flightSearch, Request $request, string $cache_key)
     {
         $flights = cache()->remember(md5($cache_key), config('services.parto.timing.flights_cache'), function () use($flightSearch) {
-            return Parto::api()->searchFlight($flightSearch)?->PricedItineraries ?? [];
+            return Parto::api()->air()->searchFlight($flightSearch)?->PricedItineraries ?? [];
         });
         if (count($flights) > 0) {
             $this->takeCareOfSideEffects(collect($flights), $request);

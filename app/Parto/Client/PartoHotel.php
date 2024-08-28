@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Parto\Client\Traits;
+namespace App\Parto\Client;
 
 use App\Parto\Domains\Hotel\Builder\HotelBookingQueryBuilder;
 use App\Parto\Domains\Hotel\Builder\HotelCancellationQueryBuilder;
@@ -9,7 +9,7 @@ use App\Parto\Domains\Hotel\Builder\HotelSearchQueryBuilder;
 /**
  * @method \stdClass apiCall(string $uri, array $data = [], $auth = true)
  */
-trait PartoHotelMethods
+class PartoHotel extends PartoClient
 {
     public function searchHotels(HotelSearchQueryBuilder $query)
     {

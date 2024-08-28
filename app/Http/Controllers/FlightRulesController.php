@@ -17,7 +17,7 @@ class FlightRulesController extends Controller
         $request->validate([
             'ref' => 'required|string|min:10',
         ]);
-        $rules = collect(Parto::api()->getFareRule($request->input('ref'))?->FareRules ?? []);
+        $rules = collect(Parto::api()->air()->getFareRule($request->input('ref'))?->FareRules ?? []);
         $airlines = Airline::whereIn(
             'code', 
             $rules->pluck('Airline')->flatten()->filter()->unique()->values()
@@ -39,7 +39,7 @@ class FlightRulesController extends Controller
             'ref' => 'required|string|min:10',
         ]);
         // TODO => ->Services
-        $rules = Parto::api()->getBaggageRule($request->input('ref'))?->BaggageInfoes;
+        $rules = Parto::api()->air()->getBaggageRule($request->input('ref'))?->BaggageInfoes;
         if ($rules) {
             $rules = collect($rules);
             $airports = $rules->pluck('Arrival')->flatten()->filter();

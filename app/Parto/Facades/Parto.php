@@ -7,9 +7,9 @@ use Illuminate\Support\Facades\Facade;
 /**
  * @method static \App\Parto\Domains\FlightService flight()
  * @method static \App\Parto\Domains\Hotel\HotelServices hotel()
- * @method static \App\Parto\Client\PartoClient api()
+ * @method static \App\Parto\Client\PartoApi api()
  *
- * @see \App\Parto\PartoClient
+ * @see \App\Parto\Parto
  *
  * @mixin \Illuminate\Cache\Repository
  */

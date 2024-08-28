@@ -65,7 +65,7 @@ class AirBookingController extends Controller
         $status = AirQueueStatus::Booked;
 
         if (! $booking->is_webfare) {
-            $result = Parto::api()->flightBook($airBook);
+            $result = Parto::api()->air()->flightBook($airBook);
             abort_if(
                 AirBookCategory::tryFrom($result->Category) != AirBookCategory::Booked,
                 'Couldn\'t book the flight. please try again!',

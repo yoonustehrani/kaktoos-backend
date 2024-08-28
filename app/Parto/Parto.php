@@ -2,6 +2,7 @@
 
 namespace App\Parto;
 
+use App\Parto\Client\PartoApi;
 use App\Parto\Client\PartoClient;
 use App\Parto\Domains\FlightService;
 use App\Parto\Domains\Hotel\HotelServices;
@@ -19,7 +20,7 @@ class Parto
 
     public function api()
     {
-        return new PartoClient($this->config);
+        return new PartoApi($this->config);
     }
 
     public static function flight()

@@ -2,25 +2,16 @@
 
 namespace App\Parto\Client\Traits;
 
+use App\Parto\Client\PartoClient;
 use App\Parto\Domains\Flight\FlightBook\FlightBook;
 use App\Parto\Domains\Flight\FlightSearch\FlightSearch;
 use stdClass;
 
-trait PartoAirMethods
+class PartoAir extends PartoClient
 {
     public function searchFlight(FlightSearch $flightSearch): stdClass|null
     {
         return $this->apiCall('Air/AirLowFareSearch', $flightSearch->getQuery());
-        // try {
-        //     $response = $this->apiCall('Air/AirLowFareSearch', $flightSearch->getQuery());
-        //     return $response;
-        // } catch (PartoErrorException $error) {
-        //     $errorObject = $error->getErrorObject();
-        //     if ($errorObject->Id === 'Err0103016') {
-        //         return null;
-        //     }
-        //     throw $error;
-        // }
     }
 
     public function revalidate(string $fareSourceCode)

@@ -51,7 +51,7 @@ class HotelController extends Controller
 
     public function showCity(int $cityId, HotelSearchRequest $request)
     {
-        $partoHotels = Parto::api()->searchHotels(
+        $partoHotels = Parto::api()->hotel()->searchHotels(
             $this->getPartoHotelQuery($request, Parto::hotel()->hotelSearch()->searchByCityId($cityId))
         )->PricedItineraries;
         $partoHotels = collect($partoHotels);
@@ -64,7 +64,7 @@ class HotelController extends Controller
 
     public function hotelOffers(int $hotelId, HotelSearchRequest $request)
     {
-        $offers = Parto::api()->searchHotels( 
+        $offers = Parto::api()->hotel()->searchHotels( 
             $this->getPartoHotelQuery($request, Parto::hotel()->hotelSearch()->searchByHotelId($hotelId))
         )->PricedItineraries ?? [];
         return response()->json(
