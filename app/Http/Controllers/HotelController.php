@@ -64,22 +64,26 @@ class HotelController extends Controller
         ]);
         $key = $request->query('ids');
         $ids = array_map('intval', explode(',', $request->query('ids')));
-        // TODO: Parto has to answer support ticket - Bulk Image request doesn't work
-        // $hotelImages = Cache::remember("hotel-$key-images", 60 * 60 * 24, function() use($ids) {
-        //     return Parto::api()->requestHotelImagesBulk($ids) ?? null;
-        // });
-        // return $hotelImages;
-        // if (! $hotelImages) {
-        //     abort(500, 'No hotel image found');
-        // }
-        // $links = ;
-        // collect($links->toArray(request()))->groupBy('group')
+        $hotelImages = Cache::remember("hotel-$key-images", 60 * 60 * 24, function() use($ids) {
+            return Parto::api()->requestHotelImagesBulk($ids) ?? null;
+        });
+        if (! $hotelImages) {
+            abort(500, 'No hotel image found');
+        }
         return response()->json(
-            array_map(fn($id) => [
-                'id' => $id,
-                'image' => 'https://cdn-a-hi.partocrs.com/upload/hotelimages/'. $id .'/main.jpg'
-            ], $ids)
+            collect($hotelImages->HotelImages)
+                ->groupBy('HotelId')
+                ->map(fn($item) => $item[0]['Links'])
+                ->map(fn($item) => [
+                    new HotelImageResource($item[0])
+                ])
         );
+        // return response()->json(
+        //     array_map(fn($id) => [
+        //         'id' => $id,
+        //         'image' => 'https://cdn-a-hi.partocrs.com/upload/hotelimages/'. $id .'/main.jpg'
+        //     ], $ids)
+        // );
     }
 
     public function show(int $hotelId)

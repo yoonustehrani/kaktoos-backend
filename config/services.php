@@ -50,7 +50,7 @@ return [
             'calendar_cache' => 60 // 1m
         ],
         'datetime_format' => 'Y-m-d\TH:i:s.uP',
-        'endpoint' => 'http://apidemo.partocrs.com/api/'
+        'endpoint' => 'https://apidemo.partocrs.com/api/'
     ],
 
     'sms' => [
