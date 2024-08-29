@@ -72,14 +72,10 @@ class HotelController extends Controller
         );
     }
 
-    public function checkHotelOffer(Request $request)
+    public function checkHotelOffer(string $ref)
     {
-        $request->validate([
-            'ref' => 'required|string|min:10'
-        ]);
-
         return new PartoHotelOfferResource(
-            Parto::api()->hotel()->checkOffer($request->input('ref'))
+            Parto::api()->hotel()->checkOffer($ref)->PricedItinerary
         );
     }
 

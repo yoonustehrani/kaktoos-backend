@@ -61,9 +61,9 @@ Route::post('/sanctum/token', function (Request $request) {
 Route::get('cities/search', [CityController::class, 'search']);
 
 Route::prefix('hotels')->group(function() {
-    Route::prefix('/offer', function() {
-        Route::post('/check', [HotelController::class, 'checkHotelOffer']);
-        Route::post('/book', [HotelBookingController::class, 'store'])->middleware('auth:sanctum');
+    Route::prefix('/offers')->group(function() {
+        Route::post('/{ref}/book', [HotelBookingController::class, 'store'])->middleware('auth:sanctum');
+        Route::get('/{ref}', [HotelController::class, 'checkHotelOffer']);
     });
     Route::get('/search', [HotelController::class, 'search']);
     Route::get('/images', [HotelImageController::class, 'index']);
