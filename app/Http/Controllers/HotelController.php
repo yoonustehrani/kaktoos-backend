@@ -72,6 +72,17 @@ class HotelController extends Controller
         );
     }
 
+    public function checkHotelOffer(Request $request)
+    {
+        $request->validate([
+            'ref' => 'required|string|min:10'
+        ]);
+
+        return new PartoHotelOfferResource(
+            Parto::api()->hotel()->checkOffer($request->input('ref'))
+        );
+    }
+
     protected function getPartoHotelQuery(Request $request, HotelSearchQueryBuilder $builder): HotelSearchQueryBuilder
     {
         $builder->setDates($request->input('start_date'), $request->input('end_date'));

@@ -43,7 +43,8 @@ class PartoClient
             }
         }
         $http = Http::acceptJson()->timeout(60)->asJson()->withHeader('Accept-Encoding', 'gzip')->withOptions([
-            'decode_content' => 'gzip'
+            'decode_content' => 'gzip',
+            'verify' => false
         ]);
         if ($auth) {
             $data['SessionId'] = $this->getPartoSession();
