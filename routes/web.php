@@ -4,25 +4,34 @@ use App\Events\OrderPaid;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\TicketController;
 use App\Models\Order;
+use App\Parto\Enums\HotelQueueStatus;
 use App\Payment\PaymentGateway;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('orders/{order}', function(Order $order, Request $request) {
-    $order->load('purchasable');
-    return $order;
+Route::get('/test', function() {
+    $order = Order::latest()->first();
+    return $order->purchasable;
+    // OrderPaid::dispatch($order);
 });
 
-Route::get('orders/{order}/events', function (Order $order) {
-    OrderPaid::dispatch($order);
-    return [
-        'okay' => true
-    ];
+Route::middleware('auth:sanctum')->group(function() {
+    Route::get('orders/{order}', function(Order $order, Request $request) {
+        $order->load('purchasable');
+        return $order;
+    });
+    
+    Route::get('orders/{order}/events', function (Order $order) {
+        OrderPaid::dispatch($order);
+        return [
+            'okay' => true
+        ];
+    });
+    
+    Route::get('orders/{order}/pay', [OrderController::class, 'pay'])->name('orders.pay');
+    Route::get('tickets/{ticketId}', [TicketController::class, 'show'])->name('tickets.show');
 });
-
-Route::get('orders/{order}/pay', [OrderController::class, 'pay'])->name('orders.pay');
-Route::get('tickets/{ticketId}', [TicketController::class, 'show'])->name('tickets.show');
 
 
 Route::get('/pay', function() {

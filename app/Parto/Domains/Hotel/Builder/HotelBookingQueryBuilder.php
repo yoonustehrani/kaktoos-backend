@@ -9,21 +9,24 @@ class HotelBookingQueryBuilder extends QueryBuilder
     public function __construct(?User $user = null)
     {
         $default = [
-            'ClientUniqueId' => $user?->id,
-            'PhoneNumber' => $user?->phone_number,
-            'Email' => $user?->email,
+            'ClientUniqueId' => null,
+            'PhoneNumber' => null,
+            'Email' => null,
             'Note' => null,
             'Rooms' => [],
             // 'HotelTransfers' => []
         ];
         $this->query = $default;
+        if ($user) {
+            $this->setUser($user);
+        }
     }
 
     public function setUser(User $user)
     {
         $this->set('PhoneNumber', $user->phone_number);
         $this->set('Email', $user->email);
-        return $this->set('ClientUniqueId', $user->id);
+        return $this->set('ClientUniqueId', "U{$user->id}");
     }
 
     public static function newRoom()

@@ -16,4 +16,14 @@ class Order extends Model
     {
         return $this->morphTo();
     }
+
+    public function transactions()
+    {
+        return $this->hasMany(Transaction::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

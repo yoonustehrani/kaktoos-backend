@@ -26,6 +26,14 @@ class PartoHotel extends PartoClient
         return $this->apiCall('Hotel/HotelBook', array_merge(['FareSourceCode' => $ref], $query->get()));
     }
 
+    public function getBookingData(string $uniqueId, int $userId)
+    {
+        return $this->apiCall('Hotel/HotelBookingData', [
+            'UniqueId' => $uniqueId,
+            'ClientUniqueId' => "U{$userId}"
+        ]);
+    }
+
     public function confirmHotelBook(string $uniqueId)
     {
         return $this->apiCall('Hotel/HotelOrder', ['UniqueId' => $uniqueId]);
@@ -33,7 +41,7 @@ class PartoHotel extends PartoClient
 
     public function cancelHotelBook(string $uniqueId, HotelCancellationQueryBuilder $query)
     {
-        return $this->apiCall('Hotel/HotelOrder', array_merge(['UniqueId' => $uniqueId], $query->get()));
+        return $this->apiCall('Hotel/HotelCancel', array_merge(['UniqueId' => $uniqueId], $query->get()));
     }
 
     public function requestHotelImages(int $hotelId)

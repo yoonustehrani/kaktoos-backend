@@ -27,7 +27,7 @@ class PartoHotelOfferResource extends JsonResource
                 return [
                     'id' => $room['RoomId'],
                     'name' => $room['Name'],
-                    'residents' => [
+                    'guests' => [
                         'adults' => $room['AdultCount'],
                         'children' => $room['ChildCount'],
                         'children_ages' => $room['ChildAges']
@@ -41,7 +41,7 @@ class PartoHotelOfferResource extends JsonResource
                 return [
                     'amount' => $policy['Amount'],
                     'percentage' => round(($policy['Amount'] / $this['NetRate']) * 100, 1),
-                    'from_date' => Carbon::parse($policy['FromDate'])->format('Y-m-d H:i:s'),
+                    'from_date' => Carbon::parse($policy['FromDate'])->format('Y-m-d'),
                     'currency' => $this['Currency']
                 ];
             }, $this['CancellationPolicies']),

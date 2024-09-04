@@ -74,8 +74,10 @@ class HotelController extends Controller
 
     public function checkHotelOffer(string $ref)
     {
-        return new PartoHotelOfferResource(
-            Parto::api()->hotel()->checkOffer($ref)->PricedItinerary
+        return response()->json(
+            new PartoHotelOfferResource(
+                Parto::api()->hotel()->checkOffer($ref)->PricedItinerary
+            )
         );
     }
 

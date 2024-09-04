@@ -3,6 +3,8 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+
+use App\Models\Parto\Hotel\HotelBooking;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -49,5 +51,10 @@ class User extends Authenticatable
     public function airBookings()
     {
         return $this->hasMany(AirBooking::class);
+    }
+
+    public function hotelBookings()
+    {
+        return $this->hasMany(HotelBooking::class);
     }
 }

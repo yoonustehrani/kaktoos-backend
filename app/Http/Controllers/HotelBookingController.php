@@ -3,39 +3,54 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\HotelBookingRequest;
+use App\Http\Resources\HotelBookingResource;
+use App\Models\Order;
+use App\Models\Parto\Hotel\HotelBooking;
 use App\Parto\Domains\Flight\Enums\TravellerGender;
 use App\Parto\Domains\Flight\Enums\TravellerPassengerType;
+use App\Parto\Domains\Hotel\Builder\HotelCancellationQueryBuilder;
 use App\Parto\Domains\Hotel\Builder\HotelPassengerBuilder;
+use App\Parto\Enums\HotelQueueStatus;
 use App\Parto\Facades\Parto;
+use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Carbon;
 
 class HotelBookingController extends Controller
 {
-    public function store(HotelBookingRequest $request)
+    public function show(HotelBooking $booking, Request $request)
     {
-        $ref = Parto::api()->hotel()->checkOffer($request->input('ref'))->PricedItinerary['FareSourceCode'];
+        return Parto::api()->hotel()->getBookingData($booking->parto_unique_id, $request->user()->id);
+    }
 
-        $booking = Parto::hotel()->hotelBooking($request->user());
-        foreach ($request->input('rooms') as $room) {
-            $roomQuery = Parto::hotel()->newHotelRoom();
-            foreach ($room['residents'] as $resident) {
-                switch (TravellerPassengerType::tryFrom($resident['type'])) {
-                    case TravellerPassengerType::Chd:
-                        $passenger = HotelPassengerBuilder::child(age: $resident['age'], gender: TravellerGender::tryFrom($resident['gender']));
-                        break;
-                    default:
-                        $passenger = HotelPassengerBuilder::adult(TravellerGender::tryFrom($resident['gender']));
-                        break;
-                }
-                $passenger->setName($resident['first_name'], $resident['last_name']);
-                if ($resident['national_id']) {
-                    $passenger->setNationalId($resident['national_id']);
-                } else {
-                    $passenger->setPassportNumber($resident['passport_number']);
-                }
-                $roomQuery->addPassenger($passenger);
-            }
-            $booking->addRoom($roomQuery);
-        }
-        return Parto::api()->hotel()->bookHotel($ref, $booking);
+    public function store(string $ref, HotelBookingRequest $request)
+    {
+        $offer = Parto::api()->hotel()->checkOffer($ref)->PricedItinerary;
+        $booking = new HotelBooking([
+            'hotel_id' => $offer['HotelId'],
+            'status' => HotelQueueStatus::Created
+        ]);
+        $booking->meta = [
+            'ref' => $offer['FareSourceCode'],
+            'rooms' => $request->input('rooms')
+        ];
+        $booking = $request->user()->hotelBookings()->save($booking);
+        $order = new Order([
+            'user_id' => $request->user()->id,
+            'title' => 'رزور هتل',
+            'amount' => $offer['NetRate']
+        ]);
+        $booking->order()->save($order);
+        return [
+            // 'time_limit' => $booking->payment_valid_until->format('Y-m-d H:i:s'),
+            'payment' => [
+                'amount' => $order->amount,
+                'currency' => $offer['Currency'],
+                'url' => route('orders.pay', ['order' => $order->id])
+            ]
+        ];
+        return response()->json(
+            new HotelBookingResource($hotelBooking)
+        );
     }
 }

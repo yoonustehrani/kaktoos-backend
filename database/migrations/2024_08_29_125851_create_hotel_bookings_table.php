@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Hotel;
 use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -13,11 +14,17 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('hotel_bookings', function (Blueprint $table) {
-            $table->id();
-            $table->string('parto_unique_id');
+            $table->ulid('id')->primary();
+            $table->foreignIdFor(Hotel::class);
+            $table->string('parto_unique_id')->nullable();
             $table->foreignIdFor(User::class)->index();
-            $table->string('status');
+            $table->unsignedInteger('status');
+            $table->string('supplier')->nullable();
+            $table->string('vat_number')->nullable();
+            $table->timestamp('payment_valid_until')->nullable();
+            $table->boolean('payment_time_extendable')->default(false);
             $table->timestamps();
+            $table->json('meta')->default(json_encode([]));
         });
     }
 

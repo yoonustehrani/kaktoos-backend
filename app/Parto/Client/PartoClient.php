@@ -57,6 +57,7 @@ class PartoClient
                 Cache::forget(self::AUTH_CACHE_KEY);
                 return $this->apiCall($uri, $data, $auth);
             }
+            throw $error;
         }
         if ($response->serverError()) {
             throw new Exception('Parto Server Error');

@@ -9,6 +9,9 @@ enum HotelQueueStatus: int
 {
     use EnumAttributeCatcher;
 
+    #[DisplayFa('بررسی نشده')]
+    case Created = 0;
+
     #[DisplayFa('رزرو شده')]
     case Booked = 10;
 
@@ -16,10 +19,10 @@ enum HotelQueueStatus: int
     case OnRequest = 11;
 
     #[DisplayFa('در حال بررسی')]
-    case Pending   = 12;
+    case Pending = 12;
 
     #[DisplayFa('تایید شده')]
-    case Confirm   = 20;
+    case Confirm = 20;
 
     // Confirm-Cancelled
     #[DisplayFa('لغو تایید')]

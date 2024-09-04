@@ -26,16 +26,16 @@ class HotelBookingRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'ref' => 'required|string',
+            // 'ref' => 'required|string',
             'rooms' => 'required|array',
-            'rooms.*.residents' => 'required|array',
-            'rooms.*.residents.*.first_name' => 'required|string|min:2|max:40',
-            'rooms.*.residents.*.last_name' => 'required|string|min:2|max:60',
-            'rooms.*.residents.*.type' => ['required', Rule::enum(TravellerPassengerType::class)],
-            'rooms.*.residents.*.age' => ['required_if:rooms.*.residents.*.type,' . TravellerPassengerType::Chd->value],
-            'rooms.*.residents.*.gender' => ['required', Rule::enum(TravellerGender::class)],
-            'rooms.*.residents.*.national_id' => ['required_without:rooms.*.residents.*.passport_number', 'string', 'numeric', 'digits:10'],
-            'rooms.*.residents.*.passport_number' => ['required_without:rooms.*.residents.*.national_id', 'string'],
+            'rooms.*.guests' => 'required|array',
+            'rooms.*.guests.*.first_name' => 'required|string|min:2|max:40',
+            'rooms.*.guests.*.last_name' => 'required|string|min:2|max:60',
+            'rooms.*.guests.*.type' => ['required', Rule::enum(TravellerPassengerType::class)],
+            'rooms.*.guests.*.age' => ['required_if:rooms.*.guests.*.type,' . TravellerPassengerType::Chd->value],
+            'rooms.*.guests.*.gender' => ['required', Rule::enum(TravellerGender::class)],
+            'rooms.*.guests.*.national_id' => ['required_without:rooms.*.guests.*.passport_number', 'string', 'numeric', 'digits:10'],
+            'rooms.*.guests.*.passport_number' => ['required_without:rooms.*.guests.*.national_id', 'string'],
         ];
     }
 }
