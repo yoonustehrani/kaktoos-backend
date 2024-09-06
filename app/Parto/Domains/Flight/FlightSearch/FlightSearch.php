@@ -34,7 +34,7 @@ final class FlightSearch
         }
         return $this;
     }
-    protected function setOriginDistinationData(string $key, string $value)
+    protected function setOriginDistinationData(string $key, string|int $value)
     {
         $this->setAttribute(self::ORIGING_DESTINATION_KEY . '.' . $key, $value);
     }
