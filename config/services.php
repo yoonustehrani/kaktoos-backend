@@ -46,7 +46,7 @@ return [
         'password' => env('PARTO_PASSWORD'),
         'office_id' => env('PARTO_OFFICEID'),
         'timing' => [
-            'flights_cache' => 60 * 2, // 1h
+            'flights_cache' => 60 * 2, // 2m
             'calendar_cache' => 60 // 1m
         ],
         'datetime_format' => 'Y-m-d\TH:i:s.uP',

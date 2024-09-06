@@ -18,7 +18,7 @@ class FlightSearchController extends Controller
 {
     use PaginatesCollections, FlightsSideJobs;
 
-    public function index(string $method, FlightSearchRequest $request)
+    public function __invoke(string $method, FlightSearchRequest $request)
     {
         abort_if(! in_array($method, ['one-way', 'roundtrip']), 404, "Search method not found");
         [$originLocationType, $origin] = explode(':', $request->input('origin'));

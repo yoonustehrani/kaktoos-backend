@@ -27,7 +27,7 @@ Route::prefix('airports')->group(function() {
 });
 
 Route::prefix('flights')->group(function() {
-    Route::post('search/{method}', [FlightSearchController::class, 'index']);
+    Route::post('search/{method}', FlightSearchController::class);
     Route::get('prices', [FlightPriceController::class, 'show']);
     Route::post('rules/fare',[FlightRulesController::class, 'fare']);
     Route::post('rules/baggage', [FlightRulesController::class, 'baggage']);
