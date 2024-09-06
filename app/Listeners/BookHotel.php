@@ -75,7 +75,7 @@ class BookHotel
         $booking->meta = [
             'cancellation' => [
                 'policies' => Arr::map($response->CancellationPolicies, fn($policy) => [
-                    'amount' => $policy['Amount'],
+                    'amount' => intval($policy['Amount']),
                     'currency' => 'IRR',
                     'from_date' => Carbon::parse($policy['FromDate'])->format('Y-m-d H:i:s')
                 ]),

@@ -34,7 +34,7 @@ class FlightSearchResource extends JsonResource
                 'reference' => $this['FareSourceCode'],
                 'type' => str(PartoFareType::tryFrom($this['AirItineraryPricingInfo']['FareType'])->name)->lower(),
                 'total' => [
-                    'amount' => $this['AirItineraryPricingInfo']['ItinTotalFare']['TotalFare'],
+                    'amount' => intval($this['AirItineraryPricingInfo']['ItinTotalFare']['TotalFare']),
                     'currency' => $this['AirItineraryPricingInfo']['ItinTotalFare']['Currency']
                 ],
                 'breakdown' => FlightFareBreakdownResource::collection($this['AirItineraryPricingInfo']['PtcFareBreakdown'])

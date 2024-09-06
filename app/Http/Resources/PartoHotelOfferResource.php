@@ -20,7 +20,7 @@ class PartoHotelOfferResource extends JsonResource
             'amenties' => $this['Amenities'],
             'available_room' => $this['AvailableRoom'],
             'net_rate' => [
-                'amount' => $this['NetRate'],
+                'amount' => intval($this['NetRate']),
                 'currency' => $this['Currency']
             ],
             'user_rooms' => array_map(function(array $room) {
@@ -39,7 +39,7 @@ class PartoHotelOfferResource extends JsonResource
             'hotel_policy' => new PartoHotelPolicyResource($this['HotelPolicy']),
             'cancellation_policies' => array_map(function(array $policy) {
                 return [
-                    'amount' => $policy['Amount'],
+                    'amount' => intval($policy['Amount']),
                     'percentage' => round(($policy['Amount'] / $this['NetRate']) * 100, 1),
                     'from_date' => Carbon::parse($policy['FromDate'])->format('Y-m-d'),
                     'currency' => $this['Currency']

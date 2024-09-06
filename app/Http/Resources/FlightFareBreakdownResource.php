@@ -19,11 +19,11 @@ class FlightFareBreakdownResource extends JsonResource
             'type' => str(PartoPassengerType::tryFrom($this['PassengerTypeQuantity']['PassengerType'])->name)->lower(),
             'quantity' => $this['PassengerTypeQuantity']['Quantity'],
             'unit' => [
-                'amount' => $this['PassengerFare']['TotalFare'],
+                'amount' => intval($this['PassengerFare']['TotalFare']),
                 'currency' => $this['PassengerFare']['Currency']
             ],
             'total' => [
-                'amount' => $this['PassengerFare']['TotalFare'] * $this['PassengerTypeQuantity']['Quantity'],
+                'amount' => intval($this['PassengerFare']['TotalFare'] * $this['PassengerTypeQuantity']['Quantity']),
                 'currency' => $this['PassengerFare']['Currency']
             ]
         ];

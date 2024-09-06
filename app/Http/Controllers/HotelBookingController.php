@@ -32,7 +32,7 @@ class HotelBookingController extends Controller
         $order = new Order([
             'user_id' => $request->user()->id,
             'title' => 'رزور هتل',
-            'amount' => $offer['NetRate']
+            'amount' => intval($offer['NetRate'])
         ]);
         $booking->order()->save($order);
         return [
