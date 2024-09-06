@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Parto\Client\Traits;
+namespace App\Parto\Client;
 
 use App\Parto\Client\PartoClient;
 use App\Parto\Domains\Flight\FlightBook\FlightBook;

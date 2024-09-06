@@ -2,8 +2,6 @@
 
 namespace App\Parto\Client;
 
-use App\Parto\Client\Traits\PartoAir;
-
 class PartoApi
 {
     public function __construct(public array $config)
