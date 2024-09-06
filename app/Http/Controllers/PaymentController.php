@@ -7,6 +7,7 @@ use App\Models\Order;
 use App\Models\Transaction;
 use App\Payment\PaymentGateway;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PaymentController extends Controller
 {
@@ -18,9 +19,9 @@ class PaymentController extends Controller
             'status' => 'required',
             'clientReferenceNumber' => 'required'
         ]);
-        /**
-         * @var \App\Payment\PaymentGateway
-         */
+        // /**
+        //  * @var \App\Payment\PaymentGateway
+        //  */
         // $payment = app()->make(PaymentGateway::getGatewayClassname('jibit'));
         // if ($request->input('status') == 'SUCCESSFUL') {
         //     // $result = $payment->gateway->getOrderById($request->input('purchaseId'));
@@ -40,13 +41,20 @@ class PaymentController extends Controller
         //     dd($request->all());
         // }
         // TODO: verify the purchase
+        /**
+         * @var \App\Models\Order
+         */
         $order = Transaction::findOrFail($request->input('clientReferenceNumber'))->order()->firstOrFail();
+        DB::transaction(function() use($order) {
+            $order->user?->increaseCredit($order->amout);
+        });
         OrderPaid::dispatch($order);
+        $url = preg_replace('/^([a-z]{1,}\.)(.+$)/i', '${2}', $request->host());
+        $url .= '/flight/final?url=' . urlencode($order->purchasable->getUri());
         return [
-            'okay' => true
+            'okay' => true,
+            'url' => $url
         ];
-        // $url = preg_replace('/^([a-z]{1,}\.)(.+$)/i', '${2}', $request->host());
-        // $url .= '/flight/final?url=' . urlencode($order->purchasable->getUri());
         // return redirect()->to($url);
     }
 }

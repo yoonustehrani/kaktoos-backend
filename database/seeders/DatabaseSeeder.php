@@ -17,20 +17,21 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call(CountrySeeder::class);
-        $this->call(StateSeeder::class);
-        $this->call(CitySeeder::class);
-        $this->call(AccommodationTypeSeeder::class);
-        $this->call(HotelSeeder::class);
+        // $this->call(StateSeeder::class);
+        // $this->call(CitySeeder::class);
+        // $this->call(AccommodationTypeSeeder::class);
+        // $this->call(HotelSeeder::class);
 
-        Process::run('php artisan scout:flush "' . Hotel::class . '"')->throw();
-        Process::run('php artisan scout:flush "' . City::class . '"')->throw();
+        // Process::run('php artisan scout:flush "' . Hotel::class . '"')->throw();
+        // Process::run('php artisan scout:flush "' . City::class . '"')->throw();
 
-        Process::run('php artisan scout:sync-index-settings');
+        // Process::run('php artisan scout:sync-index-settings');
 
-        Process::run('php artisan scout:import "' . Hotel::class . '"')->throw();
-        Process::run('php artisan scout:import "' . City::class . '"')->throw();
-        // $this->call(AirportSeeder::class);
-        // $this->call(AirlineSeeder::class);
+        // Process::run('php artisan scout:import "' . Hotel::class . '"')->throw();
+        // Process::run('php artisan scout:import "' . City::class . '"')->throw();
+
+        $this->call(AirportSeeder::class);
+        $this->call(AirlineSeeder::class);
 
         $user = User::factory()->state([
             'phone_number' => '09121234567',

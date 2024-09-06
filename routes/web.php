@@ -8,12 +8,13 @@ use App\Parto\Enums\HotelQueueStatus;
 use App\Payment\PaymentGateway;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Str;
 
 
 Route::get('/test', function() {
     $order = Order::latest()->first();
-    return $order->purchasable;
-    // OrderPaid::dispatch($order);
+    // return $order->purchasable;
+    OrderPaid::dispatch($order);
 });
 
 Route::middleware('auth:sanctum')->group(function() {
@@ -41,7 +42,7 @@ Route::get('/pay', function() {
     $purchase = app()->make(PaymentGateway::getGatewayClassname('jibit'));
     // $order->title
     $purchase->gateway->setRequestItem('description', 'پرداخت برای تست');
-    $purchase->init(amount: 1000, ref: \Str::random(18));
+    $purchase->init(amount: 1000, ref: Str::random(18));
     if ($purchase->requestPurchase()) {
         // $order->gateway_purchase_id = $purchase->getPurchaseId();
         // $order->save();

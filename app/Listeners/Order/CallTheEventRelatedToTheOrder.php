@@ -10,8 +10,15 @@ use App\Models\Parto\Hotel\HotelBooking;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 
-class CallTheEventRelatedToTheOrder
+class CallTheEventRelatedToTheOrder implements ShouldQueue
 {
+    /**
+     * The time (seconds) before the job should be processed.
+     *
+     * @var int
+     */
+    public $delay = 5;
+
     /**
      * Create the event listener.
      */

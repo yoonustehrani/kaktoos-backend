@@ -6,15 +6,9 @@ use App\Http\Requests\HotelBookingRequest;
 use App\Http\Resources\HotelBookingResource;
 use App\Models\Order;
 use App\Models\Parto\Hotel\HotelBooking;
-use App\Parto\Domains\Flight\Enums\TravellerGender;
-use App\Parto\Domains\Flight\Enums\TravellerPassengerType;
-use App\Parto\Domains\Hotel\Builder\HotelCancellationQueryBuilder;
-use App\Parto\Domains\Hotel\Builder\HotelPassengerBuilder;
 use App\Parto\Enums\HotelQueueStatus;
 use App\Parto\Facades\Parto;
 use Illuminate\Http\Request;
-use Illuminate\Support\Arr;
-use Illuminate\Support\Carbon;
 
 class HotelBookingController extends Controller
 {

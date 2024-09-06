@@ -36,7 +36,7 @@ class AirBookingController extends Controller
          */
         $user = $request->user();
         $airBook = Parto::flight()->flightBook();
-        $airBook->setFareCode($request->input('ref'))
+        $airBook->setFareCode($request->revalidated_flight->getFareSourceCode())
             ->setPhoneNumber($user->phone_number)
             ->setEmail('yoonustehrani28@gmail.com');
 
@@ -48,11 +48,11 @@ class AirBookingController extends Controller
                 ->setNationality($passenger['nationality'])
                 ->setPassengerType(TravellerPassengerType::tryFrom($passenger['type']))
                 ->setSeatPreference(TravellerSeatPreference::tryFrom('any'));
-            if ($request->revalidated_flight->isPassportMandatory()) {
+            if ($request->revalidated_flight->isPassportMandatory() || $passenger['passport']) {
                 $t->setPassport(
                     passportNumber: $passenger['passport']['passport_number'],
-                    expires_on: $passenger['passport']['expiry_date'],
-                    issued_on: $passenger['passport']['issue_date']
+                    expires_on: Carbon::createFromFormat('Y-m-d', $passenger['passport']['expiry_date']),
+                    issued_on: is_null($passenger['passport']['issue_date']) ? null : Carbon::createFromFormat('Y-m-d', $passenger['passport']['issue_date'])
                 );
             } else {
                 $t->setNationalId($passenger['national_id']);
@@ -102,6 +102,7 @@ class AirBookingController extends Controller
                 'price_changed' => $result->PriceChange ?? false,
                 'payment' => [
                     'amount' => $request->revalidated_flight->getTotalInRials(),
+                    'currency' => 'IRR',
                     'url' => route('orders.pay', ['order' => $order->id])
                 ]
             ];

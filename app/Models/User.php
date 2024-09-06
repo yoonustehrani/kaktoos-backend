@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 
+use App\CreditAction;
 use App\Models\Parto\Hotel\HotelBooking;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -56,5 +57,28 @@ class User extends Authenticatable
     public function hotelBookings()
     {
         return $this->hasMany(HotelBooking::class);
+    }
+
+    public function credit_logs()
+    {
+        return $this->hasMany(CreditLog::class);
+    }
+
+    public function increaseCredit(int $amount)
+    {
+        $this->increment('credit', $amount);
+        $this->credit_logs()->save(new CreditLog([
+            'amount' => abs($amount),
+            'status' => CreditAction::Increase
+        ]));
+    }
+
+    public function decreaseCredit(int $amount)
+    {
+        $this->decrement('credit', $amount);
+        $this->credit_logs()->save(new CreditLog([
+            'amount' => abs($amount) * -1,
+            'status' => CreditAction::Decrease
+        ]));
     }
 }

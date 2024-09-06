@@ -5,11 +5,10 @@ namespace App\Listeners;
 use App\Events\AirBookingOrderPaid;
 use App\Jobs\IssueNonWebFareTicket;
 use App\Jobs\IssueWebFareTicket;
-use App\Parto\Parto;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 
-class IssueAirTicket
+class IssueAirTicket implements ShouldQueue
 {
     /**
      * Create the event listener.
@@ -26,9 +25,9 @@ class IssueAirTicket
     {
         $booking = $event->order->purchasable;
         if ($booking->is_webfare) {
-            IssueWebFareTicket::dispatchSync($booking);
+            IssueWebFareTicket::dispatch($booking);
         } else {
-            IssueNonWebFareTicket::dispatchSync($booking);
+            IssueNonWebFareTicket::dispatch($booking);
         }
     }
 }
