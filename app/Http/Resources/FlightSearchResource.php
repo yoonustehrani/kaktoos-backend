@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Parto\Domains\Flight\Enums\AirSearch\AirTripType;
 use App\Parto\Domains\Flight\Enums\PartoFareType;
 use App\Parto\Domains\Flight\Enums\PartoPassengerType;
 use App\Parto\Domains\Flight\Enums\PartoRefundMethod;
@@ -21,6 +22,7 @@ class FlightSearchResource extends JsonResource
     public function toArray(Request $request): array
     {
         return [
+            'type' => str(AirTripType::tryFrom($this['DirectionInd'])->name)->kebab()->lower(),
             'closed' => $this['IsClosed'],
             'refund_type' => str(PartoRefundMethod::tryFrom($this['RefundMethod'])->name)->lower(),
             'passport' => [
