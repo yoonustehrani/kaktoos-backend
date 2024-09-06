@@ -51,10 +51,6 @@ class PaymentController extends Controller
         OrderPaid::dispatch($order);
         $url = preg_replace('/^([a-z]{1,}\.)(.+$)/i', '${2}', $request->host());
         $url .= '/flight/final?url=' . urlencode($order->purchasable->getUri());
-        return [
-            'okay' => true,
-            'url' => $url
-        ];
-        // return redirect()->to($url);
+        return redirect()->to($url);
     }
 }
