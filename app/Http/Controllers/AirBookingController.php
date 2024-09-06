@@ -25,6 +25,7 @@ use App\Parto\Facades\Parto;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Gate;
 
 class AirBookingController extends Controller
 {
@@ -130,6 +131,7 @@ class AirBookingController extends Controller
      */
     public function show(AirBooking $airBooking)
     {
+        Gate::authorize('view', $airBooking);
         if ($airBooking->parto_unique_id && $airBooking->status != AirQueueStatus::Ticketed) {
             $result = Parto::api()->air()->getBookingDetails($airBooking->parto_unique_id);
         }
@@ -148,10 +150,19 @@ class AirBookingController extends Controller
                 throw $th;
             }
         }
-        $airBooking->load(['passengers.tickets', 'flights']);
-        return $airBooking;
-        // return response()->json(new AirBookingResource($airBooking));
+        $airBooking->load(['passengers', 'flights']);
+        $airBooking->passengers->append('fullname')->makeHidden(['first_name', 'middle_name', 'last_name', 'title']);
+        return response()->json(new AirBookingResource($airBooking));
     }
+
+    public function showDetailed(AirBooking $airBooking)
+    {
+        Gate::authorize('view', $airBooking);
+        $airBooking->load(['passengers.tickets', 'flights']);
+        $airBooking->passengers->append('fullname')->makeHidden(['first_name', 'middle_name', 'last_name', 'title']);
+        return response()->json(new AirBookingResource($airBooking));
+    }
+    
     /**
      * Remove the specified resource from storage.
      */
