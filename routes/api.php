@@ -17,10 +17,6 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Validation\ValidationException;
 
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:sanctum');
-
 Route::prefix('airports')->group(function() {
     Route::get('/national', NationalAirportController::class . '@index');
     Route::get('/international', InternationalAirportController::class . '@index');
@@ -34,8 +30,11 @@ Route::prefix('flights')->group(function() {
     Route::post('reserve', [AirBookingController::class, 'store'])->middleware('auth:sanctum');
 });
 
-Route::middleware('auth:sanctum')->group(function() {
+Route::prefix('/user')->name('user.')->middleware('auth:sanctum')->group(function() {
+    Route::get('/', fn(Request $request) => $request->user());
     Route::get('bookings/air/{airBooking}', [AirBookingController::class, 'show'])->name('bookings.air.show');
+    // [AirBookingController::class, 'show']
+    Route::get('bookings/hotel/{hotelBooking}', fn() => ['okay' => true])->name('bookings.hotel.show');
 });
 
 Route::post('/login', [UserAuthController::class, 'login']);

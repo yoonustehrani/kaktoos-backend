@@ -3,7 +3,8 @@
 namespace App\Parto\Domains\Flight\Enums;
 
 enum PartoPassengerType: int {
-    case Adult = 1;
-    case Child = 2;
-    case Infant = 3;
+    // case SeniorAdt = 0;
+    case Adt = 1;
+    case Chd = 2;
+    case Inf = 3;
 }

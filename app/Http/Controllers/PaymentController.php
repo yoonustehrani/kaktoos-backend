@@ -46,7 +46,7 @@ class PaymentController extends Controller
          */
         $order = Transaction::findOrFail($request->input('clientReferenceNumber'))->order()->firstOrFail();
         DB::transaction(function() use($order) {
-            $order->user?->increaseCredit($order->amout);
+            $order->user?->increaseCredit($order->amount);
         });
         OrderPaid::dispatch($order);
         $url = preg_replace('/^([a-z]{1,}\.)(.+$)/i', '${2}', $request->host());

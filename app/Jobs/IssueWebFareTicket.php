@@ -36,13 +36,17 @@ class IssueWebFareTicket implements ShouldQueue
             );
             $this->airBooking->parto_unique_id = $result->UniqueId;
             $this->airBooking->status = AirQueueStatus::tryFrom($result->Status);
-            $this->airBooking->status_notes = AirQueueStatus::tryFrom($result->Status)->getDescription();
             $this->airBooking->meta = [];
             $this->airBooking->save();
         } catch (PartoErrorException $error) {
             Log::error(json_encode($error->getErrorObject(), JSON_PRETTY_PRINT));
             $this->airBooking->status = AirQueueStatus::Exception;
-            $this->airBooking->status_notes = $error->getMessage();
+            $this->airBooking->meta = array_merge($this->airBooking->meta, [
+                'error' => [
+                    'id' => $error->id,
+                    'message' => $error->getMessage()
+                ]
+            ]);
             $this->airBooking->save();
         }
     }

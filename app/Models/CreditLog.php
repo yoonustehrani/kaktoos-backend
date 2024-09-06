@@ -10,6 +10,8 @@ class CreditLog extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['amount', 'action', 'description'];
+
     /**
      * Get the attributes that should be cast.
      *

@@ -42,4 +42,9 @@ class HotelBooking extends Model
     {
         return $this->hasMany(HotelBookedRoom::class);
     }
+
+    public function getUri()
+    {
+        return route('user.bookings.hotel.show', ['airBooking' => $this->id]);
+    }
 }

@@ -3,17 +3,27 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\FlightBookingRequest;
+use App\Http\Resources\AirBookingResource;
+use App\Jobs\InsertTicketData;
 use App\Models\AirBooking;
+use App\Models\ETicket;
 use App\Models\Order;
+use App\Models\Parto\Air\Flight;
+use App\Models\Passenger;
 use App\Parto\Domains\Flight\Enums\AirBook\AirBookCategory;
 use App\Parto\Domains\Flight\Enums\AirBook\AirQueueStatus;
+use App\Parto\Domains\Flight\Enums\AirSearch\PartoCabinType;
+use App\Parto\Domains\Flight\Enums\FlightCabinType;
 use App\Parto\Domains\Flight\Enums\PartoFareType;
+use App\Parto\Domains\Flight\Enums\PartoPassengerGender;
+use App\Parto\Domains\Flight\Enums\PartoPassengerType;
 use App\Parto\Domains\Flight\Enums\TravellerGender;
 use App\Parto\Domains\Flight\Enums\TravellerPassengerType;
 use App\Parto\Domains\Flight\Enums\TravellerSeatPreference;
 use App\Parto\Domains\Flight\FlightBook\AirTraveler;
 use App\Parto\Facades\Parto;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 
 class AirBookingController extends Controller
@@ -59,8 +69,8 @@ class AirBookingController extends Controller
             }
             $airBook->addTraveler($t);
         }
-        
         $booking = new AirBooking();
+        $booking->refund_type = $request->revalidated_flight->get('RefundMethod');
         $booking->is_webfare = $request->revalidated_flight->isWebfare();
         $status = AirQueueStatus::Booked;
 
@@ -86,7 +96,6 @@ class AirBookingController extends Controller
         }
 
         $booking->status = $status;
-        $booking->status_notes = $status->getDescription();
         
         try {
             DB::beginTransaction();
@@ -114,20 +123,35 @@ class AirBookingController extends Controller
         }
     }
 
+
+    
     /**
      * Display the specified resource.
      */
     public function show(AirBooking $airBooking)
     {
-        if ($airBooking->parto_unique_id && AirQueueStatus::tryFrom($airBooking->status) != AirQueueStatus::Ticketed) {
+        if ($airBooking->parto_unique_id && $airBooking->status != AirQueueStatus::Ticketed) {
             $result = Parto::api()->air()->getBookingDetails($airBooking->parto_unique_id);
-            $airBooking->update([
-                'status' => AirQueueStatus::tryFrom($result->Status)
-            ]);
         }
-        return response()->json($airBooking);
+        if (isset($result)) {
+            try {
+                DB::beginTransaction();
+                if ($airBooking->parto_unique_id && AirQueueStatus::tryFrom($result->Status) == AirQueueStatus::Ticketed) {
+                    InsertTicketData::dispatchSync($airBooking, $result->TravelItinerary['ItineraryInfo']);
+                }
+                $airBooking->update([
+                    'status' => AirQueueStatus::tryFrom($result->Status)
+                ]);
+                DB::commit();
+            } catch (\Throwable $th) {
+                DB::rollBack();
+                throw $th;
+            }
+        }
+        $airBooking->load(['passengers.tickets', 'flights']);
+        return $airBooking;
+        // return response()->json(new AirBookingResource($airBooking));
     }
-
     /**
      * Remove the specified resource from storage.
      */

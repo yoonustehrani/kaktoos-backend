@@ -7,12 +7,16 @@ use App\Models\Order;
 use App\Parto\Enums\HotelQueueStatus;
 use App\Payment\PaymentGateway;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 
 
 Route::get('/test', function() {
     $order = Order::latest()->first();
+    DB::transaction(function() use($order) {
+        $order->user?->increaseCredit($order->amount);
+    });
     // return $order->purchasable;
     OrderPaid::dispatch($order);
 });

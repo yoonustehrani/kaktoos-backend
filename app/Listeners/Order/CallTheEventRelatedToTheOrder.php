@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Listeners;
+namespace App\Listeners\Order;
 
 use App\Events\AirBookingOrderPaid;
 use App\Events\OrderPaid;
