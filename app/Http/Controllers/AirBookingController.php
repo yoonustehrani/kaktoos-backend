@@ -119,6 +119,12 @@ class AirBookingController extends Controller
      */
     public function show(AirBooking $airBooking)
     {
+        if ($airBooking->parto_unique_id && AirQueueStatus::tryFrom($airBooking->status) != AirQueueStatus::Ticketed) {
+            $result = Parto::api()->air()->getBookingDetails($airBooking->parto_unique_id);
+            $airBooking->update([
+                'status' => AirQueueStatus::tryFrom($result->Status)
+            ]);
+        }
         return response()->json($airBooking);
     }
 

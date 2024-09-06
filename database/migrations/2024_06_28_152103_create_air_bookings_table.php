@@ -14,6 +14,7 @@ return new class extends Migration
     {
         Schema::create('air_bookings', function (Blueprint $table) {
             $table->id();
+            $table->unsignedInteger('type');
             $table->boolean('is_webfare');
             $table->string('parto_unique_id')->nullable();
             $table->foreignIdFor(User::class)->index();

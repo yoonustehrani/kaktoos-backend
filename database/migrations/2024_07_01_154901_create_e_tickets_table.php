@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('ticket_number');
             $table->unsignedInteger('status');
-            $table->foreignIdFor(AirBooking::class); // UniqueId
+            $table->foreignIdFor(AirBooking::class);
             $table->foreignIdFor(Passenger::class);
             $table->timestamp('issued_at');
             $table->string('airline_pnr');
