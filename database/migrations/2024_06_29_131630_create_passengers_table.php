@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\AirBooking;
 use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -14,13 +15,17 @@ return new class extends Migration
     {
         Schema::create('passengers', function (Blueprint $table) {
             $table->ulid('id')->primary()->unique();
-            $table->foreignIdFor(User::class);
-            $table->ulid('parent_id')->nullable();
+            $table->foreignIdFor(AirBooking::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate(); // air_booking_id
+            // $table->foreignIdFor(User::class)->index(); // user_id
+            $table->enum('gender', ['male', 'female']); // "Male" "Female"
+            $table->string('type'); // "SeniorAdt" "Adt" "Chd" "Inf"
+            $table->string('title'); // "Mr" "Mrs" "Ms" "Miss" "Mstr"
             $table->string('first_name');
             $table->string('middle_name')->nullable();
             $table->string('last_name');
             $table->date('birthdate');
             $table->string('country_code')->default('IR');
+            $table->string('national_code')->nullable();
             $table->string('passport_number')->nullable();
             $table->date('passport_expires_on')->nullable();
             $table->date('passport_issued_on')->nullable();

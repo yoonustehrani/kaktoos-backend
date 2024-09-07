@@ -2,7 +2,8 @@
 
 namespace App\Parto\Domains;
 
-use App\Parto\Domains\Flight\FlightSearch;
+use App\Parto\Domains\Flight\FlightBook\FlightBook;
+use App\Parto\Domains\Flight\FlightSearch\FlightSearch;
 
 class FlightService
 {
@@ -13,6 +14,11 @@ class FlightService
 
     public function flightSearch()
     {
-        return new FlightSearch();
+        return new FlightSearch;
+    }
+
+    public function flightBook()
+    {
+        return new FlightBook;
     }
 }

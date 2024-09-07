@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::table('users', function(Blueprint $table) {
             $table->timestamp('locked_until')->nullable()->after('remember_token');
+            $table->bigInteger('credit')->unsigned();
         });
     }
 
@@ -22,7 +23,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('users', function(Blueprint $table) {
-            $table->dropColumn(['locked_until']);
+            $table->dropColumn(['locked_until', 'credit']);
         });
     }
 };
