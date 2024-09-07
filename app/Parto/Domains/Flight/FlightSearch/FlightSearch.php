@@ -2,8 +2,12 @@
 
 namespace App\Parto\Domains\Flight\FlightSearch;
 
-use App\Parto\Domains\Flight\Enums\AirTripType;
 use App\Parto\Domains\Flight\Enums\FlightCabinType;
+use App\Parto\Domains\Flight\Enums\AirSearch\AirTripType;
+use App\Parto\Domains\Flight\Enums\AirSearch\MaxStopsQuantity;
+use App\Parto\Domains\Flight\Enums\AirSearch\PartoCabinType;
+use App\Parto\Domains\Flight\Enums\AirSearch\PricingSourceType;
+use App\Parto\Domains\Flight\Enums\AirSearch\RequestOption;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 
@@ -15,8 +19,8 @@ final class FlightSearch
 
     public function __construct()
     {
-        $this->setAttribute('PricingSourceType', 'All');
-        $this->setAttribute('RequestOption', 'All');
+        $this->setAttribute('PricingSourceType', PricingSourceType::All->value);
+        $this->setAttribute('RequestOption', RequestOption::All->value);
     }
     protected function setAttribute(string $attr, mixed $value)
     {
@@ -30,7 +34,7 @@ final class FlightSearch
         }
         return $this;
     }
-    protected function setOriginDistinationData(string $key, string $value)
+    protected function setOriginDistinationData(string $key, string|int $value)
     {
         $this->setAttribute(self::ORIGING_DESTINATION_KEY . '.' . $key, $value);
     }
@@ -42,13 +46,13 @@ final class FlightSearch
         if (is_null($cabin)) {
             $cabin = FlightCabinType::Default;
         }
-        $this->setAttribute(self::TRAVEL_INFO_KEY . '.CabinType', $cabin->name);
+        $this->setAttribute(self::TRAVEL_INFO_KEY . '.CabinType', PartoCabinType::{$cabin->name}->value);
         return $this;
     }
     public function oneWay(FlightOriginDestination $data)
     {
-        $this->setAttribute(self::TRAVEL_INFO_KEY . '.MaxStopsQuantity', 'All');
-        $this->setAttribute(self::TRAVEL_INFO_KEY . '.AirTripType', AirTripType::OneWay->name);
+        $this->setAttribute(self::TRAVEL_INFO_KEY . '.MaxStopsQuantity', MaxStopsQuantity::All->value);
+        $this->setAttribute(self::TRAVEL_INFO_KEY . '.AirTripType', AirTripType::OneWay->value);
         foreach ($data->toArray() as $key => $value) {
             $this->setOriginDistinationData("0.$key", $value);
         }
@@ -57,7 +61,7 @@ final class FlightSearch
     public function roundtrip(FlightOriginDestination $first, FlightOriginDestination $second)
     {
         $this->setAttribute(self::TRAVEL_INFO_KEY . '.MaxStopsQuantity', 'All');
-        $this->setAttribute(self::TRAVEL_INFO_KEY . '.AirTripType', AirTripType::Return->name);
+        $this->setAttribute(self::TRAVEL_INFO_KEY . '.AirTripType', AirTripType::Return->value);
         foreach ($first->toArray() as $key => $value) {
             $this->setOriginDistinationData("0.$key", $value);
         }
@@ -68,7 +72,7 @@ final class FlightSearch
     }
     public function multi(FlightOriginDestination $first, FlightOriginDestination ...$data)
     {
-        $this->setAttribute(self::TRAVEL_INFO_KEY . '.AirTripType', AirTripType::Circle->name);
+        $this->setAttribute(self::TRAVEL_INFO_KEY . '.AirTripType', AirTripType::Circle->value);
         return $this;
     }
     /**

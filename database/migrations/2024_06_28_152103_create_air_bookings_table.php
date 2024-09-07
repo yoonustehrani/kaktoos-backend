@@ -14,11 +14,12 @@ return new class extends Migration
     {
         Schema::create('air_bookings', function (Blueprint $table) {
             $table->id();
+            $table->unsignedInteger('type');
+            $table->unsignedInteger('refund_type');
             $table->boolean('is_webfare');
             $table->string('parto_unique_id')->nullable();
             $table->foreignIdFor(User::class)->index();
             $table->string('status');
-            $table->text('status_notes');
             $table->timestamp('valid_until');
             $table->timestamps();
             $table->json('meta')->default(json_encode([]));

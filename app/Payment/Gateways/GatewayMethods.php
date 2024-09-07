@@ -4,6 +4,7 @@ namespace App\Payment\Gateways;
 
 use App\Payment\IranianCurrency;
 use Exception;
+use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
 
 interface IPaymentGateway
@@ -21,7 +22,7 @@ abstract class GatewayMethods implements IPaymentGateway {
     abstract public function getGatewayName(): string;
     abstract public function config(array $config): void;
     abstract public function requestPayment();
-    abstract public function validatePayment();
+    abstract public function validatePayment(Request $request);
 
     public function getCallbackUrl() {
         return route('payment.verify', ['gateway' => $this->getGatewayName()]);

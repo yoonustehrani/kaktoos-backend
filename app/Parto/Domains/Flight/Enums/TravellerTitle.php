@@ -2,11 +2,11 @@
 
 namespace App\Parto\Domains\Flight\Enums;
 
-enum TravellerTitle
+enum TravellerTitle: int
 {
-    case Mr;
-    case Mrs;
-    case Ms;
-    case Miss;
-    case Mstr;
+    case Mr  = 0;
+    case Mrs = 1;
+    case Ms  = 2;
+    case Miss = 3;
+    case Mstr = 4;
 }

@@ -20,10 +20,10 @@ class AirportSeeder extends Seeder
         $iata_codes = array_keys($airports_json); 
         // LocationFa
         for ($i=1; $i <= 10; $i++) { 
-            print("\nprocessing $i.csv\n");
+            $this->command->alert("processing $i.csv");
             $airports = $this->read(__DIR__ . "/data/airports/$i.csv");
             $count = $airports->count();
-            print("\nprocessing $count airports");
+            $this->command->info("processing $count airports");
             $result = $airports->filter(fn($airport) => $airport['country_code'] != 'IL')->map(function($airport) use($airports_json, $iata_codes) {
                 $airport['is_international'] = false;
                 if (strlen($airport['country_code']) > 2) {
@@ -51,7 +51,7 @@ class AirportSeeder extends Seeder
             });
             $result->chunk(200)->map(function($chunked_results, $key) {
                 $k = $key + 1;
-                print("\ninserting 200 airports - part: $k\n");
+                $this->command->info("inserting 200 airports - part: $k");
                 try {
                     Airport::insert($chunked_results->toArray());
                 } catch (\Throwable $th) {

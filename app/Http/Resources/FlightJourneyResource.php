@@ -3,7 +3,7 @@
 namespace App\Http\Resources;
 
 use App\Parto\Domains\Flight\Enums\FlightCabinType;
-use App\Parto\Domains\Flight\Enums\PartoCabinType;
+use App\Parto\Domains\Flight\Enums\AirSearch\PartoCabinType;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 

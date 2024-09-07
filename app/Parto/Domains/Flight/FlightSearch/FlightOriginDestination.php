@@ -2,6 +2,7 @@
 
 namespace App\Parto\Domains\Flight\FlightSearch;
 
+use App\Parto\Domains\Flight\Enums\AirSearch\OriginDestinationType;
 use App\Parto\Domains\Flight\Enums\FlightLocationType;
 
 class FlightOriginDestination
@@ -24,9 +25,9 @@ class FlightOriginDestination
         return [
             'DepartureDateTime' => $this->getFormattedDepartureDateTime(),
             'OriginLocationCode' => $this->originCode,
-            'OriginType' => $this->originLocationType->name,
+            'OriginType' => OriginDestinationType::{$this->originLocationType->name}->value,
             'DestinationLocationCode' => $this->destinationCode,
-            'DestinationType' => $this->destinationLocationType->name
+            'DestinationType' => OriginDestinationType::{$this->destinationLocationType->name}->value
         ];
     }
     public function toObject()

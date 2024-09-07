@@ -2,6 +2,8 @@
 
 namespace App\Parto\Domains\Flight\FlightBook;
 
+use App\Parto\Domains\Flight\Enums\PartoPassengerGender;
+use App\Parto\Domains\Flight\Enums\PartoPassengerType;
 use App\Parto\Domains\Flight\Enums\TravellerGender;
 use App\Parto\Domains\Flight\Enums\TravellerPassengerType;
 use App\Parto\Domains\Flight\Enums\TravellerSeatPreference;
@@ -27,7 +29,8 @@ class AirTraveler
             'Passport' => [
                 'Country' => null,
                 'IssueDate' => null,
-                'PassportNumber' => null
+                'PassportNumber' => null,
+                'ExpiryDate' => null
             ],
             'NationalId' => ''
         ]);
@@ -41,9 +44,8 @@ class AirTraveler
     protected function configureTitle()
     {
         $title = null;
-        $is_male = $this->attributes->get('Gender') === TravellerGender::Male->name;
-        
-        switch ($this->attributes->get('PassengerType')) {
+        $is_male = TravellerGender::{PartoPassengerGender::tryFrom($this->attributes->get('Gender'))->name} === TravellerGender::Male;
+        switch (PartoPassengerType::tryFrom($this->attributes->get('PassengerType'))->name) {
             case TravellerPassengerType::Adt->name:
                 $title = $is_male ? TravellerTitle::Mr : TravellerTitle::Ms;
                 break;
@@ -62,21 +64,21 @@ class AirTraveler
     {
         $this->configureTitle();
         $attrs = $this->attributes->undot();
-        if (is_null($this->attributes['Passport']['PassportNumber'])) {
-            $attrs->put('Passport', []);
-        }
+        // if (is_null($this->attributes['Passport']['PassportNumber'])) {
+        //     $attrs->put('Passport', []);
+        // }
         return $attrs;
     }
 
     public function setPassengerType(TravellerPassengerType $type)
     {
-        $this->attributes->put('PassengerType', $type->name);
+        $this->attributes->put('PassengerType', PartoPassengerType::{$type->name}->value);
         return $this;
     }
 
     public function setGender(TravellerGender $gender)
     {
-        $this->attributes->put('Gender', $gender->name);
+        $this->attributes->put('Gender', PartoPassengerGender::{$gender->name}->value);
         return $this;
     }
 

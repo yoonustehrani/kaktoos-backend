@@ -6,6 +6,7 @@ use App\Payment\Interfaces\IPaymentGateway;
 use App\Payment\IranianCurrency;
 use App\Payment\Traits\JibitToken;
 use Exception;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 
 class JibitGateway extends GatewayMethods
@@ -42,7 +43,7 @@ class JibitGateway extends GatewayMethods
             'amount' => $this->getAmount(),
             'clientReferenceNumber' => $this->ref,
             'currency' => 'IRR',
-            'userIdentifier' => auth()->user()->id,
+            'userIdentifier' => auth()->user()?->id ?? null,
             'description' => $this->requestData['description'] ?? '',
             'callbackUrl' => $this->requestData['callbackUrl']
         ];
@@ -54,10 +55,27 @@ class JibitGateway extends GatewayMethods
         }
         throw new Exception('Jibi error');
     }
-    public function validatePayment()
+    public function validatePayment(Request $request)
     {
-        
+        $url = '/purchases/' . $request->input('purchaseId') . '/verify';
+        $result = $this->apiCall(url: $url, data: [], withAuth: true, method: 'POST');
+        // if (condition) {
+        //     # code...
+        // }
+        return $result;
     }
+
+    /**
+     * @param $id
+     * @return bool|mixed|string
+     * @throws Exception
+     */
+    public function getOrderById($purchaseId)
+    {
+        return  $this->apiCall(url: '/purchases?purchaseId=' . $purchaseId, data: [], withAuth: true, method: 'GET');
+
+    }
+
     /**
      * @param $url
      * @param $arrayData
@@ -77,7 +95,7 @@ class JibitGateway extends GatewayMethods
             }
             $http->withToken($this->getAccessToken());
         }
-        $response = $http->post(self::BASE_URL . $url, $data);
+        $response = $method == 'POST' ? $http->post(self::BASE_URL . $url, $data) : $http->get(self::BASE_URL . $url);
         if ($response->clientError()) {
             $errors = collect($response->json('errors'));
             $codes = $errors->pluck('code');

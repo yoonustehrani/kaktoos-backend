@@ -27,6 +27,10 @@ class PricedItinerary
             )['ArrivalDateTime']
         );
     }
+    public function getFareSourceCode()
+    {
+        return $this->get('FareSourceCode');
+    }
     public function getTotalInRials()
     {
         return intval(Arr::get($this->result->toArray(), 'AirItineraryPricingInfo.ItinTotalFare.TotalFare'));

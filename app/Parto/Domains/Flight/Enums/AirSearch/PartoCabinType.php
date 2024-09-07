@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Parto\Domains\Flight\Enums;
+namespace App\Parto\Domains\Flight\Enums\AirSearch;
 
 enum PartoCabinType: int {
     case Y = 1;

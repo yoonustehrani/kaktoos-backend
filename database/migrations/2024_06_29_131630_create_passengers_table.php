@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('passengers', function (Blueprint $table) {
             $table->ulid('id')->primary()->unique();
-            $table->foreignIdFor(AirBooking::class); // air_booking_id
-            $table->foreignIdFor(User::class)->index(); // user_id
+            $table->foreignIdFor(AirBooking::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate(); // air_booking_id
+            // $table->foreignIdFor(User::class)->index(); // user_id
             $table->enum('gender', ['male', 'female']); // "Male" "Female"
             $table->string('type'); // "SeniorAdt" "Adt" "Chd" "Inf"
             $table->string('title'); // "Mr" "Mrs" "Ms" "Miss" "Mstr"

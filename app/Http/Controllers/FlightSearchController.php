@@ -8,7 +8,7 @@ use App\Parto\Domains\Flight\Enums\FlightCabinType;
 use App\Parto\Domains\Flight\Enums\FlightLocationType;
 use App\Parto\Domains\Flight\FlightSearch\FlightOriginDestination;
 use App\Parto\Domains\Flight\FlightSearch\FlightSearch;
-use App\Parto\Parto;
+use App\Parto\Facades\Parto;
 use App\Traits\FlightsSideJobs;
 use App\Traits\PaginatesCollections;
 use Illuminate\Http\Request;
@@ -18,19 +18,17 @@ class FlightSearchController extends Controller
 {
     use PaginatesCollections, FlightsSideJobs;
 
-    public function index(string $method, FlightSearchRequest $request)
+    public function __invoke(string $method, FlightSearchRequest $request)
     {
         abort_if(! in_array($method, ['one-way', 'roundtrip']), 404, "Search method not found");
         [$originLocationType, $origin] = explode(':', $request->input('origin'));
         [$destinationLocationType, $destination] = explode(':', $request->input('destination'));
 
-        $parto = Parto::flight();
-        $flight_search = $parto->flightSearch()
+        $flight_search = Parto::flight()->flightSearch()
             ->setCount(
                 adult: $request->input('passengers.adults'),
                 child: $request->input('passengers.children', 0),
                 infant: $request->input('passengers.infants', 0)
-                
             )
             ->setCabinType(FlightCabinType::tryFrom($request->input('cabin_type', null)));
         $cache_key = implode(':', [$request->input('passengers.adults'), $request->input('passengers.children', 0), $request->input('passengers.infants', 0)]);
@@ -75,7 +73,7 @@ class FlightSearchController extends Controller
     protected function returnFlights(FlightSearch $flightSearch, Request $request, string $cache_key)
     {
         $flights = cache()->remember(md5($cache_key), config('services.parto.timing.flights_cache'), function () use($flightSearch) {
-            return app('parto')->searchFlight($flightSearch)?->PricedItineraries ?? [];
+            return Parto::api()->air()->searchFlight($flightSearch)?->PricedItineraries ?? [];
         });
         if (count($flights) > 0) {
             $this->takeCareOfSideEffects(collect($flights), $request);

@@ -6,10 +6,11 @@ use App\Parto\Domains\Flight\Enums\TravellerGender;
 use App\Parto\Domains\Flight\Enums\TravellerPassengerType;
 use App\Parto\Domains\Flight\Enums\TravellerSeatPreference;
 use App\Parto\Domains\Flight\PricedItinerary;
-use App\Parto\Parto;
+use App\Parto\Facades\Parto;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Validation\Validator;
 use Illuminate\Validation\Rule;
@@ -22,11 +23,14 @@ class FlightBookingRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        $revalidated = Parto::revalidate($this->input('ref'))?->PricedItinerary;
+        $this->validate([
+            'ref' => 'required|string|min:20'
+        ]);
+        $revalidated = Parto::api()->air()->revalidate($this->input('ref'))?->PricedItinerary;
         abort_if(! $revalidated, 404, 'Couldn\'t find the flight');
         $this->revalidated_flight = new PricedItinerary($revalidated);
         
-        return auth()->check();
+        return Auth::check();
     }
 
     /**
