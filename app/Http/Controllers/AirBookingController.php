@@ -63,7 +63,7 @@ class AirBookingController extends Controller
                 $t->setPassport(
                     passportNumber: $passenger['passport']['passport_number'],
                     expires_on: Carbon::createFromFormat('Y-m-d', $passenger['passport']['expiry_date']),
-                    issued_on: is_null($passenger['passport']['issue_date']) ? null : Carbon::createFromFormat('Y-m-d', $passenger['passport']['issue_date'])
+                    issued_on: ! isset($passenger['passport']['issue_date']) ? null : Carbon::createFromFormat('Y-m-d', $passenger['passport']['issue_date'])
                 );
             } else {
                 $t->setNationalId($passenger['national_id']);
