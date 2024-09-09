@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Events\OrderPaid;
+use App\Models\AirBooking;
 use App\Models\Order;
+use App\Models\Parto\Hotel\HotelBooking;
 use App\Models\Transaction;
 use App\Payment\PaymentGateway;
 use Illuminate\Http\Request;
@@ -49,9 +51,18 @@ class PaymentController extends Controller
             $order->user?->increaseCredit($order->amount);
         });
         OrderPaid::dispatch($order);
-        // preg_replace('/^([a-z]{1,}\.)(.+$)/i', '${2}', $request->host());
+
         $url = str_replace('api.', '', config('app.url'));
-        $url .= '/flight/final?url=' . urlencode($order->purchasable->getUri());
+        switch ($order->purchasable_type) {
+            case AirBooking::class:
+                $url .= '/flight';
+                break;
+            case HotelBooking::class:
+                $url .= '/hotel';
+                break;
+        }
+        $url .= '/final?url=' . urlencode($order->purchasable->getUri());
+        
         return redirect()->away($url);
     }
 }

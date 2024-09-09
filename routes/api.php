@@ -32,10 +32,11 @@ Route::prefix('flights')->group(function() {
 
 Route::prefix('/user')->name('user.')->middleware('auth:sanctum')->group(function() {
     Route::get('/', fn(Request $request) => $request->user());
-    Route::get('bookings/air/{airBooking}', [AirBookingController::class, 'show'])->name('bookings.air.show');
-    Route::get('bookings/air/{airBooking}/details', [AirBookingController::class, 'showDetailed'])->name('bookings.air.show.detailes');
-    // [AirBookingController::class, 'show']
-    Route::get('bookings/hotel/{hotelBooking}', fn() => ['okay' => true])->name('bookings.hotel.show');
+    Route::prefix('/bookings')->name('bookings.')->group(function() {
+        Route::get('/air/{airBooking}', [AirBookingController::class, 'show'])->name('air.show');
+        Route::get('/air/{airBooking}/details', [AirBookingController::class, 'showDetailed'])->name('air.show.detailes');
+        Route::get('/hotel/{hotelBooking}', fn() => ['okay' => true])->name('hotel.show');
+    });
 });
 
 Route::post('/login', [UserAuthController::class, 'login']);
