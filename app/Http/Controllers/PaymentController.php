@@ -49,7 +49,8 @@ class PaymentController extends Controller
             $order->user?->increaseCredit($order->amount);
         });
         OrderPaid::dispatch($order);
-        $url = preg_replace('/^([a-z]{1,}\.)(.+$)/i', '${2}', $request->host());
+        // preg_replace('/^([a-z]{1,}\.)(.+$)/i', '${2}', $request->host());
+        $url = str_replace('api.', '', config('app.url'));
         $url .= '/flight/final?url=' . urlencode($order->purchasable->getUri());
         return redirect()->away($url);
     }
