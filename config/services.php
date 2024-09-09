@@ -63,7 +63,7 @@ return [
                 'login' => intval(env('MELLI_PAYAMAK_LOGIN_PATTERN'))
             ]
         ],
-        'enabled' => false
+        'enabled' => env('SMS_ENABLED', false)
     ]
 
 ];
