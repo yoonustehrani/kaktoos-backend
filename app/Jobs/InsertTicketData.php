@@ -102,7 +102,6 @@ class InsertTicketData implements ShouldQueue
                 ]), $customer['ETicketNumbers'])
             ]);
         }
-        dd($flights);
         $this->airBooking->flights()->saveMany($flights);
         foreach ($passengers as $passenger_array) {
             $passenger = $this->airBooking->passengers()->save($passenger_array['data']);

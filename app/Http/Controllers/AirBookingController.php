@@ -139,7 +139,7 @@ class AirBookingController extends Controller
             try {
                 DB::beginTransaction();
                 if ($airBooking->parto_unique_id && AirQueueStatus::tryFrom($result->Status) == AirQueueStatus::Ticketed) {
-                    InsertTicketData::dispatchSync($airBooking, $result->TravelItinerary['ItineraryInfo']);
+                    InsertTicketData::dispatch($airBooking, $result->TravelItinerary['ItineraryInfo']);
                 }
                 $airBooking->update([
                     'status' => AirQueueStatus::tryFrom($result->Status)

@@ -23,7 +23,7 @@ return new class extends Migration
             $table->dateTime('departs_at');
             $table->string('arrival_airport_code');
             $table->string('arrival_terminal')->nullable();
-            $table->dateTime('arrives_at');
+            $table->dateTime('arrives_at')->nullable();
             $table->string('marketing_airline_code');
             $table->string('operating_airline_code');
             $table->boolean('is_return');
