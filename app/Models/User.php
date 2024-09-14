@@ -59,6 +59,16 @@ class User extends Authenticatable
         return $this->hasMany(HotelBooking::class);
     }
 
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
+
+    public function transactions()
+    {
+        return $this->hasManyThrough(Transaction::class, Order::class);
+    }
+
     public function credit_logs()
     {
         return $this->hasMany(CreditLog::class);

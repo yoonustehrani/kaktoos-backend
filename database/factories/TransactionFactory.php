@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Order>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Transaction>
  */
-class OrderFactory extends Factory
+class TransactionFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,8 +17,8 @@ class OrderFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => 'پرداخت برای تست',
-            'amount' => 10000
+            'status' => null,
+            'success' => fake()->randomElement([true, false])
         ];
     }
 }

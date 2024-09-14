@@ -55,7 +55,7 @@ abstract class GatewayMethods implements IPaymentGateway {
     }
     public function getAmount() {
         return $this->getCurrency() === IranianCurrency::TOMAN
-        ? $this->amount
-        : $this->amount * 10;
+        ? $this->amount * 10
+        : $this->amount;
     }
 }

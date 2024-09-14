@@ -50,7 +50,8 @@ return [
             'calendar_cache' => 60 // 1m
         ],
         'datetime_format' => 'Y-m-d\TH:i:s.uP',
-        'endpoint' => 'https://apidemo.partocrs.com/api/'
+        'endpoint' => 'https://apidemo.partocrs.com/api/',
+        'testing' => env('PARTO_TESTING', false)
     ],
 
     'sms' => [

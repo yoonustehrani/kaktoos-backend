@@ -10,12 +10,11 @@ use App\Http\Controllers\HotelController;
 use App\Http\Controllers\InternationalAirportController;
 use App\Http\Controllers\NationalAirportController;
 use App\Http\Controllers\Parto\HotelImageController;
+use App\Http\Controllers\TempAuthController;
+use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\UserAuthController;
-use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Validation\ValidationException;
 
 Route::prefix('airports')->group(function() {
     Route::get('/national', NationalAirportController::class . '@index');
@@ -32,6 +31,7 @@ Route::prefix('flights')->group(function() {
 
 Route::prefix('/user')->name('user.')->middleware('auth:sanctum')->group(function() {
     Route::get('/', fn(Request $request) => $request->user());
+    Route::apiResource('transactions', TransactionController::class)->only(['index', 'show']);
     Route::prefix('/bookings')->name('bookings.')->group(function() {
         Route::get('/air/{airBooking}', [AirBookingController::class, 'show'])->name('air.show');
         Route::get('/air/{airBooking}/details', [AirBookingController::class, 'showDetailed'])->name('air.show.detailes');
@@ -41,22 +41,7 @@ Route::prefix('/user')->name('user.')->middleware('auth:sanctum')->group(functio
 
 Route::post('/login', [UserAuthController::class, 'login']);
 
-Route::post('/sanctum/token', function (Request $request) {
-    $request->validate([
-        'phone_number' => 'required',
-        'password' => 'required',
-    ]);
- 
-    $user = User::where('phone_number', $request->phone_number)->first();
- 
-    if (! $user || ! Hash::check($request->password, $user->password)) {
-        throw ValidationException::withMessages([
-            'phone_number' => ['The provided credentials are incorrect.'],
-        ]);
-    }
- 
-    return $user->createToken('thunderbelt')->plainTextToken;
-});
+Route::post('/sanctum/token', TempAuthController::class);
 
 
 Route::get('cities/search', [CityController::class, 'search']);
