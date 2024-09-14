@@ -39,6 +39,7 @@ Route::get('/ticket/data', function() {
 Route::middleware('auth:sanctum')->group(function() {
     Route::get('orders/{order}/pay', [OrderController::class, 'pay'])->name('orders.pay');
     Route::get('air/bookings/{airBooking}/ticket', [TicketController::class, 'index'])->name('bookings.air.tickets.index');
+    // Route::get('hotel/bookings/{hotelBooking}/voucher');
 });
 
 Route::view('/success', 'transaction.success');
