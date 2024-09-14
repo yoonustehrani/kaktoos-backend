@@ -36,8 +36,6 @@ Route::get('/ticket/data', function() {
     return $airBooking;
 });
 
-Auth::loginUsingId(1);
-
 Route::middleware('auth:sanctum')->group(function() {
     Route::get('orders/{order}/pay', [OrderController::class, 'pay'])->name('orders.pay');
     Route::get('air/bookings/{airBooking}/ticket', [TicketController::class, 'index'])->name('bookings.air.tickets.index');
