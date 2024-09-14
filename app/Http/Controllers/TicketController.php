@@ -20,13 +20,14 @@ class TicketController extends Controller
         $view = view('pdfs.ticket2')
             ->with('passengers', $airBooking->passengers)
             ->with('flights', $airBooking->flights);
-        $response = Http::post('http://pdfrenderer:8082/render', [
-            'html' => $view->render(), // Render a Blade view
-        ]);
-        $pdf = $response->body();
-        return response($pdf, 200, [
-            'Content-Type' => 'application/pdf'
-        ]);
+        return $view;
+        // $response = Http::post('http://pdfrenderer:8082/render', [
+        //     'html' => $view->render(), // Render a Blade view
+        // ]);
+        // $pdf = $response->body();
+        // return response($pdf, 200, [
+        //     'Content-Type' => 'application/pdf'
+        // ]);
         // return Response::streamDownload(function() use($pdf) {
         //     echo $pdf;
         // }, 'ticket-' . $ticketId . '.pdf', [

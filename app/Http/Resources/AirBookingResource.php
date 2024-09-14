@@ -21,7 +21,8 @@ class AirBookingResource extends JsonResource
         $status = $this['status'];
         return array_merge(parent::toArray($request), [
             'status' => str($status->name)->kebab(),
-            'status_fa' => $status->getAttributeValue(DisplayFa::class)
+            'status_fa' => $status->getAttributeValue(DisplayFa::class),
+            'ticket_url' => route('bookings.air.tickets.index', ['airBooking' => $this['id']])
         ]);
     }
 }
