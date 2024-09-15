@@ -46,6 +46,7 @@ class OrderController extends Controller
                 default:
                     throw new Exception('Purchasable type not supported!');
             }
+            $url .= '?url=' . urlencode($order->purchasable->getUri());
             OrderPaid::dispatch($order);
             return redirect()->to($url);
         }
