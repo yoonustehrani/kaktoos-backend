@@ -31,7 +31,7 @@ class HotelBookingController extends Controller
         $booking = $request->user()->hotelBookings()->save($booking);
         $order = new Order([
             'user_id' => $request->user()->id,
-            'title' => 'رزور هتل',
+            'title' => __('Hotel Reservation'),
             'amount' => intval($offer['NetRate'])
         ]);
         $booking->order()->save($order);

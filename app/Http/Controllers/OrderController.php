@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Enums\TransactionStatus;
 use App\Events\OrderPaid;
+use App\Http\Resources\OrderCollection;
+use App\Http\Resources\OrderResource;
 use App\Models\AirBooking;
 use App\Models\Order;
 use App\Models\Parto\Hotel\HotelBooking;
@@ -22,13 +24,11 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $orders = get_auth_user()->orders();
-
-        // return response()->json([
-        //     'meta' => [
-        //         'status' => 
-        //     ]
-        // ]);
+        return response()->json(
+            new OrderCollection(
+                get_auth_user()->orders()->paginate(10)
+            )
+        );
     }
 
     public function pay(Order $order)
