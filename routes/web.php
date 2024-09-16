@@ -46,5 +46,3 @@ Route::view('/success', 'transaction.success');
 Route::view('/fail', 'transaction.fail');
 
 Route::view('/', 'welcome');
-
-Auth::loginUsingId(1);
