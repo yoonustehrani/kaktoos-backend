@@ -1,4 +1,9 @@
 {
     "adult": "بزرگسال",
-    "child": "کودک"
+    "child": "کودک",
+    "Flight": "پرواز",
+    "Hotel": "هتل",
+    "Unknown": "نامشخص",
+    "Flight Ticket": "بلیط هواپیما",
+    "Hotel Reservation": "رزرو هتل"
 }
