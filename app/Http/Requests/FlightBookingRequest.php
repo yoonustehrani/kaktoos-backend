@@ -2,9 +2,13 @@
 
 namespace App\Http\Requests;
 
+use App\Models\Passenger;
+use App\Parto\Domains\Flight\Enums\PartoPassengerGender;
+use App\Parto\Domains\Flight\Enums\PartoPassengerType;
 use App\Parto\Domains\Flight\Enums\TravellerGender;
 use App\Parto\Domains\Flight\Enums\TravellerPassengerType;
 use App\Parto\Domains\Flight\Enums\TravellerSeatPreference;
+use App\Parto\Domains\Flight\Enums\TravellerTitle;
 use App\Parto\Domains\Flight\PricedItinerary;
 use App\Parto\Facades\Parto;
 use Illuminate\Foundation\Http\FormRequest;
@@ -74,7 +78,7 @@ class FlightBookingRequest extends FormRequest
                 }
                 foreach ($this->input('passengers') as $key => $passenger) {
                     $birthdate = Carbon::createFromFormat('Y-m-d', $passenger['birthdate']);
-                    $years_old = $birthdate->diff($this->revalidated_flight->getLastFlightSegment())->y;
+                    $years_old = $birthdate->diff($this->revalidated_flight->getLastFlightSegmentTime())->y;
                     if ($years_old >= 12) {
                         $accepted_type = TravellerPassengerType::Adt;
                     } else if ($years_old < 2) {
@@ -123,7 +127,7 @@ class FlightBookingRequest extends FormRequest
                 'required_with:passengers.*.passport',
                 'date',
                 'date_format:Y-m-d',
-                'after_or_equal:' . $this->revalidated_flight->getLastFlightSegment()->addUTCMonths(6)->format('Y-m-d'),
+                'after_or_equal:' . $this->revalidated_flight->getLastFlightSegmentTime()->addUTCMonths(6)->format('Y-m-d'),
             ],
             'passengers.*.passport.issue_date' => [
                 $this->revalidated_flight->isPassportIssueDateMandatory() ? 'required' : 'nullable',
@@ -132,5 +136,36 @@ class FlightBookingRequest extends FormRequest
                 'before:tomorrow'
             ]
         ]);
+    }
+
+    public function getPassengersAsPassenger()
+    {
+        return array_map(function(array $passenger) {
+            $type = TravellerPassengerType::tryFrom($passenger['type']);
+            $gender = TravellerGender::tryFrom($passenger['gender']);
+            switch ($type) {
+                case TravellerPassengerType::Adt:
+                    $title = $gender == TravellerGender::Male ? TravellerTitle::Mr : TravellerTitle::Ms;
+                    break;
+                default:
+                    $title = $gender == TravellerGender::Male ? TravellerTitle::Mstr : TravellerTitle::Miss;
+                    break;
+            }
+            return new Passenger([
+                'gender' => $gender->value,
+                'type' => $type->value,
+                'title' => $title->name,
+                'first_name' => str($passenger['first_name'])->upper(),
+                'middle_name' => isset($passenger['middle_name']) ? str($passenger['middle_name'])->upper() : null,
+                'last_name' => str($passenger['last_name'])->upper(),
+                'birthdate' => $passenger['birthdate'],
+                'country_code' => $passenger['nationality'],
+                'national_id' => $passenger['national_id'] ?? null,
+                'passport_number' => $passenger['passport']['passport_number'] ?? null,
+                'passport_expires_on' => $passenger['passport']['expiry_date'] ?? null,
+                'passport_issued_on' => $passenger['passport']['issue_date'] ?? null,
+                'passport_country' => $passenger['passport']['country']
+            ]);
+        }, $this->input('passengers'));
     }
 }

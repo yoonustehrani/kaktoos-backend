@@ -30,11 +30,6 @@ class InsertTicketData implements ShouldQueue
     {
         
     }
-
-    protected function getCarbonDateTime(string $parto_datetime): Carbon
-    {
-        return Carbon::createFromFormat('Y-m-d\TH:i:s', $parto_datetime);
-    }
     /**
      * Execute the job.
      */
@@ -47,10 +42,10 @@ class InsertTicketData implements ShouldQueue
                 'airline_pnr' => $flight['AirlinePnr'],
                 'departure_airport_code' => $flight['DepartureAirportLocationCode'],
                 'departure_terminal' => $flight['DepartureTerminal'],
-                'departs_at' => $this->getCarbonDateTime($flight['DepartureDateTime'])->format('Y-m-d H:i:s'),
+                'departs_at' => get_carbon_datetime($flight['DepartureDateTime'])->format('Y-m-d H:i:s'),
                 'arrival_airport_code' => $flight['ArrivalAirportLocationCode'],
                 'arrival_terminal' => $flight['ArrivalTerminal'],
-                'arrives_at' => $this->getCarbonDateTime($flight['ArrivalDateTime'])->format('Y-m-d H:i:s'),
+                'arrives_at' => get_carbon_datetime($flight['ArrivalDateTime'])->format('Y-m-d H:i:s'),
                 'marketing_airline_code' => $flight['MarketingAirlineCode'], 
                 'operating_airline_code' => $flight['OperatingAirlineCode'],
                 'is_return' => $flight['IsReturn'],
@@ -67,8 +62,8 @@ class InsertTicketData implements ShouldQueue
                     ],
                     'stops' => array_map(fn($stop) => [
                         'airport_code' => $stop['ArrivalAirport'],
-                        'arrives_at' => $this->getCarbonDateTime($stop['ArrivalDateTime'])->format('Y-m-d H:i:s'),
-                        'departs_at' => $this->getCarbonDateTime($stop['DepartureDateTime'])->format('Y-m-d H:i:s')
+                        'arrives_at' => get_carbon_datetime($stop['ArrivalDateTime'])->format('Y-m-d H:i:s'),
+                        'departs_at' => get_carbon_datetime($stop['DepartureDateTime'])->format('Y-m-d H:i:s')
                     ], $flight['TechnicalStops']),
                     'is_charter' => $flight['IsCharter'],
                 ]
@@ -85,9 +80,9 @@ class InsertTicketData implements ShouldQueue
                     'first_name' => $passenger['PaxName']['PassengerFirstName'],
                     'middle_name' => $passenger['PaxName']['PassengerMiddleName'],
                     'last_name' => $passenger['PaxName']['PassengerLastName'],
-                    'birthdate' => $this->getCarbonDateTime($passenger['DateOfBirth'])->format('Y-m-d'),
+                    'birthdate' => get_carbon_datetime($passenger['DateOfBirth'])->format('Y-m-d'),
                     'country_code' => $passenger['Nationality'],
-                    'national_code' => $passenger['NationalId'] ?: null,
+                    'national_id' => $passenger['NationalId'] ?: null,
                     'passport_number' => $passenger['PassportNumber'] ?: null,
                     'passport_expires_on' => $passenger['PassportExpireDate'] ?: null,
                     'passport_issued_on' => $passenger['PassportIssueDate'] ?: null
@@ -97,12 +92,14 @@ class InsertTicketData implements ShouldQueue
                     'status' => $ticket['EticketStatus'],
                     'refunded' => $ticket['IsRefunded'],
                     'total_refund' => $ticket['TotalRefund'],
-                    'issued_at' => $this->getCarbonDateTime($ticket['DateOfIssue']),
+                    'issued_at' => get_carbon_datetime($ticket['DateOfIssue']),
                     'airline_pnr' => $ticket['AirlinePnr']
                 ]), $customer['ETicketNumbers'])
             ]);
         }
+        $this->airBooking->flights()->delete();
         $this->airBooking->flights()->saveMany($flights);
+        $this->airBooking->passengers()->delete();
         foreach ($passengers as $passenger_array) {
             $passenger = $this->airBooking->passengers()->save($passenger_array['data']);
             $passenger->tickets()->saveMany($passenger_array['tickets']);

@@ -14,7 +14,14 @@ use Illuminate\Database\Eloquent\Model;
 class AirBooking extends Model implements Purchasable
 {
     use HasFactory, HasMetaAttribute;
-    protected $fillable = ['status', 'meta'];
+    protected $fillable = [
+        'status', 'meta',
+        'origin_airport_code',
+        'destination_airport_code',
+        'journey_begins_at',
+        'journey_ends_at',
+        'airline_code'
+    ];
     /**
      * Get the attributes that should be cast.
      *
@@ -44,8 +51,23 @@ class AirBooking extends Model implements Purchasable
         return $this->hasMany(Passenger::class);
     }
 
+    public function origin_airport()
+    {
+        return $this->belongsTo(Airport::class, 'origin_airport_code', 'IATA_code');
+    }
+
+    public function destination_airport()
+    {
+        return $this->belongsTo(Airport::class, 'destination_airport_code', 'IATA_code');
+    }
+
+    public function airline()
+    {
+        return $this->belongsTo(Airline::class, 'airline_code', 'code');
+    }
+
     public function getUri()
     {
-        return route('user.bookings.air.show', ['airBooking' => $this->id]);
+        return route('user.bookings.air.status', ['airBooking' => $this->id]);
     }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\FlightBookingRequest;
 use App\Http\Resources\AirBookingResource;
+use App\Http\Resources\UserAirBookingCollection;
 use App\Jobs\InsertTicketData;
 use App\Models\AirBooking;
 use App\Models\ETicket;
@@ -17,11 +18,13 @@ use App\Parto\Domains\Flight\Enums\FlightCabinType;
 use App\Parto\Domains\Flight\Enums\PartoFareType;
 use App\Parto\Domains\Flight\Enums\PartoPassengerGender;
 use App\Parto\Domains\Flight\Enums\PartoPassengerType;
+use App\Parto\Domains\Flight\Enums\PartoRefundMethod;
 use App\Parto\Domains\Flight\Enums\TravellerGender;
 use App\Parto\Domains\Flight\Enums\TravellerPassengerType;
 use App\Parto\Domains\Flight\Enums\TravellerSeatPreference;
 use App\Parto\Domains\Flight\FlightBook\AirTraveler;
 use App\Parto\Facades\Parto;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
@@ -34,7 +37,17 @@ class AirBookingController extends Controller
      */
     public function index()
     {
-        //
+        $orders = get_auth_user()->airBookings()->with([
+            'flights', 'order'
+        ])->paginate(5);
+        return response()->json(
+            (new UserAirBookingCollection($orders))->additional([
+                'meta' => [
+                    'status' => AirQueueStatus::describe(),
+                    'refund_type' => PartoRefundMethod::describe()
+                ]
+            ])
+        );
     }
 
     /**
@@ -74,6 +87,13 @@ class AirBookingController extends Controller
         $booking = new AirBooking();
         $booking->refund_type = $request->revalidated_flight->get('RefundMethod');
         $booking->is_webfare = $request->revalidated_flight->isWebfare();
+        $booking->fill([
+            'origin_airport_code' => Arr::first($request->revalidated_flight->getFirstItinirary()['FlightSegments'])['DepartureAirportLocationCode'],
+            'destination_airport_code' => Arr::last($request->revalidated_flight->getFirstItinirary()['FlightSegments'])['ArrivalAirportLocationCode'],
+            'journey_begins_at' => $request->revalidated_flight->getFirstFlightSegmentTime()->format('Y-m-d H:i:s'),
+            'journey_ends_at' => $request->revalidated_flight->getLastFlightSegmentTime()->format('Y-m-d H:i:s'),
+            'airline_code' => $request->revalidated_flight->get('ValidatingAirlineCode')
+        ]);
         $status = AirQueueStatus::Booked;
 
         if (! $booking->is_webfare) {
@@ -102,7 +122,10 @@ class AirBookingController extends Controller
         try {
             DB::beginTransaction();
             $user->airBookings()->save($booking);
+            $booking->flights()->saveMany($request->revalidated_flight->getFlightsAsFlight());
+            $booking->passengers()->saveMany($request->getPassengersAsPassenger());
             $order = $booking->order()->save(new Order([
+                    'title' => __('Flight Ticket'),
                     'user_id' => $user->id,
                     'amount' => $request->revalidated_flight->getTotalInRials()
                 ])
@@ -119,7 +142,7 @@ class AirBookingController extends Controller
             ];
         } catch (\Throwable $th) {
             DB::rollBack();
-            throw $th;
+            // throw $th;
             // Better to retry
             abort(500, 'Issue in saving order in DB');
         }
@@ -130,7 +153,7 @@ class AirBookingController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(AirBooking $airBooking)
+    public function status(AirBooking $airBooking)
     {
         Gate::authorize('view', $airBooking);
         if ($airBooking->parto_unique_id && $airBooking->status != AirQueueStatus::Ticketed) {
@@ -151,8 +174,8 @@ class AirBookingController extends Controller
                 throw $th;
             }
         }
-        $airBooking->load(['passengers', 'flights']);
-        $airBooking->passengers->append('fullname')->makeHidden(['first_name', 'middle_name', 'last_name', 'title']);
+        $airBooking->load(['airline', 'origin_airport', 'destination_airport']);
+        // $airBooking->passengers->append('fullname')->makeHidden(['first_name', 'middle_name', 'last_name', 'title']);
         return response()->json(new AirBookingResource($airBooking));
     }
 

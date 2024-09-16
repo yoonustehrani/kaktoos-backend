@@ -15,8 +15,8 @@ class Passenger extends Model
         'first_name', 'middle_name', 'last_name',
         'birthdate',
         'country_code',
-        'national_code', 
-        'passport_number', 'passport_expires_on', 'passport_issued_on'
+        'national_id', 
+        'passport_number', 'passport_expires_on', 'passport_issued_on', 'passport_country'
     ];
 
     public function getFullNameAttribute()

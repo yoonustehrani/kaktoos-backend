@@ -7,7 +7,7 @@ use App\Parto\Domains\Flight\Enums\AirBook\AirQueueStatus;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class AirBookingResource extends JsonResource
+class UserAirBookingResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -27,12 +27,9 @@ class AirBookingResource extends JsonResource
             'created_at' => $this['created_at'],
             'updated_at' => $this['updated_at'],
             'status' => $this['status'],
-            'origin_airport' => $this['origin_airport'],
-            'destination_airport' => $this['destination_airport'],
-            'journey_begins_at' => $this['journey_begins_at'],
-            'journey_ends_at' => $this['journey_ends_at'],
-            'airline' => $this['airline'],
             'status_fa' => $status->getAttributeValue(DisplayFa::class),
+            'order_paid_at' => $this['order']['paid_at'],
+            'flights' => $this['flights'],
             'ticket_url' => $status == AirQueueStatus::Ticketed ? route('bookings.air.tickets.index', ['airBooking' => $this['id']]) : null
         ];
     }

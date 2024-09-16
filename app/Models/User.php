@@ -79,7 +79,7 @@ class User extends Authenticatable
         $this->increment('credit', $amount);
         $this->credit_logs()->save(new CreditLog([
             'amount' => abs($amount),
-            'status' => CreditAction::Increase
+            'action' => CreditAction::Increase
         ]));
     }
 
@@ -88,7 +88,7 @@ class User extends Authenticatable
         $this->decrement('credit', $amount);
         $this->credit_logs()->save(new CreditLog([
             'amount' => abs($amount) * -1,
-            'status' => CreditAction::Decrease
+            'action' => CreditAction::Decrease
         ]));
     }
 }
