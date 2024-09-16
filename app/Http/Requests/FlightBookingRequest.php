@@ -55,11 +55,9 @@ class FlightBookingRequest extends FormRequest
         $passport_required = [
             'passengers.*.passport' => ['required', 'array'],
         ];
-        if ($this->revalidated_flight->isPassportMandatory()) {
-            $initial_rules = $initial_rules->merge($passport_required);
-        } else {
-            $initial_rules = $initial_rules->merge($normal_rules);
-        }
+        $initial_rules = $this->input('is_international') 
+                ? $initial_rules->merge($passport_required)
+                : $initial_rules->merge($normal_rules);
         return $initial_rules->merge($this->getPassportDetailsRules())->toArray();
     }
 
@@ -101,6 +99,7 @@ class FlightBookingRequest extends FormRequest
     {
         return collect([
             'ref' => 'bail|required|string|min:10|numeric',
+            'is_international' => 'boolean|required',
             'passengers' => [ 'required', 'array', 'min:1', 'max:9' ],
             'passengers.*' => [ 'required', 'array' ],
             'passengers.*.birthdate' => 'required|date|date_format:Y-m-d|before:today',

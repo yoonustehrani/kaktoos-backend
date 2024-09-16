@@ -59,13 +59,14 @@ class AirBookingController extends Controller
                 ->setNationality($passenger['nationality'])
                 ->setPassengerType(TravellerPassengerType::tryFrom($passenger['type']))
                 ->setSeatPreference(TravellerSeatPreference::tryFrom('any'));
-            if ($request->revalidated_flight->isPassportMandatory() || isset($passenger['passport'])) {
+            if ($request->revalidated_flight->isPassportMandatory() && isset($passenger['passport'])) {
                 $t->setPassport(
                     passportNumber: $passenger['passport']['passport_number'],
                     expires_on: Carbon::createFromFormat('Y-m-d', $passenger['passport']['expiry_date']),
                     issued_on: ! isset($passenger['passport']['issue_date']) ? null : Carbon::createFromFormat('Y-m-d', $passenger['passport']['issue_date'])
                 );
-            } else {
+            }
+            if (isset($passenger['national_id'])) {
                 $t->setNationalId($passenger['national_id']);
             }
             $airBook->addTraveler($t);
