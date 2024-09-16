@@ -10,7 +10,7 @@ class Order extends Model
 {
     use HasFactory, HasMetaAttribute;
 
-    protected $fillable = ['user_id', 'gateway_purchase_id', 'amount', 'meta'];
+    protected $fillable = ['user_id', 'gateway_purchase_id', 'amount', 'meta', 'title'];
 
     public function purchasable()
     {
