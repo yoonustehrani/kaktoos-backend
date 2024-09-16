@@ -59,7 +59,7 @@ class InsertTicketData implements ShouldQueue
                         'name' => $flight['AirEquipmentType'],
                         'cabin_type' => FlightCabinType::{PartoCabinType::tryFrom($flight['CabinClassCode'])->name}->value
                     ],
-                    'fare_class' => FlightCabinType::tryFrom(str($flight['ResBookDesigCode'])->kebab()->lower())->name,
+                    'fare_class' => FlightCabinType::tryFrom(str($flight['ResBookDesigCode'])->kebab()->lower())?->name ?? $flight['ResBookDesigCode'],
                     'baggage' => $flight['Baggage'],
                     'journey' => [
                         'duration' => $flight['JourneyDuration'],
