@@ -14,7 +14,7 @@ use Illuminate\Database\Eloquent\Model;
 class AirBooking extends Model implements Purchasable
 {
     use HasFactory, HasMetaAttribute;
-    protected $fillable = ['status'];
+    protected $fillable = ['status', 'meta'];
     /**
      * Get the attributes that should be cast.
      *

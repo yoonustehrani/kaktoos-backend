@@ -33,18 +33,9 @@ class IssueNonWebFareTicket implements ShouldQueue
             $result = Parto::api()->air()->orderTicket(unique_id: $this->airBooking->parto_unique_id);
             $this->airBooking->status = AirQueueStatus::tryFrom($result->Status);
             $this->airBooking->save();
-            // if (
-            //     AirQueueStatus::tryFrom($result->Status) == AirQueueStatus::TicketinProcess
-            //     ||
-            //     AirQueueStatus::tryFrom($result->Status) == AirQueueStatus::Ticketed
-            // ) {
-                
-            // } else {
-                
-            // }
         } catch (PartoErrorException $error) {
             $this->airBooking->status = AirQueueStatus::Exception;
-            $this->airBooking->meta = array_merge($this->airBooking->status, [
+            $this->airBooking->meta = array_merge($this->airBooking->meta, [
                 'error' => [
                     'id' => $error->id,
                     'message' => $error->getMessage()
