@@ -9,6 +9,7 @@ use App\Http\Controllers\HotelBookingController;
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\InternationalAirportController;
 use App\Http\Controllers\NationalAirportController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\Parto\HotelImageController;
 use App\Http\Controllers\TempAuthController;
 use App\Http\Controllers\TransactionController;
@@ -30,9 +31,11 @@ Route::prefix('flights')->group(function() {
 });
 
 Route::prefix('/user')->name('user.')->middleware('auth:sanctum')->group(function() {
-    Route::get('/', fn(Request $request) => $request->user());
+    Route::get('/', fn(Request $request) => $request->user())->name('show');
+    Route::get('/orders', [OrderController::class, 'index'])->name('orders.index');
     Route::apiResource('transactions', TransactionController::class)->only(['index', 'show']);
     Route::prefix('/bookings')->name('bookings.')->group(function() {
+        Route::get('/air', [AirBookingController::class, 'index'])->name('air.index');
         Route::get('/air/{airBooking}', [AirBookingController::class, 'show'])->name('air.show');
         Route::get('/air/{airBooking}/details', [AirBookingController::class, 'showDetailed'])->name('air.show.detailes');
         Route::get('/hotel/{hotelBooking}', fn() => ['okay' => true])->name('hotel.show');
