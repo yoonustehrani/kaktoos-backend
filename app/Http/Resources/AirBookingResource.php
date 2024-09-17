@@ -36,7 +36,8 @@ class AirBookingResource extends JsonResource
                 'name' => $this['status']->getNameForApi(),
                 'name_fa' => $this['status']->getAttributeValue(DisplayFa::class)
             ],
-            'order' => $this['order'],
+            'status_notes' => $this['status_notes'],
+            'order' => new OrderPlainResource($this['order']),
             'origin_airport' => $this['origin_airport'],
             'destination_airport' => $this['destination_airport'],
             'journey_begins_at' => $this['journey_begins_at'],

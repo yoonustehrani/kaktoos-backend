@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\FlightBookingRequest;
 use App\Http\Resources\AirBookingResource;
+use App\Http\Resources\FlightFareBreakdownResource;
 use App\Http\Resources\UserAirBookingCollection;
 use App\Jobs\InsertTicketData;
 use App\Models\AirBooking;
@@ -118,11 +119,13 @@ class AirBookingController extends Controller
             $booking->flights()->saveMany($request->revalidated_flight->getFlightsAsFlight());
             $booking->passengers()->saveMany($request->getPassengersAsPassenger());
             $order = $booking->order()->save(new Order([
-                    'title' => __('Flight Ticket'),
-                    'user_id' => $user->id,
-                    'amount' => $request->revalidated_flight->getTotalInRials()
-                ])
-            );
+                'title' => __('Flight Ticket'),
+                'user_id' => $user->id,
+                'amount' => $request->revalidated_flight->getTotalInRials(),
+                'meta' => [
+                    'breakdown' => FlightFareBreakdownResource::collection($request->revalidated_flight->get('AirItineraryPricingInfo')['PtcFareBreakdown'])
+                ]
+            ]));
             DB::commit();
             return [
                 'ticket_time_limit' => $booking->valid_until->format('Y-m-d H:i:s'),
@@ -130,6 +133,7 @@ class AirBookingController extends Controller
                 'payment' => [
                     'amount' => $request->revalidated_flight->getTotalInRials(),
                     'currency' => 'IRR',
+                    'breakdown' => $order->meta->breakdown,
                     'url' => route('orders.pay', ['order' => $order->id])
                 ]
             ];
@@ -168,8 +172,6 @@ class AirBookingController extends Controller
             }
         }
         $airBooking->load(['airline', 'origin_airport', 'destination_airport', 'order']);
-        $airBooking->loadCount(['passengers']);
-        // $airBooking->passengers->append('fullname')->makeHidden(['first_name', 'middle_name', 'last_name', 'title']);
         return response()->json(new AirBookingResource($airBooking));
     }
 

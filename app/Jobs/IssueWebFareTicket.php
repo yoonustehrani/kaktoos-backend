@@ -41,6 +41,7 @@ class IssueWebFareTicket implements ShouldQueue
         } catch (PartoErrorException $error) {
             Log::error(json_encode($error->getErrorObject(), JSON_PRETTY_PRINT));
             $this->airBooking->status = AirQueueStatus::Exception;
+            $this->airBooking->status_notes = $error->getMessage();
             $this->airBooking->meta = array_merge($this->airBooking->meta, [
                 'error' => [
                     'id' => $error->id,

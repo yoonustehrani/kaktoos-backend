@@ -35,6 +35,7 @@ class IssueNonWebFareTicket implements ShouldQueue
             $this->airBooking->save();
         } catch (PartoErrorException $error) {
             $this->airBooking->status = AirQueueStatus::Exception;
+            $this->airBooking->status_notes = $error->getMessage();
             $this->airBooking->meta = array_merge($this->airBooking->meta, [
                 'error' => [
                     'id' => $error->id,
