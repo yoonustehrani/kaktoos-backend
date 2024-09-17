@@ -23,11 +23,11 @@ class AirBookingResource extends JsonResource
         return [
             'id' => $this['id'],
             'type' => $this['type'],
-            // 'type' => [
-            //     'value' => $this['type'],
-            //     // 'name' => $this['type']->name,
-            //     'name_fa' => $this['type']->getAttributeValue(DisplayFa::class)
-            // ],
+            'type' => [
+                'value' => $this['type']->value,
+                'name' => $this['type']->getNameForApi(),
+                'name_fa' => $this['type']->getAttributeValue(DisplayFa::class)
+            ],
             'is_webfare' => $this['is_webfare'],
             'created_at' => $this['created_at'],
             'updated_at' => $this['updated_at'],
@@ -36,6 +36,7 @@ class AirBookingResource extends JsonResource
                 'name' => $this['status']->getNameForApi(),
                 'name_fa' => $this['status']->getAttributeValue(DisplayFa::class)
             ],
+            'order' => $this['order'],
             'origin_airport' => $this['origin_airport'],
             'destination_airport' => $this['destination_airport'],
             'journey_begins_at' => $this['journey_begins_at'],

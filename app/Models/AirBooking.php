@@ -37,7 +37,7 @@ class AirBooking extends Model implements Purchasable
         return [
             'valid_until' => 'datetime',
             'status' => AirQueueStatus::class,
-            // 'type' => AirTripType::class,
+            'type' => AirTripType::class,
             'refund_type' => PartoRefundMethod::class
         ];
     }

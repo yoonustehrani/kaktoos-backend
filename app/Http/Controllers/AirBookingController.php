@@ -167,7 +167,8 @@ class AirBookingController extends Controller
                 throw $th;
             }
         }
-        $airBooking->load(['airline', 'origin_airport', 'destination_airport']);
+        $airBooking->load(['airline', 'origin_airport', 'destination_airport', 'order']);
+        $airBooking->loadCount(['passengers']);
         // $airBooking->passengers->append('fullname')->makeHidden(['first_name', 'middle_name', 'last_name', 'title']);
         return response()->json(new AirBookingResource($airBooking));
     }
