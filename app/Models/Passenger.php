@@ -21,7 +21,7 @@ class Passenger extends Model
 
     public function getFullNameAttribute()
     {
-        return collect([$this->title, $this->first_name, $this->middle_name, $this->last_name])->filter()->join(' ');
+        return str(collect([$this->title, $this->first_name, $this->middle_name, $this->last_name])->filter()->join(' '))->upper();
     }
 
     public function nationality()

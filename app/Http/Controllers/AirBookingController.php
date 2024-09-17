@@ -6,6 +6,7 @@ use App\Http\Requests\FlightBookingRequest;
 use App\Http\Resources\AirBookingResource;
 use App\Http\Resources\FlightFareBreakdownResource;
 use App\Http\Resources\UserAirBookingCollection;
+use App\Http\Resources\UserAirBookingResource;
 use App\Jobs\InsertTicketData;
 use App\Models\AirBooking;
 use App\Models\Order;
@@ -180,9 +181,9 @@ class AirBookingController extends Controller
         $airBooking = AirBooking::withCount('passengers', 'flights')->findOrFail($airBooking);
         Gate::authorize('view', $airBooking);
         $airBooking->load(['airline', 'origin_airport', 'destination_airport']);
-        // $airBooking->load(['passengers.tickets', 'flights']);
-        // $airBooking->passengers->append('fullname')->makeHidden(['first_name', 'middle_name', 'last_name', 'title']);
-        return response()->json(new AirBookingResource($airBooking));
+        $airBooking->load(['passengers', 'flights']);
+        $airBooking->passengers->append('fullname')->makeHidden(['first_name', 'middle_name', 'last_name', 'title']);
+        return response()->json(new UserAirBookingResource($airBooking));
     }
     
     /**
