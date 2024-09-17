@@ -32,8 +32,8 @@ class AirBookingController extends Controller
     public function index()
     {
         $orders = get_auth_user()->airBookings()->with([
-            'flights', 'order'
-        ])->paginate(5);
+            'order'
+        ])->withCount('passengers')->paginate(5);
         return response()->json(
             (new UserAirBookingCollection($orders))->additional([
                 'meta' => [
