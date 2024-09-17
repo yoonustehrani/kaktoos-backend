@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Models\Parto\Air\Flight;
 use App\Parto\Domains\Flight\Enums\AirBook\AirBookCategory;
 use App\Parto\Domains\Flight\Enums\AirBook\AirQueueStatus;
+use App\Parto\Domains\Flight\Enums\AirSearch\AirTripType;
 use App\Parto\Domains\Flight\Enums\PartoRefundMethod;
 use App\Purchasable;
 use App\Traits\HasMetaAttribute;
@@ -15,13 +16,17 @@ class AirBooking extends Model implements Purchasable
 {
     use HasFactory, HasMetaAttribute;
     protected $fillable = [
-        'status', 'meta',
+        'status', 'type', 'refund_type', 
+        'is_webfare',
+        'meta',
         'origin_airport_code',
         'destination_airport_code',
         'journey_begins_at',
         'journey_ends_at',
         'airline_code'
     ];
+
+    protected $hidden = ['parto_unique_id'];
     /**
      * Get the attributes that should be cast.
      *
@@ -32,6 +37,7 @@ class AirBooking extends Model implements Purchasable
         return [
             'valid_until' => 'datetime',
             'status' => AirQueueStatus::class,
+            // 'type' => AirTripType::class,
             'refund_type' => PartoRefundMethod::class
         ];
     }

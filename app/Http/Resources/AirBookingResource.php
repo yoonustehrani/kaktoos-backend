@@ -23,17 +23,25 @@ class AirBookingResource extends JsonResource
         return [
             'id' => $this['id'],
             'type' => $this['type'],
+            // 'type' => [
+            //     'value' => $this['type'],
+            //     // 'name' => $this['type']->name,
+            //     'name_fa' => $this['type']->getAttributeValue(DisplayFa::class)
+            // ],
             'is_webfare' => $this['is_webfare'],
             'created_at' => $this['created_at'],
             'updated_at' => $this['updated_at'],
-            'status' => $this['status'],
+            'status' => [
+                'value' => $this['status']->value,
+                'name' => $this['status']->getNameForApi(),
+                'name_fa' => $this['status']->getAttributeValue(DisplayFa::class)
+            ],
             'origin_airport' => $this['origin_airport'],
             'destination_airport' => $this['destination_airport'],
             'journey_begins_at' => $this['journey_begins_at'],
             'journey_ends_at' => $this['journey_ends_at'],
             'airline' => $this['airline'],
-            'status_fa' => $status->getAttributeValue(DisplayFa::class),
-            'ticket_url' => $status == AirQueueStatus::Ticketed ? route('bookings.air.tickets.index', ['airBooking' => $this['id']]) : null
+            'ticket_url' => $this['status'] == AirQueueStatus::Ticketed ? route('bookings.air.tickets.index', ['airBooking' => $this['id']]) : null
         ];
     }
 }
