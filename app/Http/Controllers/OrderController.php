@@ -5,17 +5,16 @@ namespace App\Http\Controllers;
 use App\Enums\TransactionStatus;
 use App\Events\OrderPaid;
 use App\Http\Resources\OrderCollection;
-use App\Http\Resources\OrderResource;
 use App\Models\AirBooking;
 use App\Models\Order;
 use App\Models\Parto\Hotel\HotelBooking;
 use App\Models\Transaction;
 use App\Payment\PaymentGateway;
 use Exception;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Gate;
-use Illuminate\Support\Str;
 
 class OrderController extends Controller
 {
@@ -31,10 +30,13 @@ class OrderController extends Controller
         );
     }
 
-    public function pay(Order $order)
+    public function pay(Order $order, Request $request)
     {
         Gate::authorize('update', $order);
-        if (config('services.parto.testing')) {
+        // Revalidate once more here
+        // Move this to a seperated function
+        if ($request->has('credit')) {
+            abort_if($order->amount > get_auth_user()->credit, 403, __('Insufficient credit'));
             $url = str_replace('api.', '', config('app.url'));
             switch ($order->purchasable_type) {
                 case AirBooking::class:
