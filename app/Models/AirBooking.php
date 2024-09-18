@@ -19,6 +19,7 @@ class AirBooking extends Model implements Purchasable
         'status', 'type', 'refund_type', 
         'is_webfare',
         'meta',
+        'ref',
         'origin_airport_code',
         'destination_airport_code',
         'journey_begins_at',

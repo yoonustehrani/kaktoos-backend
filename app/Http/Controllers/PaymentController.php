@@ -6,13 +6,9 @@ use App\Attributes\DisplayFa;
 use App\Enums\TransactionFailReason;
 use App\Enums\TransactionStatus;
 use App\Enums\VerificationResultStatus;
-use App\Events\OrderPaid;
-use App\Models\AirBooking;
-use App\Models\Order;
-use App\Models\Parto\Hotel\HotelBooking;
+use App\Jobs\OrderTransactionPaid;
 use App\Models\Transaction;
 use App\Payment\PaymentGateway;
-use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
@@ -38,20 +34,7 @@ class PaymentController extends Controller
          */
         $payment = app()->make(PaymentGateway::getGatewayClassname('jibit'));
         if ($request->input('status') == 'SUCCESSFUL') {
-            $url = str_replace('api.', '', config('app.url'));
-            switch ($trx->order->purchasable_type) {
-                case AirBooking::class:
-                    $url .= '/flight/final';
-                    break;
-                case HotelBooking::class:
-                    $url .= '/hotel/final';
-                    break;
-                default:
-                    throw new Exception('Purchasable type not supported!');
-            }
-            if ($trx->order->purchasable_id) {
-                $url .= '?url=' . urlencode($trx->order->purchasable->getUri());
-            }
+            $url = get_order_final_url($trx->order);
             $verification = $payment->gateway->validatePayment($request);
             if (
                 VerificationResultStatus::{$verification['status']} == VerificationResultStatus::SUCCESSFUL
@@ -60,7 +43,7 @@ class PaymentController extends Controller
             ) {
                 if (VerificationResultStatus::{$verification['status']} == VerificationResultStatus::SUCCESSFUL) {
                     DB::transaction(function() use($trx, $request) {
-                        $trx->order->user?->increaseCredit($trx->order->amount);
+                        $trx->order->user?->increaseCredit($request->amount);
                         $trx->update([
                             'status' => TransactionStatus::SUCCESS,
                             'status_notes' => null,
@@ -75,7 +58,7 @@ class PaymentController extends Controller
                             ]
                         ]);
                     });
-                    OrderPaid::dispatch($trx->order);
+                    OrderTransactionPaid::dispatchSync($trx);
                 }
                 if (is_null($trx->paid_at)) {
                     $gateway_order = collect($payment->gateway->getOrderById($trx->gateway_purchase_id)['elements'])->last();

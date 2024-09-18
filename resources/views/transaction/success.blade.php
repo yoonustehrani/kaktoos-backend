@@ -1,7 +1,4 @@
 <x-layouts.html :title="__('Transaction successfull')">
-    <x-slot:head>
-        @vite('resources/css/app.css')
-    </x-slot:head>
     <main class="bg-gray-900 w-full h-full flex justify-center items-center font-vazir px-3">
         <div class="w-auto min-h-[100px] px-6 p-3 bg-gray-800 text-gray-200 shadow-md rounded-lg flex flex-col items-center">
             <svg width="50" height="50" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">

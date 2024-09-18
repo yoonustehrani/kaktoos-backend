@@ -18,8 +18,7 @@ return new class extends Migration
             $table->morphs('purchasable');
             $table->string('title')->nullable();
             $table->unsignedBigInteger('amount');
-            // TODO: amount paid and to be paid (for price change)
-            $table->unsignedBigInteger('amount_paid')->nullable();
+            $table->unsignedBigInteger('amount_paid')->default(0);
             $table->timestamp('paid_at')->nullable();
             $table->json('meta')->default(json_encode([]));
             $table->timestamps();

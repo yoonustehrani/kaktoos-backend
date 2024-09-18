@@ -38,7 +38,7 @@ class DatabaseSeeder extends Seeder
             'phone_number' => '09121234567',
             'email' => 'yoonustehrani@example.com'
         ])->create();
-        $user->increaseCredit(99_999_999_999);
+        // $user->increaseCredit(99_999_999_999);
         // $user->orders()->save(Order::factory()->make());
     }
 }

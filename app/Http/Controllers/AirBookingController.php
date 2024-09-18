@@ -87,7 +87,8 @@ class AirBookingController extends Controller
             'destination_airport_code' => Arr::last($request->revalidated_flight->getFirstItinirary()['FlightSegments'])['ArrivalAirportLocationCode'],
             'journey_begins_at' => $request->revalidated_flight->getFirstFlightSegmentTime()->format('Y-m-d H:i:s'),
             'journey_ends_at' => $request->revalidated_flight->getLastFlightSegmentTime()->format('Y-m-d H:i:s'),
-            'airline_code' => $request->revalidated_flight->get('ValidatingAirlineCode')
+            'airline_code' => $request->revalidated_flight->get('ValidatingAirlineCode'),
+            'ref' => $request->input('ref')
         ]);
         $status = AirQueueStatus::Booked;
 
@@ -140,7 +141,7 @@ class AirBookingController extends Controller
             ];
         } catch (\Throwable $th) {
             DB::rollBack();
-            // throw $th;
+            throw $th;
             // Better to retry
             abort(500, __('Error while saving the order'. ' ' . __('Please try again') . '.'));
         }

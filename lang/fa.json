@@ -6,5 +6,6 @@
     "Unknown": "نامشخص",
     "Flight Ticket": "بلیط هواپیما",
     "Hotel Reservation": "رزرو هتل",
-    "Insufficient credit": "اعتبار ناکافی"
+    "Insufficient credit": "اعتبار ناکافی",
+    "Couldn't find the flight": "پرواز موردنظر یافت نشد."
 }

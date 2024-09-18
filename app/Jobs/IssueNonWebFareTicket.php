@@ -2,6 +2,7 @@
 
 namespace App\Jobs;
 
+use App\Enums\OrderStatus;
 use App\Exceptions\PartoErrorException;
 use App\Models\AirBooking;
 use App\Parto\Domains\Flight\Enums\AirBook\AirQueueStatus;
@@ -33,17 +34,14 @@ class IssueNonWebFareTicket implements ShouldQueue
             $result = Parto::api()->air()->orderTicket(unique_id: $this->airBooking->parto_unique_id);
             $this->airBooking->status = AirQueueStatus::tryFrom($result->Status);
             $this->airBooking->save();
+            $this->airBooking->order->update([
+                'status' => OrderStatus::COMPLETED
+            ]);
         } catch (PartoErrorException $error) {
             $this->airBooking->status = AirQueueStatus::Exception;
             $this->airBooking->status_notes = $error->getMessage();
-            $this->airBooking->meta = array_merge($this->airBooking->meta, [
-                'error' => [
-                    'id' => $error->id,
-                    'message' => $error->getMessage()
-                ]
-            ]);
             $this->airBooking->save();
+            CancellAirOrder::dispatch($this->airBooking);
         }
-        
     }
 }

@@ -31,7 +31,7 @@ class FlightBookingRequest extends FormRequest
             'ref' => 'required|string|min:20'
         ]);
         $revalidated = Parto::api()->air()->revalidate($this->input('ref'))?->PricedItinerary;
-        abort_if(! $revalidated, 404, 'Couldn\'t find the flight');
+        abort_if(! $revalidated, 404, __('Couldn\'t find the flight'));
         $this->revalidated_flight = new PricedItinerary($revalidated);
         
         return Auth::check();
@@ -164,7 +164,7 @@ class FlightBookingRequest extends FormRequest
                 'passport_number' => $passenger['passport']['passport_number'] ?? null,
                 'passport_expires_on' => $passenger['passport']['expiry_date'] ?? null,
                 'passport_issued_on' => $passenger['passport']['issue_date'] ?? null,
-                'passport_country' => $passenger['passport']['country']
+                'passport_country' => $passenger['passport']['country'] ?? null
             ]);
         }, $this->input('passengers'));
     }

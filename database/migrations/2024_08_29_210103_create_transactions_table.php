@@ -16,7 +16,7 @@ return new class extends Migration
             $table->uuid('id')->primary()->unique();
             $table->unsignedBigInteger('amount');
             $table->string('gateway_purchase_id');
-            $table->foreignIdFor(Order::class)->constrained();
+            $table->foreignIdFor(Order::class)->constrained()->cascadeOnDelete()->cascadeOnUpdate();
             $table->unsignedInteger('status')->nullable();
             $table->text('status_notes')->nullable();
             $table->ipAddress('payer_ip')->nullable();

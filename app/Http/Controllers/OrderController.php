@@ -9,6 +9,8 @@ use App\Models\AirBooking;
 use App\Models\Order;
 use App\Models\Parto\Hotel\HotelBooking;
 use App\Models\Transaction;
+use App\Parto\Domains\Flight\PricedItinerary;
+use App\Parto\Facades\Parto;
 use App\Payment\PaymentGateway;
 use Exception;
 use Illuminate\Http\Request;
@@ -33,25 +35,33 @@ class OrderController extends Controller
     public function pay(Order $order, Request $request)
     {
         Gate::authorize('update', $order);
-        // Revalidate once more here
-        // Move this to a seperated function
-        if ($request->has('credit')) {
-            abort_if($order->amount > get_auth_user()->credit, 403, __('Insufficient credit'));
-            $url = str_replace('api.', '', config('app.url'));
-            switch ($order->purchasable_type) {
-                case AirBooking::class:
-                    $url .= '/flight/final';
-                    break;
-                case HotelBooking::class:
-                    $url .= '/hotel/final';
-                    break;
-                default:
-                    throw new Exception('Purchasable type not supported!');
+        if ($order->purchasable_type == AirBooking::class) {
+            $airBooking = $order->purchasable;
+            $live_price = get_flight_total_price($airBooking);
+            if ($order->amount != $live_price) {
+                $order->update([
+                    'amount' => $live_price
+                ]);
+                return view('orders.confirm', compact('order'));
             }
-            $url .= '?url=' . urlencode($order->purchasable->getUri());
-            OrderPaid::dispatch($order);
-            return redirect()->to($url);
         }
+        if ($request->has('credit')) {
+            return $this->creditPayment($order);
+        }
+        return $this->gatewayPayment($order);
+    }
+
+    protected function creditPayment(Order $order)
+    {
+        if ($order->amount_to_be_paid > get_auth_user()->credit) {
+            abort(403, __('Insufficient credit'));
+        }
+        OrderPaid::dispatch($order);
+        return redirect()->to(get_order_final_url($order));
+    }
+
+    protected function gatewayPayment(Order $order)
+    {
         try {
             DB::beginTransaction();
             /**
@@ -64,10 +74,10 @@ class OrderController extends Controller
             $purchase->gateway->setRequestItem('payerMobileNumber', get_auth_user()->phone_number);
             $trx = new Transaction([
                 'status' => TransactionStatus::AWAITING,
-                'amount' => $order->amount,
+                'amount' => $order->amount_to_be_paid,
             ]);
             $order->transactions()->save($trx);
-            $purchase->init(amount: $order->amount, ref: $trx->id);
+            $purchase->init(amount: $order->amount_to_be_paid, ref: $trx->id);
             if ($purchase->requestPurchase()) {
                 $trx->update([
                     'gateway_purchase_id' => $purchase->getPurchaseId()
