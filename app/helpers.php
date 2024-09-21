@@ -51,7 +51,7 @@ if (! function_exists('get_order_final_url')) {
 if (! function_exists('get_flight_total_price')) {
     function get_flight_total_price(AirBooking $booking)
     {
-        if ($booking->is_webfare) {
+        if (is_null($booking->parto_unique_id)) {
             $price = (new PricedItinerary(Parto::api()->air()->revalidate($booking->ref)->PricedItinerary))->getTotalInRials();
         } else {
             $price = Arr::get(
