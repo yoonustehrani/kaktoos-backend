@@ -24,9 +24,17 @@ Route::get('/ticket', function() {
         $query->with(['arrival_airport.country', 'departure_airport.country', 'marketing_airline', 'operating_airline']);
     }]);
     $airBooking->passengers->append('fullname')->makeHidden(['first_name', 'middle_name', 'last_name', 'title']);
-    return view('pdfs.ticket2')
+    $view = view('pdfs.ticket2')
         ->with('passengers', $airBooking->passengers)
         ->with('flights', $airBooking->flights);
+    // return $view->render();
+    $response = Http::post('http://pdfrenderer:8082/render', [
+        'html' => $view->render(), // Render a Blade view
+    ]);
+    $pdf = $response->body();
+    return response($pdf, 200, [
+        'Content-Type' => 'application/pdf'
+    ]);
 });
 
 Route::get('/ticket/data', function() {

@@ -194,27 +194,34 @@ class AirBookingController extends Controller
     public function destroy(AirBooking $airBooking, Request $request)
     {
         $request->validate([
-            'ticket_numbers' => 'nullable|array',
+            'ticket_numbers' => 'array',
             'ticket_numbers.*' => 'string',
         ]);
+        // dd($airBooking->refund_type);
         if ($airBooking->refund_type == PartoRefundMethod::NonRefundable) {
             abort(403, __('Booking is non-refundable'));
         }
-        switch ($airBooking->refund_type) {
-            case PartoRefundMethod::Online:
-                $result = Parto::api()->air()->onlineRefund(
-                    unique_id: $airBooking->parto_unique_id,
-                    refundGroup: count($request->input('ticket_numbers', [])) > 0 ? RefundGroup::Pnr : RefundGroup::Eticket,
-                    ticket_numbers: $request->input('ticket_numbers')
-                );
-                break;
-            case PartoRefundMethod::Offline:
-                $result = Parto::api()->air()->offlineRefund(
-                    unique_id: $airBooking->parto_unique_id,
-                    ticket_numbers: $request->input('ticket_numbers')
-                );
-                break;
+        try {
+            switch ($airBooking->refund_type) {
+                case PartoRefundMethod::Online:
+                    $result = Parto::api()->air()->onlineRefund(
+                        unique_id: $airBooking->parto_unique_id,
+                        refundGroup: count($request->input('ticket_numbers', [])) < 1 ? RefundGroup::Pnr : RefundGroup::Eticket,
+                        ticket_numbers: $request->input('ticket_numbers')
+                    );
+                    break;
+                case PartoRefundMethod::Offline:
+                    $result = Parto::api()->air()->offlineRefund(
+                        unique_id: $airBooking->parto_unique_id,
+                        ticket_numbers: $request->input('ticket_numbers')
+                    );
+                    break;
+            }
+            return [
+                'okay' => $result->Success
+            ];
+        } catch (\Throwable $th) {
+            throw $th;
         }
-        return $result;
     }
 }

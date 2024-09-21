@@ -8,15 +8,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    {{-- <style>{{ file_get_contents(public_path('build/assets/app-BJOKyhXd.css')) }}</style> --}}
+    {{-- <style>{{ file_get_contents(public_path('')) }}</style> --}}
+    {{-- <link rel="stylesheet" href="http://backend/build/assets/app-C79Z4i2h.css"> --}}
+    {{-- http://backend/ --}}
     {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
     @vite('resources/css/app.css')
 </head>
-<body class="w-full h-full p-6 bg-gray-800 font-roboto">
+<body class="w-full min-w-[1280px] h-full p-1 bg-gray-800 font-roboto">
     @foreach ($passengers as $passenger)
         <div class="w-full h-screen p-6 flex flex-col gap-6">
             @foreach ($flights as $flight)
-                <div class="mx-auto w-full lg:w-4/5 flex h-[26rem] rounded-xl overflow-hidden bg-transparent">
+                <div class="mx-auto w-full 2xl:w-4/5 flex h-[26rem] rounded-xl overflow-hidden bg-transparent">
                     {{-- Ticket --}}
                     <div class="h-full w-auto grow relative text-gray-800">
                         <div class="w-full h-4/5 relative overflow-hidden flex items-start justify-center">

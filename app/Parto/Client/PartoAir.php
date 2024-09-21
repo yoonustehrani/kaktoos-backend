@@ -65,7 +65,7 @@ class PartoAir extends PartoClient
     public function offlineRefund(string $unique_id, ?Carbon $request_date = null, ?array $ticket_numbers = null)
     {
         $request_date = $request_date ?? now();
-        return $this->apiCall('Air/AirRefund', [
+        return $this->apiCall('Air/AirRefundOfflineRequest', [
             'UniqueId' => $unique_id,
             'RefundPaymentMode' => RefundPaymentMode::Credit,
             'RequestDate' => $request_date->format(config('services.parto.datetime_format')),

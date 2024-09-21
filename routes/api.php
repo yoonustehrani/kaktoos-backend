@@ -39,6 +39,7 @@ Route::prefix('/user')->name('user.')->middleware('auth:sanctum')->group(functio
     Route::prefix('/bookings')->name('bookings.')->group(function() {
         Route::get('/air', [AirBookingController::class, 'index'])->name('air.index');
         Route::get('/air/{airBooking}', [AirBookingController::class, 'show'])->name('air.show');
+        Route::delete('/air/{airBooking}', [AirBookingController::class, 'destroy'])->name('air.refund');
         Route::get('/air/{airBooking}/status', [AirBookingController::class, 'status'])->name('air.status');
         // Route::get('/air/{airBooking}/details', [AirBookingController::class, 'showDetailed'])->name('air.show.detailes');
         Route::get('/hotel/{hotelBooking}', fn() => ['okay' => true])->name('hotel.show');
