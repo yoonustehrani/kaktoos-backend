@@ -14,6 +14,7 @@ use App\Http\Controllers\Parto\HotelImageController;
 use App\Http\Controllers\TempAuthController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\UserAuthController;
+use App\Http\Controllers\UserCreditLogController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -34,6 +35,7 @@ Route::prefix('/user')->name('user.')->middleware('auth:sanctum')->group(functio
     Route::get('/', fn(Request $request) => $request->user())->name('show');
     Route::get('/orders', [OrderController::class, 'index'])->name('orders.index');
     Route::apiResource('transactions', TransactionController::class)->only(['index', 'show']);
+    Route::apiResource('credit-logs', UserCreditLogController::class)->only(['index', 'show']);
     Route::prefix('/bookings')->name('bookings.')->group(function() {
         Route::get('/air', [AirBookingController::class, 'index'])->name('air.index');
         Route::get('/air/{airBooking}', [AirBookingController::class, 'show'])->name('air.show');
