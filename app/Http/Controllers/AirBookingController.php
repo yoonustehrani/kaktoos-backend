@@ -52,14 +52,10 @@ class AirBookingController extends Controller
      */
     public function store(FlightBookingRequest $request)
     {
-        /**
-         * @var \App\Models\User
-         */
-        $user = $request->user();
+        $user = get_auth_user();
         $airBook = Parto::flight()->flightBook();
-        $airBook->setFareCode($request->revalidated_flight->getFareSourceCode())
-            ->setPhoneNumber($user->phone_number)
-            ->setEmail('yoonustehrani28@gmail.com');
+        $airBook->setFareCode($request->revalidated_flight->getFareSourceCode());
+        $airBook->setUser($user);
 
         foreach ($request->input('passengers') as $passenger) {
             $t = AirTraveler::make()
