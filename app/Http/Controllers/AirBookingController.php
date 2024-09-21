@@ -12,6 +12,7 @@ use App\Models\AirBooking;
 use App\Models\Order;
 use App\Parto\Domains\Flight\Enums\AirBook\AirBookCategory;
 use App\Parto\Domains\Flight\Enums\AirBook\AirQueueStatus;
+use App\Parto\Domains\Flight\Enums\AirRefund\RefundGroup;
 use App\Parto\Domains\Flight\Enums\AirSearch\AirTripType;
 use App\Parto\Domains\Flight\Enums\PartoRefundMethod;
 use App\Parto\Domains\Flight\Enums\TravellerGender;
@@ -19,6 +20,7 @@ use App\Parto\Domains\Flight\Enums\TravellerPassengerType;
 use App\Parto\Domains\Flight\Enums\TravellerSeatPreference;
 use App\Parto\Domains\Flight\FlightBook\AirTraveler;
 use App\Parto\Facades\Parto;
+use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
@@ -190,8 +192,30 @@ class AirBookingController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(AirBooking $airBooking)
+    public function destroy(AirBooking $airBooking, Request $request)
     {
-        //
+        $request->validate([
+            'ticket_numbers' => 'nullable|array',
+            'ticket_numbers.*' => 'string',
+        ]);
+        if ($airBooking->refund_type == PartoRefundMethod::NonRefundable) {
+            abort(403, __('Booking is non-refundable'));
+        }
+        switch ($airBooking->refund_type) {
+            case PartoRefundMethod::Online:
+                $result = Parto::api()->air()->onlineRefund(
+                    unique_id: $airBooking->parto_unique_id,
+                    refundGroup: count($request->input('ticket_numbers', [])) > 0 ? RefundGroup::Pnr : RefundGroup::Eticket,
+                    ticket_numbers: $request->input('ticket_numbers')
+                );
+                break;
+            case PartoRefundMethod::Offline:
+                $result = Parto::api()->air()->offlineRefund(
+                    unique_id: $airBooking->parto_unique_id,
+                    ticket_numbers: $request->input('ticket_numbers')
+                );
+                break;
+        }
+        return $result;
     }
 }

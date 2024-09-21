@@ -7,6 +7,7 @@ use App\Parto\Domains\Flight\Enums\AirRefund\RefundGroup;
 use App\Parto\Domains\Flight\Enums\AirRefund\RefundPaymentMode;
 use App\Parto\Domains\Flight\FlightBook\FlightBook;
 use App\Parto\Domains\Flight\FlightSearch\FlightSearch;
+use Illuminate\Support\Carbon;
 use stdClass;
 
 class PartoAir extends PartoClient
@@ -61,8 +62,14 @@ class PartoAir extends PartoClient
         ]);
     }
 
-    public function offlineRefund()
+    public function offlineRefund(string $unique_id, ?Carbon $request_date = null, ?array $ticket_numbers = null)
     {
-
+        $request_date = $request_date ?? now();
+        return $this->apiCall('Air/AirRefund', [
+            'UniqueId' => $unique_id,
+            'RefundPaymentMode' => RefundPaymentMode::Credit,
+            'RequestDate' => $request_date->format(config('services.parto.datetime_format')),
+            'EticketNumbers' => $ticket_numbers
+        ]);
     }
 }
