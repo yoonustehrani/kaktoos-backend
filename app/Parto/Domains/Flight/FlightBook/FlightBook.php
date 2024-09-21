@@ -32,7 +32,8 @@ final class FlightBook
     {
         $this->setPhoneNumber($user->phone_number);
         $this->setEmail($user->email);
-        return $this->setAttribute('ClientUniqueId', "U{$user->id}");
+        return $this;
+        // return $this->setAttribute('ClientUniqueId', "U{$user->id}");
     }
 
     public function addTraveler(AirTraveler $traveler)
