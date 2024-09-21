@@ -37,5 +37,6 @@ class CancellAirOrder implements ShouldQueue
             'status' => AirQueueStatus::Cancelled,
             'status_notes' => ''
         ]);
+        RefundOrder::dispatch($this->airBooking->order);
     }
 }
