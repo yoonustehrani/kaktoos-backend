@@ -9,6 +9,7 @@ use App\Parto\Domains\Flight\Enums\AirBook\AirQueueStatus;
 use App\Parto\Facades\Parto;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Queue\Queueable;
+use Illuminate\Support\Facades\Log;
 
 class IssueNonWebFareTicket implements ShouldQueue
 {
@@ -33,6 +34,7 @@ class IssueNonWebFareTicket implements ShouldQueue
             $this->airBooking->save();
             OrderCompleted::dispatch($this->airBooking->order);
         } catch (PartoErrorException $error) {
+            Log::error(json_encode($error->getErrorObject(), JSON_PRETTY_PRINT));
             $this->airBooking->status = AirQueueStatus::Exception;
             $this->airBooking->status_notes = $error->getMessage();
             $this->airBooking->save();
