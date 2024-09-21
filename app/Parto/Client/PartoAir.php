@@ -3,6 +3,8 @@
 namespace App\Parto\Client;
 
 use App\Parto\Client\PartoClient;
+use App\Parto\Domains\Flight\Enums\AirRefund\RefundGroup;
+use App\Parto\Domains\Flight\Enums\AirRefund\RefundPaymentMode;
 use App\Parto\Domains\Flight\FlightBook\FlightBook;
 use App\Parto\Domains\Flight\FlightSearch\FlightSearch;
 use stdClass;
@@ -47,5 +49,20 @@ class PartoAir extends PartoClient
     public function orderTicket(string $unique_id)
     {
         return $this->apiCall('Air/AirOrderTicket', ['UniqueId' => $unique_id]);
+    }
+
+    public function onlineRefund(string $unique_id, RefundGroup $refundGroup = RefundGroup::Pnr, ?array $ticket_numbers = null)
+    {
+        return $this->apiCall('Air/AirRefund', [
+            'UniqueId' => $unique_id,
+            'RefundType' => $refundGroup->value,
+            'RefundPaymentMode' => RefundPaymentMode::Credit,
+            'EticketNumbers' => $ticket_numbers
+        ]);
+    }
+
+    public function offlineRefund()
+    {
+
     }
 }
