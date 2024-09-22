@@ -23,6 +23,7 @@ use App\Parto\Facades\Parto;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Gate;
 
@@ -157,7 +158,11 @@ class AirBookingController extends Controller
     {
         Gate::authorize('view', $airBooking);
         if ($airBooking->parto_unique_id && $airBooking->status != AirQueueStatus::Ticketed) {
-            $result = Parto::api()->air()->getBookingDetails($airBooking->parto_unique_id);
+            $result = Cache::remember(
+                'BD@Parto' . $airBooking->parto_unique_id,
+                60 * 5,
+                fn() => Parto::api()->air()->getBookingDetails($airBooking->parto_unique_id)
+            );
         }
         if (isset($result)) {
             try {

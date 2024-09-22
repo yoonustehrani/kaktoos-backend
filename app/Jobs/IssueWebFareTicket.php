@@ -34,6 +34,7 @@ class IssueWebFareTicket implements ShouldQueue
             );
             $this->airBooking->parto_unique_id = $result->UniqueId;
             $this->airBooking->status = AirQueueStatus::tryFrom($result->Status);
+            $this->airBooking->meta->webfare = null;
             $this->airBooking->save();
             OrderCompleted::dispatch($this->airBooking->order);
         } catch (PartoErrorException $error) {
