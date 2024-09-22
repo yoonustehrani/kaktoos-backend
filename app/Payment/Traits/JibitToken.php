@@ -19,10 +19,10 @@ trait JibitToken
         if ($isForce === false && Cache::has($this->accessToken_key)) {
             return;
         } else if (Cache::has($this->refreshToken_key)) {
-            $refreshToken = $this->refreshTokens();
-            if (! $refreshToken) {
+            // $refreshToken = $this->refreshTokens();
+            // if (! $refreshToken) {
                 return $this->generateNewToken();
-            }
+            // }
         } else {
             return $this->generateNewToken();
         }
@@ -32,8 +32,8 @@ trait JibitToken
     public function refreshTokens()
     {
         $data = [
-            'accessToken' => str_replace('Bearer ', '', $this->cache->retrieve('accessToken')),
-            'refreshToken' => $this->cache->retrieve('refreshToken'),
+            'accessToken' => str_replace('Bearer ', '', $this->getAccessToken()),
+            'refreshToken' => $this->getRefreshToken(),
         ];
         $result = $this->apiCall(url: '/tokens/refresh', data: $data);
         if (empty($result['accessToken'])) {
