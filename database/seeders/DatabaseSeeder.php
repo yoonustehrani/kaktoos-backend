@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\City;
 use App\Models\Hotel;
+use App\Models\Order;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -36,7 +37,8 @@ class DatabaseSeeder extends Seeder
         $user = User::factory()->state([
             'phone_number' => '09121234567',
             'email' => 'yoonustehrani@example.com'
-        ])->make();
-        $user->save();
+        ])->create();
+        // $user->increaseCredit(99_999_999_999);
+        // $user->orders()->save(Order::factory()->make());
     }
 }

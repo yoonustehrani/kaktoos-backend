@@ -2,35 +2,27 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AirBooking;
+use App\Parto\Domains\Flight\Enums\AirBook\AirQueueStatus;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Response;
 
 class TicketController extends Controller
 {
-    public function show(string $ticketId)
+    public function index(AirBooking $airBooking)
     {
-        return view('pdfs.ticket', [
-            'company' => [
-                'name' => 'کاکتوس سیر توس',
-                'logo' => '',
-                'phone_number' => '05131234567'
-            ],
-            'ticket' => [
-                'number' => '123456'
-            ]
-        ]);
+        abort_if($airBooking->status != AirQueueStatus::Ticketed, 403);
+        $airBooking->load(['passengers.tickets', 'flights' => function($query) {
+            $query->with(['arrival_airport.country', 'departure_airport.country', 'marketing_airline', 'operating_airline']);
+        }]);
+        $airBooking->passengers->append('fullname')->makeHidden(['first_name', 'middle_name', 'last_name', 'title']);
+        $view = view('pdfs.ticket2')
+            ->with('passengers', $airBooking->passengers)
+            ->with('flights', $airBooking->flights);
+        return $view;
         // $response = Http::post('http://pdfrenderer:8082/render', [
-        //     'html' => view('pdfs.ticket', [
-        //         'company' => [
-        //             'name' => 'کاکتوس سیر توس',
-        //             'logo' => '',
-        //             'phone_number' => '05131234567'
-        //         ],
-        //         'ticket' => [
-        //             'number' => '123456'
-        //         ]
-        //     ])->render(), // Render a Blade view
+        //     'html' => $view->render(), // Render a Blade view
         // ]);
         // $pdf = $response->body();
         // return response($pdf, 200, [

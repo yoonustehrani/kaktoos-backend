@@ -51,13 +51,15 @@ class PartoClient
         }
         $response = $http->post($this->config['endpoint'] . $uri, $data);
         if ($response->clientError() || $response->json('Success') === false) {
-            $error = new PartoErrorException($response->json('Error'));
-            if ($error->id === 'Err0102008') {
-                // $this->logout();
-                Cache::forget(self::AUTH_CACHE_KEY);
-                return $this->apiCall($uri, $data, $auth);
+            if ($response->json('Error')) {
+                $error = new PartoErrorException($response->json('Error'));
+                if ($error->id === 'Err0102008') {
+                    // $this->logout();
+                    Cache::forget(self::AUTH_CACHE_KEY);
+                    return $this->apiCall($uri, $data, $auth);
+                }
+                throw $error;
             }
-            throw $error;
         }
         if ($response->serverError()) {
             throw new Exception('Parto Server Error');

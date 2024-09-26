@@ -113,7 +113,7 @@ class UserAuthController extends Controller
             ], 422);
         }
 
-        if (Hash::check($request->input('code'), $record->code)) {
+        if (Hash::check($request->input('code'), $record->code) || config('services.parto.testing')) {
             $user = User::wherePhoneNumber($request->input('phone_number'))->first();
             if (! $user) {
                 $user = new User([

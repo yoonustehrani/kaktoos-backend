@@ -12,9 +12,9 @@ use Illuminate\Http\Request;
 
 class HotelBookingController extends Controller
 {
-    public function show(HotelBooking $booking, Request $request)
+    public function show(HotelBooking $hotelBooking, Request $request)
     {
-        return Parto::api()->hotel()->getBookingData($booking->parto_unique_id, $request->user()->id);
+        return Parto::api()->hotel()->getBookingData($hotelBooking->parto_unique_id, $request->user()->id);
     }
 
     public function store(string $ref, HotelBookingRequest $request)
@@ -31,7 +31,7 @@ class HotelBookingController extends Controller
         $booking = $request->user()->hotelBookings()->save($booking);
         $order = new Order([
             'user_id' => $request->user()->id,
-            'title' => 'رزور هتل',
+            'title' => __('Hotel Reservation'),
             'amount' => intval($offer['NetRate'])
         ]);
         $booking->order()->save($order);

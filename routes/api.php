@@ -9,13 +9,14 @@ use App\Http\Controllers\HotelBookingController;
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\InternationalAirportController;
 use App\Http\Controllers\NationalAirportController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\Parto\HotelImageController;
+use App\Http\Controllers\TempAuthController;
+use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\UserAuthController;
-use App\Models\User;
+use App\Http\Controllers\UserCreditLogController;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Validation\ValidationException;
 
 Route::prefix('airports')->group(function() {
     Route::get('/national', NationalAirportController::class . '@index');
@@ -31,31 +32,23 @@ Route::prefix('flights')->group(function() {
 });
 
 Route::prefix('/user')->name('user.')->middleware('auth:sanctum')->group(function() {
-    Route::get('/', fn(Request $request) => $request->user());
-    Route::get('bookings/air/{airBooking}', [AirBookingController::class, 'show'])->name('bookings.air.show');
-    Route::get('bookings/air/{airBooking}/details', [AirBookingController::class, 'showDetailed'])->name('bookings.air.show.detailes');
-    // [AirBookingController::class, 'show']
-    Route::get('bookings/hotel/{hotelBooking}', fn() => ['okay' => true])->name('bookings.hotel.show');
+    Route::get('/', fn(Request $request) => $request->user())->name('show');
+    Route::get('/orders', [OrderController::class, 'index'])->name('orders.index');
+    Route::apiResource('transactions', TransactionController::class)->only(['index', 'show']);
+    Route::apiResource('credit-logs', UserCreditLogController::class)->only(['index', 'show']);
+    Route::prefix('/bookings')->name('bookings.')->group(function() {
+        Route::get('/air', [AirBookingController::class, 'index'])->name('air.index');
+        Route::get('/air/{airBooking}', [AirBookingController::class, 'show'])->name('air.show');
+        Route::delete('/air/{airBooking}', [AirBookingController::class, 'destroy'])->name('air.refund');
+        Route::get('/air/{airBooking}/status', [AirBookingController::class, 'status'])->name('air.status');
+        // Route::get('/air/{airBooking}/details', [AirBookingController::class, 'showDetailed'])->name('air.show.detailes');
+        Route::get('/hotel/{hotelBooking}', fn() => ['okay' => true])->name('hotel.show');
+    });
 });
 
 Route::post('/login', [UserAuthController::class, 'login']);
 
-Route::post('/sanctum/token', function (Request $request) {
-    $request->validate([
-        'phone_number' => 'required',
-        'password' => 'required',
-    ]);
- 
-    $user = User::where('phone_number', $request->phone_number)->first();
- 
-    if (! $user || ! Hash::check($request->password, $user->password)) {
-        throw ValidationException::withMessages([
-            'phone_number' => ['The provided credentials are incorrect.'],
-        ]);
-    }
- 
-    return $user->createToken('thunderbelt')->plainTextToken;
-});
+Route::post('/sanctum/token', TempAuthController::class);
 
 
 Route::get('cities/search', [CityController::class, 'search']);

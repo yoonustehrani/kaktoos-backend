@@ -9,7 +9,7 @@ class ETicket extends Model
 {
     use HasFactory;
 
-    protected $fillable = [ 'ticket_number', 'status', 'refunded', 'total_refund', 'issued_at', 'airline_pnr'];
+    protected $fillable = [ 'ticket_number', 'air_booking_id', 'status', 'refunded', 'total_refund', 'issued_at', 'airline_pnr'];
 
     public function passengers()
     {

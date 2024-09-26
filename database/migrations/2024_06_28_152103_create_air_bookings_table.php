@@ -16,6 +16,11 @@ return new class extends Migration
             $table->id();
             $table->unsignedInteger('type');
             $table->unsignedInteger('refund_type');
+            $table->string('origin_airport_code');
+            $table->string('destination_airport_code');
+            $table->dateTime('journey_begins_at');
+            $table->dateTime('journey_ends_at')->nullable();
+            $table->string('airline_code');
             $table->boolean('is_webfare');
             $table->string('parto_unique_id')->nullable();
             $table->foreignIdFor(User::class)->index();

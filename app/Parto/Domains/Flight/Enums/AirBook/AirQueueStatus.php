@@ -3,11 +3,12 @@
 namespace App\Parto\Domains\Flight\Enums\AirBook;
 
 use App\Attributes\DisplayFa;
+use App\Traits\DescribeEnumForAPI;
 use App\Traits\EnumAttributeCatcher;
 
 enum AirQueueStatus: int
 {
-    use EnumAttributeCatcher;
+    use EnumAttributeCatcher, DescribeEnumForAPI;
     
     #[DisplayFa('رزرو شده')]
     case Booked = 10;

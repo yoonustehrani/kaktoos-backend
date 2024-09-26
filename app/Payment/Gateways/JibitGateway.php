@@ -39,14 +39,14 @@ class JibitGateway extends GatewayMethods
     }
     public function requestPayment()
     {
-        $data = [
+        $data = array_merge([
             'amount' => $this->getAmount(),
             'clientReferenceNumber' => $this->ref,
             'currency' => 'IRR',
-            'userIdentifier' => auth()->user()?->id ?? null,
-            'description' => $this->requestData['description'] ?? '',
-            'callbackUrl' => $this->requestData['callbackUrl']
-        ];
+            'userIdentifier' => null,
+            'description' => '',
+            'callbackUrl' => null
+        ], $this->requestData->toArray());
         $result = $this->apiCall(url: '/purchases', data: $data, withAuth: true);
         if (is_array($result) && isset($result['pspSwitchingUrl']) ) {
             $this->redirectUrl = $result['pspSwitchingUrl'];

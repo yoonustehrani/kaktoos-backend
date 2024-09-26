@@ -15,10 +15,10 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(User::class);
-            $table->string('gateway_purchase_id')->nullable();
             $table->morphs('purchasable');
             $table->string('title')->nullable();
             $table->unsignedBigInteger('amount');
+            $table->unsignedBigInteger('amount_paid')->default(0);
             $table->timestamp('paid_at')->nullable();
             $table->json('meta')->default(json_encode([]));
             $table->timestamps();
