@@ -29,7 +29,7 @@ class OrderPolicy
      */
     public function update(User $user, Order $order): Response
     {
-        return $order->user_id === $user->id
+        return $order->user_id === $user->id && is_null($order->paid_at)
         ? Response::allow()
         : Response::denyAsNotFound();
     }

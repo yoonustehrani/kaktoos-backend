@@ -2,6 +2,7 @@
 
 namespace App\Parto\Domains\Flight\FlightBook;
 
+use App\Models\User;
 use Illuminate\Support\Collection;
 
 final class FlightBook
@@ -25,6 +26,14 @@ final class FlightBook
                 'AirTravelers' => []
             ]
         ]);
+    }
+
+    public function setUser(User $user)
+    {
+        $this->setPhoneNumber($user->phone_number);
+        $this->setEmail($user->email);
+        return $this;
+        // return $this->setAttribute('ClientUniqueId', "U{$user->id}");
     }
 
     public function addTraveler(AirTraveler $traveler)

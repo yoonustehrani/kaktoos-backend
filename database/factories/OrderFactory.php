@@ -17,7 +17,8 @@ class OrderFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'title' => 'پرداخت برای تست',
+            'amount' => 10000
         ];
     }
 }

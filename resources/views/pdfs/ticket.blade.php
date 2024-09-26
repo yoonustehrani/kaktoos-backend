@@ -6,15 +6,15 @@
 </head>
 <body>
 
-<div class="px-2 py-8 max-w-xl mx-auto">
+<div class="px-2 py-8 max-w-xl mx-auto bg-red-400">
     <div class="flex items-center justify-between mb-8">
         <div class="flex items-center">
-            <div class="text-gray-700 font-semibold text-lg">{{ $company['name'] }}</div>
+            <div class="text-gray-700 font-semibold text-lg">'$company['name']'</div>
         </div>
         <div class="text-gray-700">
             <div class="font-bold text-xl mb-2 uppercase">Ticket</div>
             <div class="text-sm">Date: 01/05/2023</div>
-            <div class="text-sm">Ticket #: {{ $ticket['number'] }}</div>
+            <div class="text-sm">Ticket #: '$ticket['number']'</div>
         </div>
     </div>
     <div class="border-b-2 border-gray-300 pb-8 mb-8">

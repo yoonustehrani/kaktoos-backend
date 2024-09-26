@@ -3,55 +3,59 @@
 use App\Events\OrderPaid;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\TicketController;
+use App\Jobs\OrderTransactionPaid;
+use App\Models\AirBooking;
 use App\Models\Order;
+use App\Models\Transaction;
 use App\Parto\Enums\HotelQueueStatus;
 use App\Payment\PaymentGateway;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 
 
-Route::get('/test', function() {
-    $order = Order::latest()->first();
-    DB::transaction(function() use($order) {
-        $order->user?->increaseCredit($order->amount);
-    });
-    // return $order->purchasable;
-    OrderPaid::dispatch($order);
+Route::get('/ticket', function() {
+    $airBooking = AirBooking::latest()->first();
+    $airBooking->load(['passengers.tickets', 'flights' => function($query) {
+        $query->with(['arrival_airport.country', 'departure_airport.country', 'marketing_airline', 'operating_airline']);
+    }]);
+    $airBooking->passengers->append('fullname')->makeHidden(['first_name', 'middle_name', 'last_name', 'title']);
+    $view = view('pdfs.ticket2')
+        ->with('passengers', $airBooking->passengers)
+        ->with('flights', $airBooking->flights);
+    // return $view->render();
+    $response = Http::post('http://pdfrenderer:8082/render', [
+        'html' => $view->render(), // Render a Blade view
+    ]);
+    $pdf = $response->body();
+    return response($pdf, 200, [
+        'Content-Type' => 'application/pdf'
+    ]);
+});
+
+Route::get('/ticket/data', function() {
+    $airBooking = AirBooking::latest()->first();
+    $airBooking->load(['passengers.tickets', 'flights' => function($query) {
+        $query->with(['arrival_airport.country', 'departure_airport.country', 'marketing_airline', 'operating_airline']);
+    }]);
+    $airBooking->passengers->append('fullname')->makeHidden(['first_name', 'middle_name', 'last_name', 'title']);
+    return $airBooking;
 });
 
 Route::middleware('auth:sanctum')->group(function() {
-    Route::get('orders/{order}', function(Order $order, Request $request) {
-        $order->load('purchasable');
-        return $order;
-    });
-    
-    Route::get('orders/{order}/events', function (Order $order) {
-        OrderPaid::dispatch($order);
-        return [
-            'okay' => true
-        ];
-    });
-    
     Route::get('orders/{order}/pay', [OrderController::class, 'pay'])->name('orders.pay');
-    Route::get('tickets/{ticketId}', [TicketController::class, 'show'])->name('tickets.show');
+    Route::get('air/bookings/{airBooking}/ticket', [TicketController::class, 'index'])->name('bookings.air.tickets.index');
+    // Route::get('hotel/bookings/{hotelBooking}/voucher');
 });
 
-
-Route::get('/pay', function() {
-    /**
-     * @var \App\Payment\PaymentGateway
-     */
-    $purchase = app()->make(PaymentGateway::getGatewayClassname('jibit'));
-    // $order->title
-    $purchase->gateway->setRequestItem('description', 'پرداخت برای تست');
-    $purchase->init(amount: 1000, ref: Str::random(18));
-    if ($purchase->requestPurchase()) {
-        // $order->gateway_purchase_id = $purchase->getPurchaseId();
-        // $order->save();
-        return redirect()->to($purchase->getRedirectUrl());
-    }
+Route::get('/trx', function() {
+    $trx = Transaction::latest()->first();
+    $trx->order->user->increaseCredit($trx->amount);
+    OrderTransactionPaid::dispatch($trx);
 });
 
 Route::view('/', 'welcome');

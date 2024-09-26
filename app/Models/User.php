@@ -59,6 +59,16 @@ class User extends Authenticatable
         return $this->hasMany(HotelBooking::class);
     }
 
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
+
+    public function transactions()
+    {
+        return $this->hasManyThrough(Transaction::class, Order::class);
+    }
+
     public function credit_logs()
     {
         return $this->hasMany(CreditLog::class);
@@ -69,7 +79,7 @@ class User extends Authenticatable
         $this->increment('credit', $amount);
         $this->credit_logs()->save(new CreditLog([
             'amount' => abs($amount),
-            'status' => CreditAction::Increase
+            'action' => CreditAction::Increase
         ]));
     }
 
@@ -78,7 +88,7 @@ class User extends Authenticatable
         $this->decrement('credit', $amount);
         $this->credit_logs()->save(new CreditLog([
             'amount' => abs($amount) * -1,
-            'status' => CreditAction::Decrease
+            'action' => CreditAction::Decrease
         ]));
     }
 }

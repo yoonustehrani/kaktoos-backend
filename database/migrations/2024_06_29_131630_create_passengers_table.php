@@ -25,7 +25,8 @@ return new class extends Migration
             $table->string('last_name');
             $table->date('birthdate');
             $table->string('country_code')->default('IR');
-            $table->string('national_code')->nullable();
+            $table->string('national_id')->nullable();
+            $table->string('passport_country')->nullable();
             $table->string('passport_number')->nullable();
             $table->date('passport_expires_on')->nullable();
             $table->date('passport_issued_on')->nullable();

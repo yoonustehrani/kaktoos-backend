@@ -45,6 +45,6 @@ class HotelBooking extends Model
 
     public function getUri()
     {
-        return route('user.bookings.hotel.show', ['airBooking' => $this->id]);
+        return route('user.bookings.hotel.show', ['hotelBooking' => $this->id]);
     }
 }
