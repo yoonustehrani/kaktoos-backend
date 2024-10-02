@@ -14,7 +14,6 @@ class AppServiceProvider extends ServiceProvider
         if ($this->app->environment('local')) {
             // \URL::forceScheme('https');
             $this->app->register(\Laravel\Telescope\TelescopeServiceProvider::class);
-            $this->app->register(TelescopeServiceProvider::class);
         }
     }
 

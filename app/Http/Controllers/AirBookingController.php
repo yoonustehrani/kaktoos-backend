@@ -160,7 +160,7 @@ class AirBookingController extends Controller
         if ($airBooking->parto_unique_id && $airBooking->status != AirQueueStatus::Ticketed) {
             $result = Cache::remember(
                 'BD@Parto' . $airBooking->parto_unique_id,
-                60 * 5,
+                60 * 1,
                 fn() => Parto::api()->air()->getBookingDetails($airBooking->parto_unique_id)
             );
         }
