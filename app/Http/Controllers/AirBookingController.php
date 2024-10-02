@@ -180,7 +180,13 @@ class AirBookingController extends Controller
             }
         }
         $airBooking->load(['airline', 'origin_airport', 'destination_airport', 'order']);
-        return response()->json(new AirBookingResource($airBooking));
+        $response = new AirBookingResource($airBooking);
+        if (isset($result)) {
+            $response = array_merge($response->toArray(request()), [
+                'parto_response' => json_encode((array) $result)
+            ]);
+        }
+        return response()->json($response);
     }
 
     public function show($airBooking)
