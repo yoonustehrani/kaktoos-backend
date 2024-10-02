@@ -157,10 +157,11 @@ class AirBookingController extends Controller
     public function status(AirBooking $airBooking)
     {
         Gate::authorize('view', $airBooking);
-        if ($airBooking->parto_unique_id && $airBooking->status != AirQueueStatus::Ticketed) {
+        if ($airBooking->parto_unique_id) {
+            $ttl = $airBooking->status != AirQueueStatus::Ticketed ? 60 : 60 * 60;
             $result = Cache::remember(
                 'BD@Parto' . $airBooking->parto_unique_id,
-                60 * 1,
+                $ttl,
                 fn() => Parto::api()->air()->getBookingDetails($airBooking->parto_unique_id)
             );
         }
@@ -183,7 +184,7 @@ class AirBookingController extends Controller
         $response = new AirBookingResource($airBooking);
         if (isset($result)) {
             $response = array_merge($response->toArray(request()), [
-                'parto_response' => json_encode((array) $result)
+                'parto_response' => (array) $result
             ]);
         }
         return response()->json($response);
