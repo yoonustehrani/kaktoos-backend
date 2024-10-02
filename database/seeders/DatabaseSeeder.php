@@ -35,10 +35,10 @@ class DatabaseSeeder extends Seeder
         $this->call(AirlineSeeder::class);
 
         $user = User::factory()->state([
-            'phone_number' => '09121234567',
-            'email' => 'yoonustehrani@example.com'
+            'phone_number' => '09124082579',
+            'email' => 'm.sepehr@partocrs.com'
         ])->create();
-        // $user->increaseCredit(99_999_999_999);
-        // $user->orders()->save(Order::factory()->make());
+        
+        $user->increaseCredit(99_999_999_999);
     }
 }
