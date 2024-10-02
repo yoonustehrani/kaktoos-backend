@@ -30,8 +30,7 @@ if (! function_exists('get_carbon_datetime')) {
 if (! function_exists('get_order_final_url')) {
     function get_order_final_url(Order $order)
     {
-        // str_replace('api.', '', config('app.url'))
-        $url = '';
+        $url = str_replace('api.', '', config('app.url'));
         switch ($order->purchasable_type) {
             case AirBooking::class:
                 $url .= '/flight/final';
@@ -43,7 +42,8 @@ if (! function_exists('get_order_final_url')) {
                 throw new Exception('Purchasable type not supported!');
         }
         if (method_exists($order->purchasable, 'getUri')) {
-            $url .= '?url=' . urlencode($order->purchasable->getUri());
+            $target = urlencode($order->purchasable->getUri());
+            $url .= '?url=' . $target;
         }
         return $url;
     }
