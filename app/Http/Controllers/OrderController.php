@@ -56,6 +56,7 @@ class OrderController extends Controller
         if ($order->amount_to_be_paid > get_auth_user()->credit) {
             abort(403, __('Insufficient credit'));
         }
+        get_auth_user()->decreaseCredit($order->amount_to_be_paid);
         OrderPaid::dispatch($order);
         return redirect()->to(get_order_final_url($order));
     }
