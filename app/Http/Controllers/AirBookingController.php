@@ -26,6 +26,7 @@ use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Log;
 
 class AirBookingController extends Controller
 {
@@ -57,7 +58,6 @@ class AirBookingController extends Controller
         $airBook = Parto::flight()->flightBook();
         $airBook->setFareCode($request->revalidated_flight->getFareSourceCode());
         $airBook->setUser($user);
-
         foreach ($request->input('passengers') as $passenger) {
             $t = AirTraveler::make()
                 ->setName(firstName: $passenger['first_name'], middleName: $passenger->middle_name ?? '', lastName: $passenger['last_name'])
@@ -66,11 +66,12 @@ class AirBookingController extends Controller
                 ->setNationality($passenger['nationality'])
                 ->setPassengerType(TravellerPassengerType::tryFrom($passenger['type']))
                 ->setSeatPreference(TravellerSeatPreference::tryFrom('any'));
+            // ($request->revalidated_flight->isPassportMandatory() || $request->input('is_international')) ||
             if (
-                ($request->revalidated_flight->isPassportMandatory() || $request->input('is_international'))
-                && isset($passenger['passport'])
+                 isset($passenger['passport'])
             ) {
                 $t->setPassport(
+                    countryCode: $passenger['passport']['country'],
                     passportNumber: $passenger['passport']['passport_number'],
                     expires_on: Carbon::createFromFormat('Y-m-d', $passenger['passport']['expiry_date']),
                     issued_on: ! isset($passenger['passport']['issue_date']) ? null : Carbon::createFromFormat('Y-m-d', $passenger['passport']['issue_date'])
@@ -158,7 +159,7 @@ class AirBookingController extends Controller
     {
         Gate::authorize('view', $airBooking);
         if ($airBooking->parto_unique_id) {
-            $ttl = $airBooking->status != AirQueueStatus::Ticketed ? 60 : 60 * 60;
+            $ttl = $airBooking->status != AirQueueStatus::Ticketed ? 3 : 60 * 60;
             $result = Cache::remember(
                 'BD@Parto' . $airBooking->parto_unique_id,
                 $ttl,
@@ -182,11 +183,9 @@ class AirBookingController extends Controller
         }
         $airBooking->load(['airline', 'origin_airport', 'destination_airport', 'order']);
         $response = new AirBookingResource($airBooking);
-        if (isset($result)) {
-            $response = array_merge($response->toArray(request()), [
-                'parto_response' => (array) $result
-            ]);
-        }
+        $response = array_merge($response->toArray(request()), [
+            'parto_response' => isset($result) ? ((array) $result) : $airBooking->status_notes
+        ]);
         return response()->json($response);
     }
 

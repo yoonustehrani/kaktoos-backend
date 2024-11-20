@@ -110,7 +110,7 @@ class FlightBookingRequest extends FormRequest
             'passengers.*.gender' => ['required', Rule::enum(TravellerGender::class)],
             'passengers.*.type' => ['required', Rule::enum(TravellerPassengerType::class)],
             'passengers.*.first_name' => 'required|string|min:3|max:25',
-            'passengers.*.middle_name' => ['required_unless:passengers.*.nationality,IR', 'string', 'min:1', 'max:25'],
+            // 'passengers.*.middle_name' => ['required_unless:passengers.*.nationality,IR', 'string', 'min:1', 'max:25'],
             'passengers.*.last_name' => 'required|string|min:3|max:25',
             'passengers.*.wheelchair' => ['required', 'boolean'],
             'passengers.*.seat_type' => ['nullable', Rule::enum(TravellerSeatPreference::class)],

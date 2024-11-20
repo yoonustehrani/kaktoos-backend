@@ -107,12 +107,12 @@ class AirTraveler
     public function setNationality(string $countryCode)
     {
         $this->attributes->put('Nationality', $countryCode);
-        $this->attributes->put('Passport.Country', $countryCode);
         return $this;
     }
 
-    public function setPassport(string $passportNumber, Carbon $expires_on, Carbon $issued_on = null)
+    public function setPassport(string $countryCode, string $passportNumber, Carbon $expires_on, Carbon $issued_on = null)
     {
+        $this->attributes->put('Passport.Country', $countryCode);
         $this->attributes->put('Passport.PassportNumber', $passportNumber);
         $this->attributes->put('Passport.ExpiryDate', $expires_on->format($this->datetime_formate));
         if (! is_null($issued_on)) {
