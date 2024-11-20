@@ -87,7 +87,7 @@ class UserAuthController extends Controller
          */
         if ($request->missing('code')) {
             $rlKey = 'sms:' . $request->ip();
-            if (RateLimiter::tooManyAttempts($rlKey, $perTwoMinutes = 1, $decayRate = 120)) {
+            if (RateLimiter::tooManyAttempts($rlKey, $perTwoMinutes = 3, $decayRate = 120)) {
                 return response()->json([
                     'message' => 'Too many requests! you may request again in ' . RateLimiter::availableIn($rlKey) . ' seconds'
                 ], 429);
