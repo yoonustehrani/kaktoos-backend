@@ -24,14 +24,15 @@ Route::get('/ticket', function() {
         $query->with(['arrival_airport.country', 'departure_airport.country', 'marketing_airline', 'operating_airline']);
     }]);
     $airBooking->passengers->append('fullname')->makeHidden(['first_name', 'middle_name', 'last_name', 'title']);
-    $view = view('pdfs.ticket2')
+    $view = view('pdfs.ticket')
         ->with('passengers', $airBooking->passengers)
         ->with('flights', $airBooking->flights);
+    return $view;
     // return $view->render();
-    $response = Http::post('http://pdfrenderer:8082/render', [
-        'html' => $view->render(), // Render a Blade view
-    ]);
-    $pdf = $response->body();
+    // $response = Http::post('http://pdfrenderer:8082/render', [
+    //     'html' => $view->render(), // Render a Blade view
+    // ]);
+    // $pdf = $response->body();
     return response($pdf, 200, [
         'Content-Type' => 'application/pdf'
     ]);
