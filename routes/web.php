@@ -19,12 +19,16 @@ use Illuminate\Support\Str;
 
 
 Route::get('/ticket', function() {
+    abort_if(app()->isProduction(), 403);
     $airBooking = AirBooking::latest()->first();
+    $airBooking->load('origin_airport', 'destination_airport');
     $airBooking->load(['passengers.tickets', 'flights' => function($query) {
         $query->with(['arrival_airport.country', 'departure_airport.country', 'marketing_airline', 'operating_airline']);
     }]);
+    // return $airBooking;
     $airBooking->passengers->append('fullname')->makeHidden(['first_name', 'middle_name', 'last_name', 'title']);
-    $view = view('pdfs.ticket')
+    $view = view('pdfs.ticket-fa')
+        ->with('booking', $airBooking)
         ->with('passengers', $airBooking->passengers)
         ->with('flights', $airBooking->flights);
     return $view;
@@ -33,9 +37,9 @@ Route::get('/ticket', function() {
     //     'html' => $view->render(), // Render a Blade view
     // ]);
     // $pdf = $response->body();
-    return response($pdf, 200, [
-        'Content-Type' => 'application/pdf'
-    ]);
+    // return response($pdf, 200, [
+    //     'Content-Type' => 'application/pdf'
+    // ]);
 });
 
 Route::get('/ticket/data', function() {

@@ -173,7 +173,10 @@ class AirBookingController extends Controller
                     InsertTicketData::dispatch($airBooking, $result->TravelItinerary['ItineraryInfo']);
                 }
                 $airBooking->update([
-                    'status' => AirQueueStatus::tryFrom($result->Status)
+                    'status' => AirQueueStatus::tryFrom($result->Status),
+                    'meta' => array_merge($airBooking->meta, [
+                        'notes' => $result->TravelItinerary['BookingNotes']
+                    ])
                 ]);
                 DB::commit();
             } catch (\Throwable $th) {
