@@ -9,6 +9,7 @@ use App\Parto\Domains\Flight\PricedItinerary;
 use App\Parto\Facades\Parto;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Carbon;
+use Morilog\Jalali\Jalalian;
 
 if (! function_exists('get_auth_user')) {
     /**
@@ -61,5 +62,19 @@ if (! function_exists('get_flight_total_price')) {
             );
         }
         return intval($price);
+    }
+}
+
+if (!function_exists('name_fa')) {
+    function name_fa($object, $name = 'name')
+    {
+        $name_fa = $name . '_fa';
+        return $object->{$name_fa} ?? $object->{$name};
+    }
+}
+
+if (! function_exists('jalali')) {
+    function jalali (Carbon $date) {
+        return Jalalian::fromCarbon($date);
     }
 }
