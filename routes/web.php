@@ -59,6 +59,7 @@ Route::middleware('auth:sanctum')->group(function() {
 });
 
 Route::get('/trx', function() {
+    abort_if(app()->isProduction(), 403);
     $trx = Transaction::latest()->first();
     $trx->order->user->increaseCredit($trx->amount);
     OrderTransactionPaid::dispatch($trx);
