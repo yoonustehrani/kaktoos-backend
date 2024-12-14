@@ -13,4 +13,9 @@ trait HasMetaAttribute
             set: fn($value) => json_encode($value)
         );
     }
+
+    public function addToMeta(string $key, mixed $value)
+    {
+        $this->meta = data_set($this->meta, $key, $value);
+    }
 }
