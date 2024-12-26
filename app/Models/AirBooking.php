@@ -9,8 +9,11 @@ use App\Parto\Domains\Flight\Enums\AirSearch\AirTripType;
 use App\Parto\Domains\Flight\Enums\PartoRefundMethod;
 use App\Purchasable;
 use App\Traits\HasMetaAttribute;
+use Illuminate\Database\Eloquent\Casts\AsArrayObject;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Arr;
+use Nette\Utils\ObjectHelpers;
 
 class AirBooking extends Model implements Purchasable
 {

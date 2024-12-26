@@ -169,15 +169,22 @@ class AirBookingController extends Controller
         if (isset($result)) {
             try {
                 DB::beginTransaction();
+                $airBooking->status = AirQueueStatus::tryFrom($result->Status);
                 if ($airBooking->parto_unique_id && AirQueueStatus::tryFrom($result->Status) == AirQueueStatus::Ticketed) {
                     InsertTicketData::dispatch($airBooking, $result->TravelItinerary['ItineraryInfo']);
+                    $airBooking->addToMeta('notes', $result->TravelItinerary['BookingNotes']);
+                    $airBooking->addToMeta('online_check_in', [
+                        'active' => $result->OnlineCheckIn,
+                        'url' => $result->OnlineCheckingUrl,
+                        'time' => $result->BeforeTravelOnlineCheckingTime
+                    ]);
+                    $airBooking->addToMeta('seat_selection', [
+                        'active' => $result->SeatSelection,
+                        'url' => $result->SeatSelectionUrl,
+                        'time' => $result->BeforeTravelSeatSelectionTime
+                    ]);
                 }
-                $airBooking->update([
-                    'status' => AirQueueStatus::tryFrom($result->Status),
-                    'meta' => array_merge($airBooking->meta, [
-                        'notes' => $result->TravelItinerary['BookingNotes']
-                    ])
-                ]);
+                $airBooking->save();
                 DB::commit();
             } catch (\Throwable $th) {
                 DB::rollBack();
