@@ -16,14 +16,16 @@ class InternationalAirportController extends Controller
         ]);
         $search_query = $request->query('q');
         $airports = Airport::onlyInternational();
-        if (preg_match('/^[A-Z]{2,4}$/', $search_query)) {
-            $airports->where('IATA_code', 'like', "$search_query%");
-        } else if (preg_match('/[A-Za-z]+/', $search_query)) {
-            $airports->where('name', 'like', "%$search_query%");
-            $airports->orWhere('city_name', 'like', "%$search_query%");
-        } else if (preg_match('/[^a-zA-Z0-9\_\@\!\/\$\#\^\&\*\(\)\-\+]{1,}/', $search_query)) {
-            $airports->where('name_fa', 'like', "%$search_query%");
-            $airports->orWhere('city_name_fa', 'like', "%$search_query%");
+        if ($search_query) {
+            if (preg_match('/^[A-Z]{2,4}$/', $search_query)) {
+                $airports->where('IATA_code', 'like', "$search_query%");
+            } else if (preg_match('/[A-Za-z]+/', $search_query)) {
+                $airports->where('name', 'like', "%$search_query%");
+                $airports->orWhere('city_name', 'like', "%$search_query%");
+            } else if (preg_match('/[^a-zA-Z0-9\_\@\!\/\$\#\^\&\*\(\)\-\+]{1,}/', $search_query)) {
+                $airports->where('name_fa', 'like', "%$search_query%");
+                $airports->orWhere('city_name_fa', 'like', "%$search_query%");
+            }   
         }
         $limit = $request->query('limit') ?? '5';
         $airports->limit($limit);
