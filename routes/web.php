@@ -1,21 +1,11 @@
 <?php
 
-use App\Events\OrderPaid;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\TicketController;
 use App\Jobs\OrderTransactionPaid;
 use App\Models\AirBooking;
-use App\Models\Order;
 use App\Models\Transaction;
-use App\Parto\Enums\HotelQueueStatus;
-use App\Payment\PaymentGateway;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Str;
 
 
 Route::get('/ticket', function() {
@@ -59,6 +49,7 @@ Route::middleware('auth:sanctum')->group(function() {
 });
 
 Route::get('/trx', function() {
+    abort_if(app()->isProduction(), 403);
     $trx = Transaction::latest()->first();
     $trx->order->user->increaseCredit($trx->amount);
     OrderTransactionPaid::dispatch($trx);
