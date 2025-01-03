@@ -18,11 +18,9 @@ class TicketController extends Controller
             $query->with(['arrival_airport.country', 'departure_airport.country', 'marketing_airline', 'operating_airline']);
         }]);
         $view = 'ticket';
-        if ($airBooking->origin_airport->country_code  == 'IR' && $airBooking->destination_airport->country_code == 'IR') {
-            $view = 'ticket-fa';
-        }
         $airBooking->passengers->append('fullname')->makeHidden(['first_name', 'middle_name', 'last_name', 'title']);
         return view('pdfs.' . $view)
+            ->with('booking', $airBooking)
             ->with('passengers', $airBooking->passengers)
             ->with('flights', $airBooking->flights);
         return $view;

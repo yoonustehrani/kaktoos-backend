@@ -66,8 +66,11 @@ if (! function_exists('get_flight_total_price')) {
 }
 
 if (!function_exists('name_fa')) {
-    function name_fa($object, $name = 'name')
+    function name_fa($object, $name = 'name', $enforce = false)
     {
+        if (! $enforce && ! app()->isLocale('fa')) {
+            return $object->{$name};
+        }
         $name_fa = $name . '_fa';
         return $object->{$name_fa} ?? $object->{$name};
     }
