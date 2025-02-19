@@ -82,6 +82,7 @@ class AirBookingController extends Controller
             }
             $airBook->addTraveler($t);
         }
+
         $booking = new AirBooking([
             'is_webfare' => $request->revalidated_flight->isWebfare(),
             'refund_type' => PartoRefundMethod::tryFrom($request->revalidated_flight->get('RefundMethod')),

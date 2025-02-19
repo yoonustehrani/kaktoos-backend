@@ -1,6 +1,6 @@
 @foreach ($passengers as $passenger)
     <div class="w-full h-fit p-6 flex flex-col gap-6">
-        <x-ticket.notice :notes="$booking->meta?->notes"/>
+        <x-ticket.notice :airline="name_fa($booking->airline)" :meta="$booking->meta" :notes="$booking->meta?->notes"/>
         @foreach ($passenger->tickets as $ticket)
             @php
                 $flight = $flights[$loop->index]; 

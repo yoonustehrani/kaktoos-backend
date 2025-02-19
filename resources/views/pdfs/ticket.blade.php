@@ -1,5 +1,9 @@
 @php
-    if ($booking->origin_airport->country_code  == 'IR' && $booking->destination_airport->country_code == 'IR') {
+    if (
+        request()->query('lang') == 'fa'
+        // ||
+        // ($booking->origin_airport->country_code  == 'IR' && $booking->destination_airport->country_code == 'IR')
+    ) {
         App::setLocale('fa');
     } else {
         App::setLocale('en');
