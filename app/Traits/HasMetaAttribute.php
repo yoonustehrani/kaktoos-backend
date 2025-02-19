@@ -16,6 +16,6 @@ trait HasMetaAttribute
 
     public function addToMeta(string $key, mixed $value)
     {
-        $this->attributes['meta'] = data_set($this->meta, $key, $value);
+        data_set($this->meta, $key, $value);
     }
 }
