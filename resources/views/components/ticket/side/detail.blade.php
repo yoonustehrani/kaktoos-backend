@@ -3,5 +3,5 @@
         <x-dynamic-component :component="'icons.'.$icon" class="w-6 h-6"/>
     @endisset
     <strong>{{ $title }}</strong>
-    <p class="bg-gray-200 grow w-auto px-2 py-1 italic rounded-md">{{ $slot }}</p>
+    <p class="bg-gray-200 grow w-auto px-2 py-1 italic rounded-md h-8">{{ $slot }}</p>
 </div>

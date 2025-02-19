@@ -118,5 +118,13 @@ return [
         'Err0109004' => 'Booking details not found for given Booking reference number',
         'Err0109005' => 'Secure PNR',
         'Err0109006' => 'UniqueID and ClientUniqueID cannot be both null',
-    ]
+    ],
+    'online_check_in_required' => 'Mandatory Online Check-in',
+    'online_check_in_message' => implode(' ', [
+        ':airline require you to do a mandatory online Check-in up to 24 hours prior to departure.',
+        ':airline can charge 100 EUR or more per passenger for not carrying an online boarding pass to the check-in counter.',
+        'Please contact us 24 hours prior to departure with a copy of the passport to complete online check-in.',
+        'We will take no responsibility if the :airline check-in counter denies boarding or charges any additional fee for not carrying an online boarding pass.',
+        'Please contact us for your boarding pass.',
+    ])
 ];
