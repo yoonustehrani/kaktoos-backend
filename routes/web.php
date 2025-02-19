@@ -55,4 +55,6 @@ Route::get('/trx', function() {
     OrderTransactionPaid::dispatch($trx);
 });
 
-Route::view('/', 'welcome');
+Route::get('/', function() {
+    abort(403);
+});
