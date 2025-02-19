@@ -16,6 +16,8 @@ trait HasMetaAttribute
 
     public function addToMeta(string $key, mixed $value)
     {
-        data_set($this->meta, $key, $value);
+        $meta = $this->meta; // Get the current meta data
+        data_set($meta, $key, $value); // Modify the meta data
+        $this->meta = $meta; // Set the modified meta data back
     }
 }
