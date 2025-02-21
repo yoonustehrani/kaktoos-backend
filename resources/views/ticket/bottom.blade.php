@@ -10,7 +10,7 @@
     </div>
     <div class="flex gap-2 text-lg">
         <h1 class="font-bold">@lang('PNR')</h1>
-        <p>{{ $ticket->airline_pnr ?? $flight->airline_pnr }}</p>
+        <p>{{ $ticket->airline_pnr ?: $flight->airline_pnr }}</p>
     </div>
     <div class="flex gap-2 text-lg">
         <h1 class="font-bold">@lang('Date of issue')</h1>
