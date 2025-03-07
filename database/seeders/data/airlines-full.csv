@@ -542,7 +542,6 @@ id,name,alias,iata,icao,callsign,country,active
 540,"Airlink Zambia",\N,"K8","ZAK","","Zambia","N"
 541,"Agence Nationale des Aerodromes et de la Meteorologie",\N,"","ZZM","","Ivory Coast","N"
 542,"Airbus Transport International",\N,"","BGA","BELOUGA","France","N"
-543,"Air Bangladesh",\N,"B9","BGD","AIR BANGLA","Bangladesh","Y"
 544,"Aviodetachment-28",\N,"","BGF","BULGARIAN","Bulgaria","N"
 545,"Aero BG",\N,"","BGG","AERO BG","Mexico","N"
 546,"Aerotaxis De La Bahia",\N,"","BHC","BAHIA","Mexico","N"

@@ -54,12 +54,12 @@ services:
                 - ping
             retries: 3
             timeout: 5s
-    pdfrenderer:
-        image: timoschwarzer/headless-pdf-renderer
-        networks:
-            - sail
-        security_opt:
-            - seccomp=./backend/chromium.json
+    #pdfrenderer:
+    #    image: timoschwarzer/headless-pdf-renderer
+    #    networks:
+    #        - sail
+    #    security_opt:
+    #        - seccomp=./backend/chromium.json
     meilisearch:
         image: 'getmeili/meilisearch:latest'
         environment:
