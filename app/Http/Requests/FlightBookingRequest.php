@@ -48,7 +48,10 @@ class FlightBookingRequest extends FormRequest
         $normal_rules = [
             'passengers.*.national_id' => Rule::forEach(function ($_v, $_a, $_p, array $this_passenger) {
                 return [
-                    Rule::requiredIf(fn() => (! isset($this_passenger['passport']) || ! is_array($this_passenger['passport'])) && $this_passenger['nationality'] == 'IR'),
+                    Rule::requiredIf(
+                        // (! isset($this_passenger['passport']['passport_number']) || ! is_array($this_passenger['passport'])) && 
+                        fn() => $this_passenger['nationality'] == 'IR'
+                    ),
                     'string',
                     'numeric',
                     'digits:10'
