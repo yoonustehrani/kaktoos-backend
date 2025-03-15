@@ -59,6 +59,7 @@ ENV COMPOSER_ALLOW_SUPERUSER=1
 RUN composer install --optimize-autoloader --no-dev
 
 RUN php artisan optimize
+RUN php artisan storage:link
 
 RUN apt-get update -y && apt-get install -y supervisor
 
