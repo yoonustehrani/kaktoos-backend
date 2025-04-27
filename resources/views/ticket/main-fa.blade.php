@@ -53,7 +53,7 @@
                         {{ name_fa($flight->departure_airport, 'city_name') }}@lang(',') {{ name_fa($flight->departure_airport->country) }}
                     </p>
                     @unless (is_null($flight->departure_terminal))
-                        <p><strong>Terminal:</strong>&nbsp;{{ $flight->departure_terminal }}</p>
+                        <p><strong>@lang('Terminal'):</strong>&nbsp;{{ $flight->departure_terminal }}</p>
                     @endunless
                     <x-date lang="fa" :datetime="$flight->departs_at" />
                     <x-time :datetime="$flight->departs_at" />
