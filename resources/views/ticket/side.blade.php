@@ -1,7 +1,7 @@
 <div class="h-full w-1/4 bg-white text-gray-800 border-gray-600 border-dashed flex flex-col justify-between items-center py-2 {{ app()->isLocale('fa') ? 'border-r-[3px]' : 'border-l-[3px]' }}">
     <div class="ml-6 p-3 flex items-center justify-center gap-2">
-        <img class="w-10 h-10" width="48px" height="48px" src="{{ asset($flight->marketing_airline->logo) }}" alt="">
-        <h3 class="font-bold text-xl">{{ name_fa($flight->marketing_airline) }}</h3>
+        <img class="w-10 h-10" width="48px" height="48px" src="{{ asset($flight->operating_airline->logo) }}" alt="">
+        <h3 class="font-bold text-xl">{{ name_fa($flight->operating_airline) }}</h3>
     </div>
     <div class="px-3 flex flex-col gap-3">
         <x-ticket.side.detail icon="passenger" :title="__('Passenger')">{{ str($passenger->full_name)->upper() }}</x-ticket.side.detail>

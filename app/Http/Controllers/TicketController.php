@@ -18,6 +18,7 @@ class TicketController extends Controller
             $query->with(['arrival_airport.country', 'departure_airport.country', 'marketing_airline', 'operating_airline']);
         }]);
         $airBooking->passengers->append('fullname')->makeHidden(['first_name', 'middle_name', 'last_name', 'title']);
+        // dd($airBooking->toArray());
         return view('pdfs.ticket')
             ->with('booking', $airBooking)
             ->with('passengers', $airBooking->passengers)
