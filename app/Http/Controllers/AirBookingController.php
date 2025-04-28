@@ -168,8 +168,10 @@ class AirBookingController extends Controller
             );
         }
         if (isset($result)) {
-            try {
-                DB::beginTransaction();
+            DB::transaction(function() use(&$airBooking, &$result) {
+                $airBooking = AirBooking::where('id', $airBooking->id)
+                    ->lockForUpdate()
+                    ->first();
                 $airBooking->status = AirQueueStatus::tryFrom($result->Status);
                 if ($airBooking->parto_unique_id && AirQueueStatus::tryFrom($result->Status) == AirQueueStatus::Ticketed) {
                     InsertTicketData::dispatch($airBooking, $result->TravelItinerary['ItineraryInfo']);
@@ -186,11 +188,7 @@ class AirBookingController extends Controller
                     ]);
                 }
                 $airBooking->save();
-                DB::commit();
-            } catch (\Throwable $th) {
-                DB::rollBack();
-                throw $th;
-            }
+            });
         }
         $airBooking->load(['airline', 'origin_airport', 'destination_airport', 'order']);
         $response = new AirBookingResource($airBooking);

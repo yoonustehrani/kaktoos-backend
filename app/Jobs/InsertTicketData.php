@@ -6,6 +6,7 @@ use App\Models\AirBooking;
 use App\Models\ETicket;
 use App\Models\Parto\Air\Flight;
 use App\Models\Passenger;
+use App\Parto\Domains\Flight\Enums\AirBook\AirQueueStatus;
 use App\Parto\Domains\Flight\Enums\AirSearch\PartoCabinType;
 use App\Parto\Domains\Flight\Enums\FlightCabinType;
 use App\Parto\Domains\Flight\Enums\PartoPassengerGender;
@@ -18,10 +19,13 @@ use Illuminate\Foundation\Queue\Queueable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\DB;
 
 class InsertTicketData implements ShouldQueue
 {
     use Queueable;
+
+    public $tries = 3;
 
     /**
      * Create a new job instance.
@@ -97,12 +101,17 @@ class InsertTicketData implements ShouldQueue
                 ]), $customer['ETicketNumbers'])
             ]);
         }
-        $this->airBooking->flights()->delete();
-        $this->airBooking->flights()->saveMany($flights);
-        $this->airBooking->passengers()->delete();
-        foreach ($passengers as $passenger_array) {
-            $passenger = $this->airBooking->passengers()->save($passenger_array['data']);
-            $passenger->tickets()->saveMany($passenger_array['tickets']);
-        }
+        DB::transaction(function() use(&$passengers, &$flights) {
+            $airBooking = AirBooking::where('id', $this->airBooking->id)
+                ->lockForUpdate()
+                ->first();
+            $airBooking->flights()->delete();
+            $airBooking->flights()->saveMany($flights);
+            $airBooking->passengers()->delete();
+            foreach ($passengers as $passenger_array) {
+                $passenger = $airBooking->passengers()->save($passenger_array['data']);
+                $passenger->tickets()->saveMany($passenger_array['tickets']);
+            }
+        });
     }
 }
